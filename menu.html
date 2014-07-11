@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>UI - ESUI Demo</title>
+        <link rel="stylesheet" href="src/css/main.css" />
+        <link rel="stylesheet" href="src/icons/css/font-awesome.css" />
+        <link rel="stylesheet" href="demo.css" />
+    </head>
+    <body>
+        <h1>Menu</h1>
+        <div id="layout" class="ui-g">
+            <div class="ui-u-1-5">
+                <ul id="navigator">
+                    <li><a href="index.html">Get Started</a></li>
+                    <li><a href="#">Layouts</a></li>
+                    <li><a href="checkbox.html">Checkbox</a></li>
+                    <li><a href="icons.html">Icons</a></li>
+                    <li><a href="input.html">Input</a></li>
+                    <li><a href="label.html">Label</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                </ul>
+            </div>
+            <div class="ui-u-4-5">
+                <div id="main" class="content p2 no-pt">
+                    <h2 class="content-subhead">Menu</h2>
+                    <div>
+                        <h3>类型</h3>
+                        <div>
+                            <h4>横向菜单</h4>
+                            <div class="ui-menu horizontal">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-rocket"></i> CSS Nested Menu</a>
+                                        <ul class="submenu">
+                                            <li><a href="#">First</a></li>
+                                            <li><a href="#">Second</a></li>
+                                            <li><a href="#">Third</a></li>
+                                            <li>
+                                                <a href="#">Right...</a>
+                                                <ul class="submenu flyout right">
+                                                    <li><a href="#">First</a></li>
+                                                    <li><a href="#">Second</a></li>
+                                                    <li><a href="#">Third</a></li>
+                                                    <li>
+                                                        <a href="#">Right...</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Left...</a>
+                                                <ul class="submenu flyout left">
+                                                    <li><a href="#">First</a></li>
+                                                    <li><a href="#">Second</a></li>
+                                                    <li><a href="#">Third</a></li>
+                                                    <li>
+                                                        <a href="#">Right...</a>
+                                                        <ul class="submenu flyout right">
+                                                            <li><a href="#">First</a></li>
+                                                            <li><a href="#">Second</a></li>
+                                                            <li><a href="#">Third</a></li>
+                                                            <li>
+                                                                <a href="#">Right...</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="active"><a href="#">Active</a></li>
+                                    <li class="disabled"><a href="#">Disabled</a></li>
+                                </ul>
+                            </div>
+                            <h4>纵向菜单</h4>
+                            <div class="ui-menu vertical">
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Post archive</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

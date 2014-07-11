@@ -1,0 +1,2504 @@
+/* =========
+   Inputs
+   ========= */
+/* =========
+   Buttons
+   ========= */
+/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+  display: none;
+}
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+/**
+ * Address `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+/**
+ * Address margins handled incorrectly in IE 6/7.
+ */
+body {
+  margin: 0;
+}
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address font sizes and margins set differently in IE 6/7.
+ * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 0.67em;
+  margin: 2.33em 0;
+}
+/**
+ * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/**
+ * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Address differences between Firefox and other browsers.
+ * Known issue: no IE 6/7 normalization.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+/**
+ * Address styling not present in IE 6/7/8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/**
+ * Address margins set differently in IE 6/7.
+ */
+p,
+pre {
+  margin: 1em 0;
+}
+/**
+ * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+/**
+ * Address CSS quotes not supported in IE 6/7.
+ */
+q {
+  quotes: none;
+}
+/**
+ * Address `quotes` property not supported in Safari 4.
+ */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/**
+ * Address margins set differently in IE 6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+  margin: 0;
+}
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*csslint important:false*/
+/* ==========================================================================
+   Base Extras
+   ========================================================================== */
+/**
+ * Extra rules that Pure adds on top of Normalize.css
+ */
+/**
+ * Always hide an element when it has the `hidden` HTML attribute.
+ */
+[hidden] {
+  display: none !important;
+}
+/**
+ * Add this class to an image to make it fit within it's fluid parent wrapper while maintaining
+ * aspect ratio.
+ */
+ui-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/**
+ * Override normalize with variable values.
+ */
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+}
+button[disabled],
+html input[disabled],
+ui-disabled {
+  cursor: not-allowed;
+  opacity: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.p1 {
+  padding: 10px;
+}
+.pl1 {
+  padding-left: 10px;
+}
+.pb1 {
+  padding-bottom: 10px;
+}
+.pr1 {
+  padding-right: 10px;
+}
+.pt1 {
+  padding-top: 10px;
+}
+.p2 {
+  padding: 20px;
+}
+.pl2 {
+  padding-left: 20px;
+}
+.pb2 {
+  padding-bottom: 20px;
+}
+.pr2 {
+  padding-right: 20px;
+}
+.pt2 {
+  padding-top: 20px;
+}
+.p3 {
+  padding: 30px;
+}
+.pl3 {
+  padding-left: 30px;
+}
+.pb3 {
+  padding-bottom: 30px;
+}
+.pr3 {
+  padding-right: 30px;
+}
+.pt3 {
+  padding-top: 30px;
+}
+.p4 {
+  padding: 40px;
+}
+.pl4 {
+  padding-left: 40px;
+}
+.pb4 {
+  padding-bottom: 40px;
+}
+.pr4 {
+  padding-right: 40px;
+}
+.pt4 {
+  padding-top: 40px;
+}
+.no-pl {
+  padding-left: 0 !important;
+}
+.no-pb {
+  padding-bottom: 0 !important;
+}
+.no-pr {
+  padding-right: 0 !important;
+}
+.no-pt {
+  padding-top: 0 !important;
+}
+.m1 {
+  margin: 10px;
+}
+.ml1 {
+  margin-left: 10px;
+}
+.mb1 {
+  margin-bottom: 10px;
+}
+.mr1 {
+  margin-right: 10px;
+}
+.mt1 {
+  margin-top: 10px;
+}
+.m2 {
+  margin: 20px;
+}
+.ml2 {
+  margin-left: 20px;
+}
+.mb2 {
+  margin-bottom: 20px;
+}
+.mr2 {
+  margin-right: 20px;
+}
+.mt2 {
+  margin-top: 20px;
+}
+.m3 {
+  margin: 30px;
+}
+.ml3 {
+  margin-left: 30px;
+}
+.mb3 {
+  margin-bottom: 30px;
+}
+.mr3 {
+  margin-right: 30px;
+}
+.mt3 {
+  margin-top: 30px;
+}
+.no-ml {
+  margin-left: 0 !important;
+}
+.no-mb {
+  margin-bottom: 0 !important;
+}
+.no-mr {
+  margin-right: 0 !important;
+}
+.no-mt {
+  margin-top: 0 !important;
+}
+.align-left {
+  text-align: left;
+}
+.align-center {
+  text-align: center;
+}
+.align-right {
+  text-align: right;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+/*
+ * # Semantic - Input
+ * http://github.com/jlukic/semantic-ui/
+ *
+ *
+ * Copyright 2013 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*******************************
+           Standard
+*******************************/
+/*--------------------
+        Inputs
+---------------------*/
+.ui-input {
+  display: inline-block;
+  position: relative;
+  color: rgba(0, 0, 0, 0.7);
+}
+.ui-input input {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0em;
+  padding: 0.65em 1em;
+  font-size: 1em;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  outline: none;
+  color: rgba(0, 0, 0, 0.7);
+  border-radius: 0.3125em;
+  -webkit-transition: background-color 0.3s ease-out, -webkit-box-shadow 0.2s ease, border-color 0.2s ease;
+  -moz-transition: background-color 0.3s ease-out, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: background-color 0.3s ease-out, box-shadow 0.2s ease, border-color 0.2s ease;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*--------------------
+      Placeholder
+---------------------*/
+/* browsers require these rules separate */
+.ui-input::-webkit-input-placeholder {
+  color: #bbbbbb;
+}
+.ui-input::-moz-placeholder {
+  color: #bbbbbb;
+}
+/*******************************
+            States
+*******************************/
+/*--------------------
+        Active
+---------------------*/
+.ui-input input:active,
+.ui-input.down input {
+  border-color: rgba(0, 0, 0, 0.3);
+  background-color: #fafafa;
+}
+/*--------------------
+        Loading
+---------------------*/
+.ui.loading.input > .icon {
+  background: url(../images/loader-mini.gif) no-repeat 50% 50%;
+}
+.ui.loading.input > .icon:before,
+.ui.loading.input > .icon:after {
+  display: none;
+}
+/*--------------------
+        Focus
+---------------------*/
+.ui-input.focus input,
+.ui-input input:focus {
+  border-color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.85);
+}
+/*--------------------
+        Error
+---------------------*/
+.ui-input.error input {
+  background-color: #fffafa;
+  border-color: #e7bebe;
+  color: #d95c5c;
+}
+/* Error Placeholder */
+.ui-input.error input ::-webkit-input-placeholder {
+  color: #ff0000;
+}
+.ui-input.error input ::-moz-placeholder {
+  color: #ff0000;
+}
+.ui-input.error input :focus::-webkit-input-placeholder {
+  color: #ff0000;
+}
+.ui-input.error input :focus::-moz-placeholder {
+  color: #ff0000;
+}
+/*--------------------
+        Disabled
+---------------------*/
+.ui-input.disabled input,
+.ui-input input[disabled] {
+  background-color: #eeeeee;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+/*******************************
+           Variations
+*******************************/
+/*--------------------
+      Transparent
+---------------------*/
+.ui.transparent.input input {
+  border: none;
+  background-color: transparent;
+}
+/*--------------------
+         Icon
+---------------------*/
+.ui-input.icon > .icon {
+  cursor: default;
+  position: absolute;
+  opacity: 0.5;
+  top: 0px;
+  right: 0px;
+  margin: 0em;
+  width: 2.6em;
+  height: 100%;
+  padding-top: 0.82em;
+  text-align: center;
+  border-radius: 0em 0.3125em 0.3125em 0em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+.ui-input.icon > .link.icon {
+  cursor: pointer;
+}
+.ui-input.icon input {
+  padding-right: 3em !important;
+}
+.ui-input.icon > .circular.icon {
+  top: 0.35em;
+  right: 0.5em;
+}
+/* Left Side */
+.ui-input.icon.left > .icon {
+  right: auto;
+  left: 1px;
+  border-radius: 0.3125em 0em 0em 0.3125em;
+}
+.ui.left.icon.input > .circular.icon {
+  right: auto;
+  left: 0.5em;
+}
+.ui.left.icon.input > input {
+  padding-left: 3em !important;
+  padding-right: 1.2em !important;
+}
+/* Focus */
+.ui.icon.input > input:focus ~ .icon {
+  opacity: 1;
+}
+/*--------------------
+        Labeled
+---------------------*/
+.ui.labeled.input .corner.label {
+  font-size: 0.7em;
+  border-radius: 0 0.3125em;
+}
+.ui.labeled.input .left.corner.label {
+  border-radius: 0.3125em 0;
+}
+.ui.labeled.input input {
+  padding-right: 2.5em !important;
+}
+/* Spacing with corner label */
+.ui.labeled.icon.input:not(.left) > input {
+  padding-right: 3.25em !important;
+}
+.ui.labeled.icon.input:not(.left) > .icon {
+  margin-right: 1.25em;
+}
+/*--------------------
+        Action
+---------------------*/
+.ui.action.input {
+  display: table;
+}
+.ui.action.input > input {
+  display: table-cell;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-right: none;
+}
+.ui.action.input > .button,
+.ui.action.input > .buttons {
+  display: table-cell;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  white-space: nowrap;
+}
+.ui.action.input > .button > .icon,
+.ui.action.input > .buttons > .button > .icon {
+  display: inline;
+  vertical-align: top;
+}
+.ui.fluid.action.input {
+  display: table;
+  width: 100%;
+}
+.ui.fluid.action.input > .button {
+  width: 0.01%;
+}
+/*--------------------
+        Fluid
+---------------------*/
+.ui-input.fluid {
+  display: block;
+}
+/*--------------------
+        Size
+---------------------*/
+.ui-input.mini {
+  font-size: 0.8125em;
+}
+.ui-input.small {
+  font-size: 0.875em;
+}
+.ui-input {
+  font-size: 1em;
+}
+.ui-input.large {
+  font-size: 1.125em;
+}
+.ui-input.big {
+  font-size: 1.25em;
+}
+.ui-input.huge {
+  font-size: 1.375em;
+}
+.ui-input.massive {
+  font-size: 1.5em;
+}
+/*!
+Pure v0.5.0
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yui/pure/blob/master/LICENSE.md
+*/
+/*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
+.ui-g {
+  letter-spacing: -0.31em;
+  /* Webkit: collapse white-space between units */
+  *letter-spacing: normal;
+  /* reset IE < 8 */
+  *word-spacing: -0.43em;
+  /* IE < 8: collapse white-space between units */
+  text-rendering: optimizespeed;
+  /* Webkit: fixes text-rendering: optimizeLegibility */
+  /*
+    Sets the font stack to fonts known to work properly with the above letter
+    and word spacings. See: https://github.com/yui/pure/issues/41/
+
+    The following font stack makes Pure Grids work on all known environments.
+
+    * FreeSans: Ships with many Linux distros, including Ubuntu
+
+    * Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
+      Arial to get picked up by the browser, even though neither is available
+      in Chrome OS.
+
+    * Droid Sans: Ships with all versions of Android.
+
+    * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
+    */
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+  /*
+    Use flexbox when possible to avoid `letter-spacing` side-effects.
+
+    NOTE: Firefox (as of 25) does not currently support flex-wrap, so the
+    `-moz-` prefix version is omitted.
+    */
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  /* IE10 uses display: flexbox */
+  display: -ms-flexbox;
+  -ms-flex-flow: row wrap;
+}
+/* Opera as of 12 on Windows needs word-spacing.
+   The ".opera-only" selector is used to prevent actual prefocus styling
+   and is not required in markup.
+*/
+.opera-only :-o-prefocus,
+.ui-g {
+  word-spacing: -0.43em;
+}
+.ui-u {
+  display: inline-block;
+  *display: inline;
+  /* IE < 8: fake inline-block */
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+}
+/*
+Resets the font family back to the OS/browser's default sans-serif font,
+this the same font stack that Normalize.css sets for the `body`.
+*/
+.ui-g [class*="ui-u"] {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.ui-u-1,
+.ui-u-1-1,
+.ui-u-1-2,
+.ui-u-1-3,
+.ui-u-2-3,
+.ui-u-1-4,
+.ui-u-3-4,
+.ui-u-1-5,
+.ui-u-2-5,
+.ui-u-3-5,
+.ui-u-4-5,
+.ui-u-5-5,
+.ui-u-1-6,
+.ui-u-5-6,
+.ui-u-1-8,
+.ui-u-3-8,
+.ui-u-5-8,
+.ui-u-7-8,
+.ui-u-1-12,
+.ui-u-5-12,
+.ui-u-7-12,
+.ui-u-11-12,
+.ui-u-1-24,
+.ui-u-2-24,
+.ui-u-3-24,
+.ui-u-4-24,
+.ui-u-5-24,
+.ui-u-6-24,
+.ui-u-7-24,
+.ui-u-8-24,
+.ui-u-9-24,
+.ui-u-10-24,
+.ui-u-11-24,
+.ui-u-12-24,
+.ui-u-13-24,
+.ui-u-14-24,
+.ui-u-15-24,
+.ui-u-16-24,
+.ui-u-17-24,
+.ui-u-18-24,
+.ui-u-19-24,
+.ui-u-20-24,
+.ui-u-21-24,
+.ui-u-22-24,
+.ui-u-23-24,
+.ui-u-24-24 {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+}
+.ui-u-1-24 {
+  width: 4.1667%;
+  *width: 4.1357%;
+}
+.ui-u-1-12,
+.ui-u-2-24 {
+  width: 8.3333%;
+  *width: 8.3023%;
+}
+.ui-u-1-8,
+.ui-u-3-24 {
+  width: 12.5000%;
+  *width: 12.4690%;
+}
+.ui-u-1-6,
+.ui-u-4-24 {
+  width: 16.6667%;
+  *width: 16.6357%;
+}
+.ui-u-1-5 {
+  width: 20%;
+  *width: 19.9690%;
+}
+.ui-u-5-24 {
+  width: 20.8333%;
+  *width: 20.8023%;
+}
+.ui-u-1-4,
+.ui-u-6-24 {
+  width: 25%;
+  *width: 24.9690%;
+}
+.ui-u-7-24 {
+  width: 29.1667%;
+  *width: 29.1357%;
+}
+.ui-u-1-3,
+.ui-u-8-24 {
+  width: 33.3333%;
+  *width: 33.3023%;
+}
+.ui-u-3-8,
+.ui-u-9-24 {
+  width: 37.5000%;
+  *width: 37.4690%;
+}
+.ui-u-2-5 {
+  width: 40%;
+  *width: 39.9690%;
+}
+.ui-u-5-12,
+.ui-u-10-24 {
+  width: 41.6667%;
+  *width: 41.6357%;
+}
+.ui-u-11-24 {
+  width: 45.8333%;
+  *width: 45.8023%;
+}
+.ui-u-1-2,
+.ui-u-12-24 {
+  width: 50%;
+  *width: 49.9690%;
+}
+.ui-u-13-24 {
+  width: 54.1667%;
+  *width: 54.1357%;
+}
+.ui-u-7-12,
+.ui-u-14-24 {
+  width: 58.3333%;
+  *width: 58.3023%;
+}
+.ui-u-3-5 {
+  width: 60%;
+  *width: 59.9690%;
+}
+.ui-u-5-8,
+.ui-u-15-24 {
+  width: 62.5000%;
+  *width: 62.4690%;
+}
+.ui-u-2-3,
+.ui-u-16-24 {
+  width: 66.6667%;
+  *width: 66.6357%;
+}
+.ui-u-17-24 {
+  width: 70.8333%;
+  *width: 70.8023%;
+}
+.ui-u-3-4,
+.ui-u-18-24 {
+  width: 75%;
+  *width: 74.9690%;
+}
+.ui-u-19-24 {
+  width: 79.1667%;
+  *width: 79.1357%;
+}
+.ui-u-4-5 {
+  width: 80%;
+  *width: 79.9690%;
+}
+.ui-u-5-6,
+.ui-u-20-24 {
+  width: 83.3333%;
+  *width: 83.3023%;
+}
+.ui-u-7-8,
+.ui-u-21-24 {
+  width: 87.5000%;
+  *width: 87.4690%;
+}
+.ui-u-11-12,
+.ui-u-22-24 {
+  width: 91.6667%;
+  *width: 91.6357%;
+}
+.ui-u-23-24 {
+  width: 95.8333%;
+  *width: 95.8023%;
+}
+.ui-u-1,
+.ui-u-1-1,
+.ui-u-5-5,
+.ui-u-24-24 {
+  width: 100%;
+}
+/*!
+@{ui-class-prefix} v0.5.0
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yui/@{ui-class-prefix}/blob/master/LICENSE.md
+*/
+.ui-button {
+  /* Structure */
+  display: inline-block;
+  *display: inline;
+  /*IE 6/7*/
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: baseline;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Firefox: Get rid of the inner focus border */
+.ui-button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+/*csslint outline-none:false*/
+.ui-button {
+  font-family: inherit;
+  font-size: 100%;
+  *font-size: 90%;
+  /*IE 6/7 - To reduce IE's oversized button text*/
+  *overflow: visible;
+  /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
+  padding: 0.5em 1em;
+  color: #444444;
+  /* rgba not supported (IE 8) */
+  color: #ffffff;
+  /* rgba supported */
+  *color: #444444;
+  /* IE 6 & 7 */
+  border: 1px solid #999;
+  /*IE 6/7/8*/
+  border: none rgba(0, 0, 0, 0);
+  /*IE9 + everything else*/
+  background-color: #bdc3c7;
+  text-decoration: none;
+  border-radius: 2px;
+}
+.ui-button.fluid {
+  display: block;
+  width: 100%;
+}
+.ui-button.icon {
+  padding: 0.5em;
+}
+.ui-button.hover,
+.ui-button:hover,
+.ui-button:focus {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000', GradientType=0) !important;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.1))) !important;
+  background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1)) !important;
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.1)) !important;
+  background-image: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1)) !important;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1)) !important;
+}
+.ui-button:focus {
+  outline: 0;
+}
+.ui-button.active,
+.ui-button:active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
+}
+.ui-button[disabled],
+.ui-button.disabled,
+.ui-button-disabled:hover,
+.ui-button-disabled:focus,
+.ui-button-disabled:active {
+  border: none;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  filter: alpha(opacity=40);
+  -khtml-opacity: 0.40;
+  -moz-opacity: 0.40;
+  opacity: 0.40;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+/* Firefox: Get rid of the inner focus border */
+.ui-button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+.ui-button.primary,
+.ui-button.selected,
+a.ui-button.primary,
+a.ui-button.selected {
+  background-color: #0078e7;
+  color: #fff;
+}
+.ui-button.success,
+.ui-button.error,
+.ui-button.warning,
+.ui-button.secondary {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.ui-button.success {
+  background: #1cb841;
+  /* this is a green */
+}
+.ui-button.error {
+  background: #ca3c3c;
+  /* this is a maroon */
+}
+.ui-button.warning {
+  background: #df7514;
+  /* this is an orange */
+}
+.ui-button.secondary {
+  background: #42b8dd;
+  /* this is a light blue */
+}
+/*--------------------
+        Size
+---------------------*/
+.ui-button.mini {
+  font-size: 0.8125em;
+}
+.ui-button.small {
+  font-size: 0.875em;
+}
+.ui-button.large {
+  font-size: 1.125em;
+}
+.ui-button.big {
+  font-size: 1.25em;
+}
+.ui-button.huge {
+  font-size: 1.375em;
+}
+.ui-button.massive {
+  font-size: 1.5em;
+}
+.ui-button-group .ui-button {
+  float: left;
+}
+.ui-button-group > .ui-button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.ui-button-group > .ui-button:first-child:not(:last-child) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.ui-button-group > .ui-button:last-child:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.ui-menu {
+  overflow: visible;
+  position: relative;
+  background: #1a1a1a;
+  border-radius: 2px;
+}
+.ui-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.ui-menu li {
+  position: relative;
+  margin: 0;
+}
+.ui-menu li ul.submenu {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.ui-menu li ul.submenu li {
+  font-size: .875em;
+}
+.ui-menu li ul.submenu li a {
+  padding: 0.5em 1em;
+  display: block;
+  float: none;
+  color: #555555;
+}
+.ui-menu li ul.submenu li a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+.ui-menu li a {
+  color: white;
+  text-decoration: none;
+}
+.ui-menu li a:hover {
+  background: #404040;
+}
+.ui-menu li:hover > ul.submenu {
+  display: block;
+}
+.ui-menu li.disabled a {
+  color: #666666;
+  text-shadow: #000000 0 -1px 0;
+}
+.ui-menu li.disabled a:hover {
+  background: none;
+}
+.ui-menu li.active {
+  background: #333333;
+}
+.ui-menu.horizontal:before,
+.ui-menu.horizontal:after {
+  content: " ";
+  display: table;
+}
+.ui-menu.horizontal:after {
+  clear: both;
+}
+.ui-menu.horizontal li {
+  float: left;
+}
+.ui-menu.horizontal li a {
+  padding: 0.5em 1em;
+  display: block;
+  line-height: 1.7;
+}
+.ui-menu.horizontal li ul.submenu {
+  min-width: 100%;
+  left: 0;
+  z-index: 1000;
+  top: auto;
+  left: auto;
+}
+.ui-menu.horizontal li ul.submenu li {
+  float: none;
+}
+.ui-menu.horizontal li ul.submenu li .flyout {
+  position: absolute;
+  top: 0;
+}
+.ui-menu.horizontal li ul.submenu li .flyout.left {
+  right: 100%;
+}
+.ui-menu.horizontal li ul.submenu li .flyout.right {
+  left: 100%;
+}
+.ui-menu.horizontal > ul li:first-child,
+.ui-menu.horizontal > ul li:first-child a {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.ui-menu.horizontal > ul li:last-child,
+.ui-menu.horizontal > ul li:last-child a {
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+}
+/*
+ * # Semantic - Label
+ * http://github.com/jlukic/semantic-ui/
+ *
+ *
+ * Copyright 2013 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*******************************
+            Label
+*******************************/
+.ui.label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: -0.25em 0.25em 0em;
+  background-color: #E8E8E8;
+  border-color: #E8E8E8;
+  padding: 0.5em 0.8em;
+  color: rgba(0, 0, 0, 0.65);
+  text-transform: uppercase;
+  font-weight: normal;
+  -webkit-border-radius: 0.325em;
+  -moz-border-radius: 0.325em;
+  border-radius: 0.325em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: background 0.1s linear
+  ;
+  -moz-transition: background 0.1s linear
+  ;
+  -o-transition: background 0.1s linear
+  ;
+  -ms-transition: background 0.1s linear
+  ;
+  transition: background 0.1s linear
+  ;
+}
+.ui.label:first-child {
+  margin-left: 0em;
+}
+.ui.label:last-child {
+  margin-right: 0em;
+}
+/* Link */
+a.ui.label {
+  cursor: pointer;
+}
+/* Inside Link */
+.ui.label a {
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.8;
+  transition: 0.2s opacity ease;
+}
+.ui.label a:hover {
+  opacity: 1;
+}
+/* Detail */
+.ui.label .detail {
+  display: inline-block;
+  margin-left: 0.5em;
+  font-weight: bold;
+  opacity: 0.8;
+}
+/* Icon */
+.ui.label .icon {
+  width: auto;
+}
+/* Removable label */
+.ui.label .delete.icon {
+  cursor: pointer;
+  margin: 0em 0em 0em 0.5em;
+  opacity: 0.7;
+  -webkit-transition: background 0.1s linear
+  ;
+  -moz-transition: background 0.1s linear
+  ;
+  -o-transition: background 0.1s linear
+  ;
+  -ms-transition: background 0.1s linear
+  ;
+  transition: background 0.1s linear
+  ;
+}
+.ui.label .delete.icon:hover {
+  opacity: 0.99;
+}
+/*-------------------
+       Coupling
+--------------------*/
+/* Padding on next content after a label */
+.ui.segment > .attached.label:first-child + * {
+  margin-top: 2.5em;
+}
+.ui.segment > .bottom.attached.label:first-child ~ :last-child {
+  margin-top: 0em;
+  margin-bottom: 2.5em;
+}
+/*******************************
+             Types
+*******************************/
+.ui.image.label {
+  width: auto !important;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  line-height: 1.5em;
+  vertical-align: baseline;
+  text-transform: none;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
+}
+.ui.image.label img {
+  display: inline-block;
+  height: 2.25em;
+  margin: -0.4em 0.8em -0.4em -0.8em;
+  vertical-align: top;
+  -moz-border-radius: 0.325em 0em 0em 0.325em;
+  -webkit-border-radius: 0.325em 0em 0em 0.325em;
+  border-radius: 0.325em 0em 0em 0.325em;
+}
+/*******************************
+             States
+*******************************/
+/*-------------------
+      Disabled
+--------------------*/
+.ui.label.disabled {
+  opacity: 0.5;
+}
+/*-------------------
+        Hover
+--------------------*/
+a.ui.labels .label:hover,
+a.ui.label:hover {
+  background-color: #E0E0E0;
+  border-color: #E0E0E0;
+  color: rgba(0, 0, 0, 0.7);
+}
+.ui.labels a.label:hover:before,
+a.ui.label:hover:before {
+  background-color: #E0E0E0;
+  color: rgba(0, 0, 0, 0.7);
+}
+/*-------------------
+      Visible
+--------------------*/
+.ui.labels.visible .label,
+.ui.label.visible {
+  display: inline-block !important;
+}
+/*-------------------
+      Hidden
+--------------------*/
+.ui.labels.hidden .label,
+.ui.label.hidden {
+  display: none !important;
+}
+/*******************************
+           Variations
+*******************************/
+/*-------------------
+         Tag
+--------------------*/
+.ui.tag.labels .label,
+.ui.tag.label {
+  margin-left: 1em;
+  position: relative;
+  padding: 0.33em 1.3em 0.33em 1.4em;
+  -webkit-border-radius: 0px 3px 3px 0px;
+  -moz-border-radius: 0px 3px 3px 0px;
+  border-radius: 0px 3px 3px 0px;
+}
+.ui.tag.labels .label:before,
+.ui.tag.label:before {
+  position: absolute;
+  top: 0.3em;
+  left: 0.3em;
+  content: '';
+  margin-left: -1em;
+  background-image: none;
+  width: 1.5em;
+  height: 1.5em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: background 0.1s linear
+    ;
+  -moz-transition: background 0.1s linear
+    ;
+  -o-transition: background 0.1s linear
+    ;
+  -ms-transition: background 0.1s linear
+    ;
+  transition: background 0.1s linear
+    ;
+}
+.ui.tag.labels .label:after,
+.ui.tag.label:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: -0.25em;
+  margin-top: -0.3em;
+  background-color: #FFFFFF;
+  width: 0.55em;
+  height: 0.55em;
+  -webkit-box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
+  -moz-border-radius: 100px 100px 100px 100px;
+  -webkit-border-radius: 100px 100px 100px 100px;
+  border-radius: 100px 100px 100px 100px;
+}
+/*-------------------
+       Ribbon
+--------------------*/
+.ui.ribbon.label {
+  position: relative;
+  margin: 0em 0.2em;
+  left: -2rem;
+  padding-left: 2rem;
+  -webkit-border-radius: 0px 4px 4px 0px;
+  -moz-border-radius: 0px 4px 4px 0px;
+  border-radius: 0px 4px 4px 0px;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+.ui.ribbon.label:after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0%;
+  border-top: 0em solid transparent;
+  border-right-width: 1em;
+  border-right-color: inherit;
+  border-right-style: solid;
+  border-bottom: 1em solid transparent;
+  border-left: 0em solid transparent;
+  width: 0em;
+  height: 0em;
+}
+/*-------------------
+       Attached
+--------------------*/
+.ui.top.attached.label,
+.ui.attached.label {
+  width: 100%;
+  position: absolute;
+  margin: 0em;
+  top: 0em;
+  left: 0em;
+  padding: 0.75em 1em;
+  -webkit-border-radius: 4px 4px 0em 0em;
+  -moz-border-radius: 4px 4px 0em 0em;
+  border-radius: 4px 4px 0em 0em;
+}
+.ui.bottom.attached.label {
+  top: auto;
+  bottom: 0em;
+  -webkit-border-radius: 0em 0em 4px 4px;
+  -moz-border-radius: 0em 0em 4px 4px;
+  border-radius: 0em 0em 4px 4px;
+}
+.ui.top.left.attached.label {
+  width: auto;
+  margin-top: 0em !important;
+  -webkit-border-radius: 4px 0em 4px 0em;
+  -moz-border-radius: 4px 0em 4px 0em;
+  border-radius: 4px 0em 4px 0em;
+}
+.ui.top.right.attached.label {
+  width: auto;
+  left: auto;
+  right: 0em;
+  -webkit-border-radius: 0em 4px 0em 4px;
+  -moz-border-radius: 0em 4px 0em 4px;
+  border-radius: 0em 4px 0em 4px;
+}
+.ui.bottom.left.attached.label {
+  width: auto;
+  top: auto;
+  bottom: 0em;
+  -webkit-border-radius: 4px 0em 0em 4px;
+  -moz-border-radius: 4px 0em 0em 4px;
+  border-radius: 4px 0em 0em 4px;
+}
+.ui.bottom.right.attached.label {
+  top: auto;
+  bottom: 0em;
+  left: auto;
+  right: 0em;
+  width: auto;
+  -webkit-border-radius: 4px 0em 4px 0em;
+  -moz-border-radius: 4px 0em 4px 0em;
+  border-radius: 4px 0em 4px 0em;
+}
+/*-------------------
+    Corner Label
+--------------------*/
+.ui.corner.label {
+  background-color: transparent;
+  position: absolute;
+  top: 0em;
+  right: 0em;
+  z-index: 10;
+  margin: 0em;
+  font-size: 0.8125em;
+  width: 2rem;
+  height: 2rem;
+  padding: 0em;
+  text-align: center;
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
+  -ms-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+.ui.corner.label:after {
+  position: absolute;
+  content: "";
+  right: 0em;
+  top: 0em;
+  z-index: -1;
+  width: 0em;
+  height: 0em;
+  border-top: 0em solid transparent;
+  border-right: 3em solid transparent;
+  border-bottom: 3em solid transparent;
+  border-left: 0em solid transparent;
+  border-right-color: inherit;
+  -webkit-transition: border-color 0.2s ease;
+  -moz-transition: border-color 0.2s ease;
+  -o-transition: border-color 0.2s ease;
+  -ms-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+.ui.corner.label .icon {
+  margin: 0.4em 0em 0em 0.7em;
+}
+.ui.corner.label .text {
+  display: inline-block;
+  font-weight: bold;
+  margin: 0.5em 0em 0em 0.6em;
+  width: 2.5em;
+  font-size: 0.82em;
+  text-align: center;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* Left Corner */
+.ui.left.corner.label,
+.ui.left.corner.label:after {
+  right: auto;
+  left: 0em;
+}
+.ui.left.corner.label:after {
+  border-top: 3em solid transparent;
+  border-right: 3em solid transparent;
+  border-bottom: 0em solid transparent;
+  border-left: 0em solid transparent;
+  border-top-color: inherit;
+}
+.ui.left.corner.label .icon {
+  margin: 0.4em 0em 0em -0.7em;
+}
+.ui.left.corner.label .text {
+  margin: 0.5em 0em 0em -0.6em;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/* Hover */
+.ui.corner.label:hover {
+  background-color: transparent;
+}
+/*-------------------
+       Fluid
+--------------------*/
+.ui.label.fluid,
+.ui.fluid.labels > .label {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*-------------------
+       Inverted
+--------------------*/
+.ui.inverted.labels .label,
+.ui.inverted.label {
+  color: #FFFFFF !important;
+}
+/*-------------------
+       Colors
+--------------------*/
+/*--- Black ---*/
+.ui.black.labels .label,
+.ui.black.label {
+  background-color: #5C6166 !important;
+  border-color: #5C6166 !important;
+  color: #FFFFFF !important;
+}
+.ui.labels .black.label:before,
+.ui.black.labels .label:before,
+.ui.black.label:before {
+  background-color: #5C6166 !important;
+}
+/* Hover */
+a.ui.black.labels .label:hover,
+a.ui.black.label:hover {
+  background-color: #333333 !important;
+  border-color: #333333 !important;
+}
+.ui.labels a.black.label:hover:before,
+.ui.black.labels a.label:hover:before,
+a.ui.black.label:hover:before {
+  background-color: #333333 !important;
+}
+/* Corner */
+.ui.black.corner.label,
+.ui.black.corner.label:hover {
+  background-color: transparent !important;
+}
+/* Ribbon */
+.ui.black.ribbon.label {
+  border-color: #333333 !important;
+}
+/*--- Green ---*/
+.ui.green.labels .label,
+.ui.green.label {
+  background-color: #A1CF64 !important;
+  border-color: #A1CF64 !important;
+  color: #FFFFFF !important;
+}
+.ui.labels .green.label:before,
+.ui.green.labels .label:before,
+.ui.green.label:before {
+  background-color: #A1CF64 !important;
+}
+/* Hover */
+a.ui.green.labels .label:hover,
+a.ui.green.label:hover {
+  background-color: #89B84C !important;
+  border-color: #89B84C !important;
+}
+.ui.labels a.green.label:hover:before,
+.ui.green.labels a.label:hover:before,
+a.ui.green.label:hover:before {
+  background-color: #89B84C !important;
+}
+/* Corner */
+.ui.green.corner.label,
+.ui.green.corner.label:hover {
+  background-color: transparent !important;
+}
+/* Ribbon */
+.ui.green.ribbon.label {
+  border-color: #89B84C !important;
+}
+/*--- Red ---*/
+.ui.red.labels .label,
+.ui.red.label {
+  background-color: #D95C5C !important;
+  border-color: #D95C5C !important;
+  color: #FFFFFF !important;
+}
+.ui.labels .red.label:before,
+.ui.red.labels .label:before,
+.ui.red.label:before {
+  background-color: #D95C5C !important;
+}
+/* Corner */
+.ui.red.corner.label,
+.ui.red.corner.label:hover {
+  background-color: transparent !important;
+}
+/* Hover */
+a.ui.red.labels .label:hover,
+a.ui.red.label:hover {
+  background-color: #DE3859 !important;
+  border-color: #DE3859 !important;
+  color: #FFFFFF !important;
+}
+.ui.labels a.red.label:hover:before,
+.ui.red.labels a.label:hover:before,
+a.ui.red.label:hover:before {
+  background-color: #DE3859 !important;
+}
+/* Ribbon */
+.ui.red.ribbon.label {
+  border-color: #DE3859 !important;
+}
+/*--- Blue ---*/
+.ui.blue.labels .label,
+.ui.blue.label {
+  background-color: #6ECFF5 !important;
+  border-color: #6ECFF5 !important;
+  color: #FFFFFF !important;
+}
+.ui.labels .blue.label:before,
+.ui.blue.labels .label:before,
+.ui.blue.label:before {
+  background-color: #6ECFF5 !important;
+}
+/* Hover */
+a.ui.blue.labels .label:hover,
+.ui.blue.labels a.label:hover,
+a.ui.blue.label:hover {
+  background-color: #1AB8F3 !important;
+  border-color: #1AB8F3 !important;
+  color: #FFFFFF !important;
+}
+.ui.labels a.blue.label:hover:before,
+.ui.blue.labels a.label:hover:before,
+a.ui.blue.label:hover:before {
+  background-color: #1AB8F3 !important;
+}
+/* Corner */
+.ui.blue.corner.label,
+.ui.blue.corner.label:hover {
+  background-color: transparent !important;
+}
+/* Ribbon */
+.ui.blue.ribbon.label {
+  border-color: #1AB8F3 !important;
+}
+/*--- Purple ---*/
+.ui.purple.labels .label,
+.ui.purple.label {
+  background-color: #564F8A !important;
+  border-color: #564F8A !important;
+  color: #FFFFFF !important;
+}
+.ui.labels .purple.label:before,
+.ui.purple.labels .label:before,
+.ui.purple.label:before {
+  background-color: #564F8A !important;
+}
+/* Hover */
+a.ui.purple.labels .label:hover,
+.ui.purple.labels a.label:hover,
+a.ui.purple.label:hover {
+  background-color: #3E3773 !important;
+  border-color: #3E3773 !important;
+  color: #FFFFFF !important;
+}
+.ui.labels a.purple.label:hover:before,
+.ui.purple.labels a.label:hover:before,
+a.ui.purple.label:hover:before {
+  background-color: #3E3773 !important;
+}
+/* Corner */
+.ui.purple.corner.label,
+.ui.purple.corner.label:hover {
+  background-color: transparent !important;
+}
+/* Ribbon */
+.ui.purple.ribbon.label {
+  border-color: #3E3773 !important;
+}
+/*--- Orange ---*/
+.ui.orange.labels .label,
+.ui.orange.label {
+  background-color: #F05940 !important;
+  border-color: #F05940 !important;
+  color: #FFFFFF !important;
+}
+.ui.labels .orange.label:before,
+.ui.orange.labels .label:before,
+.ui.orange.label:before {
+  background-color: #F05940 !important;
+}
+/* Hover */
+a.ui.orange.labels .label:hover,
+.ui.orange.labels a.label:hover,
+a.ui.orange.label:hover {
+  background-color: #FF4121 !important;
+  border-color: #FF4121 !important;
+  color: #FFFFFF !important;
+}
+.ui.labels a.orange.label:hover:before,
+.ui.orange.labels a.label:hover:before,
+a.ui.orange.label:hover:before {
+  background-color: #FF4121 !important;
+}
+/* Corner */
+.ui.orange.corner.label,
+.ui.orange.corner.label:hover {
+  background-color: transparent !important;
+}
+/* Ribbon */
+.ui.orange.ribbon.label {
+  border-color: #FF4121 !important;
+}
+/*--- Teal ---*/
+.ui.teal.labels .label,
+.ui.teal.label {
+  background-color: #00B5AD !important;
+  border-color: #00B5AD !important;
+  color: #FFFFFF !important;
+}
+.ui.labels .teal.label:before,
+.ui.teal.labels .label:before,
+.ui.teal.label:before {
+  background-color: #00B5AD !important;
+}
+/* Hover */
+a.ui.teal.labels .label:hover,
+.ui.teal.labels a.label:hover,
+a.ui.teal.label:hover {
+  background-color: #009A93 !important;
+  border-color: #009A93 !important;
+  color: #FFFFFF !important;
+}
+.ui.labels a.teal.label:hover:before,
+.ui.teal.labels a.label:hover:before,
+a.ui.teal.label:hover:before {
+  background-color: #009A93 !important;
+}
+/* Corner */
+.ui.teal.corner.label,
+.ui.teal.corner.label:hover {
+  background-color: transparent !important;
+}
+/* Ribbon */
+.ui.teal.ribbon.label {
+  border-color: #009A93 !important;
+}
+/*-------------------
+     Horizontal
+--------------------*/
+.ui.horizontal.labels .label,
+.ui.horizontal.label {
+  margin: -0.125em 0.5em -0.125em 0em;
+  padding: 0.35em 1em;
+  min-width: 6em;
+  text-align: center;
+}
+/*-------------------
+       Circular
+--------------------*/
+.ui.circular.labels .label,
+.ui.circular.label {
+  min-height: 1em;
+  max-height: 2em;
+  padding: 0.5em !important;
+  line-height: 1em;
+  text-align: center;
+  -webkit-border-radius: 500rem;
+  -moz-border-radius: 500rem;
+  border-radius: 500rem;
+}
+/*-------------------
+       Pointing
+--------------------*/
+.ui.pointing.label {
+  position: relative;
+}
+.ui.attached.pointing.label {
+  position: absolute;
+}
+.ui.pointing.label:before {
+  position: absolute;
+  content: "";
+  width: 0.6em;
+  height: 0.6em;
+  background-image: none;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 2;
+  -webkit-transition: background 0.1s linear
+  ;
+  -moz-transition: background 0.1s linear
+  ;
+  -o-transition: background 0.1s linear
+  ;
+  -ms-transition: background 0.1s linear
+  ;
+  transition: background 0.1s linear
+  ;
+}
+/*--- Above ---*/
+.ui.pointing.label:before {
+  background-color: #E8E8E8;
+}
+.ui.pointing.label,
+.ui.pointing.above.label {
+  margin-top: 1em;
+}
+.ui.pointing.label:before,
+.ui.pointing.above.label:before {
+  margin-left: -0.3em;
+  top: -0.3em;
+  left: 50%;
+}
+/*--- Below ---*/
+.ui.pointing.below.label {
+  margin-top: 0em;
+  margin-bottom: 1em;
+}
+.ui.pointing.below.label:before {
+  margin-left: -0.3em;
+  top: auto;
+  right: auto;
+  bottom: -0.3em;
+  left: 50%;
+}
+/*--- Left ---*/
+.ui.pointing.left.label {
+  margin-top: 0em;
+  margin-left: 1em;
+}
+.ui.pointing.left.label:before {
+  margin-top: -0.3em;
+  bottom: auto;
+  right: auto;
+  top: 50%;
+  left: 0em;
+}
+/*--- Right ---*/
+.ui.pointing.right.label {
+  margin-top: 0em;
+  margin-right: 1em;
+}
+.ui.pointing.right.label:before {
+  margin-top: -0.3em;
+  right: -0.3em;
+  top: 50%;
+  bottom: auto;
+  left: auto;
+}
+/*------------------
+   Floating Label
+-------------------*/
+.ui.floating.label {
+  position: absolute;
+  z-index: 100;
+  top: -1em;
+  left: 100%;
+  margin: 0em 0em 0em -1.5em !important;
+}
+/*-------------------
+        Sizes
+--------------------*/
+.ui.small.labels .label,
+.ui.small.label {
+  font-size: 0.75rem;
+}
+.ui.label {
+  font-size: 0.8125rem;
+}
+.ui.large.labels .label,
+.ui.large.label {
+  font-size: 0.875rem;
+}
+.ui.huge.labels .label,
+.ui.huge.label {
+  font-size: 1rem;
+}
+.ui.checkbox {
+  position: relative;
+  display: inline-block;
+  min-width: 1em;
+  min-height: 1.25em;
+  line-height: 1em;
+  outline: none;
+  vertical-align: middle;
+}
+.ui.checkbox input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  outline: none;
+}
+/*--- Box ---*/
+.ui.checkbox .box,
+.ui.checkbox label {
+  cursor: pointer;
+  padding-left: 2em;
+  outline: none;
+}
+.ui.checkbox .box:before,
+.ui.checkbox label:before {
+  position: absolute;
+  top: 0em;
+  line-height: 1;
+  width: 1em;
+  height: 1em;
+  left: 0em;
+  content: '';
+  border-radius: 4px;
+  background: #FFFFFF;
+  -webkit-transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -moz-transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.2);
+}
+/*--- Checkbox ---*/
+.ui.checkbox .box:after,
+.ui.checkbox label:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  content: '';
+  position: absolute;
+  background: transparent;
+  border: 0.2em solid #333333;
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.ui.checkbox .box:after,
+.ui.checkbox label:after {
+  top: 0.275em;
+  left: 0.2em;
+  width: 0.45em;
+  height: 0.15em;
+}
+/*--- Inside Label ---*/
+.ui.checkbox label {
+  display: block;
+  color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+.ui.checkbox label:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+.ui.checkbox input:focus ~ label {
+  color: rgba(0, 0, 0, 0.8);
+}
+/*--- Outside Label  ---*/
+.ui.checkbox ~ label {
+  cursor: pointer;
+  opacity: 0.85;
+  vertical-align: middle;
+}
+.ui.checkbox ~ label:hover {
+  opacity: 1;
+}
+/*******************************
+           States
+*******************************/
+/*--- Hover ---*/
+.ui.checkbox .box:hover::before,
+.ui.checkbox label:hover::before {
+  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
+}
+/*--- Down ---*/
+.ui.checkbox .box:active::before,
+.ui.checkbox label:active::before {
+  background-color: #F5F5F5;
+}
+/*--- Focus ---*/
+.ui.checkbox input:focus ~ .box:before,
+.ui.checkbox input:focus ~ label:before {
+  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
+}
+/*--- Active ---*/
+.ui.checkbox input:checked ~ .box:after,
+.ui.checkbox input:checked ~ label:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+/*--- Disabled ---*/
+.ui.disabled.checkbox ~ .box:after,
+.ui.checkbox input[disabled] ~ .box:after,
+.ui.disabled.checkbox label,
+.ui.checkbox input[disabled] ~ label {
+  opacity: 0.4;
+  color: rgba(0, 0, 0, 0.3);
+}
+/*******************************
+          Variations
+*******************************/
+/*--------------
+     Radio
+---------------*/
+.ui.radio.checkbox .box:before,
+.ui.radio.checkbox label:before {
+  min-width: 1em;
+  height: 1em;
+  border-radius: 500px;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+.ui.radio.checkbox .box:after,
+.ui.radio.checkbox label:after {
+  border: none;
+  top: 0.2em;
+  left: 0.2em;
+  width: 0.6em;
+  height: 0.6em;
+  background-color: #555555;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+  border-radius: 500px;
+}
+/*--------------
+     Slider
+---------------*/
+.ui.slider.checkbox {
+  cursor: pointer;
+  min-width: 3em;
+}
+/* Line */
+.ui.slider.checkbox:after {
+  position: absolute;
+  top: 0.5em;
+  left: 0em;
+  content: '';
+  width: 3em;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/* Button */
+.ui.slider.checkbox .box,
+.ui.slider.checkbox label {
+  padding-left: 4em;
+}
+.ui.slider.checkbox .box:before,
+.ui.slider.checkbox label:before {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: -0.25em;
+  left: 0em;
+  z-index: 1;
+  width: 1.5em;
+  height: 1.5em;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
+  border-radius: 50rem;
+  -webkit-transition: left 0.3s ease 0s;
+  -moz-transition: left 0.3s ease 0s;
+  transition: left 0.3s ease 0s;
+}
+/* Button Activation Light */
+.ui.slider.checkbox .box:after,
+.ui.slider.checkbox label:after {
+  opacity: 1;
+  position: absolute;
+  content: '';
+  top: 0.15em;
+  left: 0em;
+  z-index: 2;
+  margin-left: 0.375em;
+  border: none;
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50rem;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+  -webkit-transition: background 0.3s ease 0s,
+    left 0.3s ease 0s
+  ;
+  -moz-transition: background 0.3s ease 0s,
+    left 0.3s ease 0s
+  ;
+  transition: background 0.3s ease 0s,
+    left 0.3s ease 0s
+  ;
+}
+/* Selected Slider Toggle */
+.ui.slider.checkbox input:checked ~ .box:before,
+.ui.slider.checkbox input:checked ~ label:before,
+.ui.slider.checkbox input:checked ~ .box:after,
+.ui.slider.checkbox input:checked ~ label:after {
+  left: 1.75em;
+}
+/* Off Color */
+.ui.slider.checkbox .box:after,
+.ui.slider.checkbox label:after {
+  background-color: #D95C5C;
+}
+/* On Color */
+.ui.slider.checkbox input:checked ~ .box:after,
+.ui.slider.checkbox input:checked ~ label:after {
+  background-color: #89B84C;
+}
+/*--------------
+     Toggle
+---------------*/
+.ui.toggle.checkbox {
+  cursor: pointer;
+}
+.ui.toggle.checkbox .box,
+.ui.toggle.checkbox label {
+  padding-left: 4em;
+}
+/* Switch */
+.ui.toggle.checkbox .box:before,
+.ui.toggle.checkbox label:before {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  content: '';
+  top: -0.25em;
+  left: 0em;
+  z-index: 1;
+  background-color: #FFFFFF;
+  width: 3em;
+  height: 1.5em;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
+  border-radius: 50rem;
+}
+/* Activation Light */
+.ui.toggle.checkbox .box:after,
+.ui.toggle.checkbox label:after {
+  opacity: 1;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  content: '';
+  position: absolute;
+  top: 0.15em;
+  left: 0.5em;
+  z-index: 2;
+  border: none;
+  width: 0.75em;
+  height: 0.75em;
+  background-color: #D95C5C;
+  border-radius: 50rem;
+  -webkit-transition: background 0.3s ease 0s,
+    left 0.3s ease 0s
+  ;
+  -moz-transition: background 0.3s ease 0s,
+    left 0.3s ease 0s
+  ;
+  transition: background 0.3s ease 0s,
+    left 0.3s ease 0s
+  ;
+}
+/* Active */
+.ui.toggle.checkbox:active .box:before,
+.ui.toggle.checkbox:active label:before {
+  background-color: #F5F5F5;
+}
+/* Active */
+.ui.toggle.checkbox input:checked ~ .box:after,
+.ui.toggle.checkbox input:checked ~ label:after {
+  left: 1.75em;
+  background-color: #89B84C;
+}
+/*--------------
+     Sizes
+---------------*/
+.ui.checkbox {
+  font-size: 1em;
+}
+.ui.large.checkbox {
+  font-size: 1.25em;
+}
+.ui.huge.checkbox {
+  font-size: 1.5em;
+}

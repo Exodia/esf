@@ -1,0 +1,131 @@
+/* User CSS */
+#navigator {
+  list-style: none;
+  padding: 0;
+  margin-left: 10px;
+}
+#navigator li a {
+    text-decoration: none;
+    display: block;
+    background-color: #f5f5f5;
+    color: #000;
+    border: 1px solid #a2a2a2;
+    margin-top: -1px;
+    padding: 8px 14px;
+}
+#navigator li:first-child a {
+    border-radius: 6px 6px 0 0;
+}
+#navigator li:last-child a {
+    border-radius: 0 0 6px 6px;
+}
+#navigator li a:hover {
+    background-color: #a2a2a2;
+    color: #fff;
+}
+#navigator li.cur a{
+    background-color: #a2a2a2;
+    color: #fff;
+}
+
+#page {
+    width: 1200px;
+    margin: 0 auto 40px;
+}
+
+h1 {
+    background: #252525;
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 40px;
+    padding: 0 8px;
+    margin: 0;
+    font-weight: normal;
+    text-rendering: optimizelegibility;
+}
+h2 {
+    font-size: 24px;
+}
+.view {
+    padding: 20px;
+    line-height: 1.5;
+    background-color: #eee;
+    border-radius: 6px;
+    position: relative;
+}
+.viewer {
+    margin: -10px 0 20px -10px;
+    padding: 0;
+    list-style: none;
+}
+.viewer li {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    padding: 4px 12px;
+    margin-right: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    cursor: default;
+}
+.viewer li:hover {
+    background-color: #a2a2a2;
+    color: #fff;
+}
+.source {
+    position: absolute;
+    max-height: 480px;
+    top: 25px;
+    left: 10px;
+    right: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 0 6px 6px 6px;
+    height: 0;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #f5f5f5;
+    font-family: monospace;
+    opacity: 0;
+}
+.source-visible {
+    height: auto;
+    overflow: auto;
+    opacity: 1;
+    transition: opacity .2s linear;
+}
+
+.fa-hover a {
+    color: #666;
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.fa-hover a:hover {
+    background-color: #1d9d74;
+    color: #fff;
+
+}
+h3 {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.ui.image {
+    width:300px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    background-color: rgba(0,0,0,.05);
+}
+
+.ui.image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

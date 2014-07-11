@@ -1,0 +1,315 @@
+/*
+ * # Semantic - Input
+ * http://github.com/jlukic/semantic-ui/
+ *
+ *
+ * Copyright 2013 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+           Standard
+*******************************/
+
+
+/*--------------------
+        Inputs
+---------------------*/
+
+.@{ui-class-prefix}-input {
+  display: inline-block;
+  position: relative;
+  color: rgba(0, 0, 0, 0.7);
+}
+.@{ui-class-prefix}-input input {
+  width: 100%;
+  font-family: @default-font-family;
+
+  margin: 0em;
+  padding: 0.65em 1em;
+  font-size: 1em;
+
+  background-color: @input-background-color;
+  border: @input-border-color;
+  outline: none;
+
+  color: @input-text-color;
+  border-radius: 0.3125em;
+
+  -webkit-transition:
+    background-color 0.3s ease-out,
+    -webkit-box-shadow 0.2s ease,
+    border-color 0.2s ease;
+  -moz-transition:
+    background-color 0.3s ease-out,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+  transition:
+    background-color 0.3s ease-out,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+
+  -webkit-tap-highlight-color:  @input-tap-color;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+/*--------------------
+      Placeholder
+---------------------*/
+
+/* browsers require these rules separate */
+.@{ui-class-prefix}-input::-webkit-input-placeholder {
+  color: @input-placeholder-color;
+}
+.@{ui-class-prefix}-input::-moz-placeholder {
+  color: @input-placeholder-color;
+}
+
+
+/*******************************
+            States
+*******************************/
+
+/*--------------------
+        Active
+---------------------*/
+
+.@{ui-class-prefix}-input input:active,
+.@{ui-class-prefix}-input.down input {
+  border-color: @input-active-border-color;
+  background-color: @input-active-background-color;
+}
+
+/*--------------------
+        Loading
+---------------------*/
+
+.ui.loading.input > .icon {
+  background: url(../images/loader-mini.gif) no-repeat 50% 50%;
+}
+.ui.loading.input > .icon:before,
+.ui.loading.input > .icon:after {
+  display: none;
+}
+
+/*--------------------
+        Focus
+---------------------*/
+
+.@{ui-class-prefix}-input.focus input,
+.@{ui-class-prefix}-input input:focus  {
+  border-color: @input-focus-border-color;
+  color: @input-focus-background-color;
+}
+
+/*--------------------
+        Error
+---------------------*/
+
+.@{ui-class-prefix}-input.error input {
+  background-color: @input-error-background-color;
+  border-color: @input-error-border-color;
+  color: @input-error-text-color;
+}
+
+/* Error Placeholder */
+.@{ui-class-prefix}-input.error input ::-webkit-input-placeholder {
+  color: @input-error-placeholder-color;
+}
+.@{ui-class-prefix}-input.error input ::-moz-placeholder {
+  color: @input-error-placeholder-color;
+}
+.@{ui-class-prefix}-input.error input :focus::-webkit-input-placeholder {
+  color: @input-error-placeholder-color;
+}
+.@{ui-class-prefix}-input.error input :focus::-moz-placeholder {
+  color: @input-error-placeholder-color;
+}
+
+/*--------------------
+        Disabled
+---------------------*/
+
+.@{ui-class-prefix}-input.disabled input,
+.@{ui-class-prefix}-input input[disabled] {
+  background-color: @input-disabled-background-color;
+  border-color: @input-disabled-border-color;
+}
+
+/*******************************
+           Variations
+*******************************/
+
+
+/*--------------------
+      Transparent
+---------------------*/
+
+.ui.transparent.input input {
+  border: none;
+  background-color: transparent;
+}
+
+
+/*--------------------
+         Icon
+---------------------*/
+
+.@{ui-class-prefix}-input.icon > .icon {
+  cursor: default;
+  position: absolute;
+  opacity: 0.5;
+  top: 0px;
+  right: 0px;
+
+  margin: 0em;
+
+  width: 2.6em;
+  height: 100%;
+  padding-top: 0.82em;
+
+  text-align: center;
+  border-radius: 0em 0.3125em 0.3125em 0em;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+.@{ui-class-prefix}-input.icon > .link.icon {
+  cursor: pointer;
+}
+.@{ui-class-prefix}-input.icon input {
+  padding-right: 3em !important;
+}
+.@{ui-class-prefix}-input.icon > .circular.icon {
+  top: 0.35em;
+  right: 0.5em;
+}
+
+/* Left Side */
+.@{ui-class-prefix}-input.icon.left > .icon {
+  right: auto;
+  left: 1px;
+  border-radius: 0.3125em 0em 0em 0.3125em;
+}
+.ui.left.icon.input > .circular.icon {
+  right: auto;
+  left: 0.5em;
+}
+.ui.left.icon.input > input {
+  padding-left: 3em !important;
+  padding-right: 1.2em !important;
+}
+
+/* Focus */
+.ui.icon.input > input:focus ~ .icon {
+  opacity: 1;
+}
+
+/*--------------------
+        Labeled
+---------------------*/
+
+.ui.labeled.input .corner.label {
+  font-size: 0.7em;
+  border-radius: 0 0.3125em;
+}
+.ui.labeled.input .left.corner.label {
+  border-radius: 0.3125em 0;
+}
+.ui.labeled.input input {
+  padding-right: 2.5em !important;
+}
+
+/* Spacing with corner label */
+.ui.labeled.icon.input:not(.left) > input {
+  padding-right: 3.25em !important;
+}
+.ui.labeled.icon.input:not(.left) > .icon {
+  margin-right: 1.25em;
+}
+
+
+/*--------------------
+        Action
+---------------------*/
+
+.ui.action.input {
+  display: table;
+}
+
+.ui.action.input > input {
+  display: table-cell;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-right: none;
+}
+.ui.action.input > .button,
+.ui.action.input > .buttons {
+  display: table-cell;
+
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  white-space: nowrap;
+}
+.ui.action.input > .button > .icon,
+.ui.action.input > .buttons > .button > .icon {
+  display: inline;
+  vertical-align: top;
+}
+
+.ui.fluid.action.input {
+  display: table;
+  width: 100%;
+}
+.ui.fluid.action.input > .button {
+  width: 0.01%;
+}
+
+/*--------------------
+        Fluid
+---------------------*/
+
+.@{ui-class-prefix}-input.fluid {
+  display: block;
+}
+
+
+/*--------------------
+        Size
+---------------------*/
+
+.@{ui-class-prefix}-input.mini {
+  font-size: 0.8125em;
+}
+.@{ui-class-prefix}-input.small {
+  font-size: 0.875em;
+}
+.@{ui-class-prefix}-input {
+  font-size: 1em;
+}
+.@{ui-class-prefix}-input.large {
+  font-size: 1.125em;
+}
+.@{ui-class-prefix}-input.big {
+  font-size: 1.25em;
+}
+.@{ui-class-prefix}-input.huge {
+  font-size: 1.375em;
+}
+.@{ui-class-prefix}-input.massive {
+  font-size: 1.5em;
+}

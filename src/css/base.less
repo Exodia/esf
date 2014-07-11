@@ -1,0 +1,42 @@
+/*csslint important:false*/
+
+/* ==========================================================================
+   Base Extras
+   ========================================================================== */
+
+/**
+ * Extra rules that Pure adds on top of Normalize.css
+ */
+
+/**
+ * Always hide an element when it has the `hidden` HTML attribute.
+ */
+
+[hidden] {
+    display: none !important;
+}
+
+/**
+ * Add this class to an image to make it fit within it's fluid parent wrapper while maintaining
+ * aspect ratio.
+ */
+@{ui-class-prefix}-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/**
+ * Override normalize with variable values.
+ */
+html {
+    font-family: @default-font-family;
+    background: @body-color;
+}
+
+button[disabled],
+html input[disabled],
+@{ui-class-prefix}-disabled {
+    cursor: not-allowed;
+    opacity: 1;
+}

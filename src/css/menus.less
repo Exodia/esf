@@ -1,0 +1,103 @@
+@menu-background-color: #1a1a1a;
+@menu-border-radius: 2px;
+
+@menu-sub-border-color: 1px solid rgba(0, 0, 0, 0.1);
+@menu-sub-background-color: #fff;
+@menu-sub-text-color: #555555;
+
+.@{ui-class-prefix}-menu {
+    overflow: visible;
+    position: relative;
+    background: @menu-background-color;
+    border-radius: @menu-border-radius;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        position: relative;
+        margin: 0;
+        ul.submenu {
+            display: none;
+            position: absolute;
+            z-index: 10;
+            background: @menu-sub-background-color;
+            border: @menu-sub-border-color;
+            li {
+                font-size: .875em;
+                a {
+                    padding: 0.5em 1em;
+                    display: block;
+                    float: none;
+                    color: @menu-sub-text-color;
+                    &:hover {
+                        background: rgba(0, 0, 0, 0.05);
+                    }
+                }
+            }
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            &:hover {
+                background: #404040;
+            }
+        }
+    }
+    li:hover > ul.submenu {
+      display: block;
+    }
+    li.disabled {
+        a {
+            color: #666666;
+            text-shadow: black 0 -1px 0;
+            &:hover {
+                background: none;
+            }
+        }
+    }
+    li.active {
+        background: #333333;
+    }
+}
+
+.@{ui-class-prefix}-menu.horizontal {
+    .clearfix();
+    li {
+        float: left;
+        a {
+            padding: 0.5em 1em;
+            display: block;
+            line-height: 1.7;
+        }
+        ul.submenu {
+            min-width: 100%;
+            left: 0;
+            z-index: 1000;
+            top: auto;
+            left: auto;
+            li {
+                float: none;
+                .flyout {
+                    position: absolute;
+                    top: 0;
+                    &.left {
+                        right: 100%;
+                    }
+                    &.right {
+                        left: 100%;
+                    }
+                }
+            }
+        }
+    }
+    > ul li:first-child,
+    > ul li:first-child a{
+        .border-left-radius(@menu-border-radius);
+    }
+    > ul li:last-child,
+    > ul li:last-child a {
+        .border-right-radius(@menu-border-radius);
+    }
+}
