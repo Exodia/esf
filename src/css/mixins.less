@@ -145,3 +145,17 @@
   .loop-grid-columns(@grid-columns, @class, push);
   .loop-grid-columns(@grid-columns, @class, offset);
 }
+
+.ellipsis(...) {
+    overflow: hidden;
+}
+.ellipsis() {
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ellipsis(@line-number) {
+    display: -webkit-box;
+    -webkit-line-clamp: @line-number;
+    -webkit-box-orient: vertical;  
+}

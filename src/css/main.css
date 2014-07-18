@@ -4,6 +4,9 @@
 /* =========
    Buttons
    ========= */
+/* =========
+   Type
+   ========= */
 /*! normalize.css v1.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -478,7 +481,7 @@ ui-img {
  * Override normalize with variable values.
  */
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
   background: #ffffff;
 }
 button[disabled],
@@ -633,6 +636,9 @@ ui-disabled {
 .align-right {
   text-align: right;
 }
+.text-nowrap {
+  white-space: nowrap;
+}
 .center-block {
   display: block;
   margin-left: auto;
@@ -643,6 +649,156 @@ ui-disabled {
 }
 .pull-right {
   float: right;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimHei, "黑体", STHeiti, "华文黑体", sans-serif;
+  font-weight: bold;
+  color: #000000;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+.h1 small,
+.h2 small,
+.h3 small,
+.h4 small,
+.h5 small,
+.h6 small,
+h1 .small,
+h2 .small,
+h3 .small,
+h4 .small,
+h5 .small,
+h6 .small,
+.h1 .small,
+.h2 .small,
+.h3 .small,
+.h4 .small,
+.h5 .small,
+.h6 .small {
+  font-weight: normal;
+  color: #333333;
+}
+h1 small,
+.h1 small,
+h2 small,
+.h2 small,
+h3 small,
+.h3 small,
+h1 .small,
+.h1 .small,
+h2 .small,
+.h2 .small,
+h3 .small,
+.h3 .small {
+  font-size: 65%;
+}
+h4 small,
+.h4 small,
+h5 small,
+.h5 small,
+h6 small,
+.h6 small,
+h4 .small,
+.h4 .small,
+h5 .small,
+.h5 .small,
+h6 .small,
+.h6 .small {
+  font-size: 75%;
+}
+body {
+  font-size: 14px;
+  line-height: 1.3;
+}
+p.indent {
+  text-indent: 2em;
+}
+pre {
+  background: none repeat scroll 0 0 #e1f0de;
+  font-size: 75%;
+  font-weight: bold;
+  padding: 10px;
+}
+.song {
+  font-family: "Helvetica Neue", Helvetica, Arial, SimSun, "宋体", STSong, "华文宋体", sans-serif;
+}
+.fang-song {
+  font-family: "Helvetica Neue", Helvetica, Arial, FangSong, "仿宋", STFangsong, "华文仿宋", sans-serif;
+}
+.hei {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimHei, "黑体", STHeiti, "华文黑体", sans-serif;
+}
+.kai {
+  font-family: "Helvetica Neue", Helvetica, Arial, KaiTi, "楷体", STKaiti, "华文楷体", sans-serif;
+}
+blockquote {
+  font-style: italic;
+  margin: 0 1.5em 1.5em;
+}
+blockquote footer {
+  color: #777;
+}
+a {
+  color: #489ac1;
+  text-decoration: none;
+}
+a:hover {
+  color: #306f8d;
+  text-decoration: underline;
+}
+address {
+  font-style: normal;
+}
+ul,
+ol {
+  margin-top: 0;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-bottom: 0;
+}
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+  margin-left: -5px;
+}
+.list-inline > li {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.truncate2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 /*
  * # Semantic - Input
@@ -667,7 +823,7 @@ ui-disabled {
 }
 .ui-input input {
   width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
   margin: 0em;
   padding: 0.65em 1em;
   font-size: 1em;
@@ -963,7 +1119,7 @@ Resets the font family back to the OS/browser's default sans-serif font,
 this the same font stack that Normalize.css sets for the `body`.
 */
 .ui-g [class*="ui-u"] {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
 }
 .ui-u-1,
 .ui-u-1-1,
@@ -1147,6 +1303,13 @@ this the same font stack that Normalize.css sets for the `body`.
 .ui-u-5-5,
 .ui-u-24-24 {
   width: 100%;
+}
+.ui-divider {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  height: 0;
+  line-height: 1;
+  overflow: hidden;
 }
 /*!
 @{ui-class-prefix} v0.5.0
