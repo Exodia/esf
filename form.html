@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>UI - ESUI Demo</title>
+        <link rel="stylesheet" href="src/css/main.css" />
+        <link rel="stylesheet" href="src/icons/css/font-awesome.css" />
+        <link rel="stylesheet" href="demo.css" />
+    </head>
+    <body>
+        <div class="page-header p1"> 
+            <h1>表单</h1>
+        </div>
+        <div id="layout" class="ui-g">
+            <div class="ui-u-1-5">
+                <ul id="navigator">
+                    <li><a href="index.html">Get Started</a></li>
+                    <li><a href="#">Layouts</a></li>
+                    <li><a href="checkbox.html">Checkbox</a></li>
+                    <li><a href="icons.html">Icons</a></li>
+                    <li><a href="input.html">Input</a></li>
+                    <li><a href="label.html">Label</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                </ul>
+            </div>
+            <div class="ui-u-4-5">
+                <div id="main" class="content p2 no-pt">
+                    <h2 id="icons" class="content-subhead">普通表单</h2>
+                    <form class="ui-form">
+                        <fieldset>
+                            <legend>表单名称</legend>
+                            <div class="field-row">
+                                <label class="field-label" for="email">邮件地址</label>
+                                <div class="ui-input">
+                                  <input id="email" type="text" placeholder="Email" />
+                                </div>
+                            </div>
+                            <div class="field-row">
+                                <label class="field-label" for="password">密码</label>
+                                <div class="ui-input">
+                                  <input id="password" type="password" placeholder="Password" />
+                                </div>
+                            </div>
+                            <div class="field-row">
+                                <label class="field-label" for="state">景点</label>
+                                <select id="state">
+                                    <option>长白山</option>
+                                    <option>武夷山</option>
+                                    <option>泰山</option>
+                                </select>
+                            </div>
+                            <div class="field-row">
+                                <div class="ui checkbox">
+                                  <input type="checkbox" id="unique-id">
+                                  <label for="unique-id">记住密码</label>
+                                </div>
+                            </div>
+                            <div class="field-row">
+                                <button type="submit" class="ui-button primary">登录</button> <button type="button" class="ui-button secondary">返回</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <h2 id="icons" class="content-subhead">表单和Grid一起</h2>
+                    <form class="ui-form">
+                        <fieldset>
+                            <legend>复杂点表单</legend>
+                            <div class="field-row">
+                                <div class="ui-g">
+                                    <div class="ui-u-1-2">
+                                        <label class="field-label" for="email">邮件地址</label>
+                                        <div class="ui-input fluid">
+                                            <input id="email" type="text" placeholder="Email" />
+                                        </div>
+                                    </div>
+                                    <div class="ui-u-1-2">
+                                        <label class="field-label" for="email">邮件地址</label>
+                                        <div class="ui-input fluid">
+                                            <input id="email" type="text" placeholder="Email" />
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="field-row">
+                                <label class="field-label" for="password">密码</label>
+                                <div class="ui-input">
+                                  <input id="password" type="password" placeholder="Password" />
+                                </div>
+                            </div>
+                            <div class="field-row">
+                                <label class="field-label" for="state">景点</label>
+                                <select id="state">
+                                    <option>长白山</option>
+                                    <option>武夷山</option>
+                                    <option>泰山</option>
+                                </select>
+                            </div>
+                            <div class="field-row">
+                                <div class="ui checkbox">
+                                  <input type="checkbox" id="unique-id">
+                                  <label for="unique-id">记住密码</label>
+                                </div>
+                            </div>
+                            <div class="field-row">
+                                <button type="submit" class="ui-button primary">登录</button> <button type="button" class="ui-button secondary">返回</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

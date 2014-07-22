@@ -636,7 +636,7 @@ ui-disabled {
 .align-right {
   text-align: right;
 }
-.text-nowrap {
+.nowrap {
   white-space: nowrap;
 }
 .center-block {
@@ -799,257 +799,6 @@ ol ol {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-}
-/*
- * # Semantic - Input
- * http://github.com/jlukic/semantic-ui/
- *
- *
- * Copyright 2013 Contributors
- * Released under the MIT license
- * http://opensource.org/licenses/MIT
- *
- */
-/*******************************
-           Standard
-*******************************/
-/*--------------------
-        Inputs
----------------------*/
-.ui-input {
-  display: inline-block;
-  position: relative;
-  color: rgba(0, 0, 0, 0.7);
-}
-.ui-input input {
-  width: 100%;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
-  margin: 0em;
-  padding: 0.65em 1em;
-  font-size: 1em;
-  background-color: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  outline: none;
-  color: rgba(0, 0, 0, 0.7);
-  border-radius: 0.3125em;
-  -webkit-transition: background-color 0.3s ease-out, -webkit-box-shadow 0.2s ease, border-color 0.2s ease;
-  -moz-transition: background-color 0.3s ease-out, box-shadow 0.2s ease, border-color 0.2s ease;
-  transition: background-color 0.3s ease-out, box-shadow 0.2s ease, border-color 0.2s ease;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
-/*--------------------
-      Placeholder
----------------------*/
-/* browsers require these rules separate */
-.ui-input::-webkit-input-placeholder {
-  color: #bbbbbb;
-}
-.ui-input::-moz-placeholder {
-  color: #bbbbbb;
-}
-/*******************************
-            States
-*******************************/
-/*--------------------
-        Active
----------------------*/
-.ui-input input:active,
-.ui-input.down input {
-  border-color: rgba(0, 0, 0, 0.3);
-  background-color: #fafafa;
-}
-/*--------------------
-        Loading
----------------------*/
-.ui.loading.input > .icon {
-  background: url(../images/loader-mini.gif) no-repeat 50% 50%;
-}
-.ui.loading.input > .icon:before,
-.ui.loading.input > .icon:after {
-  display: none;
-}
-/*--------------------
-        Focus
----------------------*/
-.ui-input.focus input,
-.ui-input input:focus {
-  border-color: rgba(0, 0, 0, 0.2);
-  color: rgba(0, 0, 0, 0.85);
-}
-/*--------------------
-        Error
----------------------*/
-.ui-input.error input {
-  background-color: #fffafa;
-  border-color: #e7bebe;
-  color: #d95c5c;
-}
-/* Error Placeholder */
-.ui-input.error input ::-webkit-input-placeholder {
-  color: #ff0000;
-}
-.ui-input.error input ::-moz-placeholder {
-  color: #ff0000;
-}
-.ui-input.error input :focus::-webkit-input-placeholder {
-  color: #ff0000;
-}
-.ui-input.error input :focus::-moz-placeholder {
-  color: #ff0000;
-}
-/*--------------------
-        Disabled
----------------------*/
-.ui-input.disabled input,
-.ui-input input[disabled] {
-  background-color: #eeeeee;
-  border-color: rgba(0, 0, 0, 0.2);
-}
-/*******************************
-           Variations
-*******************************/
-/*--------------------
-      Transparent
----------------------*/
-.ui.transparent.input input {
-  border: none;
-  background-color: transparent;
-}
-/*--------------------
-         Icon
----------------------*/
-.ui-input.icon > .icon {
-  cursor: default;
-  position: absolute;
-  opacity: 0.5;
-  top: 0px;
-  right: 0px;
-  margin: 0em;
-  width: 2.6em;
-  height: 100%;
-  padding-top: 0.82em;
-  text-align: center;
-  border-radius: 0em 0.3125em 0.3125em 0em;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: opacity 0.3s ease-out;
-  -moz-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out;
-}
-.ui-input.icon > .link.icon {
-  cursor: pointer;
-}
-.ui-input.icon input {
-  padding-right: 3em !important;
-}
-.ui-input.icon > .circular.icon {
-  top: 0.35em;
-  right: 0.5em;
-}
-/* Left Side */
-.ui-input.icon.left > .icon {
-  right: auto;
-  left: 1px;
-  border-radius: 0.3125em 0em 0em 0.3125em;
-}
-.ui.left.icon.input > .circular.icon {
-  right: auto;
-  left: 0.5em;
-}
-.ui.left.icon.input > input {
-  padding-left: 3em !important;
-  padding-right: 1.2em !important;
-}
-/* Focus */
-.ui.icon.input > input:focus ~ .icon {
-  opacity: 1;
-}
-/*--------------------
-        Labeled
----------------------*/
-.ui.labeled.input .corner.label {
-  font-size: 0.7em;
-  border-radius: 0 0.3125em;
-}
-.ui.labeled.input .left.corner.label {
-  border-radius: 0.3125em 0;
-}
-.ui.labeled.input input {
-  padding-right: 2.5em !important;
-}
-/* Spacing with corner label */
-.ui.labeled.icon.input:not(.left) > input {
-  padding-right: 3.25em !important;
-}
-.ui.labeled.icon.input:not(.left) > .icon {
-  margin-right: 1.25em;
-}
-/*--------------------
-        Action
----------------------*/
-.ui.action.input {
-  display: table;
-}
-.ui.action.input > input {
-  display: table-cell;
-  border-top-right-radius: 0px !important;
-  border-bottom-right-radius: 0px !important;
-  border-right: none;
-}
-.ui.action.input > .button,
-.ui.action.input > .buttons {
-  display: table-cell;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  white-space: nowrap;
-}
-.ui.action.input > .button > .icon,
-.ui.action.input > .buttons > .button > .icon {
-  display: inline;
-  vertical-align: top;
-}
-.ui.fluid.action.input {
-  display: table;
-  width: 100%;
-}
-.ui.fluid.action.input > .button {
-  width: 0.01%;
-}
-/*--------------------
-        Fluid
----------------------*/
-.ui-input.fluid {
-  display: block;
-}
-/*--------------------
-        Size
----------------------*/
-.ui-input.mini {
-  font-size: 0.8125em;
-}
-.ui-input.small {
-  font-size: 0.875em;
-}
-.ui-input {
-  font-size: 1em;
-}
-.ui-input.large {
-  font-size: 1.125em;
-}
-.ui-input.big {
-  font-size: 1.25em;
-}
-.ui-input.huge {
-  font-size: 1.375em;
-}
-.ui-input.massive {
-  font-size: 1.5em;
 }
 /*!
 Pure v0.5.0
@@ -1303,6 +1052,296 @@ this the same font stack that Normalize.css sets for the `body`.
 .ui-u-5-5,
 .ui-u-24-24 {
   width: 100%;
+}
+.ui-form fieldset {
+  margin: 0;
+  padding: .35em 0 .75em;
+  border: 0;
+}
+.ui-form legend {
+  display: block;
+  width: 100%;
+  padding: 0.3em 0;
+  margin-bottom: 0.3em;
+  color: #333;
+  border-bottom: 1px solid #e5e5e5;
+}
+.ui-form .field-label {
+  display: block;
+  margin-bottom: 0.3em;
+}
+.ui-form .field-row {
+  margin-bottom: 0.3em;
+}
+.ui-form .field-row .ui-u-* {
+  padding-right: 1%;
+}
+select {
+  padding: 0.65em 1em;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 0.3125em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+select:focus,
+textarea:focus {
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  border-color: #129FEA;
+}
+/*
+ * # Semantic - Input
+ * http://github.com/jlukic/semantic-ui/
+ *
+ *
+ * Copyright 2013 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*******************************
+           Standard
+*******************************/
+/*--------------------
+        Inputs
+---------------------*/
+.ui-input {
+  display: inline-block;
+  position: relative;
+  color: rgba(0, 0, 0, 0.7);
+}
+.ui-input input {
+  width: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
+  margin: 0em;
+  padding: 0.65em 1em;
+  font-size: 1em;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  outline: none;
+  color: rgba(0, 0, 0, 0.7);
+  border-radius: 0.3125em;
+  -webkit-transition: background-color 0.3s ease-out, -webkit-box-shadow 0.2s ease, border-color 0.2s ease;
+  -moz-transition: background-color 0.3s ease-out, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: background-color 0.3s ease-out, box-shadow 0.2s ease, border-color 0.2s ease;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*--------------------
+      Placeholder
+---------------------*/
+/* browsers require these rules separate */
+.ui-input::-webkit-input-placeholder {
+  color: #bbbbbb;
+}
+.ui-input::-moz-placeholder {
+  color: #bbbbbb;
+}
+/*******************************
+            States
+*******************************/
+/*--------------------
+        Active
+---------------------*/
+.ui-input input:active,
+.ui-input.down input {
+  border-color: rgba(0, 0, 0, 0.3);
+  background-color: #fafafa;
+}
+/*--------------------
+        Loading
+---------------------*/
+.ui.loading.input > .icon {
+  background: url(../images/loader-mini.gif) no-repeat 50% 50%;
+}
+.ui.loading.input > .icon:before,
+.ui.loading.input > .icon:after {
+  display: none;
+}
+/*--------------------
+        Focus
+---------------------*/
+.ui-input.focus input,
+.ui-input input:focus {
+  border-color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.85);
+}
+/*--------------------
+        Error
+---------------------*/
+.ui-input.error input {
+  background-color: #fffafa;
+  border-color: #e7bebe;
+  color: #d95c5c;
+}
+/* Error Placeholder */
+.ui-input.error input ::-webkit-input-placeholder {
+  color: #ff0000;
+}
+.ui-input.error input ::-moz-placeholder {
+  color: #ff0000;
+}
+.ui-input.error input :focus::-webkit-input-placeholder {
+  color: #ff0000;
+}
+.ui-input.error input :focus::-moz-placeholder {
+  color: #ff0000;
+}
+/*--------------------
+        Disabled
+---------------------*/
+.ui-input.disabled input,
+.ui-input input[disabled] {
+  background-color: #eeeeee;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+/*******************************
+           Variations
+*******************************/
+/*--------------------
+      Transparent
+---------------------*/
+.ui.transparent.input input {
+  border: none;
+  background-color: transparent;
+}
+/*--------------------
+         Icon
+---------------------*/
+.ui-input.icon > .icon {
+  cursor: default;
+  position: absolute;
+  opacity: 0.5;
+  top: 0px;
+  right: 0px;
+  margin: 0em;
+  width: 2.6em;
+  height: 100%;
+  padding-top: 0.82em;
+  text-align: center;
+  border-radius: 0em 0.3125em 0.3125em 0em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+.ui-input.icon > .link.icon {
+  cursor: pointer;
+}
+.ui-input.icon input {
+  padding-right: 3em !important;
+}
+.ui-input.icon > .circular.icon {
+  top: 0.35em;
+  right: 0.5em;
+}
+/* Left Side */
+.ui-input.icon.left > .icon {
+  right: auto;
+  left: 1px;
+  border-radius: 0.3125em 0em 0em 0.3125em;
+}
+.ui.left.icon.input > .circular.icon {
+  right: auto;
+  left: 0.5em;
+}
+.ui.left.icon.input > input {
+  padding-left: 3em !important;
+  padding-right: 1.2em !important;
+}
+/* Focus */
+.ui.icon.input > input:focus ~ .icon {
+  opacity: 1;
+}
+/*--------------------
+        Labeled
+---------------------*/
+.ui.labeled.input .corner.label {
+  font-size: 0.7em;
+  border-radius: 0 0.3125em;
+}
+.ui.labeled.input .left.corner.label {
+  border-radius: 0.3125em 0;
+}
+.ui.labeled.input input {
+  padding-right: 2.5em !important;
+}
+/* Spacing with corner label */
+.ui.labeled.icon.input:not(.left) > input {
+  padding-right: 3.25em !important;
+}
+.ui.labeled.icon.input:not(.left) > .icon {
+  margin-right: 1.25em;
+}
+/*--------------------
+        Action
+---------------------*/
+.ui.action.input {
+  display: table;
+}
+.ui.action.input > input {
+  display: table-cell;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-right: none;
+}
+.ui.action.input > .button,
+.ui.action.input > .buttons {
+  display: table-cell;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  white-space: nowrap;
+}
+.ui.action.input > .button > .icon,
+.ui.action.input > .buttons > .button > .icon {
+  display: inline;
+  vertical-align: top;
+}
+.ui.fluid.action.input {
+  display: table;
+  width: 100%;
+}
+.ui.fluid.action.input > .button {
+  width: 0.01%;
+}
+/*--------------------
+        Fluid
+---------------------*/
+.ui-input.fluid {
+  display: block;
+}
+/*--------------------
+        Size
+---------------------*/
+.ui-input.mini {
+  font-size: 0.8125em;
+}
+.ui-input.small {
+  font-size: 0.875em;
+}
+.ui-input {
+  font-size: 1em;
+}
+.ui-input.large {
+  font-size: 1.125em;
+}
+.ui-input.big {
+  font-size: 1.25em;
+}
+.ui-input.huge {
+  font-size: 1.375em;
+}
+.ui-input.massive {
+  font-size: 1.5em;
 }
 .ui-divider {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
