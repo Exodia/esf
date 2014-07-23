@@ -16,14 +16,53 @@
         color: #333;
         border-bottom: 1px solid #e5e5e5;
     }
+    .@{ui-class-prefix}-g [class *= "@{ui-class-prefix}-u"] .field {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+    .@{ui-class-prefix}-g [class *= "@{ui-class-prefix}-u"]:first-child .field {
+        padding-left: 0;
+    }
+    .@{ui-class-prefix}-g [class *= "@{ui-class-prefix}-u"]:last-child .field {
+        padding-right: 0;
+    }
 }
 
-.@{ui-class-prefix}-form .field-label {
+.field.required .ui-input .asterisk {
+    color: red;
+}
+
+.field.error {
+    .ui-input input {
+        color: red;
+        border-color: red;
+    }
+}
+
+.field .field-hint {
+    color: #ccc;
+    margin-top: 0.2em;
+}
+
+.field .field-error {
+    color: red;
+}
+.field-wrapper {
+    padding: 0.65em 0em;
+}
+
+.@{ui-class-prefix}-form .block-label {
     display: block;
     margin-bottom: 0.3em;
 }
 
-.@{ui-class-prefix}-form .field-row {
+.@{ui-class-prefix}-form .inline-label {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0.65em;
+}
+
+.@{ui-class-prefix}-form .form-row {
     margin-bottom: 0.3em;
     .@{ui-class-prefix}-u-* {
         padding-right: 1%;
@@ -38,6 +77,9 @@ select {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    &.fluid {
+        width: 100%;
+    }
 }
 
 select:focus,

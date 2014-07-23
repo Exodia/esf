@@ -1066,14 +1066,46 @@ this the same font stack that Normalize.css sets for the `body`.
   color: #333;
   border-bottom: 1px solid #e5e5e5;
 }
-.ui-form .field-label {
+.ui-form .ui-g [class*="ui-u"] .field {
+  padding-left: 1%;
+  padding-right: 1%;
+}
+.ui-form .ui-g [class*="ui-u"]:first-child .field {
+  padding-left: 0;
+}
+.ui-form .ui-g [class*="ui-u"]:last-child .field {
+  padding-right: 0;
+}
+.field.required .ui-input .asterisk {
+  color: red;
+}
+.field.error .ui-input input {
+  color: red;
+  border-color: red;
+}
+.field .field-hint {
+  color: #ccc;
+  margin-top: 0.2em;
+}
+.field .field-error {
+  color: red;
+}
+.field-wrapper {
+  padding: 0.65em 0em;
+}
+.ui-form .block-label {
   display: block;
   margin-bottom: 0.3em;
 }
-.ui-form .field-row {
+.ui-form .inline-label {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 0.65em;
+}
+.ui-form .form-row {
   margin-bottom: 0.3em;
 }
-.ui-form .field-row .ui-u-* {
+.ui-form .form-row .ui-u-* {
   padding-right: 1%;
 }
 select {
@@ -1084,6 +1116,9 @@ select {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+select.fluid {
+  width: 100%;
 }
 select:focus,
 textarea:focus {
