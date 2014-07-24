@@ -1089,6 +1089,7 @@ this the same font stack that Normalize.css sets for the `body`.
 }
 .field .field-error {
   color: red;
+  margin-top: 0.2em;
 }
 .field-wrapper {
   padding: 0.65em 0em;
@@ -1127,6 +1128,11 @@ textarea:focus {
   /* IE6-9 */
   border-color: #129FEA;
 }
+.ui-xbox-group.vertical > div {
+  display: block;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
 /*
  * # Semantic - Input
  * http://github.com/jlukic/semantic-ui/
@@ -1148,7 +1154,8 @@ textarea:focus {
   position: relative;
   color: rgba(0, 0, 0, 0.7);
 }
-.ui-input input {
+.ui-input input,
+.ui-input textarea {
   width: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
   margin: 0em;
