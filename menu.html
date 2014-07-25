@@ -11,18 +11,20 @@
         <h1>Menu</h1>
         <div id="layout" class="ui-g">
             <div class="ui-u-1-5">
-                <ul id="navigator">
-                    <li><a href="index.html">Get Started</a></li>
-                    <li><a href="button.html">按钮</a></li>
-                    <li><a href="#">布局网格</a></li>
-                    <li><a href="checkbox.html">Checkbox</a></li>
-                    <li><a href="form.html">表单</a></li>
-                    <li><a href="icons.html">图标</a></li>
-                    <li><a href="input.html">输入框</a></li>
-                    <li><a href="label.html">标签</a></li>
-                    <li><a href="menu.html">导航菜单</a></li>
-                    <li><a href="type.html">文字样式</a></li>
-                </ul>
+                <div class="ui-menu vertical">
+                    <ul>
+                        <li><a href="index.html">Get Started</a></li>
+                        <li><a href="button.html">按钮</a></li>
+                        <li><a href="#">布局网格</a></li>
+                        <li><a href="checkbox.html">Checkbox</a></li>
+                        <li><a href="form.html">表单</a></li>
+                        <li><a href="icons.html">图标</a></li>
+                        <li><a href="input.html">输入框</a></li>
+                        <li><a href="label.html">标签</a></li>
+                        <li class="active"><a href="menu.html">导航菜单</a></li>
+                        <li><a href="type.html">文字样式</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="ui-u-4-5">
                 <div id="main" class="content p2 no-pt">
@@ -36,13 +38,13 @@
                                     <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
                                     <li>
                                         <a href="#"><i class="fa fa-rocket"></i> CSS Nested Menu</a>
-                                        <ul class="submenu">
+                                        <ul class="ui-dropdown">
                                             <li><a href="#">First</a></li>
                                             <li><a href="#">Second</a></li>
                                             <li><a href="#">Third</a></li>
                                             <li>
                                                 <a href="#">Right...</a>
-                                                <ul class="submenu flyout right">
+                                                <ul class="ui-dropdown flyout right">
                                                     <li><a href="#">First</a></li>
                                                     <li><a href="#">Second</a></li>
                                                     <li><a href="#">Third</a></li>
@@ -53,13 +55,13 @@
                                             </li>
                                             <li>
                                                 <a href="#">Left...</a>
-                                                <ul class="submenu flyout left">
+                                                <ul class="ui-dropdown flyout left">
                                                     <li><a href="#">First</a></li>
                                                     <li><a href="#">Second</a></li>
                                                     <li><a href="#">Third</a></li>
                                                     <li>
                                                         <a href="#">Right...</a>
-                                                        <ul class="submenu flyout right">
+                                                        <ul class="ui-dropdown flyout right">
                                                             <li><a href="#">First</a></li>
                                                             <li><a href="#">Second</a></li>
                                                             <li><a href="#">Third</a></li>
@@ -77,10 +79,57 @@
                                 </ul>
                             </div>
                             <h4>纵向菜单</h4>
-                            <div class="ui-menu vertical">
+                            <div class="ui-menu vertical" style="width: 30%">
                                 <ul>
                                     <li><a href="#">Home</a></li>
-                                    <li><a href="#">Post archive</a></li>
+                                    <li>
+                                        <a href="#">子菜单</a>
+                                        <ul class="ui-dropdown">
+                                            <li class="separator-below"><a href="#">First</a></li>
+                                            <li><a href="#">Second</a></li>
+                                            <li><a href="#">Third</a></li>
+                                            <li>
+                                                <a href="#">Right...</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">右侧子菜单 <i class="fa fa-arrow-right ui-icon"></i></a>
+                                        <ul class="ui-dropdown flyout right">
+                                            <li><a href="#">First</a></li>
+                                            <li class="separator-above"><a href="#">Second</a></li>
+                                            <li><a href="#">Third</a></li>
+                                            <li>
+                                                <a href="#">Right...</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">左侧子菜单</a>
+                                        <ul class="ui-dropdown flyout left">
+                                            <li><a href="#">First</a></li>
+                                            <li><a href="#">Second</a></li>
+                                            <li><a href="#">Third</a></li>
+                                            <li>
+                                                <a href="#">Right...</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h4>下拉子菜单</h4>
+                            <div style="width: 200px;">
+                                <ul class="ui-dropdown">
+                                    <li class="heading">First</li>
+                                    <li class="separator-above"><a href="#">Second</a></li>
+                                    <li><a href="#">Third</a></li>
+                                    <li>
+                                        <a href="#">Right...</a>
+                                        <ul class="ui-dropdown flyout right">
+                                            <li><a href="#">First</a></li>
+                                            <li><a href="#">Second</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
