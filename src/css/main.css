@@ -2782,3 +2782,80 @@ a.ui.teal.label:hover:before {
 .ui.huge.checkbox {
   font-size: 1.5em;
 }
+/*!
+Pure v0.5.0
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yui/pure/blob/master/LICENSE.md
+*/
+.ui-table {
+  /* Remove spacing between table cells (from Normalize.css) */
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 1px solid #cbcbcb;
+}
+.ui-table caption {
+  color: #000;
+  font: italic 85%/1 arial, sans-serif;
+  padding: 1em 0;
+  text-align: center;
+}
+.ui-table td,
+.ui-table th {
+  border-left: 1px solid #cbcbcb;
+  /*  inner column border */
+  border-width: 0 0 0 1px;
+  font-size: inherit;
+  margin: 0;
+  overflow: visible;
+  /*to make ths where the title is really long work*/
+  padding: 0.5em 1em;
+  /* cell padding */
+}
+.ui-table td:first-child,
+.ui-table th:first-child {
+  border-left-width: 0;
+}
+.ui-table thead {
+  background: #e0e0e0;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
+}
+/*
+striping:
+   even - #fff (white)
+   odd  - #f2f2f2 (light gray)
+*/
+.ui-table td {
+  background-color: transparent;
+}
+.ui-table-odd td {
+  background-color: #f2f2f2;
+}
+/* nth-child selector for modern browsers */
+.ui-table-striped tr:nth-child(2n-1) td {
+  background-color: #f2f2f2;
+}
+/* BORDERED TABLES */
+.ui-table-bordered td {
+  border-bottom: 1px solid #cbcbcb;
+}
+.ui-table-bordered tbody > tr:last-child td,
+.ui-table-horizontal tbody > tr:last-child td {
+  border-bottom-width: 0;
+}
+/* HORIZONTAL BORDERED TABLES */
+.ui-table-horizontal td,
+.ui-table-horizontal th {
+  border-width: 0 0 1px 0;
+  border-bottom: 1px solid #cbcbcb;
+}
+.ui-table-horizontal tbody > tr:last-child td {
+  border-bottom-width: 0;
+}
+.ui-table-hover > tbody > tr:hover > td,
+.ui-table-hover > tbody > tr:hover > th {
+  background-color: #f5f5f5;
+}
