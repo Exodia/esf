@@ -159,3 +159,21 @@
     -webkit-line-clamp: @line-number;
     -webkit-box-orient: vertical;  
 }
+
+.button-variant(@color; @background; @border) { 
+    color: @color;
+    background-color: @background;
+        border-color: @border;
+    &:hover,&.hover {
+        color: @color;
+        background-color: darken(@background, 10%);
+            border-color: darken(@border, 12%);
+    }
+}
+
+.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
+    padding: @padding-vertical @padding-horizontal;
+    font-size: @font-size;
+    line-height: @line-height;
+    border-radius: @border-radius;
+}

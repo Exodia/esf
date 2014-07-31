@@ -34,9 +34,13 @@ html {
     background: @body-color;
 }
 
+.ui-disabled() {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
 button[disabled],
 html input[disabled],
 @{ui-class-prefix}-disabled {
-    cursor: not-allowed;
-    opacity: 1;
+    .ui-disabled();
 }

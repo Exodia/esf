@@ -25,7 +25,7 @@
   color: rgba(0, 0, 0, 0.7);
 }
 .@{ui-class-prefix}-input input,
-.@{ui-class-prefix}-input textarea, {
+.@{ui-class-prefix}-input textarea {
   width: 100%;
   font-family: @default-font-family;
 
@@ -195,52 +195,21 @@
 .@{ui-class-prefix}-input.icon input {
   padding-right: 3em !important;
 }
-.@{ui-class-prefix}-input.icon > .circular.icon {
-  top: 0.35em;
-  right: 0.5em;
-}
-
 /* Left Side */
 .@{ui-class-prefix}-input.icon.left > .icon {
   right: auto;
   left: 1px;
   border-radius: 0.3125em 0em 0em 0.3125em;
 }
-.ui.left.icon.input > .circular.icon {
-  right: auto;
-  left: 0.5em;
-}
-.ui.left.icon.input > input {
-  padding-left: 3em !important;
-  padding-right: 1.2em !important;
+
+.@{ui-class-prefix}-input.left.icon > input {
+    padding-left: 3em !important;
+    padding-right: 1.2em !important;
 }
 
 /* Focus */
-.ui.icon.input > input:focus ~ .icon {
-  opacity: 1;
-}
-
-/*--------------------
-        Labeled
----------------------*/
-
-.ui.labeled.input .corner.label {
-  font-size: 0.7em;
-  border-radius: 0 0.3125em;
-}
-.ui.labeled.input .left.corner.label {
-  border-radius: 0.3125em 0;
-}
-.ui.labeled.input input {
-  padding-right: 2.5em !important;
-}
-
-/* Spacing with corner label */
-.ui.labeled.icon.input:not(.left) > input {
-  padding-right: 3.25em !important;
-}
-.ui.labeled.icon.input:not(.left) > .icon {
-  margin-right: 1.25em;
+.@{ui-class-prefix}-input.icon > input:focus ~ .icon {
+    opacity: 1;
 }
 
 
@@ -248,36 +217,44 @@
         Action
 ---------------------*/
 
-.ui.action.input {
-  display: table;
+.@{ui-class-prefix}-input.action {
+    display: table;
 }
 
-.ui.action.input > input {
-  display: table-cell;
-  border-top-right-radius: 0px !important;
-  border-bottom-right-radius: 0px !important;
-  border-right: none;
-}
-.ui.action.input > .button,
-.ui.action.input > .buttons {
-  display: table-cell;
-
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  white-space: nowrap;
-}
-.ui.action.input > .button > .icon,
-.ui.action.input > .buttons > .button > .icon {
-  display: inline;
-  vertical-align: top;
+.@{ui-class-prefix}-input.action > input {
+    display: table-cell;
+    &:first-child { 
+        border-right: none;
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }
+    &:last-child {
+        border-left: none;
+        border-top-left-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+    }
 }
 
-.ui.fluid.action.input {
-  display: table;
-  width: 100%;
+.@{ui-class-prefix}-input.action > .@{ui-class-prefix}-action-container {
+    display: table-cell !important;
+    white-space: nowrap;
+    font-size: 0;
+    &:last-child .@{ui-class-prefix}-button {
+        border-top-left-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+    }
+    &:first-child .@{ui-class-prefix}-button {
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important; 
+    }
 }
-.ui.fluid.action.input > .button {
-  width: 0.01%;
+
+.@{ui-class-prefix}-input.fluid.action {
+    display: table;
+    width: 100%;
+}
+.@{ui-class-prefix}-input.fluid.action > .button {
+    width: 0.01%;
 }
 
 /*--------------------
@@ -285,7 +262,7 @@
 ---------------------*/
 
 .@{ui-class-prefix}-input.fluid {
-  display: block;
+    display: block;
 }
 
 
@@ -294,23 +271,23 @@
 ---------------------*/
 
 .@{ui-class-prefix}-input.mini {
-  font-size: 0.8125em;
+    font-size: 0.8125em;
 }
 .@{ui-class-prefix}-input.small {
-  font-size: 0.875em;
+    font-size: 0.875em;
 }
 .@{ui-class-prefix}-input {
-  font-size: 1em;
+    font-size: 1em;
 }
 .@{ui-class-prefix}-input.large {
-  font-size: 1.125em;
+    font-size: 1.125em;
 }
 .@{ui-class-prefix}-input.big {
-  font-size: 1.25em;
+    font-size: 1.25em;
 }
 .@{ui-class-prefix}-input.huge {
-  font-size: 1.375em;
+    font-size: 1.375em;
 }
 .@{ui-class-prefix}-input.massive {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }

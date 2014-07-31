@@ -1,5 +1,4 @@
-@menu-background-color: #1a1a1a;
-@menu-border-radius: 2px;
+
 
 @menu-sub-border-color: 1px solid rgba(0, 0, 0, 0.1);
 @menu-sub-background-color: #fff;
@@ -45,9 +44,7 @@
             }
         }
         &.heading {
-            font-size: 1em;
             padding: 0.5em 1em;
-            padding-bottom: 0;
             font-weight: bold;
         }
     }
@@ -64,11 +61,29 @@
     }
 }
 
+.menu-variant(@menu-background-color; @text-color; @menu-active-background-color; @menu-item-padding; @menu-item-line-height) {
+
+    background: @menu-background-color;
+    > ul > li {
+        > a {
+            color: @text-color;
+
+            padding: @menu-item-padding;
+            line-height: @menu-item-line-height;
+        }
+        &:hover {
+            background-color: darken(@menu-background-color, 10%);
+        }
+        &.active {
+            background: darken(@menu-background-color, 10%);
+        }
+    }
+}
+
 .@{ui-class-prefix}-menu {
     overflow: visible;
     position: relative;
-    background: @menu-background-color;
-    border-radius: @menu-border-radius;
+
     > ul {
         list-style-type: none;
         padding: 0;
@@ -77,23 +92,16 @@
             position: relative;
             margin: 0;
             > a {
-                color: white;
                 text-decoration: none;
-                &:hover {
-                    background: #404040;
-                }
             }
             &.disabled {
                 a {
-                    color: #666666;
                     text-shadow: black 0 -1px 0;
                     &:hover {
                         background: none;
                     }
                 }
-            }
-            &.active {
-                background: #333333;
+                .ui-disabled();
             }
             &.heading {
                 font-weight: bold;
@@ -110,22 +118,22 @@
     }
 }
 
+.@{ui-class-prefix}-menu {
+    .menu-variant(
+        @menu-background-color, 
+        @menu-text-color,
+        @menu-active-background-color,
+        @menu-item-padding,
+        @menu-item-line-height
+    );
+}
+
 .@{ui-class-prefix}-menu.horizontal {
     .clearfix();
     > ul > li {
         float: left;
         a {
-            padding: 0.5em 1em;
             display: block;
-            line-height: 1.7;
-        }
-        &:first-child,
-        &:first-child a{
-            .border-left-radius(@menu-border-radius);
-        }
-        &:last-child,
-        &:last-child a{
-            .border-right-radius(@menu-border-radius);
         }
     }
     .@{ui-class-prefix}-dropdown {
@@ -136,10 +144,8 @@
 
 .@{ui-class-prefix}-menu.vertical {
     li {
-        line-height: 1.7;
         position: relative;
         a {
-            padding: 0.5em 1em;
             display: block;
         }
     }

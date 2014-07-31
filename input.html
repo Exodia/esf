@@ -7,11 +7,11 @@
         <link rel="stylesheet" href="src/icons/css/font-awesome.css" />
         <link rel="stylesheet" href="demo.css" />
     </head>
-    <body>
-        <h1>Input</h1>
+    <body class="p2">
+        <h1 class="align-center">输入框</h1>
         <div id="layout" class="ui-g">
             <div class="ui-u-1-5">
-                <ul id="navigator">
+                <ul id="navigator" class="list-unstyled">
                     <li><a href="index.html">Get Started</a></li>
                     <li><a href="button.html">按钮</a></li>
                     <li><a href="#">布局网格</a></li>
@@ -126,8 +126,41 @@
                                     <textarea placeholder="massive" rows="8" cols="90"></textarea>
                                 </div>
                             </div>
+                            <h4>Action</h4>
                             <div class="mt1">
-                                TODO with action
+                                <div class="ui-input action">
+                                    <input type="text" placeholder="massive"  />
+                                    <div class="ui-action-container">
+                                        <button class="ui-button icon primary"><i class="icon fa fa-users"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt1">
+                                <div class="ui-input action">
+                                    <div class="ui-action-container">
+                                        <button class="ui-button icon primary"><i class="icon fa fa-users"></i></button>
+                                    </div>
+                                    <input type="text" placeholder="massive"  />
+                                </div>
+                            </div>
+                            <h4>Button Group</h4>
+                            <div class="mt1">
+                                <div class="ui-input action">
+                                    <div class="ui-action-container ui-button-group">
+                                        <button type="button" class="ui-button">Left</button>
+                                        <button type="button" class="ui-button"><i class="icon fa fa-caret-down"></i></button>
+                                    </div>
+                                    <input type="text" placeholder="massive"  />
+                                </div>
+                            </div>
+                            <div class="mt1">
+                                <div class="ui-input action">
+                                    <input type="text" placeholder="massive"  />
+                                    <div class="ui-action-container ui-button-group">
+                                        <button type="button" class="ui-button">Left</button>
+                                        <button type="button" class="ui-button"><i class="icon fa fa-caret-down"></i></button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

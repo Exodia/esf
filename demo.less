@@ -1,0 +1,74 @@
+@import "./src/css/est.less";
+
+body {
+   .est-layout-fixed-header(3.75em);
+}
+
+.est-header {
+    background: @primary-color;
+}
+
+.primary-bg-link {
+    color: @primary-bg-color;
+    &:hover {
+        color: @primary-bg-color;
+        text-decoration: none;
+    }
+}
+
+.header-button {
+    .button-size(13px, 15px, 32px, 1, 0);
+    vertical-align: top;
+}
+.header-button-nav {
+    .button-size(12px, 15px, 1em, 1, 0); 
+}
+.left-menu-separator {
+    border-left: 1px solid @gray-lighter !important;
+}
+.right-menu-separator {
+    border-right: 1px solid @gray-lighter !important;
+}
+ 
+.brand-title {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    display: inline-block;
+    a {
+        .primary-bg-link();
+        font-size: 25px;
+        img {
+            vertical-align: bottom;
+        }
+    }
+}
+
+.ui-menu.nav > ul > li > a {
+    padding: 16px 21px;
+}
+
+#left-nav { 
+    width: 59px;
+    background: @primary-color;
+    position: fixed;
+    top: 60px; 
+    bottom: 0px;
+}
+
+#page-footer {
+    background: @gray;
+    color: @gray-lighter;
+}
+#content-container,
+#page-footer {
+    margin-left: 59px;
+}
+
+#container-frame { 
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+

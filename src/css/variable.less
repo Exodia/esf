@@ -1,17 +1,20 @@
+@import "./palette.less";
+
 // common config
 @default-font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
-@default-font-size: 14px;
-@text-color: #666;
-@body-color: #FFF;
+@base-font-size: 16px;
+@text-color: @neutral-base-color;
+@body-color: @gray-lighter;
 
 // padding
 @gutter: 10px;
 
+// 
+
+@default-padding: 0.65em 1em;
 
 // prefix config
 @ui-class-prefix: ui;
-@skin-class-prefix: skin;
-@state-class-prefix: state;
 
 /* =========
    Inputs
@@ -41,9 +44,9 @@
 /* =========
    Buttons
    ========= */
-@button-text-IE8-color: #444;
-@button-text-color: #fff;
-@button-background-color: #bdc3c7; 
+@default-button-text-color: #fff;
+@default-button-background-color: @primary-color;
+@default-button-border-color: @primary-color;
 
 /* =========
    Type
@@ -51,5 +54,42 @@
 @hei-font: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimHei, "黑体", STHeiti, "华文黑体", sans-serif;
 @headings-font-family: @hei-font;
 @headings-font-weight: bold;
-@headings-color: #000;
+@headings-color: @neutral-shadow-color;
 @headings-small-color: #333;
+
+/* =========
+   Menu
+   ========= */
+@menu-background-color: @primary-color;
+@menu-text-color: @default-button-text-color;
+@menu-active-background-color: @primary-color;
+@menu-item-padding: 0.5em 1em;
+@menu-item-line-height: 1.7;
+
+/*
+* 
+* ESF 变量，一般不用直接修改这里
+×
+*/
+// global flags
+@support-old-ie: true;
+@support-html5: true;
+
+// default typographic settings
+@default-font-size: @base-font-size;
+@default-text-color: @text-color;
+@default-input-placeholder-color: #999;
+@default-base-font-family: @default-font-family;
+// * IE6/7下如果已经找到字体，不会再按字符进行fallback，故必须将雅黑置首位，写上Arial是为了在雅黑的情况下显示更好的英文字体
+@default-heading-font-family: @hei-font;
+@default-old-ie-heading-font-family: "Microsoft Yahei", "微软雅黑", SimHei, "黑体", STHeiti, "华文黑体", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@default-code-font-family: Monaco, Consolas, monospace;
+
+// default visual settings
+@default-border-radius: 5px;
+@default-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+
+// z-index settings (compatible with BootStrap, ESUI)
+@header-z-index: 1000;
+@footer-z-index: 1000;
+@modal-z-index: 1050;
