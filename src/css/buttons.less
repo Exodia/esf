@@ -1,12 +1,7 @@
 .@{ui-class-prefix}-button {
-    /* Structure */
     display: inline-block;
-    *display: inline; /*IE 6/7*/
-    zoom: 1;
-
-    line-height: normal;
-    white-space: nowrap;
-    vertical-align: baseline;
+    line-height: 1;
+    white-space: nowrap; 
     text-align: center;
     cursor: pointer;
     -webkit-user-drag: none;
@@ -16,12 +11,14 @@
         border: 0;
     }
     border-radius: @default-border-radius;
-
     font-size: @base-font-size; // reset font-size, since we set font-size 0 on button groups to avoid whitespace.
-    padding: @default-padding;
+    padding: @default-button-padding;
     border: 1px solid transparent;  /*IE9 + everything else*/
     &:hover {
         text-decoration: none;
+    }
+    &.@{ui-class-prefix}-icon-button {
+        padding: @default-icon-button-padding;
     }
 }
 

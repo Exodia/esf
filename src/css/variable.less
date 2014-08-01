@@ -4,17 +4,23 @@
 @default-font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
 @base-font-size: 16px;
 @text-color: @neutral-base-color;
-@body-color: @gray-lighter;
+@body-color: @primary-bg-color;
 
 // padding
 @gutter: 10px;
 
 // 
 
-@default-padding: 0.65em 1em;
+@default-padding: 10px 16px;
 
 // prefix config
 @ui-class-prefix: ui;
+
+/* =========
+   Type
+   ========= */
+@link-color:       @gray;
+@link-hover-color: darken(@link-color, 15%);
 
 /* =========
    Inputs
@@ -44,6 +50,8 @@
 /* =========
    Buttons
    ========= */
+@default-icon-button-padding: 10px;
+@default-button-padding: 10px 16px;
 @default-button-text-color: #fff;
 @default-button-background-color: @primary-color;
 @default-button-border-color: @primary-color;

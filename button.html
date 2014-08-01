@@ -6,12 +6,13 @@
         <link rel="stylesheet" href="src/css/main.css" />
         <link rel="stylesheet" href="src/icons/css/font-awesome.css" />
         <link rel="stylesheet" href="demo.css" />
+        <link rel="stylesheet" href="assets/prism.css" />
+        <script src="assets/prism.js"></script>
     </head>
     <body class="p2">
-        <h1 class="align-center">按钮</h1>
         <div id="layout" class="ui-g">
             <div class="ui-u-1-5">
-                <ul id="navigator" class="list-unstyled">
+                <ul id="navigator-features" class="list-unstyled">
                     <li><a href="index.html">Get Started</a></li>
                     <li><a href="button.html">按钮</a></li>
                     <li><a href="#">布局网格</a></li>
@@ -26,34 +27,56 @@
             </div>
             <div class="ui-u-4-5">
                 <div id="main" class="content p2 no-pt">
-                    <h2 id="icons" class="content-subhead">Button</h2>
+                    <h2 class="no-mt">按钮</h2>
+                    <div class="ui-divider"></div>
+                    <p>
+                        按钮的颜色、大小都可扩展。同时可以定义图标按钮、按钮组。
+                    </p>
                     <div>
-                        <h3>Types</h3>
                         <div>
-                            <h4>Standard Button</h4>
-                            <div>
-                                <button class="ui-button">Button</button>
+                            <h3>文字按钮</h3>
+                            <div class="example">
+                                <button class="ui-button"><span>Button</span></button>
                                 <a class="ui-button">Anchor</a>
                                 <div class="ui-button">Div</div>
                                 <input type="button" class="ui-button" value="Input Button" />
                             </div>
-                            <h4>Icon Button</h4>
-                            <div>
-                                <button class="ui-button icon"><i class="icon fa fa-cloud-download"></i></button>
-                                <button class="ui-button icon"><i class="icon fa fa-users"></i></button>
+                            <div class="highlight">
+<pre><code class="language-markup">&lt;button class=&quot;ui-button&quot;&gt;Button&lt;/button&gt;
+&lt;a class=&quot;ui-button&quot;&gt;Anchor&lt;/a&gt;
+&lt;div class=&quot;ui-button&quot;&gt;Div&lt;/div&gt;
+&lt;input type=&quot;button&quot; class=&quot;ui-button&quot; value=&quot;Input Button&quot; /&gt;</code></pre>
                             </div>
-                            <h4>Icon & Text Button</h4>
+                            <h3>图标按钮</h3>
+                            <div class="example">
+                                <button class="ui-button ui-icon-button"><i class="icon fa fa-cloud-download"></i></button>
+                                <button class="ui-button ui-icon-button"><i class="icon fa fa-users"></i></button>
+                            </div>
+                            <div class="highlight">
+<pre><code class="language-markup">&lt;button class=&quot;ui-button icon&quot;&gt;&lt;i class=&quot;icon fa fa-cloud-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;ui-button icon&quot;&gt;&lt;i class=&quot;icon fa fa-users&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+</code></pre>
+                            </div>
+                            <h3>图标和文字按钮</h3>
                             <p>
                                 Could put text and icon together.
                             </p>
-                            <div>
+                            <div class="example">
                                 <button class="ui-button">
-                                    Download
+                                    下载报告
                                     <i class="icon fa fa-cloud-download"></i>
                                 </button>
                                 <button class="ui-button">
-                                    <i class="icon fa fa-users"></i> Users
+                                    <i class="icon fa fa-users"></i> 用户列表
                                 </button>
+                            </div>
+                            <div class="highlight">
+<pre><code class="language-markup">&lt;button class=&quot;ui-button icon&quot;&gt;&lt;i class=&quot;icon fa fa-cloud-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;ui-button icon&quot;&gt;&lt;i class=&quot;icon fa fa-users&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+</code></pre>
+                            </div>
+                            <div>
+
                             </div>
                         </div>
                         <h3>States</h3>

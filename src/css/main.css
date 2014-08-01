@@ -1,4 +1,7 @@
 /* =========
+   Type
+   ========= */
+/* =========
    Inputs
    ========= */
 /* =========
@@ -493,7 +496,7 @@ ui-img {
  */
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
-  background: #eeeeee;
+  background: #fefdfa;
 }
 button[disabled],
 html input[disabled],
@@ -774,11 +777,11 @@ blockquote footer {
   color: #777;
 }
 a {
-  color: #489ac1;
+  color: #555555;
   text-decoration: none;
 }
 a:hover {
-  color: #306f8d;
+  color: #2f2f2f;
   text-decoration: underline;
 }
 address {
@@ -1393,14 +1396,9 @@ textarea:focus {
   overflow: hidden;
 }
 .ui-button {
-  /* Structure */
   display: inline-block;
-  *display: inline;
-  /*IE 6/7*/
-  zoom: 1;
-  line-height: normal;
+  line-height: 1;
   white-space: nowrap;
-  vertical-align: baseline;
   text-align: center;
   cursor: pointer;
   -webkit-user-drag: none;
@@ -1410,7 +1408,7 @@ textarea:focus {
   user-select: none;
   border-radius: 5px;
   font-size: 16px;
-  padding: 0.65em 1em;
+  padding: 10px 16px;
   border: 1px solid transparent;
   /*IE9 + everything else*/
 }
@@ -1420,6 +1418,9 @@ textarea:focus {
 }
 .ui-button:hover {
   text-decoration: none;
+}
+.ui-button.ui-icon-button {
+  padding: 10px;
 }
 .ui-button {
   color: #ffffff;
