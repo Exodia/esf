@@ -160,6 +160,16 @@
     -webkit-box-orient: vertical;  
 }
 
+.link-like() {
+  color: @link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: @link-hover-color;
+    text-decoration: underline;
+  }
+}
+
 .button-variant(@color; @background; @border) { 
     color: @color;
     background-color: @background;
@@ -170,10 +180,11 @@
             border-color: darken(@border, 12%);
     }
 }
-
-.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
-    padding: @padding-vertical @padding-horizontal;
+ 
+.button-size(@height; @padding; @font-size; @border-radius) {
+    padding: 0 @padding;
     font-size: @font-size;
-    line-height: @line-height;
     border-radius: @border-radius;
+    height: @height;
+    line-height: @height - 2;
 }

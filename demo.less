@@ -1,7 +1,7 @@
 @import "./src/css/est.less";
-
+ 
 body {
-   .est-layout-fixed-header(3.75em);
+   .est-layout-fixed-header(60px);
 }
 
 .est-header {
@@ -17,11 +17,10 @@ body {
 }
 
 .header-button {
-    .button-size(13px, 15px, 32px, 1, 0);
-    vertical-align: top;
+    .button-size(60px, 15px, 32px, 0);  
 }
 .header-button-nav {
-    .button-size(12px, 15px, 1em, 1, 0); 
+    .button-size(60px, 12px 15px, 16px, 0);
 }
 .left-menu-separator {
     border-left: 1px solid @gray-lighter !important;
@@ -31,15 +30,11 @@ body {
 }
  
 .brand-title {
-    margin-top: 10px;
+    margin-left: 80px;
     margin-bottom: 0px;
-    display: inline-block;
-    a {
-        .primary-bg-link();
-        font-size: 25px;
-        img {
-            vertical-align: bottom;
-        }
+    margin-top: 10px;
+    img {
+        vertical-align: bottom;
     }
 }
 
@@ -80,6 +75,8 @@ body {
             text-decoration: none; 
         }
     }
+    position: fixed;
+    
 }
 
 .example {
@@ -110,3 +107,4 @@ body {
   position: relative;
 }
 
+/* buttons */

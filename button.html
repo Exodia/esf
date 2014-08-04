@@ -13,16 +13,13 @@
         <div id="layout" class="ui-g">
             <div class="ui-u-1-5">
                 <ul id="navigator-features" class="list-unstyled">
-                    <li><a href="index.html">Get Started</a></li>
-                    <li><a href="button.html">按钮</a></li>
-                    <li><a href="#">布局网格</a></li>
-                    <li><a href="checkbox.html">Checkbox</a></li>
-                    <li><a href="form.html">表单</a></li>
-                    <li><a href="icons.html">图标</a></li>
-                    <li><a href="input.html">输入框</a></li>
-                    <li><a href="label.html">标签</a></li>
-                    <li><a href="menu.html">导航菜单</a></li>
-                    <li><a href="type.html">文字样式</a></li>
+                    <li><a href="#button-standard">普通文字按钮</a></li>
+                    <li><a href="#button-icon">图标按钮</a></li>
+                    <li><a href="#button-icon-text">图标和文字按钮</a></li>
+                    <li><a href="#button-states">按钮状态</a></li>
+                    <li><a href="#button-color-variants">按钮皮肤</a></li>
+                    <li><a href="#button-sizes">按钮尺寸</a></li>
+                    <li><a href="#button-group">按钮组合</a></li>
                 </ul>
             </div>
             <div class="ui-u-4-5">
@@ -34,7 +31,7 @@
                     </p>
                     <div>
                         <div>
-                            <h3>文字按钮</h3>
+                            <h3 id="button-standard">普通文字按钮</h3>
                             <div class="example">
                                 <button class="ui-button"><span>Button</span></button>
                                 <a class="ui-button">Anchor</a>
@@ -42,24 +39,29 @@
                                 <input type="button" class="ui-button" value="Input Button" />
                             </div>
                             <div class="highlight">
-<pre><code class="language-markup">&lt;button class=&quot;ui-button&quot;&gt;Button&lt;/button&gt;
+                                <pre><code class="language-markup">
+&lt;button class=&quot;ui-button&quot;&gt;Button&lt;/button&gt;
 &lt;a class=&quot;ui-button&quot;&gt;Anchor&lt;/a&gt;
 &lt;div class=&quot;ui-button&quot;&gt;Div&lt;/div&gt;
-&lt;input type=&quot;button&quot; class=&quot;ui-button&quot; value=&quot;Input Button&quot; /&gt;</code></pre>
+&lt;input type=&quot;button&quot; class=&quot;ui-button&quot; value=&quot;Input Button&quot; /&gt;
+                                </code></pre>
                             </div>
-                            <h3>图标按钮</h3>
+
+                            <h3 id="button-icon">图标按钮</h3>
                             <div class="example">
-                                <button class="ui-button ui-icon-button"><i class="icon fa fa-cloud-download"></i></button>
-                                <button class="ui-button ui-icon-button"><i class="icon fa fa-users"></i></button>
+                                <button class="ui-button ui-icon-button"><i class="ui-icon fa fa-cloud-download"></i></button>
+                                <button class="ui-button ui-icon-button"><i class="ui-icon fa fa-users"></i></button>
                             </div>
                             <div class="highlight">
-<pre><code class="language-markup">&lt;button class=&quot;ui-button icon&quot;&gt;&lt;i class=&quot;icon fa fa-cloud-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-&lt;button class=&quot;ui-button icon&quot;&gt;&lt;i class=&quot;icon fa fa-users&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-</code></pre>
+                                <pre><code class="language-markup">
+&lt;button class=&quot;ui-button ui-icon-button&quot;&gt;&lt;i class=&quot;ui-icon fa fa-cloud-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;ui-button ui-icon-button&quot;&gt;&lt;i class=&quot;ui-icon fa fa-users&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                                </code></pre>
                             </div>
-                            <h3>图标和文字按钮</h3>
+
+                            <h3 id="button-icon-text">图标和文字按钮</h3>
                             <p>
-                                Could put text and icon together.
+                                可以为按钮添加图标。
                             </p>
                             <div class="example">
                                 <button class="ui-button">
@@ -71,38 +73,120 @@
                                 </button>
                             </div>
                             <div class="highlight">
-<pre><code class="language-markup">&lt;button class=&quot;ui-button icon&quot;&gt;&lt;i class=&quot;icon fa fa-cloud-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-&lt;button class=&quot;ui-button icon&quot;&gt;&lt;i class=&quot;icon fa fa-users&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-</code></pre>
+                                <pre><code class="language-markup">
+&lt;button class=&quot;ui-button&quot;&gt;
+    &#19979;&#36733;&#25253;&#21578;
+    &lt;i class=&quot;icon fa fa-cloud-download&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;ui-button&quot;&gt;
+    &lt;i class=&quot;icon fa fa-users&quot;&gt;&lt;/i&gt; &#29992;&#25143;&#21015;&#34920;
+&lt;/button&gt;
+                                </code></pre>
                             </div>
-                            <div>
+                        </div>
 
-                            </div>
-                        </div>
-                        <h3>States</h3>
-                        <div>
-                            <h4>Active</h4>
+                        <h3 id="button-states">按钮状态</h3>
+                        <p>
+                            按钮的状态。
+                        </p>
+                        <h4>Active</h4>
+                        <div class="example">
                             <button class="ui-button active">Button</button>
-                            <h4>Hover</h4>
+                            Or
+                            <button class="ui-button">:active</button>
+                        </div>
+                        <div class="highlight">
+                            <pre><code class="language-markup">
+&lt;button class=&quot;ui-button active&quot;&gt;Button&lt;/button&gt;
+Or
+&lt;button class=&quot;ui-button active&quot;&gt;:active&lt;/button&gt;
+                            </code></pre>
+                        </div>
+                        <h4>Hover</h4>
+                        <div class="example">
                             <button class="ui-button hover">Hover</button>
-                            <h4>Disabled</h4>
-                            <button class="ui-button" disabled="disabled">Hover</button>
-                            <button class="ui-button" disabled="disabled">
-                                <i class="icon fa fa-users"></i> Users
-                            </button>
+                            Or
+                            <button class="ui-button">:hover</button>
                         </div>
-                        <h3>扩展颜色</h3>
-                        <div>
-                            <h4>Button Colors</h4>
-                            <button class="ui-button primary">primary</button>
-                            <button class="ui-button success">success</button>
-                            <button class="ui-button error">error</button>
-                            <button class="ui-button warning ">warning </button>
-                            <button class="ui-button secondary ">secondary </button>
+                        <div class="highlight">
+                            <pre><code class="language-markup">
+&lt;button class=&quot;ui-button hover&quot;&gt;Hover&lt;/button&gt;
+Or
+&lt;button class=&quot;ui-button&quot;&gt;:hover&lt;/button&gt;
+                            </code></pre>
                         </div>
-                        <h3>Sizes</h3>
-                        <div>
-                            <h4>Button Colors</h4>
+                        <h4>Disabled</h4>
+                        <div class="example">
+                            <button class="ui-button" disabled="disabled"><span>Button</span></button>
+                            <a class="ui-button disabled">Anchor</a>
+                            <div class="ui-button disabled">Div</div>
+                            <input type="button" class="ui-button" value="Input Button" disabled="disabled" />
+                        </div>
+                        <div class="highlight">
+                            <pre><code class="language-markup">
+&lt;button class=&quot;ui-button&quot; disabled=&quot;disabled&quot;&gt;&lt;span&gt;Button&lt;/span&gt;&lt;/button&gt;
+&lt;a class=&quot;ui-button disabled&quot;&gt;Anchor&lt;/a&gt;
+&lt;div class=&quot;ui-button disabled&quot;&gt;Div&lt;/div&gt;
+&lt;input type=&quot;button&quot; class=&quot;ui-button&quot; value=&quot;Input Button&quot; disabled=&quot;disabled&quot; /&gt;
+                            </code></pre>
+                        </div>
+
+                        <h3 id="button-color-variants">扩展颜色</h3>
+                        <p>
+                            可以通过提供的mixin定制按钮颜色。
+                        </p>
+                        <div class="example">
+                            <!-- Standard button -->
+                            <button type="button" class="ui-button ui-button-default">Default</button>
+
+                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                            <button type="button" class="ui-button ui-button-primary">Primary</button>
+
+                            <!-- Indicates a successful or positive action -->
+                            <button type="button" class="ui-button ui-button-success">Success</button>
+
+                            <!-- Contextual button for informational alert messages -->
+                            <button type="button" class="ui-button ui-button-info">Info</button>
+
+                            <!-- Indicates caution should be taken with this action -->
+                            <button type="button" class="ui-button ui-button-warning">Warning</button>
+
+                            <!-- Indicates a dangerous or potentially negative action -->
+                            <button type="button" class="ui-button ui-button-danger">Danger</button>
+
+                            <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+                            <button type="button" class="ui-button ui-button-link">Link</button>
+                        </div>
+                        <div class="highlight">
+                            <pre><code class="language-markup">
+&lt;!-- Standard button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button-default&quot;&gt;Default&lt;/button&gt;
+
+&lt;!-- Provides extra visual weight and identifies the primary action in a set of buttons --&gt;
+&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button-primary&quot;&gt;Primary&lt;/button&gt;
+
+&lt;!-- Indicates a successful or positive action --&gt;
+&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button-success&quot;&gt;Success&lt;/button&gt;
+
+&lt;!-- Contextual button for informational alert messages --&gt;
+&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button-info&quot;&gt;Info&lt;/button&gt;
+
+&lt;!-- Indicates caution should be taken with this action --&gt;
+&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button-warning&quot;&gt;Warning&lt;/button&gt;
+
+&lt;!-- Indicates a dangerous or potentially negative action --&gt;
+&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button-danger&quot;&gt;Danger&lt;/button&gt;
+
+&lt;!-- Deemphasize a button by making it look like a link while maintaining button behavior --&gt;
+&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button-link&quot;&gt;Link&lt;/button&gt;
+                            </code></pre>
+                        </div>
+
+                        <h3 id="button-sizes">按钮尺寸</h3>
+                        <p>
+                            按钮可以调整大小。
+                        </p>
+                        <div class="example">
                             <button class="ui-button mini"><i class="icon fa fa-users"></i> success</button>
                             <button class="ui-button small"><i class="icon fa fa-users"></i> error</button>
                             <button class="ui-button large"><i class="icon fa fa-users"></i> warning </button>
@@ -110,21 +194,104 @@
                             <button class="ui-button huge"><i class="icon fa fa-users"></i> secondary </button>
                             <button class="ui-button massive"><i class="icon fa fa-users"></i> secondary </button>
                         </div>
-                        <h3>Group</h3>
-                        <div>
-                            <h4>Button Group</h4>
-                            <div class="ui-button-group clearfix">
-                              <button type="button" class="ui-button">Left</button>
-                              <button type="button" class="ui-button active">Middle</button>
-                              <button type="button" class="ui-button">Right</button>
+                        <div class="highlight">
+                            <pre><code class="language-markup">
+&lt;button class=&quot;ui-button mini&quot;&gt;&lt;i class=&quot;icon fa fa-users&quot;&gt;&lt;/i&gt; success&lt;/button&gt;
+&lt;button class=&quot;ui-button small&quot;&gt;&lt;i class=&quot;icon fa fa-users&quot;&gt;&lt;/i&gt; error&lt;/button&gt;
+&lt;button class=&quot;ui-button large&quot;&gt;&lt;i class=&quot;icon fa fa-users&quot;&gt;&lt;/i&gt; warning &lt;/button&gt;
+&lt;button class=&quot;ui-button big&quot;&gt;&lt;i class=&quot;icon fa fa-users&quot;&gt;&lt;/i&gt; secondary &lt;/button&gt;
+&lt;button class=&quot;ui-button huge&quot;&gt;&lt;i class=&quot;icon fa fa-users&quot;&gt;&lt;/i&gt; secondary &lt;/button&gt;
+&lt;button class=&quot;ui-button massive&quot;&gt;&lt;i class=&quot;icon fa fa-users&quot;&gt;&lt;/i&gt; secondary &lt;/button&gt;
+                            </code></pre>
+                        </div>
+
+                        <h3 id="button-group">按钮组合</h3>
+                        <p>
+                            按钮组合。
+                        </p>
+                        <h4>普通组合</h4>
+                        <div class="example">
+                            <div class="ui-button-group">
+                                <button type="button" class="ui-button">Left</button>
+                                <button type="button" class="ui-button active">Middle</button>
+                                <button type="button" class="ui-button">Right</button>
                             </div>
-                            <h4>Icon Group</h4>
-                            <div class="ui-button-group clearfix">
-                                <button class="ui-button icon"><i class="icon fa fa-cloud-download"></i></button>
-                                <button class="ui-button icon"><i class="icon fa fa-users"></i></button>
-                                <button class="ui-button icon"><i class="icon fa fa-cloud-download"></i></button>
-                                <button class="ui-button icon"><i class="icon fa fa-users"></i></button>
+                        </div>
+                        <div class="highlight">
+                            <pre><code class="language-markup">
+&lt;div class=&quot;ui-button-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;ui-button&quot;&gt;Left&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;ui-button active&quot;&gt;Middle&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;ui-button&quot;&gt;Right&lt;/button&gt;
+&lt;/div&gt;
+                            </code></pre>
+                        </div>
+                        <h4>图标组合</h4>
+                        <div class="example">
+                            <div class="ui-button-group">
+                                <button class="ui-button ui-icon-button"><i class="ui-icon fa fa-cloud-download"></i></button>
+                                <button class="ui-button ui-icon-button"><i class="ui-icon fa fa-users"></i></button>
+                                <button class="ui-button ui-icon-button"><i class="ui-icon fa fa-cloud-download"></i></button>
+                                <button class="ui-button ui-icon-button"><i class="ui-icon fa fa-users"></i></button>
                             </div>
+                        </div>
+                        <div class="highlight">
+                            <pre><code class="language-markup">
+&lt;div class=&quot;ui-button-group&quot;&gt;
+    &lt;button class=&quot;ui-button ui-icon-button&quot;&gt;&lt;i class=&quot;ui-icon fa fa-cloud-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;button class=&quot;ui-button ui-icon-button&quot;&gt;&lt;i class=&quot;ui-icon fa fa-users&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;button class=&quot;ui-button ui-icon-button&quot;&gt;&lt;i class=&quot;ui-icon fa fa-cloud-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;button class=&quot;ui-button ui-icon-button&quot;&gt;&lt;i class=&quot;ui-icon fa fa-users&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+                            </code></pre>
+                        </div>
+                        <h4>大按钮组合</h4>
+                        <div class="example">
+                            <div class="ui-button-group">
+                                <button type="button" class="ui-button big">Left</button>
+                                <button type="button" class="ui-button active big">Middle</button>
+                                <button type="button" class="ui-button big">Right</button>
+                            </div>
+                        </div>
+                        <div class="highlight">
+                            <pre><code class="language-markup">
+&lt;div class=&quot;ui-button-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;ui-button big&quot;&gt;Left&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;ui-button active big&quot;&gt;Middle&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;ui-button big&quot;&gt;Right&lt;/button&gt;
+&lt;/div&gt;
+                            </code></pre>
+                        </div>
+                        <h4>组合的组合</h4>
+                        <div class="example">
+                            <div>
+                                <div class="ui-button-group">
+                                    <button type="button" class="ui-button big">Left</button>
+                                    <button type="button" class="ui-button active big">Middle</button>
+                                    <button type="button" class="ui-button big">Right</button>
+                                </div>
+                                <div class="ui-button-group">
+                                    <button type="button" class="ui-button big">Left</button>
+                                    <button type="button" class="ui-button active big">Middle</button>
+                                    <button type="button" class="ui-button big">Right</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="highlight">
+                            <pre><code class="language-markup">
+&lt;div&gt;
+    &lt;div class=&quot;ui-button-group&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;ui-button big&quot;&gt;Left&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;ui-button active big&quot;&gt;Middle&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;ui-button big&quot;&gt;Right&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ui-button-group&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;ui-button big&quot;&gt;Left&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;ui-button active big&quot;&gt;Middle&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;ui-button big&quot;&gt;Right&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                            </code></pre>
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,5 @@
 .@{ui-class-prefix}-button {
     display: inline-block;
-    line-height: 1;
     white-space: nowrap; 
     text-align: center;
     cursor: pointer;
@@ -10,20 +9,56 @@
         padding: 0;
         border: 0;
     }
-    border-radius: @default-border-radius;
-    font-size: @base-font-size; // reset font-size, since we set font-size 0 on button groups to avoid whitespace.
-    padding: @default-button-padding;
-    border: 1px solid transparent;  /*IE9 + everything else*/
+ 
+    border: 1px solid transparent;
+    box-sizing: border-box;
     &:hover {
         text-decoration: none;
     }
-    &.@{ui-class-prefix}-icon-button {
-        padding: @default-icon-button-padding;
-    }
+    vertical-align: middle;
+    font-family: @default-font-family;
 }
-
+ 
 .@{ui-class-prefix}-button {
     .button-variant(@default-button-text-color, @default-button-background-color, @default-button-border-color);
+    .button-size(@default-button-height, @default-button-padding, @base-font-size, @default-border-radius);
+}
+
+.@{ui-class-prefix}-button-primary {
+    .button-variant(@primary-button-text-color, @primary-button-background-color, @primary-button-border-color);
+}
+
+.@{ui-class-prefix}-button-secondary {
+    .button-variant(@secondary-button-text-color, @secondary-button-background-color, @secondary-button-border-color);
+}
+
+.@{ui-class-prefix}-button-success {
+    .button-variant(@success-button-text-color, @success-button-background-color, @success-button-border-color);
+}
+
+.@{ui-class-prefix}-button-danger {
+    .button-variant(@danger-button-text-color, @danger-button-background-color, @danger-button-border-color);
+}
+
+.@{ui-class-prefix}-button-info {
+    .button-variant(@info-button-text-color, @info-button-background-color, @info-button-border-color);
+}
+
+.@{ui-class-prefix}-button-warning {
+    .button-variant(@warning-button-text-color, @warning-button-background-color, @warning-button-border-color);
+}
+
+.@{ui-class-prefix}-button-link {
+    .link-like();
+    background: none;
+    &:hover {
+        background: none;
+    }
+    border: 0;
+}
+
+.@{ui-class-prefix}-icon-button {
+    padding: 0 @default-icon-button-padding;
 }
 
 .@{ui-class-prefix}-button.fluid {
@@ -41,9 +76,9 @@
 
 .@{ui-class-prefix}-button[disabled],
 .@{ui-class-prefix}-button.disabled,
-.@{ui-class-prefix}-button-disabled:hover,
-.@{ui-class-prefix}-button-disabled:focus,
-.@{ui-class-prefix}-button-disabled:active {
+.@{ui-class-prefix}-button.disabled:hover,
+.@{ui-class-prefix}-button.disabled:focus,
+.@{ui-class-prefix}-button.disabled:active {
     .opacity(40);
     cursor: not-allowed;
 }
@@ -58,29 +93,29 @@
         Size
 ---------------------*/
 .@{ui-class-prefix}-button.mini {
-    font-size: 0.8125em;
+    .button-size(@default-button-height * 0.8125, @default-button-padding * 0.8125, @base-font-size * 0.8125, @default-border-radius);
 }
 .@{ui-class-prefix}-button.small {
-    font-size: 0.875em;
+    .button-size(@default-button-height * 0.875, @default-button-padding * 0.875, @base-font-size * 0.875, @default-border-radius);
 }
 .@{ui-class-prefix}-button.large {
-    font-size: 1.125em;
+    .button-size(@default-button-height * 1.125, @default-button-padding * 1.125, @base-font-size * 1.125, @default-border-radius);
 }
 .@{ui-class-prefix}-button.big {
-    font-size: 1.25em;
+    .button-size(@default-button-height * 1.25, @default-button-padding * 1.25, @base-font-size * 1.25, @default-border-radius);
 }
 .@{ui-class-prefix}-button.huge {
     font-size: 1.375em;
+    .button-size(@default-button-height * 1.375, @default-button-padding * 1.375, @base-font-size * 1.375, @default-border-radius);
 }
 .@{ui-class-prefix}-button.massive {
-    font-size: 1.5em;
+    .button-size(@default-button-height * 1.5, @default-button-padding * 1.5, @base-font-size * 1.5, @default-border-radius);
 }
 
 .@{ui-class-prefix}-button-group {
     display: inline-block;
     font-size: 0;
     .@{ui-class-prefix}-button {
-        font-size: 14px;
         &:first-child {
             margin-left: 0px;
         }
@@ -89,17 +124,13 @@
 }
 
 .@{ui-class-prefix}-button-group > .@{ui-class-prefix}-button:not(:first-child):not(:last-child) {
-  border-radius: 0;
+    border-radius: 0;
 }
-.@{ui-class-prefix}-button-group > .@{ui-class-prefix}-button:first-child {
-  &:not(:last-child) {
+.@{ui-class-prefix}-button-group > .@{ui-class-prefix}-button:first-child:not(:last-child) {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
-  }
 }
 .@{ui-class-prefix}-button-group > .@{ui-class-prefix}-button:last-child:not(:first-child) {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
 }
-
-

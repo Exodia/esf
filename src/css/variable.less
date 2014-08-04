@@ -5,6 +5,7 @@
 @base-font-size: 16px;
 @text-color: @neutral-base-color;
 @body-color: @primary-bg-color;
+@default-border-radius: 4px;
 
 // padding
 @gutter: 10px;
@@ -22,6 +23,13 @@
 @link-color:       @gray;
 @link-hover-color: darken(@link-color, 15%);
 
+/* =========
+   Input & button height
+   ========= */
+@default-button-height: 40px;
+@default-button-line-height: 40px;
+@default-input-height: 40px;
+   
 /* =========
    Inputs
    ========= */
@@ -51,10 +59,35 @@
    Buttons
    ========= */
 @default-icon-button-padding: 10px;
-@default-button-padding: 10px 16px;
-@default-button-text-color: #fff;
-@default-button-background-color: @primary-color;
-@default-button-border-color: @primary-color;
+@default-button-padding: 16px;
+
+@default-button-text-color: @white;
+@default-button-background-color: @gray-light;
+@default-button-border-color: @gray-light;
+
+@primary-button-text-color: @white;
+@primary-button-background-color: @primary-color;
+@primary-button-border-color: @primary-color;
+
+@secondary-button-text-color: @white;
+@secondary-button-background-color: @triad-base-color;
+@secondary-button-border-color: @triad-base-color; 
+
+@success-button-text-color: @white;
+@success-button-background-color: @complement-hightlight-color;
+@success-button-border-color: @complement-hightlight-color;
+
+@warning-button-text-color: @white;
+@warning-button-background-color: @energetic-hightlight-color;
+@warning-button-border-color: @energetic-hightlight-color; 
+
+@danger-button-text-color: @white;
+@danger-button-background-color: @energetic-base-color;
+@danger-button-border-color: @energetic-base-color;
+
+@info-button-text-color: @white;
+@info-button-background-color: @triad-base-color;
+@info-button-border-color: @triad-base-color; 
 
 /* =========
    Type
