@@ -23,6 +23,7 @@
 */
 .esf-grid-u,
 .ui-u,
+.ui-u-1,
 .ui-u-golden-ratio,
 .ui-u-golden-ratio-1,
 .ui-u-1-1,
@@ -936,6 +937,9 @@ this the same font stack that Normalize.css sets for the `body`.
 */
 .ui-g [class*="ui-u"] {
   font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
+}
+.ui-u-1 {
+  width: 100%;
 }
 .ui-u-golden-ratio {
   width: 61.8%;
