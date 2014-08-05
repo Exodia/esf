@@ -90,12 +90,10 @@ body {
   position: absolute;
   top: 15px;
   left: 15px;
-  font-size: 12px;
+  font-size: 12px; 
   font-weight: bold;
   color: #959595;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  content: "Example";
+  content: "示例";
 }
 
 /* Tweak display of the code snippets when following an example */
@@ -107,4 +105,24 @@ body {
   position: relative;
 }
 
-/* buttons */
+.highlight {
+    max-height: 300px;
+    overflow: auto;
+}
+
+/* grid-border */
+.l-box {
+    padding: 1em;
+    border: 1px solid @gray-light;
+}
+
+.grid-demo {
+    .ui-g {
+        background: @gray-lighter;
+        [class *= "@{ui-class-prefix}-u"] {
+            background: @gray-light;
+            color: @white;
+            text-align:center;
+        }
+    }
+}

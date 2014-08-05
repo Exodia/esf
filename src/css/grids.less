@@ -54,16 +54,6 @@ https://github.com/yui/pure/blob/master/LICENSE.md
     word-spacing: -0.43em;
 }
 
-.@{ui-class-prefix}-u {
-    display: inline-block;
-    *display: inline; /* IE < 8: fake inline-block */
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
-}
-
 /*
 Resets the font family back to the OS/browser's default sans-serif font,
 this the same font stack that Normalize.css sets for the `body`.
@@ -72,214 +62,27 @@ this the same font stack that Normalize.css sets for the `body`.
     font-family: @default-font-family;
 }
 
-.@{ui-class-prefix}-u-1,
-.@{ui-class-prefix}-u-1-1,
-.@{ui-class-prefix}-u-1-2,
-.@{ui-class-prefix}-u-1-3,
-.@{ui-class-prefix}-u-2-3,
-.@{ui-class-prefix}-u-1-4,
-.@{ui-class-prefix}-u-3-4,
-.@{ui-class-prefix}-u-1-5,
-.@{ui-class-prefix}-u-2-5,
-.@{ui-class-prefix}-u-3-5,
-.@{ui-class-prefix}-u-4-5,
-.@{ui-class-prefix}-u-5-5,
-.@{ui-class-prefix}-u-1-6,
-.@{ui-class-prefix}-u-5-6,
-.@{ui-class-prefix}-u-1-8,
-.@{ui-class-prefix}-u-3-8,
-.@{ui-class-prefix}-u-5-8,
-.@{ui-class-prefix}-u-7-8,
-.@{ui-class-prefix}-u-1-12,
-.@{ui-class-prefix}-u-5-12,
-.@{ui-class-prefix}-u-7-12,
-.@{ui-class-prefix}-u-11-12,
-.@{ui-class-prefix}-u-1-24,
-.@{ui-class-prefix}-u-2-24,
-.@{ui-class-prefix}-u-3-24,
-.@{ui-class-prefix}-u-4-24,
-.@{ui-class-prefix}-u-5-24,
-.@{ui-class-prefix}-u-6-24,
-.@{ui-class-prefix}-u-7-24,
-.@{ui-class-prefix}-u-8-24,
-.@{ui-class-prefix}-u-9-24,
-.@{ui-class-prefix}-u-10-24,
-.@{ui-class-prefix}-u-11-24,
-.@{ui-class-prefix}-u-12-24,
-.@{ui-class-prefix}-u-13-24,
-.@{ui-class-prefix}-u-14-24,
-.@{ui-class-prefix}-u-15-24,
-.@{ui-class-prefix}-u-16-24,
-.@{ui-class-prefix}-u-17-24,
-.@{ui-class-prefix}-u-18-24,
-.@{ui-class-prefix}-u-19-24,
-.@{ui-class-prefix}-u-20-24,
-.@{ui-class-prefix}-u-21-24,
-.@{ui-class-prefix}-u-22-24,
-.@{ui-class-prefix}-u-23-24,
-.@{ui-class-prefix}-u-24-24 {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
+// shortcuts
+.@{ui-class-prefix}-u,
+.@{ui-class-prefix}-u-golden-ratio,
+.@{ui-class-prefix}-u-golden-ratio-1
+ {
+    &:extend(.esf-grid-u all);
 }
 
-.@{ui-class-prefix}-u-1-24 {
-    width: 4.1667%;
-    *width: 4.1357%;
+.@{ui-class-prefix}-u-golden-ratio {
+    width: 61.8%;
 }
 
-.@{ui-class-prefix}-u-1-12,
-.@{ui-class-prefix}-u-2-24 {
-    width: 8.3333%;
-    *width: 8.3023%;
+.@{ui-class-prefix}-u-golden-ratio-1 {
+    width: 38.2%;
 }
 
-.@{ui-class-prefix}-u-1-8,
-.@{ui-class-prefix}-u-3-24 {
-    width: 12.5000%;
-    *width: 12.4690%;
-}
+// custom grid.
+.make-grid(1);
+.make-grid(2);
+.make-grid(3);
+.make-grid(4);
+.make-grid(24);
 
-.@{ui-class-prefix}-u-1-6,
-.@{ui-class-prefix}-u-4-24 {
-    width: 16.6667%;
-    *width: 16.6357%;
-}
-
-.@{ui-class-prefix}-u-1-5 {
-    width: 20%;
-    *width: 19.9690%;
-}
-
-.@{ui-class-prefix}-u-5-24 {
-    width: 20.8333%;
-    *width: 20.8023%;
-}
-
-.@{ui-class-prefix}-u-1-4,
-.@{ui-class-prefix}-u-6-24 {
-    width: 25%;
-    *width: 24.9690%;
-}
-
-.@{ui-class-prefix}-u-7-24 {
-    width: 29.1667%;
-    *width: 29.1357%;
-}
-
-.@{ui-class-prefix}-u-1-3,
-.@{ui-class-prefix}-u-8-24 {
-    width: 33.3333%;
-    *width: 33.3023%;
-}
-
-.@{ui-class-prefix}-u-3-8,
-.@{ui-class-prefix}-u-9-24 {
-    width: 37.5000%;
-    *width: 37.4690%;
-}
-
-.@{ui-class-prefix}-u-2-5 {
-    width: 40%;
-    *width: 39.9690%;
-}
-
-.@{ui-class-prefix}-u-5-12,
-.@{ui-class-prefix}-u-10-24 {
-    width: 41.6667%;
-    *width: 41.6357%;
-}
-
-.@{ui-class-prefix}-u-11-24 {
-    width: 45.8333%;
-    *width: 45.8023%;
-}
-
-.@{ui-class-prefix}-u-1-2,
-.@{ui-class-prefix}-u-12-24 {
-    width: 50%;
-    *width: 49.9690%;
-}
-
-.@{ui-class-prefix}-u-13-24 {
-    width: 54.1667%;
-    *width: 54.1357%;
-}
-
-.@{ui-class-prefix}-u-7-12,
-.@{ui-class-prefix}-u-14-24 {
-    width: 58.3333%;
-    *width: 58.3023%;
-}
-
-.@{ui-class-prefix}-u-3-5 {
-    width: 60%;
-    *width: 59.9690%;
-}
-
-.@{ui-class-prefix}-u-5-8,
-.@{ui-class-prefix}-u-15-24 {
-    width: 62.5000%;
-    *width: 62.4690%;
-}
-
-.@{ui-class-prefix}-u-2-3,
-.@{ui-class-prefix}-u-16-24 {
-    width: 66.6667%;
-    *width: 66.6357%;
-}
-
-.@{ui-class-prefix}-u-17-24 {
-    width: 70.8333%;
-    *width: 70.8023%;
-}
-
-.@{ui-class-prefix}-u-3-4,
-.@{ui-class-prefix}-u-18-24 {
-    width: 75%;
-    *width: 74.9690%;
-}
-
-.@{ui-class-prefix}-u-19-24 {
-    width: 79.1667%;
-    *width: 79.1357%;
-}
-
-.@{ui-class-prefix}-u-4-5 {
-    width: 80%;
-    *width: 79.9690%;
-}
-
-.@{ui-class-prefix}-u-5-6,
-.@{ui-class-prefix}-u-20-24 {
-    width: 83.3333%;
-    *width: 83.3023%;
-}
-
-.@{ui-class-prefix}-u-7-8,
-.@{ui-class-prefix}-u-21-24 {
-    width: 87.5000%;
-    *width: 87.4690%;
-}
-
-.@{ui-class-prefix}-u-11-12,
-.@{ui-class-prefix}-u-22-24 {
-    width: 91.6667%;
-    *width: 91.6357%;
-}
-
-.@{ui-class-prefix}-u-23-24 {
-    width: 95.8333%;
-    *width: 95.8023%;
-}
-
-.@{ui-class-prefix}-u-1,
-.@{ui-class-prefix}-u-1-1,
-.@{ui-class-prefix}-u-5-5,
-.@{ui-class-prefix}-u-24-24 {
-    width: 100%;
-}
+.make-grid(5);

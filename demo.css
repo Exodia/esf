@@ -21,6 +21,15 @@
 * ESF 变量，一般不用直接修改这里
 ×
 */
+.esf-grid-u {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+}
 body > .est-header {
   position: fixed;
   top: 0;
@@ -127,9 +136,7 @@ body > .est-body:after {
   font-size: 12px;
   font-weight: bold;
   color: #959595;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  content: "Example";
+  content: "示例";
 }
 /* Tweak display of the code snippets when following an example */
 .example + .highlight {
@@ -139,4 +146,20 @@ body > .est-body:after {
   border-radius: 0;
   position: relative;
 }
-/* buttons */
+.highlight {
+  max-height: 300px;
+  overflow: auto;
+}
+/* grid-border */
+.l-box {
+  padding: 1em;
+  border: 1px solid #777777;
+}
+.grid-demo .ui-g {
+  background: #eeeeee;
+}
+.grid-demo .ui-g [class*="ui-u"] {
+  background: #777777;
+  color: #ffffff;
+  text-align: center;
+}

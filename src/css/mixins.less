@@ -54,98 +54,6 @@
 }
 
 
-// Framework grid generation
-//
-// Used only by Bootstrap to generate the correct number of grid classes given
-// any value of `@grid-columns`.
-
-.make-grid-columns() {
-  // Common styles for all sizes of grid columns, widths 1-12
-  .col(@index) when (@index = 1) { // initial
-    @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
-    .col((@index + 1), @item);
-  }
-  .col(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
-    @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
-    .col((@index + 1), ~"@{list}, @{item}");
-  }
-  .col(@index, @list) when (@index > @grid-columns) { // terminal
-    @{list} {
-      position: relative;
-      // Prevent columns from collapsing when empty
-      min-height: 1px;
-      // Inner gutter via padding
-      padding-left:  (@grid-gutter-width / 2);
-      padding-right: (@grid-gutter-width / 2);
-    }
-  }
-  .col(1); // kickstart it
-}
-
-.float-grid-columns(@class) {
-  .col(@index) when (@index = 1) { // initial
-    @item: ~".col-@{class}-@{index}";
-    .col((@index + 1), @item);
-  }
-  .col(@index, @list) when (@index =< @grid-columns) { // general
-    @item: ~".col-@{class}-@{index}";
-    .col((@index + 1), ~"@{list}, @{item}");
-  }
-  .col(@index, @list) when (@index > @grid-columns) { // terminal
-    @{list} {
-      float: left;
-    }
-  }
-  .col(1); // kickstart it
-}
-
-.calc-grid-column(@index, @class, @type) when (@type = width) and (@index > 0) {
-  .col-@{class}-@{index} {
-    width: percentage((@index / @grid-columns));
-  }
-}
-.calc-grid-column(@index, @class, @type) when (@type = push) and (@index > 0) {
-  .col-@{class}-push-@{index} {
-    left: percentage((@index / @grid-columns));
-  }
-}
-.calc-grid-column(@index, @class, @type) when (@type = push) and (@index = 0) {
-  .col-@{class}-push-0 {
-    left: auto;
-  }
-}
-.calc-grid-column(@index, @class, @type) when (@type = pull) and (@index > 0) {
-  .col-@{class}-pull-@{index} {
-    right: percentage((@index / @grid-columns));
-  }
-}
-.calc-grid-column(@index, @class, @type) when (@type = pull) and (@index = 0) {
-  .col-@{class}-pull-0 {
-    right: auto;
-  }
-}
-.calc-grid-column(@index, @class, @type) when (@type = offset) {
-  .col-@{class}-offset-@{index} {
-    margin-left: percentage((@index / @grid-columns));
-  }
-}
-
-// Basic looping in LESS
-.loop-grid-columns(@index, @class, @type) when (@index >= 0) {
-  .calc-grid-column(@index, @class, @type);
-  // next iteration
-  .loop-grid-columns((@index - 1), @class, @type);
-}
-
-// Create grid for specific class
-.make-grid(@class) {
-  .float-grid-columns(@class);
-  .loop-grid-columns(@grid-columns, @class, width);
-  .loop-grid-columns(@grid-columns, @class, pull);
-  .loop-grid-columns(@grid-columns, @class, push);
-  .loop-grid-columns(@grid-columns, @class, offset);
-}
-
 .ellipsis(...) {
     overflow: hidden;
 }
@@ -170,7 +78,7 @@
   }
 }
 
-.button-variant(@color; @background; @border) { 
+.button-variant(@color; @background; @border) {
     color: @color;
     background-color: @background;
         border-color: @border;
@@ -187,4 +95,49 @@
     border-radius: @border-radius;
     height: @height;
     line-height: @height - 2;
+}
+
+.esf-grid-u {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+}
+
+.make-grid(@grid-columns) {
+  .loop-grid-columns(@grid-columns, false, @grid-columns);
+}
+
+.make-grid(@grid-columns, @class) {
+  .loop-grid-columns(@grid-columns, @class, @grid-columns);
+}
+
+// Basic looping in LESS
+.loop-grid-columns(@index, @class, @total) when (@index >= 0) {
+  .calc-grid-column(@index, @class, @total);
+  // next iteration
+  .loop-grid-columns((@index - 1), @class, @total);
+} 
+
+.calc-grid-column(@index, @class, @total) when (isstring(@class)) and (@index > 0) {
+    .@{ui-class-prefix}-u-@{class}-@{index}-@{total} {
+        width: percentage((@index / @grid-columns));
+        // IE < 8 has issues with rounding, reducing the width slightly prevents the
+        // grid units from wrapping to the next line.
+        *width: percentage((@index / @grid-columns) - 0.00031);
+        &:extend(.esf-grid-u all);
+    }
+}
+
+.calc-grid-column(@index, @class, @total) when (@index > 0) {
+    .@{ui-class-prefix}-u-@{index}-@{total} {
+        width: percentage((@index / @grid-columns));
+        // IE < 8 has issues with rounding, reducing the width slightly prevents the
+        // grid units from wrapping to the next line.
+        *width: percentage((@index / @grid-columns) - 0.00031);
+        &:extend(.esf-grid-u all);
+    }
 }

@@ -21,6 +21,57 @@
 * ESF 变量，一般不用直接修改这里
 ×
 */
+.esf-grid-u,
+.ui-u,
+.ui-u-golden-ratio,
+.ui-u-golden-ratio-1,
+.ui-u-1-1,
+.ui-u-2-2,
+.ui-u-1-2,
+.ui-u-3-3,
+.ui-u-2-3,
+.ui-u-1-3,
+.ui-u-4-4,
+.ui-u-3-4,
+.ui-u-2-4,
+.ui-u-1-4,
+.ui-u-24-24,
+.ui-u-23-24,
+.ui-u-22-24,
+.ui-u-21-24,
+.ui-u-20-24,
+.ui-u-19-24,
+.ui-u-18-24,
+.ui-u-17-24,
+.ui-u-16-24,
+.ui-u-15-24,
+.ui-u-14-24,
+.ui-u-13-24,
+.ui-u-12-24,
+.ui-u-11-24,
+.ui-u-10-24,
+.ui-u-9-24,
+.ui-u-8-24,
+.ui-u-7-24,
+.ui-u-6-24,
+.ui-u-5-24,
+.ui-u-4-24,
+.ui-u-3-24,
+.ui-u-2-24,
+.ui-u-1-24,
+.ui-u-5-5,
+.ui-u-4-5,
+.ui-u-3-5,
+.ui-u-2-5,
+.ui-u-1-5 {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+}
 /*! normalize.css v1.1.2 | MIT License | git.io/normalize */
 /* ==========================================================================
        Base
@@ -879,16 +930,6 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 .ui-g {
   word-spacing: -0.43em;
 }
-.ui-u {
-  display: inline-block;
-  *display: inline;
-  /* IE < 8: fake inline-block */
-  zoom: 1;
-  letter-spacing: normal;
-  word-spacing: normal;
-  vertical-align: top;
-  text-rendering: auto;
-}
 /*
 Resets the font family back to the OS/browser's default sans-serif font,
 this the same font stack that Normalize.css sets for the `body`.
@@ -896,188 +937,167 @@ this the same font stack that Normalize.css sets for the `body`.
 .ui-g [class*="ui-u"] {
   font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
 }
-.ui-u-1,
-.ui-u-1-1,
-.ui-u-1-2,
-.ui-u-1-3,
-.ui-u-2-3,
-.ui-u-1-4,
-.ui-u-3-4,
-.ui-u-1-5,
-.ui-u-2-5,
-.ui-u-3-5,
-.ui-u-4-5,
-.ui-u-5-5,
-.ui-u-1-6,
-.ui-u-5-6,
-.ui-u-1-8,
-.ui-u-3-8,
-.ui-u-5-8,
-.ui-u-7-8,
-.ui-u-1-12,
-.ui-u-5-12,
-.ui-u-7-12,
-.ui-u-11-12,
-.ui-u-1-24,
-.ui-u-2-24,
-.ui-u-3-24,
-.ui-u-4-24,
-.ui-u-5-24,
-.ui-u-6-24,
-.ui-u-7-24,
-.ui-u-8-24,
-.ui-u-9-24,
-.ui-u-10-24,
-.ui-u-11-24,
-.ui-u-12-24,
-.ui-u-13-24,
-.ui-u-14-24,
-.ui-u-15-24,
-.ui-u-16-24,
-.ui-u-17-24,
-.ui-u-18-24,
-.ui-u-19-24,
-.ui-u-20-24,
-.ui-u-21-24,
-.ui-u-22-24,
-.ui-u-23-24,
-.ui-u-24-24 {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  letter-spacing: normal;
-  word-spacing: normal;
-  vertical-align: top;
-  text-rendering: auto;
+.ui-u-golden-ratio {
+  width: 61.8%;
 }
-.ui-u-1-24 {
-  width: 4.1667%;
-  *width: 4.1357%;
+.ui-u-golden-ratio-1 {
+  width: 38.2%;
 }
-.ui-u-1-12,
-.ui-u-2-24 {
-  width: 8.3333%;
-  *width: 8.3023%;
+.ui-u-1-1 {
+  width: 100%;
+  *width: 99.969%;
 }
-.ui-u-1-8,
-.ui-u-3-24 {
-  width: 12.5000%;
-  *width: 12.4690%;
+.ui-u-2-2 {
+  width: 100%;
+  *width: 99.969%;
 }
-.ui-u-1-6,
-.ui-u-4-24 {
-  width: 16.6667%;
-  *width: 16.6357%;
-}
-.ui-u-1-5 {
-  width: 20%;
-  *width: 19.9690%;
-}
-.ui-u-5-24 {
-  width: 20.8333%;
-  *width: 20.8023%;
-}
-.ui-u-1-4,
-.ui-u-6-24 {
-  width: 25%;
-  *width: 24.9690%;
-}
-.ui-u-7-24 {
-  width: 29.1667%;
-  *width: 29.1357%;
-}
-.ui-u-1-3,
-.ui-u-8-24 {
-  width: 33.3333%;
-  *width: 33.3023%;
-}
-.ui-u-3-8,
-.ui-u-9-24 {
-  width: 37.5000%;
-  *width: 37.4690%;
-}
-.ui-u-2-5 {
-  width: 40%;
-  *width: 39.9690%;
-}
-.ui-u-5-12,
-.ui-u-10-24 {
-  width: 41.6667%;
-  *width: 41.6357%;
-}
-.ui-u-11-24 {
-  width: 45.8333%;
-  *width: 45.8023%;
-}
-.ui-u-1-2,
-.ui-u-12-24 {
+.ui-u-1-2 {
   width: 50%;
-  *width: 49.9690%;
+  *width: 49.969%;
 }
-.ui-u-13-24 {
-  width: 54.1667%;
-  *width: 54.1357%;
+.ui-u-3-3 {
+  width: 100%;
+  *width: 99.969%;
 }
-.ui-u-7-12,
-.ui-u-14-24 {
-  width: 58.3333%;
-  *width: 58.3023%;
+.ui-u-2-3 {
+  width: 66.66666667%;
+  *width: 66.63566667%;
 }
-.ui-u-3-5 {
-  width: 60%;
-  *width: 59.9690%;
+.ui-u-1-3 {
+  width: 33.33333333%;
+  *width: 33.30233333%;
 }
-.ui-u-5-8,
-.ui-u-15-24 {
-  width: 62.5000%;
-  *width: 62.4690%;
+.ui-u-4-4 {
+  width: 100%;
+  *width: 99.969%;
 }
-.ui-u-2-3,
-.ui-u-16-24 {
-  width: 66.6667%;
-  *width: 66.6357%;
-}
-.ui-u-17-24 {
-  width: 70.8333%;
-  *width: 70.8023%;
-}
-.ui-u-3-4,
-.ui-u-18-24 {
+.ui-u-3-4 {
   width: 75%;
-  *width: 74.9690%;
+  *width: 74.969%;
+}
+.ui-u-2-4 {
+  width: 50%;
+  *width: 49.969%;
+}
+.ui-u-1-4 {
+  width: 25%;
+  *width: 24.969%;
+}
+.ui-u-24-24 {
+  width: 100%;
+  *width: 99.969%;
+}
+.ui-u-23-24 {
+  width: 95.83333333%;
+  *width: 95.80233333%;
+}
+.ui-u-22-24 {
+  width: 91.66666667%;
+  *width: 91.63566667%;
+}
+.ui-u-21-24 {
+  width: 87.5%;
+  *width: 87.469%;
+}
+.ui-u-20-24 {
+  width: 83.33333333%;
+  *width: 83.30233333%;
 }
 .ui-u-19-24 {
-  width: 79.1667%;
-  *width: 79.1357%;
+  width: 79.16666667%;
+  *width: 79.13566667%;
+}
+.ui-u-18-24 {
+  width: 75%;
+  *width: 74.969%;
+}
+.ui-u-17-24 {
+  width: 70.83333333%;
+  *width: 70.80233333%;
+}
+.ui-u-16-24 {
+  width: 66.66666667%;
+  *width: 66.63566667%;
+}
+.ui-u-15-24 {
+  width: 62.5%;
+  *width: 62.469%;
+}
+.ui-u-14-24 {
+  width: 58.33333333%;
+  *width: 58.30233333%;
+}
+.ui-u-13-24 {
+  width: 54.16666667%;
+  *width: 54.13566667%;
+}
+.ui-u-12-24 {
+  width: 50%;
+  *width: 49.969%;
+}
+.ui-u-11-24 {
+  width: 45.83333333%;
+  *width: 45.80233333%;
+}
+.ui-u-10-24 {
+  width: 41.66666667%;
+  *width: 41.63566667%;
+}
+.ui-u-9-24 {
+  width: 37.5%;
+  *width: 37.469%;
+}
+.ui-u-8-24 {
+  width: 33.33333333%;
+  *width: 33.30233333%;
+}
+.ui-u-7-24 {
+  width: 29.16666667%;
+  *width: 29.13566667%;
+}
+.ui-u-6-24 {
+  width: 25%;
+  *width: 24.969%;
+}
+.ui-u-5-24 {
+  width: 20.83333333%;
+  *width: 20.80233333%;
+}
+.ui-u-4-24 {
+  width: 16.66666667%;
+  *width: 16.63566667%;
+}
+.ui-u-3-24 {
+  width: 12.5%;
+  *width: 12.469%;
+}
+.ui-u-2-24 {
+  width: 8.33333333%;
+  *width: 8.30233333%;
+}
+.ui-u-1-24 {
+  width: 4.16666667%;
+  *width: 4.13566667%;
+}
+.ui-u-5-5 {
+  width: 100%;
+  *width: 99.969%;
 }
 .ui-u-4-5 {
   width: 80%;
-  *width: 79.9690%;
+  *width: 79.969%;
 }
-.ui-u-5-6,
-.ui-u-20-24 {
-  width: 83.3333%;
-  *width: 83.3023%;
+.ui-u-3-5 {
+  width: 60%;
+  *width: 59.969%;
 }
-.ui-u-7-8,
-.ui-u-21-24 {
-  width: 87.5000%;
-  *width: 87.4690%;
+.ui-u-2-5 {
+  width: 40%;
+  *width: 39.969%;
 }
-.ui-u-11-12,
-.ui-u-22-24 {
-  width: 91.6667%;
-  *width: 91.6357%;
-}
-.ui-u-23-24 {
-  width: 95.8333%;
-  *width: 95.8023%;
-}
-.ui-u-1,
-.ui-u-1-1,
-.ui-u-5-5,
-.ui-u-24-24 {
-  width: 100%;
+.ui-u-1-5 {
+  width: 20%;
+  *width: 19.969%;
 }
 .ui-form fieldset {
   margin: 0;
