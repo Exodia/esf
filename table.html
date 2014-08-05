@@ -6,196 +6,388 @@
         <link rel="stylesheet" href="src/css/main.css" />
         <link rel="stylesheet" href="src/icons/css/font-awesome.css" />
         <link rel="stylesheet" href="demo.css" />
+        <link rel="stylesheet" href="assets/prism.css" />
+        <script src="assets/prism.js"></script>
     </head>
-    <body>
-        <h1 class="page-header">ESF Demo</h1>
+    <body class="p2">
         <div id="layout" class="ui-g">
             <div class="ui-u-1-5">
-                <ul id="navigator">
-                    <li><a href="index.html">Get Started</a></li>
-                    <li><a href="button.html">按钮</a></li>
-                    <li><a href="#">布局网格</a></li>
-                    <li><a href="checkbox.html">Checkbox</a></li>
-                    <li><a href="form.html">表单</a></li>
-                    <li><a href="icons.html">图标</a></li>
-                    <li><a href="input.html">输入框</a></li>
-                    <li><a href="label.html">标签</a></li>
-                    <li><a href="menu.html">导航菜单</a></li>
-                    <li><a href="type.html">文字样式</a></li>
+                <ul id="navigator-features" class="list-unstyled">
+                    <li><a href="#table-default">默认Table样式</a></li>
+                    <li><a href="#table-bordered">有边框的Table样式</a></li>
+                    <li><a href="#table-horizontal">横线样式</a></li>
+                    <li><a href="#table-striped">条纹样式</a></li>
+                    <li><a href="#table-hover">Hover行样式</a></li>
                 </ul>
             </div>
             <div class="ui-u-4-5">
                 <div id="main" class="content p2 no-pt">
-                    <h2>表格样式</h2>
-                    <table class="ui-table">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Make</th>
-                                <th>Model</th>
-                                <th>Year</th>
-                            </tr>
-                        </thead>
+                    <h2 class="no-mt">Table样式</h2>
+                    <div class="ui-divider"></div>
+                    <p>
+                        数据表格的样式。
+                    </p>
+                    <div>
+                        <h3 id="table-default">默认Table样式</h3>
+                        <div class="example">
+                            <table class="ui-table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Make</th>
+                                        <th>Model</th>
+                                        <th>Year</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Honda</td>
+                                        <td>Accord</td>
+                                        <td>2009</td>
+                                    </tr>
 
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Honda</td>
-                                <td>Accord</td>
-                                <td>2009</td>
-                            </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Toyota</td>
+                                        <td>Camry</td>
+                                        <td>2012</td>
+                                    </tr>
 
-                            <tr>
-                                <td>2</td>
-                                <td>Toyota</td>
-                                <td>Camry</td>
-                                <td>2012</td>
-                            </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Hyundai</td>
+                                        <td>Elantra</td>
+                                        <td>2010</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="highlight">
+                            <pre><code class="language-markup">
+&lt;table class=&quot;ui-table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;#&lt;/th&gt;
+            &lt;th&gt;Make&lt;/th&gt;
+            &lt;th&gt;Model&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;Honda&lt;/td&gt;
+            &lt;td&gt;Accord&lt;/td&gt;
+            &lt;td&gt;2009&lt;/td&gt;
+        &lt;/tr&gt;
 
-                            <tr>
-                                <td>3</td>
-                                <td>Hyundai</td>
-                                <td>Elantra</td>
-                                <td>2010</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <h2>边框样式</h2>
-                    <table class="ui-table ui-table-bordered">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Make</th>
-                                <th>Model</th>
-                                <th>Year</th>
-                            </tr>
-                        </thead>
+        &lt;tr&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;Toyota&lt;/td&gt;
+            &lt;td&gt;Camry&lt;/td&gt;
+            &lt;td&gt;2012&lt;/td&gt;
+        &lt;/tr&gt;
 
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Honda</td>
-                                <td>Accord</td>
-                                <td>2009</td>
-                            </tr>
+        &lt;tr&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;Hyundai&lt;/td&gt;
+            &lt;td&gt;Elantra&lt;/td&gt;
+            &lt;td&gt;2010&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                            </code></pre>
+                        </div>
 
-                            <tr>
-                                <td>2</td>
-                                <td>Toyota</td>
-                                <td>Camry</td>
-                                <td>2012</td>
-                            </tr>
+                        <h3 id="table-bordered">有边框的Table样式</h3>
+                        <div class="example">
+                            <table class="ui-table ui-table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Make</th>
+                                        <th>Model</th>
+                                        <th>Year</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Honda</td>
+                                        <td>Accord</td>
+                                        <td>2009</td>
+                                    </tr>
 
-                            <tr>
-                                <td>3</td>
-                                <td>Hyundai</td>
-                                <td>Elantra</td>
-                                <td>2010</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <h2>横线样式</h2>
-                    <table class="ui-table ui-table-horizontal">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Make</th>
-                                <th>Model</th>
-                                <th>Year</th>
-                            </tr>
-                        </thead>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Toyota</td>
+                                        <td>Camry</td>
+                                        <td>2012</td>
+                                    </tr>
 
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Honda</td>
-                                <td>Accord</td>
-                                <td>2009</td>
-                            </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Hyundai</td>
+                                        <td>Elantra</td>
+                                        <td>2010</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="highlight">
+                            <pre><code class="language-markup">
+&lt;table class=&quot;ui-table ui-table-bordered&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;#&lt;/th&gt;
+            &lt;th&gt;Make&lt;/th&gt;
+            &lt;th&gt;Model&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;Honda&lt;/td&gt;
+            &lt;td&gt;Accord&lt;/td&gt;
+            &lt;td&gt;2009&lt;/td&gt;
+        &lt;/tr&gt;
 
-                            <tr>
-                                <td>2</td>
-                                <td>Toyota</td>
-                                <td>Camry</td>
-                                <td>2012</td>
-                            </tr>
+        &lt;tr&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;Toyota&lt;/td&gt;
+            &lt;td&gt;Camry&lt;/td&gt;
+            &lt;td&gt;2012&lt;/td&gt;
+        &lt;/tr&gt;
 
-                            <tr>
-                                <td>3</td>
-                                <td>Hyundai</td>
-                                <td>Elantra</td>
-                                <td>2010</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <h2>条纹样式</h2>
-                    <table class="ui-table ui-table-striped">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Make</th>
-                                <th>Model</th>
-                                <th>Year</th>
-                            </tr>
-                        </thead>
+        &lt;tr&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;Hyundai&lt;/td&gt;
+            &lt;td&gt;Elantra&lt;/td&gt;
+            &lt;td&gt;2010&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                            </code></pre>
+                        </div>
 
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Honda</td>
-                                <td>Accord</td>
-                                <td>2009</td>
-                            </tr>
+                        <h3 id="table-horizontal">横线样式</h3>
+                        <div class="example">
+                            <table class="ui-table ui-table-horizontal">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Make</th>
+                                        <th>Model</th>
+                                        <th>Year</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Honda</td>
+                                        <td>Accord</td>
+                                        <td>2009</td>
+                                    </tr>
 
-                            <tr>
-                                <td>2</td>
-                                <td>Toyota</td>
-                                <td>Camry</td>
-                                <td>2012</td>
-                            </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Toyota</td>
+                                        <td>Camry</td>
+                                        <td>2012</td>
+                                    </tr>
 
-                            <tr>
-                                <td>3</td>
-                                <td>Hyundai</td>
-                                <td>Elantra</td>
-                                <td>2010</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <h2>悬浮行样式</h2>
-                    <table class="ui-table ui-table-hover">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Make</th>
-                                <th>Model</th>
-                                <th>Year</th>
-                            </tr>
-                        </thead>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Hyundai</td>
+                                        <td>Elantra</td>
+                                        <td>2010</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="highlight">
+                            <pre><code class="language-markup">
+&lt;table class=&quot;ui-table ui-table-horizontal&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;#&lt;/th&gt;
+            &lt;th&gt;Make&lt;/th&gt;
+            &lt;th&gt;Model&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;Honda&lt;/td&gt;
+            &lt;td&gt;Accord&lt;/td&gt;
+            &lt;td&gt;2009&lt;/td&gt;
+        &lt;/tr&gt;
 
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Honda</td>
-                                <td>Accord</td>
-                                <td>2009</td>
-                            </tr>
+        &lt;tr&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;Toyota&lt;/td&gt;
+            &lt;td&gt;Camry&lt;/td&gt;
+            &lt;td&gt;2012&lt;/td&gt;
+        &lt;/tr&gt;
 
-                            <tr>
-                                <td>2</td>
-                                <td>Toyota</td>
-                                <td>Camry</td>
-                                <td>2012</td>
-                            </tr>
+        &lt;tr&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;Hyundai&lt;/td&gt;
+            &lt;td&gt;Elantra&lt;/td&gt;
+            &lt;td&gt;2010&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                            </code></pre>
+                        </div>
 
-                            <tr>
-                                <td>3</td>
-                                <td>Hyundai</td>
-                                <td>Elantra</td>
-                                <td>2010</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        <h3 id="table-striped">条纹样式</h3>
+                        <div class="example">
+                            <table class="ui-table ui-table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Make</th>
+                                        <th>Model</th>
+                                        <th>Year</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Honda</td>
+                                        <td>Accord</td>
+                                        <td>2009</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Toyota</td>
+                                        <td>Camry</td>
+                                        <td>2012</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Hyundai</td>
+                                        <td>Elantra</td>
+                                        <td>2010</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="highlight">
+                            <pre><code class="language-markup">
+&lt;table class=&quot;ui-table ui-table-striped&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;#&lt;/th&gt;
+            &lt;th&gt;Make&lt;/th&gt;
+            &lt;th&gt;Model&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;Honda&lt;/td&gt;
+            &lt;td&gt;Accord&lt;/td&gt;
+            &lt;td&gt;2009&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;Toyota&lt;/td&gt;
+            &lt;td&gt;Camry&lt;/td&gt;
+            &lt;td&gt;2012&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;Hyundai&lt;/td&gt;
+            &lt;td&gt;Elantra&lt;/td&gt;
+            &lt;td&gt;2010&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                            </code></pre>
+                        </div>
+                        
+                        <h3 id="table-hover">Hover行样式</h3>
+                        <div class="example">
+                            <table class="ui-table ui-table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Make</th>
+                                        <th>Model</th>
+                                        <th>Year</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Honda</td>
+                                        <td>Accord</td>
+                                        <td>2009</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Toyota</td>
+                                        <td>Camry</td>
+                                        <td>2012</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Hyundai</td>
+                                        <td>Elantra</td>
+                                        <td>2010</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="highlight">
+                            <pre><code class="language-markup">
+&lt;table class=&quot;ui-table ui-table-hover&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;#&lt;/th&gt;
+            &lt;th&gt;Make&lt;/th&gt;
+            &lt;th&gt;Model&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;Honda&lt;/td&gt;
+            &lt;td&gt;Accord&lt;/td&gt;
+            &lt;td&gt;2009&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;Toyota&lt;/td&gt;
+            &lt;td&gt;Camry&lt;/td&gt;
+            &lt;td&gt;2012&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;Hyundai&lt;/td&gt;
+            &lt;td&gt;Elantra&lt;/td&gt;
+            &lt;td&gt;2010&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                            </code></pre>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
