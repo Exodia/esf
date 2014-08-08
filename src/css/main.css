@@ -16,6 +16,9 @@
 /* =========
    Menu
    ========= */
+/* =========
+   z-index
+   ========= */
 /*
 * 
 * ESF 变量，一般不用直接修改这里
@@ -855,7 +858,8 @@ ul ol,
 ol ol {
   margin-bottom: 0;
 }
-.list-unstyled {
+.list-unstyled,
+.ui-dropdown {
   padding-left: 0;
   list-style: none;
 }
@@ -1644,8 +1648,6 @@ textarea:focus {
   z-index: 10;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding-left: 0;
-  list-style: none;
 }
 .ui-dropdown li {
   position: relative;

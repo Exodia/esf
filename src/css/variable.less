@@ -109,6 +109,18 @@
 @menu-item-margin: 0;
 @menu-item-active-shadow: 0 0.2em 0 inset;
 
+
+/* =========
+   z-index
+   ========= */
+@zindex-navbar:            1000;
+@zindex-dropdown:          1000;
+@zindex-popover:           1060;
+@zindex-tooltip:           1070;
+@zindex-navbar-fixed:      1030;
+@zindex-modal-background:  1040;
+@zindex-modal:             1050;
+
 /*
 * 
 * ESF 变量，一般不用直接修改这里
@@ -136,3 +148,10 @@
 @header-z-index: 1000;
 @footer-z-index: 1000;
 @modal-z-index: 1050;
+
+//-- Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+//
+// Note: These variables are not generated into the Customizer.
