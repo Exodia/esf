@@ -1700,6 +1700,7 @@ textarea:focus {
 }
 .ui-menu > ul .ui-menu-item > a {
   text-decoration: none;
+  display: block;
 }
 .ui-menu > ul .ui-menu-item.disabled {
   cursor: not-allowed;
@@ -1731,28 +1732,41 @@ textarea:focus {
 .ui-menu .ui-menu-item > a {
   color: #ffffff;
   padding: 0.5em 1em;
+  font-size: 16px;
 }
 .ui-menu .ui-menu-item > a:hover {
   background-color: #9d0000;
 }
 .ui-menu .ui-menu-item.active {
   background: #9d0000;
+  box-shadow: 0 0.2em 0 inset;
 }
-.ui-menu.horizontal > ul > li {
+.ui-menu .ui-menu-separator-before,
+.ui-menu .ui-menu-separator-after {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.ui-menu.horizontal .ui-menu-item {
   float: left;
-}
-.ui-menu.horizontal > ul > li a {
-  display: block;
 }
 .ui-menu.horizontal .ui-dropdown {
   position: absolute;
   min-width: 100%;
 }
-.ui-menu.vertical li {
-  position: relative;
+.ui-menu.horizontal .ui-menu-separator-before {
+  border-left-width: 1px;
+  border-left-style: solid;
 }
-.ui-menu.vertical li a {
-  display: block;
+.ui-menu.horizontal .ui-menu-separator-after {
+  border-right-width: 1px;
+  border-right-style: solid;
+}
+.ui-menu.vertical .ui-menu-separator-before {
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+.ui-menu.vertical .ui-menu-separator-after {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 }
 /*
  * # Semantic - Label
