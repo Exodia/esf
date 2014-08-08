@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="demo.css" />
         <link rel="stylesheet" href="assets/prism.css" />
         <script src="assets/prism.js"></script>
+        <script src="assets/jquery-1.11.1.min.js"></script>
+        <script src="assets/demo.js"></script>
     </head>
     <body class="p2">
         <div id="layout" class="ui-g">
@@ -63,42 +65,6 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="highlight">
-                            <pre><code class="language-markup">
-&lt;table class=&quot;ui-table&quot;&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;#&lt;/th&gt;
-            &lt;th&gt;Make&lt;/th&gt;
-            &lt;th&gt;Model&lt;/th&gt;
-            &lt;th&gt;Year&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;1&lt;/td&gt;
-            &lt;td&gt;Honda&lt;/td&gt;
-            &lt;td&gt;Accord&lt;/td&gt;
-            &lt;td&gt;2009&lt;/td&gt;
-        &lt;/tr&gt;
-
-        &lt;tr&gt;
-            &lt;td&gt;2&lt;/td&gt;
-            &lt;td&gt;Toyota&lt;/td&gt;
-            &lt;td&gt;Camry&lt;/td&gt;
-            &lt;td&gt;2012&lt;/td&gt;
-        &lt;/tr&gt;
-
-        &lt;tr&gt;
-            &lt;td&gt;3&lt;/td&gt;
-            &lt;td&gt;Hyundai&lt;/td&gt;
-            &lt;td&gt;Elantra&lt;/td&gt;
-            &lt;td&gt;2010&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;
-                            </code></pre>
-                        </div>
 
                         <h3 id="table-bordered">有边框的Table样式</h3>
                         <div class="example">
@@ -134,42 +100,6 @@
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
-                        <div class="highlight">
-                            <pre><code class="language-markup">
-&lt;table class=&quot;ui-table ui-table-bordered&quot;&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;#&lt;/th&gt;
-            &lt;th&gt;Make&lt;/th&gt;
-            &lt;th&gt;Model&lt;/th&gt;
-            &lt;th&gt;Year&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;1&lt;/td&gt;
-            &lt;td&gt;Honda&lt;/td&gt;
-            &lt;td&gt;Accord&lt;/td&gt;
-            &lt;td&gt;2009&lt;/td&gt;
-        &lt;/tr&gt;
-
-        &lt;tr&gt;
-            &lt;td&gt;2&lt;/td&gt;
-            &lt;td&gt;Toyota&lt;/td&gt;
-            &lt;td&gt;Camry&lt;/td&gt;
-            &lt;td&gt;2012&lt;/td&gt;
-        &lt;/tr&gt;
-
-        &lt;tr&gt;
-            &lt;td&gt;3&lt;/td&gt;
-            &lt;td&gt;Hyundai&lt;/td&gt;
-            &lt;td&gt;Elantra&lt;/td&gt;
-            &lt;td&gt;2010&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;
-                            </code></pre>
                         </div>
 
                         <h3 id="table-horizontal">横线样式</h3>
@@ -207,43 +137,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="highlight">
-                            <pre><code class="language-markup">
-&lt;table class=&quot;ui-table ui-table-horizontal&quot;&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;#&lt;/th&gt;
-            &lt;th&gt;Make&lt;/th&gt;
-            &lt;th&gt;Model&lt;/th&gt;
-            &lt;th&gt;Year&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;1&lt;/td&gt;
-            &lt;td&gt;Honda&lt;/td&gt;
-            &lt;td&gt;Accord&lt;/td&gt;
-            &lt;td&gt;2009&lt;/td&gt;
-        &lt;/tr&gt;
-
-        &lt;tr&gt;
-            &lt;td&gt;2&lt;/td&gt;
-            &lt;td&gt;Toyota&lt;/td&gt;
-            &lt;td&gt;Camry&lt;/td&gt;
-            &lt;td&gt;2012&lt;/td&gt;
-        &lt;/tr&gt;
-
-        &lt;tr&gt;
-            &lt;td&gt;3&lt;/td&gt;
-            &lt;td&gt;Hyundai&lt;/td&gt;
-            &lt;td&gt;Elantra&lt;/td&gt;
-            &lt;td&gt;2010&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;
-                            </code></pre>
-                        </div>
-
+                        
                         <h3 id="table-striped">条纹样式</h3>
                         <div class="example">
                             <table class="ui-table ui-table-striped">
@@ -279,43 +173,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="highlight">
-                            <pre><code class="language-markup">
-&lt;table class=&quot;ui-table ui-table-striped&quot;&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;#&lt;/th&gt;
-            &lt;th&gt;Make&lt;/th&gt;
-            &lt;th&gt;Model&lt;/th&gt;
-            &lt;th&gt;Year&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;1&lt;/td&gt;
-            &lt;td&gt;Honda&lt;/td&gt;
-            &lt;td&gt;Accord&lt;/td&gt;
-            &lt;td&gt;2009&lt;/td&gt;
-        &lt;/tr&gt;
 
-        &lt;tr&gt;
-            &lt;td&gt;2&lt;/td&gt;
-            &lt;td&gt;Toyota&lt;/td&gt;
-            &lt;td&gt;Camry&lt;/td&gt;
-            &lt;td&gt;2012&lt;/td&gt;
-        &lt;/tr&gt;
-
-        &lt;tr&gt;
-            &lt;td&gt;3&lt;/td&gt;
-            &lt;td&gt;Hyundai&lt;/td&gt;
-            &lt;td&gt;Elantra&lt;/td&gt;
-            &lt;td&gt;2010&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;
-                            </code></pre>
-                        </div>
-                        
                         <h3 id="table-hover">Hover行样式</h3>
                         <div class="example">
                             <table class="ui-table ui-table-hover">
@@ -350,42 +208,6 @@
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
-                        <div class="highlight">
-                            <pre><code class="language-markup">
-&lt;table class=&quot;ui-table ui-table-hover&quot;&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;#&lt;/th&gt;
-            &lt;th&gt;Make&lt;/th&gt;
-            &lt;th&gt;Model&lt;/th&gt;
-            &lt;th&gt;Year&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;1&lt;/td&gt;
-            &lt;td&gt;Honda&lt;/td&gt;
-            &lt;td&gt;Accord&lt;/td&gt;
-            &lt;td&gt;2009&lt;/td&gt;
-        &lt;/tr&gt;
-
-        &lt;tr&gt;
-            &lt;td&gt;2&lt;/td&gt;
-            &lt;td&gt;Toyota&lt;/td&gt;
-            &lt;td&gt;Camry&lt;/td&gt;
-            &lt;td&gt;2012&lt;/td&gt;
-        &lt;/tr&gt;
-
-        &lt;tr&gt;
-            &lt;td&gt;3&lt;/td&gt;
-            &lt;td&gt;Hyundai&lt;/td&gt;
-            &lt;td&gt;Elantra&lt;/td&gt;
-            &lt;td&gt;2010&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;
-                            </code></pre>
                         </div>
                     </div>
                 </div>

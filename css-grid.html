@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="demo.css" />
         <link rel="stylesheet" href="assets/prism.css" />
         <script src="assets/prism.js"></script>
+        <script src="assets/jquery-1.11.1.min.js"></script>
+        <script src="assets/demo.js"></script>
     </head>
     <body class="p2">
         <div id="layout" class="ui-g">
@@ -43,15 +45,6 @@
                                 <div class="ui-u-1-3"><div class="l-box"><p>三分之一</p></div></div>
                             </div>
                         </div>
-                        <div class="highlight">
-                            <pre><code class="language-markup">
-&lt;div class=&quot;ui-g&quot;&gt;
-    &lt;div class=&quot;ui-u-1-3&quot;&gt;&lt;div class=&quot;l-box&quot;&gt;&lt;p&gt;&#19977;&#20998;&#20043;&#19968;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
-    &lt;div class=&quot;ui-u-1-3&quot;&gt;&lt;div class=&quot;l-box&quot;&gt;&lt;p&gt;&#19977;&#20998;&#20043;&#19968;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
-    &lt;div class=&quot;ui-u-1-3&quot;&gt;&lt;div class=&quot;l-box&quot;&gt;&lt;p&gt;&#19977;&#20998;&#20043;&#19968;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;/div&gt;
-                            </code></pre>
-                        </div>
 
                         <h3 id="css-grid-5">栅格5等分</h3>
                         <p>
@@ -85,37 +78,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="highlight">
-                            <pre><code class="language-markup">
-&lt;div class=&quot;grid-demo&quot;&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-1-5&quot;&gt;
-            1/5
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-2-5&quot;&gt;
-            2/5
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-3-5&quot;&gt;
-            3/5
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-4-5&quot;&gt;
-            4/5
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-1&quot;&gt;
-            5/5
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-                            </code></pre>
                         </div>
 
                         <h3 id="css-grid-24">栅格24等分</h3>
@@ -246,132 +208,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="highlight">
-                            <pre><code class="language-markup">
-&lt;div class=&quot;grid-demo&quot;&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-1-24&quot;&gt;
-            1/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-2-24&quot;&gt;
-            2/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-3-24&quot;&gt;
-            3/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-4-24&quot;&gt;
-            4/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-5-24&quot;&gt;
-            5/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-6-24&quot;&gt;
-            6/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-7-24&quot;&gt;
-            7/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-8-24&quot;&gt;
-            8/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-9-24&quot;&gt;
-            9/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-10-24&quot;&gt;
-            10/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-11-24&quot;&gt;
-            11/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-12-24&quot;&gt;
-            12/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-13-24&quot;&gt;
-            13/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-14-24&quot;&gt;
-            14/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-15-24&quot;&gt;
-            15/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-16-24&quot;&gt;
-            16/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-17-24&quot;&gt;
-            17/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-18-24&quot;&gt;
-            18/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-19-24&quot;&gt;
-            19/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-20-24&quot;&gt;
-            20/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-21-24&quot;&gt;
-            21/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-22-24&quot;&gt;
-            22/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-23-24&quot;&gt;
-            23/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;ui-g mb1&quot;&gt;
-        &lt;div class=&quot;ui-u-1&quot;&gt;
-            24/24
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-                            </code></pre>
-                        </div>
 
                         <h3 id="css-grid-golden-ratio">黄金分割</h3>
                         <p>
@@ -391,36 +227,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="highlight">
-                            <pre><code class="language-markup">
-&lt;div class=&quot;example&quot;&gt;
-    &lt;div class=&quot;grid-demo&quot;&gt;
-        &lt;div class=&quot;ui-g mb1&quot;&gt;
-            &lt;div class=&quot;ui-u-golden-ratio&quot;&gt;
-                0.618
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;ui-g mb1&quot;&gt;
-            &lt;div class=&quot;ui-u-golden-ratio-1&quot;&gt;
-                0.382
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-                            </code></pre>
-                        </div>
+
                         <h3 id="css-grid-custom">自定义栅格划分比例</h3>
                         <p>
                             可以通过提供的mixin来自定义栅格。
                         </p>
                         <div class="example">
                             定义一个12等分的栅格。
-                        </div>
-                        <div class="highlight">
-                            <pre><code class="language-css">
-.make-grid(12);
-.make-grid(12, large-screen);
-                            </code></pre>
+                            .make-grid(12);
+                            .make-grid(12, large-screen);
                         </div>
 
                         <h3 id="css-grid-responsive">响应式布局</h3>
@@ -429,12 +244,8 @@
                         </p>
                         <div class="example">
                             定义一个12等分的栅格。
-                        </div>
-                        <div class="highlight">
-                            <pre><code class="language-css">
-.make-grid(12, large-screen);
-.make-grid(12, small-screen);
-                            </code></pre>
+                            .make-grid(12, large-screen);
+                            .make-grid(12, small-screen);
                         </div>
 
                         <h3 id="css-grid-linerize">把column变成block</h3>
@@ -442,13 +253,7 @@
                             把column变成block
                         </p>
                         <div class="example">
-                            定义一个12等分的栅格。
-                        </div>
-                        <div class="highlight">
-                            <pre><code class="language-css">
-.make-grid(12, large-screen);
-.make-grid(12, small-screen);
-                            </code></pre>
+                            TBD。
                         </div>
                     </div>
                 </div>

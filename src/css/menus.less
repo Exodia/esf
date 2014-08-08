@@ -11,10 +11,10 @@
     z-index: 10;
     background: @menu-sub-background-color;
     border: @menu-sub-border-color;
-    .list-unstyled();
+    &:extend(.list-unstyled);
     li {
         position: relative;
-        font-size: .875em;
+        font-size: .875em; 
         a {
             padding: 0.5em 1em;
             display: block;

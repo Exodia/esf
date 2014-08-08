@@ -16,6 +16,9 @@
 /* =========
    Menu
    ========= */
+/* =========
+   Menu
+   ========= */
 /*
 * 
 * ESF 变量，一般不用直接修改这里
@@ -855,7 +858,8 @@ ul ol,
 ol ol {
   margin-bottom: 0;
 }
-.list-unstyled {
+.list-unstyled,
+.ui-dropdown {
   padding-left: 0;
   list-style: none;
 }
@@ -1644,8 +1648,6 @@ textarea:focus {
   z-index: 10;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding-left: 0;
-  list-style: none;
 }
 .ui-dropdown li {
   position: relative;
@@ -2589,14 +2591,14 @@ a.ui.teal.label:hover:before {
   content: '';
   border-radius: 4px;
   background: #FFFFFF;
-  -webkit-transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
-  -moz-transition: background-color 0.3s ease, -moz-box-shadow 0.3s ease;
-  -ms-transition: background-color 0.3s ease, -ms-box-shadow 0.3s ease;
-  -o-transition: background-color 0.3s ease, -o-box-shadow 0.3s ease;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: background-color 0s ease, -webkit-box-shadow 0s ease;
+  -moz-transition: background-color 0s ease, -moz-box-shadow 0s ease;
+  -ms-transition: background-color 0s ease, -ms-box-shadow 0s ease;
+  -o-transition: background-color 0s ease, -o-box-shadow 0s ease;
+  transition: background-color 0s ease, box-shadow 0s ease;
+  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
 }
 .ui-checkbox .box:after,
 .ui-checkbox label:after {
@@ -2620,9 +2622,9 @@ a.ui.teal.label:hover:before {
 }
 .ui-checkbox .box:hover::before,
 .ui-checkbox label:hover::before {
-  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
 }
 .ui-checkbox .box:active::before,
 .ui-checkbox label:active::before {
@@ -2631,11 +2633,11 @@ a.ui.teal.label:hover:before {
 .ui-checkbox label {
   display: block;
   color: rgba(0, 0, 0, 0.6);
-  -webkit-transition: color 0.2s ease;
-  -moz-transition: color 0.2s ease;
-  -ms-transition: color 0.2s ease;
-  -o-transition: color 0.2s ease;
-  transition: color 0.2s ease;
+  -webkit-transition: color 0s ease;
+  -moz-transition: color 0s ease;
+  -ms-transition: color 0s ease;
+  -o-transition: color 0s ease;
+  transition: color 0s ease;
 }
 .ui-checkbox label:hover {
   color: rgba(0, 0, 0, 0.8);
@@ -2645,9 +2647,9 @@ a.ui.teal.label:hover:before {
 }
 .ui-checkbox input:focus ~ label:before,
 .ui-checkbox input:focus ~ .box:before {
-  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
 }
 .ui-checkbox input:checked ~ .box:after,
 .ui-checkbox input:checked ~ label:after {
@@ -2723,14 +2725,14 @@ a.ui.teal.label:hover:before {
   content: '';
   border-radius: 4px;
   background: #FFFFFF;
-  -webkit-transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
-  -moz-transition: background-color 0.3s ease, -moz-box-shadow 0.3s ease;
-  -ms-transition: background-color 0.3s ease, -ms-box-shadow 0.3s ease;
-  -o-transition: background-color 0.3s ease, -o-box-shadow 0.3s ease;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: background-color 0s ease, -webkit-box-shadow 0s ease;
+  -moz-transition: background-color 0s ease, -moz-box-shadow 0s ease;
+  -ms-transition: background-color 0s ease, -ms-box-shadow 0s ease;
+  -o-transition: background-color 0s ease, -o-box-shadow 0s ease;
+  transition: background-color 0s ease, box-shadow 0s ease;
+  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
 }
 .ui-radio .box:after,
 .ui-radio label:after {
@@ -2754,9 +2756,9 @@ a.ui.teal.label:hover:before {
 }
 .ui-radio .box:hover::before,
 .ui-radio label:hover::before {
-  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
 }
 .ui-radio .box:active::before,
 .ui-radio label:active::before {
@@ -2765,11 +2767,11 @@ a.ui.teal.label:hover:before {
 .ui-radio label {
   display: block;
   color: rgba(0, 0, 0, 0.6);
-  -webkit-transition: color 0.2s ease;
-  -moz-transition: color 0.2s ease;
-  -ms-transition: color 0.2s ease;
-  -o-transition: color 0.2s ease;
-  transition: color 0.2s ease;
+  -webkit-transition: color 0s ease;
+  -moz-transition: color 0s ease;
+  -ms-transition: color 0s ease;
+  -o-transition: color 0s ease;
+  transition: color 0s ease;
 }
 .ui-radio label:hover {
   color: rgba(0, 0, 0, 0.8);
@@ -2779,9 +2781,9 @@ a.ui.teal.label:hover:before {
 }
 .ui-radio input:focus ~ label:before,
 .ui-radio input:focus ~ .box:before {
-  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
 }
 .ui-radio input:checked ~ .box:after,
 .ui-radio input:checked ~ label:after {
@@ -2894,14 +2896,14 @@ a.ui.teal.label:hover:before {
   content: '';
   border-radius: 4px;
   background: #FFFFFF;
-  -webkit-transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
-  -moz-transition: background-color 0.3s ease, -moz-box-shadow 0.3s ease;
-  -ms-transition: background-color 0.3s ease, -ms-box-shadow 0.3s ease;
-  -o-transition: background-color 0.3s ease, -o-box-shadow 0.3s ease;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: background-color 0s ease, -webkit-box-shadow 0s ease;
+  -moz-transition: background-color 0s ease, -moz-box-shadow 0s ease;
+  -ms-transition: background-color 0s ease, -ms-box-shadow 0s ease;
+  -o-transition: background-color 0s ease, -o-box-shadow 0s ease;
+  transition: background-color 0s ease, box-shadow 0s ease;
+  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
 }
 .ui-slider .box:after,
 .ui-slider label:after {
@@ -2925,9 +2927,9 @@ a.ui.teal.label:hover:before {
 }
 .ui-slider .box:hover::before,
 .ui-slider label:hover::before {
-  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
 }
 .ui-slider .box:active::before,
 .ui-slider label:active::before {
@@ -2936,11 +2938,11 @@ a.ui.teal.label:hover:before {
 .ui-slider label {
   display: block;
   color: rgba(0, 0, 0, 0.6);
-  -webkit-transition: color 0.2s ease;
-  -moz-transition: color 0.2s ease;
-  -ms-transition: color 0.2s ease;
-  -o-transition: color 0.2s ease;
-  transition: color 0.2s ease;
+  -webkit-transition: color 0s ease;
+  -moz-transition: color 0s ease;
+  -ms-transition: color 0s ease;
+  -o-transition: color 0s ease;
+  transition: color 0s ease;
 }
 .ui-slider label:hover {
   color: rgba(0, 0, 0, 0.8);
@@ -2950,9 +2952,9 @@ a.ui.teal.label:hover:before {
 }
 .ui-slider input:focus ~ label:before,
 .ui-slider input:focus ~ .box:before {
-  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
 }
 .ui-slider input:checked ~ .box:after,
 .ui-slider input:checked ~ label:after {
@@ -3008,17 +3010,17 @@ a.ui.teal.label:hover:before {
   -ms-transform: none;
   -o-transform: none;
   transform: none;
-  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0) inset;
+  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0) inset;
+  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0) inset;
   -webkit-border-radius: 50rem;
   -moz-border-radius: 50rem;
   border-radius: 50rem;
-  -webkit-transition: left 0.3s ease 0s;
-  -moz-transition: left 0.3s ease 0s;
-  -ms-transition: left 0.3s ease 0s;
-  -o-transition: left 0.3s ease 0s;
-  transition: left 0.3s ease 0s;
+  -webkit-transition: left 0s ease 0s;
+  -moz-transition: left 0s ease 0s;
+  -ms-transition: left 0s ease 0s;
+  -o-transition: left 0s ease 0s;
+  transition: left 0s ease 0s;
 }
 .ui-slider .box:after,
 .ui-slider label:after {
@@ -3037,17 +3039,17 @@ a.ui.teal.label:hover:before {
   -ms-transform: none;
   -o-transform: none;
   transform: none;
-  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0) inset;
+  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0) inset;
+  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0) inset;
   -webkit-border-radius: 50rem;
   -moz-border-radius: 50rem;
   border-radius: 50rem;
-  -webkit-transition: background 0.3s ease 0s, left 0.3s ease 0s;
-  -moz-transition: background 0.3s ease 0s, left 0.3s ease 0s;
-  -ms-transition: background 0.3s ease 0s, left 0.3s ease 0s;
-  -o-transition: background 0.3s ease 0s, left 0.3s ease 0s;
-  transition: background 0.3s ease 0s, left 0.3s ease 0s;
+  -webkit-transition: background 0s ease 0s, left 0s ease 0s;
+  -moz-transition: background 0s ease 0s, left 0s ease 0s;
+  -ms-transition: background 0s ease 0s, left 0s ease 0s;
+  -o-transition: background 0s ease 0s, left 0s ease 0s;
+  transition: background 0s ease 0s, left 0s ease 0s;
 }
 .ui-slider input:checked ~ .box:before,
 .ui-slider input:checked ~ label:before,
@@ -3116,14 +3118,14 @@ a.ui.teal.label:hover:before {
   content: '';
   border-radius: 4px;
   background: #FFFFFF;
-  -webkit-transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
-  -moz-transition: background-color 0.3s ease, -moz-box-shadow 0.3s ease;
-  -ms-transition: background-color 0.3s ease, -ms-box-shadow 0.3s ease;
-  -o-transition: background-color 0.3s ease, -o-box-shadow 0.3s ease;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: background-color 0s ease, -webkit-box-shadow 0s ease;
+  -moz-transition: background-color 0s ease, -moz-box-shadow 0s ease;
+  -ms-transition: background-color 0s ease, -ms-box-shadow 0s ease;
+  -o-transition: background-color 0s ease, -o-box-shadow 0s ease;
+  transition: background-color 0s ease, box-shadow 0s ease;
+  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
 }
 .ui-toggle .box:after,
 .ui-toggle label:after {
@@ -3147,9 +3149,9 @@ a.ui.teal.label:hover:before {
 }
 .ui-toggle .box:hover::before,
 .ui-toggle label:hover::before {
-  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
 }
 .ui-toggle .box:active::before,
 .ui-toggle label:active::before {
@@ -3158,11 +3160,11 @@ a.ui.teal.label:hover:before {
 .ui-toggle label {
   display: block;
   color: rgba(0, 0, 0, 0.6);
-  -webkit-transition: color 0.2s ease;
-  -moz-transition: color 0.2s ease;
-  -ms-transition: color 0.2s ease;
-  -o-transition: color 0.2s ease;
-  transition: color 0.2s ease;
+  -webkit-transition: color 0s ease;
+  -moz-transition: color 0s ease;
+  -ms-transition: color 0s ease;
+  -o-transition: color 0s ease;
+  transition: color 0s ease;
 }
 .ui-toggle label:hover {
   color: rgba(0, 0, 0, 0.8);
@@ -3172,9 +3174,9 @@ a.ui.teal.label:hover:before {
 }
 .ui-toggle input:focus ~ label:before,
 .ui-toggle input:focus ~ .box:before {
-  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
+  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0);
 }
 .ui-toggle input:checked ~ .box:after,
 .ui-toggle input:checked ~ label:after {
@@ -3223,9 +3225,9 @@ a.ui.teal.label:hover:before {
   -ms-transform: none;
   -o-transform: none;
   transform: none;
-  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0) inset;
+  -moz-box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0) inset;
+  box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0) inset;
   -webkit-border-radius: 50rem;
   -moz-border-radius: 50rem;
   border-radius: 50rem;
@@ -3249,11 +3251,11 @@ a.ui.teal.label:hover:before {
   -webkit-border-radius: 50rem;
   -moz-border-radius: 50rem;
   border-radius: 50rem;
-  -webkit-transition: background 0.3s ease 0s, left 0.3s ease 0s;
-  -moz-transition: background 0.3s ease 0s, left 0.3s ease 0s;
-  -ms-transition: background 0.3s ease 0s, left 0.3s ease 0s;
-  -o-transition: background 0.3s ease 0s, left 0.3s ease 0s;
-  transition: background 0.3s ease 0s, left 0.3s ease 0s;
+  -webkit-transition: background 0s ease 0s, left 0s ease 0s;
+  -moz-transition: background 0s ease 0s, left 0s ease 0s;
+  -ms-transition: background 0s ease 0s, left 0s ease 0s;
+  -o-transition: background 0s ease 0s, left 0s ease 0s;
+  transition: background 0s ease 0s, left 0s ease 0s;
 }
 .ui-toggle :active .box:before,
 .ui-toggle :active label:before {
