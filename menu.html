@@ -6,130 +6,128 @@
         <link rel="stylesheet" href="src/css/main.css" />
         <link rel="stylesheet" href="src/icons/css/font-awesome.css" />
         <link rel="stylesheet" href="demo.css" />
+        <link rel="stylesheet" href="assets/prism.css" />
+        <script src="assets/prism.js" data-manual></script>
+        <script src="assets/jquery-1.11.1.min.js"></script>
+        <script src="assets/demo.js"></script>
     </head>
     <body class="p2">
-        <h1 class="align-center">Menu</h1>
         <div id="layout" class="ui-g">
             <div class="ui-u-1-5">
-                <ul class="list-unstyled">
-                    <li><a href="index.html">Get Started</a></li>
-                    <li><a href="button.html">按钮</a></li>
-                    <li><a href="#">布局网格</a></li>
-                    <li><a href="checkbox.html">Checkbox</a></li>
-                    <li><a href="form.html">表单</a></li>
-                    <li><a href="icons.html">图标</a></li>
-                    <li><a href="input.html">输入框</a></li>
-                    <li><a href="label.html">标签</a></li>
-                    <li class="active"><a href="menu.html">导航菜单</a></li>
-                    <li><a href="type.html">文字样式</a></li>
+                <ul id="navigator-features" class="list-unstyled">
+                    <li><a href="#menu">横向菜单</a></li>
+                    <li><a href="#menu-hoverable">横向菜单附加Hover下拉</a></li>
+                    <li><a href="#menu-vetical">纵向菜单</a></li>
+                    <li><a href="#menu-vetical-hoverable">纵向菜单附加Hover下拉</a></li>
+                    <li><a href="#menu-separator">分割线</a></li>
                 </ul>
             </div>
             <div class="ui-u-4-5">
                 <div id="main" class="content p2 no-pt">
-                    <h2 class="content-subhead">Menu</h2>
-                    <div>
-                        <h3>类型</h3>
-                        <div>
-                            <h4>横向菜单</h4>
-                            <div class="ui-menu horizontal">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-rocket"></i> CSS Nested Menu</a>
-                                        <ul class="ui-dropdown">
-                                            <li><a href="#">First</a></li>
-                                            <li><a href="#">Second</a></li>
-                                            <li><a href="#">Third</a></li>
-                                            <li>
-                                                <a href="#">Right...</a>
-                                                <ul class="ui-dropdown flyout right">
-                                                    <li><a href="#">First</a></li>
-                                                    <li><a href="#">Second</a></li>
-                                                    <li><a href="#">Third</a></li>
-                                                    <li>
-                                                        <a href="#">Right...</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#">Left...</a>
-                                                <ul class="ui-dropdown flyout left">
-                                                    <li><a href="#">First</a></li>
-                                                    <li><a href="#">Second</a></li>
-                                                    <li><a href="#">Third</a></li>
-                                                    <li>
-                                                        <a href="#">Right...</a>
-                                                        <ul class="ui-dropdown flyout right">
-                                                            <li><a href="#">First</a></li>
-                                                            <li><a href="#">Second</a></li>
-                                                            <li><a href="#">Third</a></li>
-                                                            <li>
-                                                                <a href="#">Right...</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="active"><a href="#">Active</a></li>
-                                    <li class="disabled"><a href="#">Disabled</a></li>
-                                </ul>
-                            </div>
-                            <h4>纵向菜单</h4>
-                            <div class="ui-menu vertical" style="width: 30%">
-                                <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li>
-                                        <a href="#">子菜单</a>
-                                        <ul class="ui-dropdown">
-                                            <li class="separator-below"><a href="#">First</a></li>
-                                            <li><a href="#">Second</a></li>
-                                            <li><a href="#">Third</a></li>
-                                            <li>
-                                                <a href="#">Right...</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">右侧子菜单 <i class="fa fa-arrow-right ui-icon"></i></a>
-                                        <ul class="ui-dropdown flyout right">
-                                            <li><a href="#">First</a></li>
-                                            <li class="separator-above"><a href="#">Second</a></li>
-                                            <li><a href="#">Third</a></li>
-                                            <li>
-                                                <a href="#">Right...</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">左侧子菜单</a>
-                                        <ul class="ui-dropdown flyout left">
-                                            <li><a href="#">First</a></li>
-                                            <li><a href="#">Second</a></li>
-                                            <li><a href="#">Third</a></li>
-                                            <li>
-                                                <a href="#">Right...</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                            <h4>下拉子菜单</h4>
-                            <div style="width: 200px;">
-                                <ul class="ui-dropdown">
-                                    <li class="heading">First</li>
-                                    <li class="separator-above"><a href="#">Second</a></li>
-                                    <li><a href="#">Third</a></li>
-                                    <li>
-                                        <a href="#">Right...</a>
-                                        <ul class="ui-dropdown flyout right">
-                                            <li><a href="#">First</a></li>
-                                            <li><a href="#">Second</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
+                    <h2 class="no-mt">导航</h2>
+                    <div class="ui-divider"></div>
+                    <p>
+                        提供常用导航组件。
+                    </p>
+                    <h3 id="menu">横向菜单</h3>
+                    <div class="example">
+                        <div class="ui-menu horizontal">
+                            <ul>
+                                <li class="ui-menu-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                                <li class="ui-menu-item"><a href="#"><i class="fa fa-rocket"></i> CSS Nested Menu</a></li>
+                                <li class="active ui-menu-item"><a href="#">Active</a></li>
+                                <li class="disabled ui-menu-item"><a href="#">Disabled</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3 id="menu-hoverable">横向菜单附加Hover下拉</h3>
+                    <div class="example">
+                        <div class="ui-menu horizontal hoverable">
+                            <ul>
+                                <li class="ui-menu-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                                <li class="ui-menu-item">
+                                    <a href="#"><i class="fa fa-rocket"></i> CSS Nested Menu</a>
+                                    <ul class="ui-dropdown">
+                                        <li><a href="#">First</a></li>
+                                        <li><a href="#">Second</a></li>
+                                        <li><a href="#">Third</a></li>
+                                        <li>
+                                            <a href="#">Right...</a>
+                                            <ul class="ui-dropdown flyout right">
+                                                <li><a href="#">First</a></li>
+                                                <li><a href="#">Second</a></li>
+                                                <li><a href="#">Third</a></li>
+                                                <li>
+                                                    <a href="#">Right...</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="active ui-menu-item"><a href="#">Active</a></li>
+                                <li class="disabled ui-menu-item"><a href="#">Disabled</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3 id="menu-vetical">纵向菜单</h3>
+                    <div class="example">
+                        <div class="ui-menu vertical" style="width: 30%">
+                            <ul>
+                                <li class="ui-menu-item">
+                                    <a href="#">产品介绍</a>
+                                </li>
+                                <li class="ui-menu-item">
+                                    <a href="#">子菜单</a>
+                                </li>
+                                <li class="ui-menu-item">
+                                    <a href="#">右侧子菜单</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3 id="menu-vetical-hoverable">纵向菜单附加Hover下拉</h3>
+                    <div class="example">
+                        <div class="ui-menu vertical hoverable" style="width: 30%">
+                            <ul>
+                                <li class="ui-menu-item">
+                                    <a href="#">产品介绍</a>
+                                </li>
+                                <li class="ui-menu-item">
+                                    <a href="#">下方子菜单</a>
+                                    <ul class="ui-dropdown">
+                                        <li><a href="#">First</a></li>
+                                        <li><a href="#">Second</a></li>
+                                        <li><a href="#">Third</a></li>
+                                    </ul>
+                                </li>
+                                <li class="ui-menu-item">
+                                    <a href="#">右侧子菜单</a>
+                                    <ul class="ui-dropdown flyout right">
+                                        <li><a href="#">First</a></li>
+                                        <li><a href="#">Second</a></li>
+                                        <li><a href="#">Third</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3 id="menu-separator">分割线</h3>
+                    <div class="example">
+                        <div class="ui-menu horizontal">
+                            <ul>
+                                <li class="ui-menu-item ui-menu-separator-before ui-menu-separator-after"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                                <li class="ui-menu-item ui-menu-separator-after"><a href="#"><i class="fa fa-rocket"></i> CSS Nested Menu</a></li>
+                                <li class="ui-menu-item ui-menu-separator-after"><a href="#">Active</a></li>
+                                <li class="ui-menu-item ui-menu-separator-after"><a href="#">Disabled</a></li>
+                            </ul>
+                        </div>
+                        <div class="ui-menu vertical mt3" style="width: 30%;">
+                            <ul>
+                                <li class="ui-menu-item ui-menu-separator-before ui-menu-separator-after"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                                <li class="ui-menu-item ui-menu-separator-after"><a href="#"><i class="fa fa-rocket"></i> CSS Nested Menu</a></li>
+                                <li class="ui-menu-item ui-menu-separator-after"><a href="#">Active</a></li>
+                                <li class="ui-menu-item"><a href="#">Disabled</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
