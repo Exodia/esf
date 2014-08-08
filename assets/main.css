@@ -1190,16 +1190,6 @@ textarea:focus {
   margin-top: 0.3em;
   margin-bottom: 0.3em;
 }
-/*
- * # Semantic - Input
- * http://github.com/jlukic/semantic-ui/
- *
- *
- * Copyright 2013 Contributors
- * Released under the MIT license
- * http://opensource.org/licenses/MIT
- *
- */
 /*******************************
            Standard
 *******************************/
@@ -1209,38 +1199,50 @@ textarea:focus {
 .ui-input {
   display: inline-block;
   position: relative;
-  color: rgba(0, 0, 0, 0.7);
+  color: #4d4d4d;
+}
+.ui-input input,
+.ui-input textarea {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.ui-input input:-moz-placeholder,
+.ui-input textarea:-moz-placeholder {
+  color: #bbbbbb;
+}
+.ui-input input::-moz-placeholder,
+.ui-input textarea::-moz-placeholder {
+  color: #bbbbbb;
+}
+.ui-input input::-webkit-input-placeholder,
+.ui-input textarea::-webkit-input-placeholder {
+  color: #bbbbbb;
+}
+.ui-input input:-ms-input-placeholder,
+.ui-input textarea:-ms-input-placeholder {
+  color: #bbbbbb;
+}
+.ui-input input,
+.ui-input textarea {
+  padding: 0.65em 1em;
+  font-size: 16px;
+}
+.ui-input input {
+  height: 40px;
 }
 .ui-input input,
 .ui-input textarea {
   width: 100%;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
-  margin: 0em;
-  padding: 0.65em 1em;
-  font-size: 1em;
-  background-color: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  margin: 0;
   outline: none;
-  color: rgba(0, 0, 0, 0.7);
-  border-radius: 0.3125em;
-  -webkit-transition: background-color 0.3s ease-out, -webkit-box-shadow 0.2s ease, border-color 0.2s ease;
-  -moz-transition: background-color 0.3s ease-out, box-shadow 0.2s ease, border-color 0.2s ease;
-  transition: background-color 0.3s ease-out, box-shadow 0.2s ease, border-color 0.2s ease;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
+  border-radius: 5px;
+  -webkit-transition: background-color 0s ease-out, -webkit-box-shadow 0s ease, border-color 0s ease;
+  -moz-transition: background-color 0s ease-out, -moz-box-shadow 0s ease, border-color 0s ease;
+  -ms-transition: background-color 0s ease-out, -ms-box-shadow 0s ease, border-color 0s ease;
+  -o-transition: background-color 0s ease-out, -o-box-shadow 0s ease, border-color 0s ease;
+  transition: background-color 0s ease-out, box-shadow 0s ease, border-color 0s ease;
   box-sizing: border-box;
-}
-/*--------------------
-      Placeholder
----------------------*/
-/* browsers require these rules separate */
-.ui-input::-webkit-input-placeholder {
-  color: #bbbbbb;
-}
-.ui-input::-moz-placeholder {
-  color: #bbbbbb;
 }
 /*******************************
             States
@@ -1440,7 +1442,6 @@ textarea:focus {
   -ms-user-select: none;
   user-select: none;
   border: 1px solid transparent;
-  box-sizing: border-box;
   vertical-align: middle;
   font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
 }
@@ -1645,36 +1646,23 @@ textarea:focus {
   position: relative;
   top: auto;
   left: auto;
-  z-index: 10;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 .ui-dropdown li {
   position: relative;
-  font-size: .875em;
 }
 .ui-dropdown li a {
-  padding: 0.5em 1em;
   display: block;
   float: none;
-  color: #555555;
   text-decoration: none;
 }
-.ui-dropdown li a:hover {
-  background: rgba(0, 0, 0, 0.05);
-}
 .ui-dropdown li.separator-above {
-  padding-top: .35em;
-  margin-top: .35em;
   border-top: 1px solid #d9d9d9;
 }
 .ui-dropdown li.separator-below {
-  padding-bottom: .35em;
-  margin-bottom: .35em;
   border-bottom: 1px solid #d9d9d9;
 }
 .ui-dropdown li.heading {
-  padding: 0.5em 1em;
   font-weight: bold;
 }
 .ui-dropdown.flyout {
@@ -1687,6 +1675,34 @@ textarea:focus {
 }
 .ui-dropdown.flyout.right {
   left: 100%;
+}
+.ui-dropdown {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.ui-dropdown > li {
+  font-size: 12px;
+  background: #fefdfa;
+}
+.ui-dropdown > li > a {
+  color: #4a3b13;
+}
+.ui-dropdown > li > a:hover {
+  background: #e6e6e6;
+}
+.ui-dropdown > li > a {
+  padding: 0.5em 1em;
+}
+.ui-dropdown > li.separator-above {
+  padding-top: 0.35em;
+  margin-top: 0.35em;
+}
+.ui-dropdown > li.separator-below {
+  padding-bottom: 0.35em;
+  margin-bottom: 0.35em;
+}
+.ui-dropdown > li.heading {
+  padding: 0.5em 1em;
+  font-size: 14px;
 }
 .ui-menu {
   overflow: visible;

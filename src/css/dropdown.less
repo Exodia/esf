@@ -1,0 +1,99 @@
+.@{ui-class-prefix}-dropdown {
+    position: relative;
+    top: auto;
+    left: auto;
+    z-index: @zindex-dropdown;
+    &:extend(.list-unstyled);
+
+    li {
+        position: relative;
+
+        a {
+            display: block;
+            float: none;
+            text-decoration: none;
+        }
+        &.separator-above {
+            border-top: 1px solid #d9d9d9;
+        }
+        &.separator-below {
+            border-bottom: 1px solid #d9d9d9;
+        }
+        &.heading {
+            font-weight: bold;
+        }
+    }
+    &.flyout {
+        position: absolute;
+        min-width: 8em;
+        top: 0;
+        &.left {
+            right: 100%;
+        }
+        &.right {
+            left: 100%;
+        }
+    } 
+}
+
+.@{ui-class-prefix}-dropdown {
+    .dropdown-variant(
+        @dropdown-background-color,
+        @dropdown-border-color,
+        @dropdown-text-color,
+        @dropdown-text-size,
+        @dropdown-hightlight-color
+    ); 
+    .dropdown-size(
+        @dropdown-item-padding,
+        @dropdown-separator-space,
+        @dropdown-heading-padding,
+        @dropdown-heading-text-size
+    );
+}
+
+// mixins
+.dropdown-variant(
+    @background-color, 
+    @border-color, 
+    @text-color, 
+    @text-size,
+    @hightlight-color
+) {
+    border: @border-color;
+    > li {
+        font-size: @text-size;
+        background: @background-color;
+        > a {
+            color: @text-color;
+            &:hover {
+                background: @hightlight-color;
+            }
+        }
+    }
+}
+
+.dropdown-size(
+    @item-padding,
+    @separator-space,
+    @heading-padding,
+    @heading-text-size
+) {
+    > li {
+        > a {
+            padding: @item-padding;
+        }
+        &.separator-above {
+            padding-top: @separator-space;
+            margin-top: @separator-space;
+        }
+        &.separator-below {
+            padding-bottom: @separator-space;
+            margin-bottom: @separator-space;
+        }
+        &.heading {
+            padding: @heading-padding;
+            font-size: @heading-text-size;
+        }
+    }
+}

@@ -1,15 +1,3 @@
-/*
- * # Semantic - Input
- * http://github.com/jlukic/semantic-ui/
- *
- *
- * Copyright 2013 Contributors
- * Released under the MIT license
- * http://opensource.org/licenses/MIT
- *
- */
-
-
 /*******************************
            Standard
 *******************************/
@@ -19,61 +7,60 @@
         Inputs
 ---------------------*/
 
+.input-variant(
+    @text-color,
+    @background-color,
+    @border-color
+) {
+    color: @text-color;
+    input, textarea {
+        background-color: @background-color;
+        border: @border-color;
+        -webkit-tap-highlight-color: @input-tap-color;
+        .placeholder(@input-placeholder-color);
+    }
+}
+
+.input-size(@padding, @text-size, @height) {
+    input, textarea {
+        padding: @padding;
+        font-size: @text-size;
+    }
+    input {
+        height: @height;
+    }
+}
+
 .@{ui-class-prefix}-input {
-  display: inline-block;
-  position: relative;
-  color: rgba(0, 0, 0, 0.7);
-}
-.@{ui-class-prefix}-input input,
-.@{ui-class-prefix}-input textarea {
-  width: 100%;
-  font-family: @default-font-family;
-
-  margin: 0em;
-  padding: 0.65em 1em;
-  font-size: 1em;
-
-  background-color: @input-background-color;
-  border: @input-border-color;
-  outline: none;
-
-  color: @input-text-color;
-  border-radius: 0.3125em;
-
-  -webkit-transition:
-    background-color 0.3s ease-out,
-    -webkit-box-shadow 0.2s ease,
-    border-color 0.2s ease;
-  -moz-transition:
-    background-color 0.3s ease-out,
-    box-shadow 0.2s ease,
-    border-color 0.2s ease;
-  transition:
-    background-color 0.3s ease-out,
-    box-shadow 0.2s ease,
-    border-color 0.2s ease;
-
-  -webkit-tap-highlight-color:  @input-tap-color;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    .input-variant(
+        @input-text-color,
+        @input-background-color,
+        @input-border-color
+    );
+    .input-size(
+        @input-padding,
+        @input-text-size,
+        @input-default-height
+    ); 
 }
 
+.@{ui-class-prefix}-input {
+    input, textarea {
+        width: 100%;
+        margin: 0;
+        outline: none;
+        border-radius: @input-border-radius;
+        .transition(
+            background-color 0.3s ease-out,
+            box-shadow 0.2s ease,
+            border-color 0.2s ease
+        );
 
-/*--------------------
-      Placeholder
----------------------*/
-
-/* browsers require these rules separate */
-.@{ui-class-prefix}-input::-webkit-input-placeholder {
-  color: @input-placeholder-color;
+        box-sizing: border-box;
+    }
 }
-.@{ui-class-prefix}-input::-moz-placeholder {
-  color: @input-placeholder-color;
-}
-
 
 /*******************************
             States
