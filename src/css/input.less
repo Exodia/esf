@@ -1,53 +1,83 @@
-/*******************************
-           Standard
-*******************************/
-
-
-/*--------------------
-        Inputs
----------------------*/
-
 .input-variant(
     @text-color,
     @background-color,
-    @border-color
+    @border-color,
+    @active-border-color,
+    @active-background-color,
+    @focus-border-color,
+    @focus-background-color,
+    @disabled-border-color,
+    @disabled-background-color,
+    @error-background-color,
+    @error-border-color,
+    @error-text-color,
+    @error-placeholder-color
 ) {
     color: @text-color;
+    // states
     input, textarea {
         background-color: @background-color;
         border: @border-color;
-        -webkit-tap-highlight-color: @input-tap-color;
         .placeholder(@input-placeholder-color);
+    }
+    &.active input, input:active {
+        border-color: @active-border-color;
+        background-color: @active-background-color;
+    }
+    &.focus input, input:focus {
+        border-color: @focus-border-color;
+        background-color: @focus-background-color;
+    }
+    &.disabled input, input[disabled] {
+        background-color: @disabled-background-color;
+        border-color: @disabled-border-color;
+    }
+    &.error input {
+        background-color: @error-background-color;
+        border-color: @error-border-color;
+        color: @error-text-color;
+        .placeholder(@error-placeholder-color);
     }
 }
 
-.input-size(@padding, @text-size, @height) {
+.input-size(@text-size, @height) {
     input, textarea {
-        padding: @padding;
         font-size: @text-size;
+        font-family: @default-font-family;
     }
     input {
         height: @height;
+    }
+    &.with-icon {
+        .@{ui-class-prefix}-icon {
+            width: @height;
+            line-height: @height;
+            font-size: @text-size;
+        }
+        &.left {
+            input {
+                padding-left: @height;
+            }
+            .@{ui-class-prefix}-icon {
+                left: 0;
+            }
+        }
+        &.right {
+            input {
+                padding-right: @height;
+            }
+            .@{ui-class-prefix}-icon {
+                right: 0;
+            }
+        }
     }
 }
 
 .@{ui-class-prefix}-input {
     display: inline-block;
     position: relative;
-    .input-variant(
-        @input-text-color,
-        @input-background-color,
-        @input-border-color
-    );
-    .input-size(
-        @input-padding,
-        @input-text-size,
-        @input-default-height
-    ); 
-}
-
-.@{ui-class-prefix}-input {
     input, textarea {
+        padding: @input-padding;
         width: 100%;
         margin: 0;
         outline: none;
@@ -60,221 +90,137 @@
 
         box-sizing: border-box;
     }
-}
-
-/*******************************
-            States
-*******************************/
-
-/*--------------------
-        Active
----------------------*/
-
-.@{ui-class-prefix}-input input:active,
-.@{ui-class-prefix}-input.down input {
-  border-color: @input-active-border-color;
-  background-color: @input-active-background-color;
-}
-
-/*--------------------
-        Loading
----------------------*/
-
-.ui.loading.input > .icon {
-  background: url(../images/loader-mini.gif) no-repeat 50% 50%;
-}
-.ui.loading.input > .icon:before,
-.ui.loading.input > .icon:after {
-  display: none;
-}
-
-/*--------------------
-        Focus
----------------------*/
-
-.@{ui-class-prefix}-input.focus input,
-.@{ui-class-prefix}-input input:focus  {
-  border-color: @input-focus-border-color;
-  color: @input-focus-background-color;
-}
-
-/*--------------------
-        Error
----------------------*/
-
-.@{ui-class-prefix}-input.error input {
-  background-color: @input-error-background-color;
-  border-color: @input-error-border-color;
-  color: @input-error-text-color;
-}
-
-/* Error Placeholder */
-.@{ui-class-prefix}-input.error input ::-webkit-input-placeholder {
-  color: @input-error-placeholder-color;
-}
-.@{ui-class-prefix}-input.error input ::-moz-placeholder {
-  color: @input-error-placeholder-color;
-}
-.@{ui-class-prefix}-input.error input :focus::-webkit-input-placeholder {
-  color: @input-error-placeholder-color;
-}
-.@{ui-class-prefix}-input.error input :focus::-moz-placeholder {
-  color: @input-error-placeholder-color;
-}
-
-/*--------------------
-        Disabled
----------------------*/
-
-.@{ui-class-prefix}-input.disabled input,
-.@{ui-class-prefix}-input input[disabled] {
-  background-color: @input-disabled-background-color;
-  border-color: @input-disabled-border-color;
-}
-
-/*******************************
-           Variations
-*******************************/
-
-
-/*--------------------
-      Transparent
----------------------*/
-
-.ui.transparent.input input {
-  border: none;
-  background-color: transparent;
-}
-
-
-/*--------------------
-         Icon
----------------------*/
-
-.@{ui-class-prefix}-input.icon > .icon {
-  cursor: default;
-  position: absolute;
-  opacity: 0.5;
-  top: 0px;
-  right: 0px;
-
-  margin: 0em;
-
-  width: 2.6em;
-  height: 100%;
-  padding-top: 0.82em;
-
-  text-align: center;
-  border-radius: 0em 0.3125em 0.3125em 0em;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-
-  -webkit-transition: opacity 0.3s ease-out;
-  -moz-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out;
-}
-.@{ui-class-prefix}-input.icon > .link.icon {
-  cursor: pointer;
-}
-.@{ui-class-prefix}-input.icon input {
-  padding-right: 3em !important;
-}
-/* Left Side */
-.@{ui-class-prefix}-input.icon.left > .icon {
-  right: auto;
-  left: 1px;
-  border-radius: 0.3125em 0em 0em 0.3125em;
-}
-
-.@{ui-class-prefix}-input.left.icon > input {
-    padding-left: 3em !important;
-    padding-right: 1.2em !important;
-}
-
-/* Focus */
-.@{ui-class-prefix}-input.icon > input:focus ~ .icon {
-    opacity: 1;
-}
-
-
-/*--------------------
-        Action
----------------------*/
-
-.@{ui-class-prefix}-input.action {
-    display: table;
-}
-
-.@{ui-class-prefix}-input.action > input {
-    display: table-cell;
-    &:first-child { 
-        border-right: none;
-        border-top-right-radius: 0px !important;
-        border-bottom-right-radius: 0px !important;
+    .input-variant(
+        @input-text-color,
+        @input-background-color,
+        @input-border-color,
+        @input-active-border-color,
+        @input-active-background-color,
+        @input-focus-border-color,
+        @input-focus-background-color,
+        @input-disabled-border-color,
+        @input-disabled-background-color,
+        @input-error-border-color,
+        @input-error-background-color,
+        @input-error-text-color,
+        @input-error-placeholder-color
+    );
+    .input-size(
+        @input-text-size,
+        @input-default-height
+    );
+    &.loading .loader {
+        //background: url(../images/loader-mini.gif) no-repeat 50% 50%;
+        &.icon:before, .icon:after {
+            display: none;
+        }
     }
-    &:last-child {
-        border-left: none;
-        border-top-left-radius: 0px !important;
-        border-bottom-left-radius: 0px !important;
+    &.transparent input {
+        border: none;
+        background-color: transparent;
+    }
+    
+    &.with-icon {
+        .@{ui-class-prefix}-icon {
+            position: absolute;
+            opacity: 0.5;
+            top: 0px;
+            margin: 0em;
+            text-align: center;
+            box-sizing: border-box;
+
+            .transition(
+                opacity 0.3s ease-out
+            );
+            &:hover {
+                text-decoration: none;
+            }
+            &.left {
+                .border-right-radius(@default-border-radius);
+            }
+            &.right {
+                .border-right-radius(@default-border-radius);
+            }
+        }
+        > input:focus ~ .@{ui-class-prefix}-icon {
+            opacity: 1; 
+        }
+    }
+    &.fluid {
+        display: block;
+        &.action {
+            display: table;
+            width: 100%;
+        }
+        &.action > .@{ui-class-prefix}-action-container {
+            width: 0.01%;
+        }
+    }
+    &.action {
+        display: table;
+        > input {
+            display: table-cell;
+            &:first-child { 
+                border-right: none;
+                border-top-right-radius: 0px !important;
+                border-bottom-right-radius: 0px !important;
+            }
+            &:last-child {
+                border-left: none;
+                border-top-left-radius: 0px !important;
+                border-bottom-left-radius: 0px !important;
+            }
+        }
+        > .@{ui-class-prefix}-action-container {
+            display: table-cell !important;
+            vertical-align: top;
+            white-space: nowrap;
+            font-size: 0;
+            &:last-child .@{ui-class-prefix}-button {
+                border-top-left-radius: 0px !important;
+                border-bottom-left-radius: 0px !important;
+            }
+            &:first-child .@{ui-class-prefix}-button {
+                border-top-right-radius: 0px !important;
+                border-bottom-right-radius: 0px !important; 
+            }
+        }
     }
 }
-
-.@{ui-class-prefix}-input.action > .@{ui-class-prefix}-action-container {
-    display: table-cell !important;
-    white-space: nowrap;
-    font-size: 0;
-    &:last-child .@{ui-class-prefix}-button {
-        border-top-left-radius: 0px !important;
-        border-bottom-left-radius: 0px !important;
-    }
-    &:first-child .@{ui-class-prefix}-button {
-        border-top-right-radius: 0px !important;
-        border-bottom-right-radius: 0px !important; 
-    }
-}
-
-.@{ui-class-prefix}-input.fluid.action {
-    display: table;
-    width: 100%;
-}
-.@{ui-class-prefix}-input.fluid.action > .button {
-    width: 0.01%;
-}
-
-/*--------------------
-        Fluid
----------------------*/
-
-.@{ui-class-prefix}-input.fluid {
-    display: block;
-}
-
-
-/*--------------------
-        Size
----------------------*/
 
 .@{ui-class-prefix}-input.mini {
-    font-size: 0.8125em;
+    .input-size(
+        @input-text-size * 0.8125,
+        @input-default-height * 0.8125
+    ); 
 }
 .@{ui-class-prefix}-input.small {
-    font-size: 0.875em;
-}
-.@{ui-class-prefix}-input {
-    font-size: 1em;
+    .input-size(
+        @input-text-size * 0.875,
+        @input-default-height * 0.875
+    );
 }
 .@{ui-class-prefix}-input.large {
-    font-size: 1.125em;
+    .input-size(
+        @input-text-size * 1.125,
+        @input-default-height * 1.125
+    );
 }
 .@{ui-class-prefix}-input.big {
-    font-size: 1.25em;
+    .input-size(
+        @input-text-size * 1.25,
+        @input-default-height * 1.25
+    );
 }
 .@{ui-class-prefix}-input.huge {
-    font-size: 1.375em;
+    .input-size(
+        @input-text-size * 1.375,
+        @input-default-height * 1.375
+    );
 }
 .@{ui-class-prefix}-input.massive {
-    font-size: 1.5em;
+    .input-size(
+        @input-text-size * 1.5,
+        @input-default-height * 1.5
+    );
 }

@@ -42,14 +42,14 @@
 @input-tap-color: rgba(255, 255, 255, 0);
 @input-border-radius: @default-border-radius;
 @input-padding: 0.65em 1em;
-@input-default-height: 40px;
+@input-default-height: 40px; 
 
 // active state
-@input-active-border-color: rgba(0, 0, 0, 0.3);
-@input-active-background-color: #FAFAFA;
+@input-active-border-color: @triad-hightlight-color;
+@input-active-background-color: @primary-bg-color;
 // focus state
-@input-focus-border-color: rgba(0, 0, 0, 0.2);
-@input-focus-background-color: rgba(0, 0, 0, 0.85);
+@input-focus-border-color: @triad-hightlight-color;
+@input-focus-background-color: @primary-bg-color;
 // error state
 @input-error-border-color: #E7BEBE;
 @input-error-background-color: #FFFAFA;
@@ -57,7 +57,7 @@
 @input-error-placeholder-color: red;
 // disabled state
 @input-disabled-border-color: rgba(0, 0, 0, 0.2);
-@input-disabled-background-color: #eee;
+@input-disabled-background-color: @black-10;
 
 /* =========
    Buttons

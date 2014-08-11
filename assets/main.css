@@ -1190,12 +1190,6 @@ textarea:focus {
   margin-top: 0.3em;
   margin-bottom: 0.3em;
 }
-/*******************************
-           Standard
-*******************************/
-/*--------------------
-        Inputs
----------------------*/
 .ui-input {
   display: inline-block;
   position: relative;
@@ -1203,9 +1197,22 @@ textarea:focus {
 }
 .ui-input input,
 .ui-input textarea {
+  padding: 0.65em 1em;
+  width: 100%;
+  margin: 0;
+  outline: none;
+  border-radius: 5px;
+  -webkit-transition: background-color 0s ease-out, -webkit-box-shadow 0s ease, border-color 0s ease;
+  -moz-transition: background-color 0s ease-out, -moz-box-shadow 0s ease, border-color 0s ease;
+  -ms-transition: background-color 0s ease-out, -ms-box-shadow 0s ease, border-color 0s ease;
+  -o-transition: background-color 0s ease-out, -o-box-shadow 0s ease, border-color 0s ease;
+  transition: background-color 0s ease-out, box-shadow 0s ease, border-color 0s ease;
+  box-sizing: border-box;
+}
+.ui-input input,
+.ui-input textarea {
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 .ui-input input:-moz-placeholder,
 .ui-input textarea:-moz-placeholder {
@@ -1223,141 +1230,116 @@ textarea:focus {
 .ui-input textarea:-ms-input-placeholder {
   color: #bbbbbb;
 }
+.ui-input.active input,
+.ui-input input:active {
+  border-color: #1b9ae8;
+  background-color: #fefdfa;
+}
+.ui-input.focus input,
+.ui-input input:focus {
+  border-color: #1b9ae8;
+  background-color: #fefdfa;
+}
+.ui-input.disabled input,
+.ui-input input[disabled] {
+  background-color: #e6e6e6;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.ui-input.error input {
+  background-color: #e7bebe;
+  border-color: #fffafa;
+  color: #d95c5c;
+}
+.ui-input.error input:-moz-placeholder {
+  color: #ff0000;
+}
+.ui-input.error input::-moz-placeholder {
+  color: #ff0000;
+}
+.ui-input.error input::-webkit-input-placeholder {
+  color: #ff0000;
+}
+.ui-input.error input:-ms-input-placeholder {
+  color: #ff0000;
+}
 .ui-input input,
 .ui-input textarea {
-  padding: 0.65em 1em;
   font-size: 16px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
 }
 .ui-input input {
   height: 40px;
 }
-.ui-input input,
-.ui-input textarea {
-  width: 100%;
-  margin: 0;
-  outline: none;
-  border-radius: 5px;
-  -webkit-transition: background-color 0s ease-out, -webkit-box-shadow 0s ease, border-color 0s ease;
-  -moz-transition: background-color 0s ease-out, -moz-box-shadow 0s ease, border-color 0s ease;
-  -ms-transition: background-color 0s ease-out, -ms-box-shadow 0s ease, border-color 0s ease;
-  -o-transition: background-color 0s ease-out, -o-box-shadow 0s ease, border-color 0s ease;
-  transition: background-color 0s ease-out, box-shadow 0s ease, border-color 0s ease;
-  box-sizing: border-box;
+.ui-input.with-icon .ui-icon {
+  width: 40px;
+  line-height: 40px;
+  font-size: 16px;
 }
-/*******************************
-            States
-*******************************/
-/*--------------------
-        Active
----------------------*/
-.ui-input input:active,
-.ui-input.down input {
-  border-color: rgba(0, 0, 0, 0.3);
-  background-color: #fafafa;
+.ui-input.with-icon.left input {
+  padding-left: 40px;
 }
-/*--------------------
-        Loading
----------------------*/
-.ui.loading.input > .icon {
-  background: url(../images/loader-mini.gif) no-repeat 50% 50%;
+.ui-input.with-icon.left .ui-icon {
+  left: 0;
 }
-.ui.loading.input > .icon:before,
-.ui.loading.input > .icon:after {
+.ui-input.with-icon.right input {
+  padding-right: 40px;
+}
+.ui-input.with-icon.right .ui-icon {
+  right: 0;
+}
+.ui-input.loading .loader.icon:before,
+.ui-input.loading .loader .icon:after {
   display: none;
 }
-/*--------------------
-        Focus
----------------------*/
-.ui-input.focus input,
-.ui-input input:focus {
-  border-color: rgba(0, 0, 0, 0.2);
-  color: rgba(0, 0, 0, 0.85);
-}
-/*--------------------
-        Error
----------------------*/
-.ui-input.error input {
-  background-color: #fffafa;
-  border-color: #e7bebe;
-  color: #d95c5c;
-}
-/* Error Placeholder */
-.ui-input.error input ::-webkit-input-placeholder {
-  color: #ff0000;
-}
-.ui-input.error input ::-moz-placeholder {
-  color: #ff0000;
-}
-.ui-input.error input :focus::-webkit-input-placeholder {
-  color: #ff0000;
-}
-.ui-input.error input :focus::-moz-placeholder {
-  color: #ff0000;
-}
-/*--------------------
-        Disabled
----------------------*/
-.ui-input.disabled input,
-.ui-input input[disabled] {
-  background-color: #eeeeee;
-  border-color: rgba(0, 0, 0, 0.2);
-}
-/*******************************
-           Variations
-*******************************/
-/*--------------------
-      Transparent
----------------------*/
-.ui.transparent.input input {
+.ui-input.transparent input {
   border: none;
   background-color: transparent;
 }
-/*--------------------
-         Icon
----------------------*/
-.ui-input.icon > .icon {
-  cursor: default;
+.ui-input.with-icon .ui-icon {
   position: absolute;
   opacity: 0.5;
   top: 0px;
-  right: 0px;
   margin: 0em;
-  width: 2.6em;
-  height: 100%;
-  padding-top: 0.82em;
   text-align: center;
-  border-radius: 0em 0.3125em 0.3125em 0em;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: opacity 0.3s ease-out;
-  -moz-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out;
+  -webkit-transition: opacity 0s ease-out;
+  -moz-transition: opacity 0s ease-out;
+  -ms-transition: opacity 0s ease-out;
+  -o-transition: opacity 0s ease-out;
+  transition: opacity 0s ease-out;
 }
-.ui-input.icon > .link.icon {
-  cursor: pointer;
+.ui-input.with-icon .ui-icon:hover {
+  text-decoration: none;
 }
-.ui-input.icon input {
-  padding-right: 3em !important;
+.ui-input.with-icon .ui-icon.left {
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
 }
-/* Left Side */
-.ui-input.icon.left > .icon {
-  right: auto;
-  left: 1px;
-  border-radius: 0.3125em 0em 0em 0.3125em;
+.ui-input.with-icon .ui-icon.right {
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
 }
-.ui-input.left.icon > input {
-  padding-left: 3em !important;
-  padding-right: 1.2em !important;
-}
-/* Focus */
-.ui-input.icon > input:focus ~ .icon {
+.ui-input.with-icon > input:focus ~ .ui-icon {
   opacity: 1;
 }
-/*--------------------
-        Action
----------------------*/
+.ui-input.fluid {
+  display: block;
+}
+.ui-input.fluid.action {
+  display: table;
+  width: 100%;
+}
+.ui-input.fluid.action > .ui-action-container {
+  width: 0.01%;
+}
 .ui-input.action {
   display: table;
 }
@@ -1376,6 +1358,7 @@ textarea:focus {
 }
 .ui-input.action > .ui-action-container {
   display: table-cell !important;
+  vertical-align: top;
   white-space: nowrap;
   font-size: 0;
 }
@@ -1387,42 +1370,155 @@ textarea:focus {
   border-top-right-radius: 0px !important;
   border-bottom-right-radius: 0px !important;
 }
-.ui-input.fluid.action {
-  display: table;
-  width: 100%;
+.ui-input.mini input,
+.ui-input.mini textarea {
+  font-size: 13px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
 }
-.ui-input.fluid.action > .button {
-  width: 0.01%;
+.ui-input.mini input {
+  height: 32.5px;
 }
-/*--------------------
-        Fluid
----------------------*/
-.ui-input.fluid {
-  display: block;
+.ui-input.mini.with-icon .ui-icon {
+  width: 32.5px;
+  line-height: 32.5px;
+  font-size: 13px;
 }
-/*--------------------
-        Size
----------------------*/
-.ui-input.mini {
-  font-size: 0.8125em;
+.ui-input.mini.with-icon.left input {
+  padding-left: 32.5px;
 }
-.ui-input.small {
-  font-size: 0.875em;
+.ui-input.mini.with-icon.left .ui-icon {
+  left: 0;
 }
-.ui-input {
-  font-size: 1em;
+.ui-input.mini.with-icon.right input {
+  padding-right: 32.5px;
 }
-.ui-input.large {
-  font-size: 1.125em;
+.ui-input.mini.with-icon.right .ui-icon {
+  right: 0;
 }
-.ui-input.big {
-  font-size: 1.25em;
+.ui-input.small input,
+.ui-input.small textarea {
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
 }
-.ui-input.huge {
-  font-size: 1.375em;
+.ui-input.small input {
+  height: 35px;
 }
-.ui-input.massive {
-  font-size: 1.5em;
+.ui-input.small.with-icon .ui-icon {
+  width: 35px;
+  line-height: 35px;
+  font-size: 14px;
+}
+.ui-input.small.with-icon.left input {
+  padding-left: 35px;
+}
+.ui-input.small.with-icon.left .ui-icon {
+  left: 0;
+}
+.ui-input.small.with-icon.right input {
+  padding-right: 35px;
+}
+.ui-input.small.with-icon.right .ui-icon {
+  right: 0;
+}
+.ui-input.large input,
+.ui-input.large textarea {
+  font-size: 18px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
+}
+.ui-input.large input {
+  height: 45px;
+}
+.ui-input.large.with-icon .ui-icon {
+  width: 45px;
+  line-height: 45px;
+  font-size: 18px;
+}
+.ui-input.large.with-icon.left input {
+  padding-left: 45px;
+}
+.ui-input.large.with-icon.left .ui-icon {
+  left: 0;
+}
+.ui-input.large.with-icon.right input {
+  padding-right: 45px;
+}
+.ui-input.large.with-icon.right .ui-icon {
+  right: 0;
+}
+.ui-input.big input,
+.ui-input.big textarea {
+  font-size: 20px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
+}
+.ui-input.big input {
+  height: 50px;
+}
+.ui-input.big.with-icon .ui-icon {
+  width: 50px;
+  line-height: 50px;
+  font-size: 20px;
+}
+.ui-input.big.with-icon.left input {
+  padding-left: 50px;
+}
+.ui-input.big.with-icon.left .ui-icon {
+  left: 0;
+}
+.ui-input.big.with-icon.right input {
+  padding-right: 50px;
+}
+.ui-input.big.with-icon.right .ui-icon {
+  right: 0;
+}
+.ui-input.huge input,
+.ui-input.huge textarea {
+  font-size: 22px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
+}
+.ui-input.huge input {
+  height: 55px;
+}
+.ui-input.huge.with-icon .ui-icon {
+  width: 55px;
+  line-height: 55px;
+  font-size: 22px;
+}
+.ui-input.huge.with-icon.left input {
+  padding-left: 55px;
+}
+.ui-input.huge.with-icon.left .ui-icon {
+  left: 0;
+}
+.ui-input.huge.with-icon.right input {
+  padding-right: 55px;
+}
+.ui-input.huge.with-icon.right .ui-icon {
+  right: 0;
+}
+.ui-input.massive input,
+.ui-input.massive textarea {
+  font-size: 24px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
+}
+.ui-input.massive input {
+  height: 60px;
+}
+.ui-input.massive.with-icon .ui-icon {
+  width: 60px;
+  line-height: 60px;
+  font-size: 24px;
+}
+.ui-input.massive.with-icon.left input {
+  padding-left: 60px;
+}
+.ui-input.massive.with-icon.left .ui-icon {
+  left: 0;
+}
+.ui-input.massive.with-icon.right input {
+  padding-right: 60px;
+}
+.ui-input.massive.with-icon.right .ui-icon {
+  right: 0;
 }
 .ui-divider {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -1575,9 +1671,8 @@ textarea:focus {
   padding: 0;
   border: 0;
 }
-/*--------------------
-        Size
----------------------*/
+.ui-button-group.mini .ui-button,
+.ui-input.mini .ui-action-container .ui-button,
 .ui-button.mini {
   padding: 0 13px;
   font-size: 13px;
@@ -1585,6 +1680,8 @@ textarea:focus {
   height: 32.5px;
   line-height: 30.5px;
 }
+.ui-button-group.small .ui-button,
+.ui-input.small .ui-action-container .ui-button,
 .ui-button.small {
   padding: 0 14px;
   font-size: 14px;
@@ -1592,6 +1689,8 @@ textarea:focus {
   height: 35px;
   line-height: 33px;
 }
+.ui-button-group.large .ui-button,
+.ui-input.large .ui-action-container .ui-button,
 .ui-button.large {
   padding: 0 18px;
   font-size: 18px;
@@ -1599,6 +1698,8 @@ textarea:focus {
   height: 45px;
   line-height: 43px;
 }
+.ui-button-group.big .ui-button,
+.ui-input.big .ui-action-container .ui-button,
 .ui-button.big {
   padding: 0 20px;
   font-size: 20px;
@@ -1606,6 +1707,8 @@ textarea:focus {
   height: 50px;
   line-height: 48px;
 }
+.ui-button-group.huge .ui-button,
+.ui-input.huge .ui-action-container .ui-button,
 .ui-button.huge {
   font-size: 1.375em;
   padding: 0 22px;
@@ -1614,6 +1717,8 @@ textarea:focus {
   height: 55px;
   line-height: 53px;
 }
+.ui-button-group.massive .ui-button,
+.ui-input.massive .ui-action-container .ui-button,
 .ui-button.massive {
   padding: 0 24px;
   font-size: 24px;

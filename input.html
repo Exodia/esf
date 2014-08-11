@@ -6,37 +6,39 @@
         <link rel="stylesheet" href="assets/main.css" />
         <link rel="stylesheet" href="src/icons/css/font-awesome.css" />
         <link rel="stylesheet" href="demo.css" />
+        <link rel="stylesheet" href="assets/prism.css" />
+        <script src="assets/prism.js"></script>
+        <script src="assets/jquery-1.11.1.min.js"></script>
+        <script src="assets/demo.js"></script>
     </head>
     <body class="p2">
-        <h1 class="align-center">输入框</h1>
         <div id="layout" class="ui-g">
             <div class="ui-u-1-5">
-                <ul id="navigator" class="list-unstyled">
-                    <li><a href="index.html">Get Started</a></li>
-                    <li><a href="button.html">按钮</a></li>
-                    <li><a href="#">布局网格</a></li>
-                    <li><a href="checkbox.html">Checkbox</a></li>
-                    <li><a href="form.html">表单</a></li>
-                    <li><a href="icons.html">图标</a></li>
-                    <li><a href="input.html">输入框</a></li>
-                    <li><a href="label.html">标签</a></li>
-                    <li><a href="menu.html">导航菜单</a></li>
-                    <li><a href="type.html">文字样式</a></li>
+                <ul id="navigator-features" class="list-unstyled">
+                    <li><a href="#input-standard">普通输入框</a></li>
+                    <li><a href="#input-states">输入框状态</a></li>
+                    <li><a href="#input-with-icon">输入框和图标</a></li>
+                    <li><a href="#input-fluid">Block输入框</a></li>
+                    <li><a href="#input-sizes">输入框尺寸</a></li>
+                    <li><a href="#input-textarea">Textarea</a></li>
+                    <li><a href="#input-buttons">输入框和按钮</a></li>
+                    <li><a href="#input-buttons-group">输入框和按钮组合</a></li>
                 </ul>
             </div>
             <div class="ui-u-4-5">
                 <div id="main" class="content p2 no-pt">
-                    <h2 id="icons" class="content-subhead">Input</h2>
+                    <h2 class="no-mt">输入框</h2>
+                    <div class="ui-divider"></div>
                     <div>
-                        <h3>Types</h3>
-                        <div>
-                            <h4>Standard Input</h4>
+                        <h3 id="input-standard">普通输入框</h3>
+                        <div class="example">
                             <div class="ui-input">
-                              <input type="text" placeholder="Place holder..." />
+                              <input type="text" placeholder="请输入" />
                             </div>
                         </div>
-                        <h3>States</h3>
-                        <div>
+
+                        <h3 id="input-states">输入框状态</h3>
+                        <div class="example">
                             <h4>Focus</h4>
                             <div class="ui-input focus">
                               <input type="text" placeholder="Place holder..." />
@@ -58,64 +60,69 @@
                               <input readonly="readonly" type="text" placeholder="Place holder..." />
                             </div>
                         </div>
-                        <h3>With Icons</h3>
-                        <div>
+
+                        <h3 id="input-with-icon">输入框和图标</h3>
+                        <div class="example">
                             <h4>Left</h4>
-                            <div class="ui-input left icon">
+                            <div class="ui-input with-icon left ">
                                 <input type="text" placeholder="Search users...">
-                                <i class="fa fa-user icon"></i>
+                                <i class="fa fa-user ui-icon"></i>
                             </div>
                             <h4>Right</h4>
-                            <div class="ui-input right icon">
+                            <div class="ui-input with-icon right">
                                 <input type="text" placeholder="Search users...">
-                                <i class="fa fa-search icon"></i>
+                                <i class="fa fa-search ui-icon"></i>
                             </div> 
                             <h4>Link Icon</h4>
-                            <div class="ui-input right icon">
+                            <div class="ui-input with-icon right">
                                 <input type="text" placeholder="Search users...">
-                                <i class="fa fa-search link icon"></i>
+                                <a href="#" class="fa fa-search ui-icon"></a>
                             </div>
-                            <h4>With Buttons (TODO)</h4>
-                            <div>
-                                display buttons.
-                            </div>
-                            <h4>Fluid</h4>
-                           <div class="ui-input fluid right icon">
+                        </div>
+
+                        <h3 id="input-fluid">Block输入框</h3>
+                        <div class="example">
+                            <div class="ui-input fluid right with-icon">
                                 <input type="text" placeholder="Search users...">
-                                <i class="fa fa-search link icon"></i>
+                                <i class="fa fa-search link ui-icon"></i>
                             </div>
-                            <h4>Sizes</h4>
+                        </div>
+
+                        <h3 id="input-sizes">输入框尺寸</h3>
+                        <div class="example">
                             <div>
-                                <div class="ui-input right icon small">
+                                <div class="ui-input right with-icon small">
                                     <input type="text" placeholder="small">
-                                    <i class="fa fa-search link icon"></i>
+                                    <i class="fa fa-search ui-icon"></i>
                                 </div>
                             </div>
                             <div class="mt1">
-                                <div class="ui-input right icon">
+                                <div class="ui-input right with-icon">
                                     <input type="text" placeholder="nomral">
-                                    <i class="fa fa-search link icon"></i>
+                                    <i class="fa fa-search ui-icon"></i>
                                 </div>
                             </div>
                             <div class="mt1">
-                                <div class="ui-input right icon big">
+                                <div class="ui-input right with-icon big">
                                     <input type="text" placeholder="big">
-                                    <i class="fa fa-search link icon"></i>
+                                    <i class="fa fa-search ui-icon"></i>
                                 </div>
                             </div>
                             <div class="mt1">
-                                <div class="ui-input right icon huge">
+                                <div class="ui-input right with-icon huge">
                                     <input type="text" placeholder="huge">
-                                    <i class="fa fa-search link icon"></i>
+                                    <i class="fa fa-search ui-icon"></i>
                                 </div>
                             </div>
                             <div class="mt1">
-                                <div class="ui-input right icon massive">
+                                <div class="ui-input right with-icon massive">
                                     <input type="text" placeholder="massive">
-                                    <i class="fa fa-search link icon"></i>
+                                    <i class="fa fa-search ui-icon"></i>
                                 </div>
                             </div>
-                            <h4>Textarea</h4>
+                        </div>
+                        <h3 id="input-textarea">Textarea</h3>
+                        <div class="example">
                             <div class="mt1">
                                 <div class="ui-input fluid">
                                     <textarea placeholder="massive" rows="10"></textarea>
@@ -126,40 +133,52 @@
                                     <textarea placeholder="massive" rows="8" cols="90"></textarea>
                                 </div>
                             </div>
-                            <h4>Action</h4>
-                            <div class="mt1">
-                                <div class="ui-input action">
-                                    <input type="text" placeholder="massive"  />
-                                    <div class="ui-action-container">
-                                        <button class="ui-button icon primary"><i class="icon fa fa-users"></i></button>
-                                    </div>
+                        </div>
+
+                        <h3 id="input-buttons">输入框和按钮</h3>
+                        <div class="example">
+                            <div class="ui-input action">
+                                <div class="ui-action-container">
+                                    <button class="ui-button"><i class="ui-icon fa fa-users"></i></button>
+                                </div>
+                                <input type="text" placeholder="massive"  />
+                            </div>
+                            
+                            <div class="ui-input action mt1">
+                                <input type="text" placeholder="massive"  />
+                                <div class="ui-action-container">
+                                    <button class="ui-button"><i class="ui-icon fa fa-users"></i></button>
                                 </div>
                             </div>
+                        </div>
+
+                        <h3 id="input-buttons-group">输入框和按钮组合</h3>
+                        <div class="example">
                             <div class="mt1">
-                                <div class="ui-input action">
-                                    <div class="ui-action-container">
-                                        <button class="ui-button icon primary"><i class="icon fa fa-users"></i></button>
-                                    </div>
-                                    <input type="text" placeholder="massive"  />
-                                </div>
-                            </div>
-                            <h4>Button Group</h4>
-                            <div class="mt1">
-                                <div class="ui-input action">
+                                <div class="ui-input action small">
                                     <div class="ui-action-container ui-button-group">
                                         <button type="button" class="ui-button">Left</button>
-                                        <button type="button" class="ui-button"><i class="icon fa fa-caret-down"></i></button>
+                                        <button type="button" class="ui-button"><i class="ui-icon fa fa-caret-down"></i></button>
                                     </div>
-                                    <input type="text" placeholder="massive"  />
+                                    <input type="text" placeholder="small"  />
                                 </div>
                             </div>
                             <div class="mt1">
-                                <div class="ui-input action">
-                                    <input type="text" placeholder="massive"  />
+                                <div class="ui-input action large">
                                     <div class="ui-action-container ui-button-group">
                                         <button type="button" class="ui-button">Left</button>
-                                        <button type="button" class="ui-button"><i class="icon fa fa-caret-down"></i></button>
+                                        <button type="button" class="ui-button"><i class="ui-icon fa fa-caret-down"></i></button>
                                     </div>
+                                    <input type="text" placeholder="large"  />
+                                </div>
+                            </div>
+                            <div class="mt1">
+                                <div class="ui-input action massive">
+                                    <div class="ui-action-container ui-button-group">
+                                        <button type="button" class="ui-button">Left</button>
+                                        <button type="button" class="ui-button"><i class="ui-icon fa fa-caret-down"></i></button>
+                                    </div>
+                                    <input type="text" placeholder="massive"  />
                                 </div>
                             </div>
                         </div>
