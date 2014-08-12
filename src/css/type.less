@@ -1,31 +1,26 @@
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: @headings-font-family;
-  font-weight: @headings-font-weight;
-  color: @headings-color;
+h1, h2, h3, h4, h5, h6 {
+    font-family: @headings-font-family;
+    font-weight: @headings-font-weight;
+    color: @headings-color;
 
-  small,
-  .small {
-    font-weight: normal;
-    color: @headings-small-color;
-  }
+    small,
+    .small {
+        font-weight: normal;
+        color: @headings-small-color;
+    }
+}
+h1, h2, h3 {
+    small,
+    .small {
+        font-size: 65%;
+    }
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3 {
-  small,
-  .small {
-    font-size: 65%;
-  }
-}
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  small,
-  .small {
-    font-size: 75%;
-  }
+h4, h5, h6 {
+    small,
+    .small {
+        font-size: 75%;
+    }
 }
 
 body {
@@ -37,19 +32,37 @@ p.indent {
     text-indent: 2em;
 }
 
-pre {
-    background: none repeat scroll 0 0 #e1f0de;
-    font-size: 75%;
-    font-weight: bold;
-    padding: @gutter;
+code {
+    color: @code-text-color;
+    white-space: nowrap;
+    border: 1px solid @code-border-color;
+    border-radius: 3px;
+    background: @code-background-color;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    font-size: @base-font-size * 0.75;
+    padding: @code-padding;
+}
+
+pre code {
+    color: inherit;
+    white-space: inherit;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.@{ui-class-prefix}-divider, hr {
+    border-top: 1px solid @hr-color;
+    height: 0;
+    overflow:hidden;
 }
 
 .song {
-    font-family: "Helvetica Neue", Helvetica, Arial, SimSun, "宋体", STSong, "华文宋体", sans-serif;
+    font-family: @song-font;
 }
 
 .fang-song {
-    font-family: "Helvetica Neue", Helvetica, Arial, FangSong, "仿宋", STFangsong, "华文仿宋", sans-serif;
+    font-family: @fang-song-font
 }
 
 .hei {
@@ -57,19 +70,24 @@ pre {
 }
 
 .kai {
-    font-family: "Helvetica Neue", Helvetica, Arial, KaiTi, "楷体", STKaiti, "华文楷体", sans-serif;
+    font-family: @kai-font; 
 }
 
 blockquote {
     font-style: italic;
-    margin: 0 1.5em 1.5em;
+    margin: @quote-margin;
     footer {
-        color: #777;
+        color: @quote-foot-text-color;
     }
 }
 
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0;
+}
 
-// Usage
 a {
     .link-like();
 }
@@ -80,14 +98,11 @@ address {
 
 ul,
 ol {
-  margin-top: 0;
-  ul,
-  ol {
-    margin-bottom: 0;
-  }
+    margin-top: 0;
+    ul, ol {
+        margin-bottom: 0;
+    }
 }
-
-// List options
 
 // Unstyled keeps list items block level, just removes default browser padding and list-style
 .list-unstyled {
@@ -113,4 +128,105 @@ ol {
 
 .truncate2 {
     .ellipsis(3);
+}
+
+// ***********
+// Table
+// ***********
+.table-variant(
+    @caption-text-color,
+    @border-color,
+    @head-background-color,
+    @head-text-color,
+    @striped-background-color,
+    @striped-text-color,
+    @hover-line-background-color,
+    @hover-line-text-color
+) {
+    border: 1px solid @border-color;
+    caption {
+        color: @caption-text-color;
+    }
+    td, th {
+        border-left: 1px solid @border-color;
+    }
+    thead {
+        background: @head-background-color;
+        color: @head-text-color;
+    }
+    &.@{ui-variant-prefix}striped {
+        tr:nth-child(2n-1) td {
+            background-color: @striped-background-color;
+            color: @striped-text-color;
+        }
+    }
+    &.@{ui-variant-prefix}bordered {
+        td {
+            border-bottom: 1px solid @border-color;
+        } 
+    }
+    &.@{ui-variant-prefix}horizontal {
+        th, td {
+            border-width: 0 0 1px 0;
+            border-bottom: 1px solid @border-color;
+        } 
+    }
+    &.@{ui-variant-prefix}hover-line {
+        > tbody > tr:hover {
+            > td,
+            > th {
+                background-color: @hover-line-background-color;
+                color: @hover-line-text-color; 
+            }
+        }
+    }
+}
+.table-size(
+    @table-caption-padding,
+    @table-caption-font-size,
+    @table-cell-padding,
+    @table-cell-font-size
+) {
+    caption {
+        padding: @table-caption-padding;
+        font-size: @table-caption-font-size;
+    }
+    td, th {
+        padding: @table-cell-padding;
+        font-size: @table-cell-font-size
+    }
+}
+.@{ui-class-prefix}-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    caption {
+        text-align: center;
+        font-weight: bold;
+    }
+    td, th {
+        border-width: 0 0 0 1px;
+        margin: 0;
+        overflow: visible; /*to make ths where the title is really long work*/
+    }
+    thead {
+        text-align: left;
+    }
+
+    .table-variant(
+        @table-caption-text-color,
+        @table-border-color,
+        @table-head-background-color,
+        @table-head-text-color,
+        @table-striped-background-color,
+        @table-striped-text-color,
+        @table-hover-line-background-color,
+        @table-hover-line-text-color
+    );
+    .table-size(
+        @table-caption-padding,
+        @table-caption-font-size,
+        @table-cell-padding,
+        @table-cell-font-size
+    );
 }

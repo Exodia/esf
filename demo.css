@@ -16,6 +16,9 @@
 /* =========
    Menu
    ========= */
+/* =========
+   Menu
+   ========= */
 /*
 * 
 * ESF 变量，一般不用直接修改这里
@@ -75,10 +78,10 @@ body > .est-body:after {
   line-height: 58px;
 }
 .left-menu-separator {
-  border-left: 1px solid #eeeeee !important;
+  border-left: 1px solid #e6e6e6 !important;
 }
 .right-menu-separator {
-  border-right: 1px solid #eeeeee !important;
+  border-right: 1px solid #e6e6e6 !important;
 }
 .brand-title {
   margin-left: 80px;
@@ -99,8 +102,8 @@ body > .est-body:after {
   bottom: 0px;
 }
 #page-footer {
-  background: #555555;
-  color: #eeeeee;
+  background: #4d4d4d;
+  color: #e6e6e6;
 }
 #content-container,
 #page-footer {
@@ -112,14 +115,14 @@ body > .est-body:after {
   border: 0;
 }
 #navigator-features {
-  position: fixed;
+  border-right: 1px solid #e6e6e6;
 }
 #navigator-features a {
   padding: 0.5em 1em;
   display: block;
 }
 #navigator-features a:hover {
-  background: #eeeeee;
+  background: #e6e6e6;
   text-decoration: none;
 }
 .example {
@@ -153,13 +156,13 @@ body > .est-body:after {
 /* grid-border */
 .l-box {
   padding: 1em;
-  border: 1px solid #777777;
+  border: 1px solid #808080;
 }
 .grid-demo .ui-g {
-  background: #eeeeee;
+  background: #e6e6e6;
 }
 .grid-demo .ui-g [class*="ui-u"] {
-  background: #777777;
+  background: #808080;
   color: #ffffff;
   text-align: center;
 }
