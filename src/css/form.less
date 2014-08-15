@@ -1,8 +1,10 @@
-.@{ui-class-prefix}-form {
-    
+.field-wrapper() {
+    padding: @input-padding;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-.@{ui-class-prefix}-form{
+.@{ui-class-prefix}-form {
     fieldset {
         margin: 0;
         padding: .35em 0 .75em;
@@ -11,10 +13,12 @@
     legend {
         display: block;
         width: 100%;
-        padding: 0.3em 0;
-        margin-bottom: 0.3em;
-        color: #333;
-        border-bottom: 1px solid #e5e5e5;
+        padding: @form-legend-padding;
+        margin: @form-legend-margin;
+        color: @form-legend-text-color;
+        border-bottom: @form-legend-bottom-border;
+        font-size: @form-legend-font-size;
+        font-family: @hei-font;
     }
     .@{ui-class-prefix}-g [class *= "@{ui-class-prefix}-u"] .field {
         padding-left: 1%;
@@ -25,6 +29,28 @@
     }
     .@{ui-class-prefix}-g [class *= "@{ui-class-prefix}-u"]:last-child .field {
         padding-right: 0;
+    }
+    .field label{
+        font-size: @form-label-font-size;
+    }
+    .form-row {
+        margin-bottom: @form-row-bottom-margin;
+    }
+    .block-label {
+        display: block;
+        font-weight: bold;
+    }
+
+    .inline-label {
+        display: inline-block;
+        font-weight: bold;
+        .field-wrapper();
+        &:extend(.truncate);
+        width: 100%;
+    }
+    
+    .field-wrapper {
+        .field-wrapper();
     }
 }
 
@@ -48,27 +74,9 @@
     color: red;
     margin-top: 0.2em;
 }
-.field-wrapper {
-    padding: 0.65em 0em;
-}
 
-.@{ui-class-prefix}-form .block-label {
-    display: block;
-    margin-bottom: 0.3em;
-}
 
-.@{ui-class-prefix}-form .inline-label {
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 0.65em;
-}
 
-.@{ui-class-prefix}-form .form-row {
-    margin-bottom: 0.3em;
-    .@{ui-class-prefix}-u-* {
-        padding-right: 1%;
-    }
-}
 
 select {
     padding: 0.65em 1em;

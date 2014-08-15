@@ -782,13 +782,14 @@ h6 .small {
   font-size: 75%;
 }
 body {
-  font-size: 16;
+  font-size: 16 px;
   line-height: 1.3;
 }
 p.indent {
   text-indent: 2em;
 }
-code {
+code,
+kbd {
   color: #b34e26;
   white-space: nowrap;
   border: 1px solid #cccccc;
@@ -872,7 +873,8 @@ ol ol {
   padding-left: 5px;
   padding-right: 5px;
 }
-.truncate {
+.truncate,
+.ui-form .inline-label {
   overflow: hidden;
   text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
@@ -1174,10 +1176,12 @@ this the same font stack that Normalize.css sets for the `body`.
 .ui-form legend {
   display: block;
   width: 100%;
-  padding: 0.3em 0;
-  margin-bottom: 0.3em;
-  color: #333;
-  border-bottom: 1px solid #e5e5e5;
+  padding: 0.5em 0;
+  margin: 0 0 0.5em;
+  color: #4a3b13;
+  border-bottom: 1px solid #cccccc;
+  font-size: 1.25em;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimHei, "黑体", STHeiti, "华文黑体", sans-serif;
 }
 .ui-form .ui-g [class*="ui-u"] .field {
   padding-left: 1%;
@@ -1187,6 +1191,29 @@ this the same font stack that Normalize.css sets for the `body`.
   padding-left: 0;
 }
 .ui-form .ui-g [class*="ui-u"]:last-child .field {
+  padding-right: 0;
+}
+.ui-form .field label {
+  font-size: 1em;
+}
+.ui-form .form-row {
+  margin-bottom: 0.8em;
+}
+.ui-form .block-label {
+  display: block;
+  font-weight: bold;
+}
+.ui-form .inline-label {
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.65em 1em;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+.ui-form .field-wrapper {
+  padding: 0.65em 1em;
+  padding-left: 0;
   padding-right: 0;
 }
 .field.required .ui-input .asterisk {
@@ -1203,24 +1230,6 @@ this the same font stack that Normalize.css sets for the `body`.
 .field .field-error {
   color: red;
   margin-top: 0.2em;
-}
-.field-wrapper {
-  padding: 0.65em 0em;
-}
-.ui-form .block-label {
-  display: block;
-  margin-bottom: 0.3em;
-}
-.ui-form .inline-label {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 0.65em;
-}
-.ui-form .form-row {
-  margin-bottom: 0.3em;
-}
-.ui-form .form-row .ui-u-* {
-  padding-right: 1%;
 }
 select {
   padding: 0.65em 1em;
