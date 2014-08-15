@@ -6,53 +6,202 @@
         <link rel="stylesheet" href="assets/main.css" />
         <link rel="stylesheet" href="src/icons/css/font-awesome.css" />
         <link rel="stylesheet" href="demo.css" />
+        <link rel="stylesheet" href="assets/prism.css" />
+        <script src="assets/prism.js"></script>
+        <script src="assets/jquery-1.11.1.min.js"></script>
+        <script src="assets/demo.js"></script>
     </head>
     <body class="p2">
-        <h1 class="align-center">Checkbox</h1>
         <div id="layout" class="ui-g">
             <div class="ui-u-1-5">
-                <ul id="navigator" class="list-unstyled">
-                    <li><a href="index.html">Get Started</a></li>
-                    <li><a href="button.html">按钮</a></li>
-                    <li><a href="#">布局网格</a></li>
-                    <li><a href="checkbox.html">Checkbox</a></li>
-                    <li><a href="form.html">表单</a></li>
-                    <li><a href="icons.html">图标</a></li>
-                    <li><a href="input.html">输入框</a></li>
-                    <li><a href="label.html">标签</a></li>
-                    <li><a href="menu.html">导航菜单</a></li>
-                    <li><a href="type.html">文字样式</a></li>
+                <ul id="navigator-features" class="list-unstyled">
+                    <li><a href="#checkbox">复选框（Checkbox）</a></li>
+                    <li><a href="#radiobox">Radiobox（单选框）</a></li>
+                    <li><a href="#system-default">系统默认（System Default）</a></li>
+                    <li><a href="#slider">滑块（Slider）</a></li>
+                    <li><a href="#toggle">开关（Switch）</a></li>
+                    <li><a href="#sizes">自定义尺寸（Sizes）</a></li>
                 </ul>
             </div>
             <div class="ui-u-4-5">
                 <div id="main" class="content p2 no-pt">
-                    <h2 id="icons" class="content-subhead">类型</h2>
+                    <h2 id="icons" class="no-mt">单选和复选框（Checkbox &amp; Radiobox）</h2>
+                    <div class="ui-divider"></div>
+                    <p>
+                        用CSS定义Checkbox和Radiobox的样式。同时支持Slider和Switch样式。
+                    </p>
                     <div>
-                        <h3>Checkbox</h3>
-                        <div class="ui-checkbox">
-                          <input type="checkbox" id="unique-id">
-                          <label for="unique-id">Poodle</label>
+                        <h3 id="checkbox">复选框（Checkbox）</h3>
+                        <p>
+                            用Checkbox来表示复选元素。
+                        </p>
+                        <div class="example">
+                            <h4>1. 你喜欢的旅游胜地？</h4>
+                            <div>
+                                <div class="ui-checkbox mr1">
+                                    <input type="checkbox" checked="checked" id="unique-id">
+                                    <label for="unique-id">香港</label>
+                                </div>
+                                <div class="ui-checkbox mr1">
+                                    <input type="checkbox" id="unique-id-2">
+                                    <label for="unique-id-2">泰国</label>
+                                </div>
+                                <div class="ui-checkbox mr1">
+                                    <input type="checkbox" id="unique-id-3">
+                                    <label for="unique-id-3">新加坡</label>
+                                </div>
+                            </div>
+                            <h4>2. 你喜欢的菜系？</h4>
+                            <div>
+                                <div class="ui-checkbox block mb1">
+                                    <input type="checkbox" id="unique-id-4">
+                                    <label for="unique-id-4">川菜</label>
+                                </div>
+                                <div class="ui-checkbox block mb1">
+                                    <input type="checkbox" checked="checked" id="unique-id-5">
+                                    <label for="unique-id-5">鲁菜</label>
+                                </div>
+                                <div class="ui-checkbox block mb1">
+                                    <input type="checkbox" id="unique-id-6">
+                                    <label for="unique-id-6">淮扬菜</label>
+                                </div>
+                            </div>
                         </div>
-                        <h3>Slider</h3>
-                        <div class="ui-slider">
-                            <input type="checkbox" name="walk" id="slider" />
-                            <label for="slider">Allow others to see when your dog is on a walk</label>
+
+                        <h3 id="radiobox">Radiobox（单选框）</h3>
+                        <p>
+                            用Radiobox来表示单选元素。
+                        </p>
+                        <div class="example">
+                            <h4>1. 你喜欢你工作的公司吗？</h4>
+                            <div>
+                                <div class="ui-radio block mb1">
+                                    <input type="radio" checked="checked" id="unique-id-7" name="company">
+                                    <label for="unique-id-7">喜欢</label>
+                                </div>
+                                <div class="ui-radio block mb1">
+                                    <input type="radio" id="unique-id-8" name="company">
+                                    <label for="unique-id-8">没感觉</label>
+                                </div>
+                                <div class="ui-radio block mb1">
+                                    <input type="radio" id="unique-id-9" name="company">
+                                    <label for="unique-id-9">不喜欢</label>
+                                </div>
+                            </div>
+                            <h4>2. 你在公司的职位？</h4>
+                            <div>
+                                <div class="ui-radio mr2">
+                                    <input type="radio" id="unique-id-10" name="company2">
+                                    <label for="unique-id-10">总监</label>
+                                </div>
+                                <div class="ui-radio mr2">
+                                    <input type="radio" checked="checked" id="unique-id-11" name="company2">
+                                    <label for="unique-id-11">经理</label>
+                                </div>
+                                <div class="ui-radio mr2">
+                                    <input type="radio" id="unique-id-12" name="company2">
+                                    <label for="unique-id-12">工程师</label>
+                                </div>
+                            </div>
                         </div>
-                        <h3>toggle</h3>
-                        <div class="ui-toggle">
-                            <input type="checkbox" name="walk" id="toggle" />
-                            <label for="toggle">Allow others to see when your dog is on a walk</label>
+
+                        <h3 id="system-default">系统默认（System Default）</h3>
+                        <p>
+                            如果不喜欢样式可以使用默认的样式。
+                        </p>
+                        <div class="example">
+                            <h4>1. 你喜欢的旅游胜地？</h4>
+                            <div>
+                                <div class="mr1">
+                                    <input type="checkbox" id="unique-id-13">
+                                    <label for="unique-id-13">香港</label>
+                                </div>
+                                <div class="mr1">
+                                    <input type="checkbox" id="unique-id-14">
+                                    <label for="unique-id-14">泰国</label>
+                                </div>
+                                <div class="mr1">
+                                    <input type="checkbox" id="unique-id-15">
+                                    <label for="unique-id-15">新加坡</label>
+                                </div>
+                            </div>
+                            <h4>2. 你在公司的职位？</h4>
+                            <div>
+                                <div class="mr2">
+                                    <input type="radio" id="unique-id-16" name="company3">
+                                    <label for="unique-id-16">总监</label>
+                                </div>
+                                <div class="mr2">
+                                    <input type="radio" id="unique-id-17" name="company3">
+                                    <label for="unique-id-17">经理</label>
+                                </div>
+                                <div class="mr2">
+                                    <input type="radio" id="unique-id-18" name="company3">
+                                    <label for="unique-id-18">工程师</label>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <h2 id="icons" class="content-subhead">Radio</h2>
-                    <h3>Radio</h3>
-                    <div class="ui-radio">
-                      <input type="radio" id="unique-id3" name="radio1" />
-                      <label for="unique-id3">Radio</label>
-                    </div>
-                    <div class="ui-radio">
-                      <input type="radio" id="unique-id4" name="radio1" />
-                      <label for="unique-id4"></label>
+
+                        <h3 id="slider">滑块（Slider）</h3>
+                        <p>
+                            兴许你需要一个滑块效果。
+                        </p>
+                        <div class="example">
+                            <div class="ui-slider">
+                                <input type="checkbox" name="walk" id="slider" />
+                                <label for="slider">Allow others to see when your dog is on a walk</label>
+                            </div>
+                        </div>
+
+                        <h3 id="toggle">开关（Switch）</h3>
+                        <p>
+                            开关效果。
+                        </p>
+                        <div class="example">
+                            <div class="ui-toggle">
+                                <input type="checkbox" name="walk" id="toggle" />
+                                <label for="toggle">Allow others to see when your dog is on a walk</label>
+                            </div>
+                        </div>
+
+                        <h3 id="sizes">自定义尺寸（Sizes）</h3>
+                        <p>
+                            自定义尺寸。
+                        </p>
+                        <div class="example">
+                            <div class="ui-slider large block mb2">
+                                <input type="checkbox" name="walk" id="slider-large" />
+                                <label for="slider-large">Allow others to see when your dog is on a walk</label>
+                            </div>
+                            <div class="ui-slider huge block mb2">
+                                <input type="checkbox" name="walk" id="slider-huge" />
+                                <label for="slider-huge">Allow others to see when your dog is on a walk</label>
+                            </div>
+                            <div class="ui-toggle large block mb2">
+                                <input type="checkbox" name="walk" id="toggle-large" />
+                                <label for="toggle-large">Allow others to see when your dog is on a walk</label>
+                            </div>
+                            <div class="ui-toggle huge block mb2">
+                                <input type="checkbox" name="walk" id="toggle-huge" />
+                                <label for="toggle-huge">Allow others to see when your dog is on a walk</label>
+                            </div>
+                            <div class="ui-radio block large mb2">
+                                <input type="radio" id="unique-id-large-1" name="company">
+                                <label for="unique-id-large-1">Allow others to see when your dog is on a walk</label>
+                            </div>
+                            <div class="ui-radio block huge mb2">
+                                <input type="radio" id="unique-id-huge-1" name="company">
+                                <label for="unique-id-huge-1">Allow others to see when your dog is on a walk</label>
+                            </div>
+                            <div class="ui-checkbox block large mb2">
+                                <input type="checkbox" id="unique-id-large-2" >
+                                <label for="unique-id-large-2">Allow others to see when your dog is on a walk</label>
+                            </div>
+                            <div class="ui-checkbox block huge mb2">
+                                <input type="checkbox" id="unique-id-huge-2" >
+                                <label for="unique-id-huge-2">Allow others to see when your dog is on a walk</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

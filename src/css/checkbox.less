@@ -7,7 +7,18 @@
 
 //
 // CheckBox Common
-.checkbox() {
+//
+// ### Usage:
+//  <div class="@{ui-class-prefix}-(checkbox|toggle|slider|radio)">
+//      <input type="" />
+//      <label>label</label> <!-- or <div class="box"></div> -->
+//  </div>
+//
+.@{ui-class-prefix}-checkbox,
+.@{ui-class-prefix}-radio,
+.@{ui-class-prefix}-slider,
+.@{ui-class-prefix}-toggle
+ {
     position: relative;
     display: inline-block;
     min-width: 1em;
@@ -19,10 +30,10 @@
     /*--- Font Sizes ---*/
     font-size: 1em;
     &.large {
-        font-size: 1.25em;
+        font-size: 1.125em;
     }
     &.huge {
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
 
     input {
@@ -36,7 +47,7 @@
     /*--- Box ---*/
     .box, label {
         cursor: pointer;
-        padding-left: 2em;
+        padding-left: @checkbox-radio-label-padding;
         outline: none;
         &:before {
             position: absolute;
@@ -47,10 +58,10 @@
             height: 1em;
             left: 0em;
             content: '';
-            border-radius: 4px;
-            background: #FFFFFF;
+            border-radius: @default-box-border-radius;
+            background: @checkbox-background-color;
             .transition(background-color 0.3s ease, box-shadow 0.3s ease;);
-            .box-shadow(0em 0em 0em 1px rgba(0, 0, 0, 0.2));
+            .box-shadow(0em 0em 0em 1px @checkbox-border-color);
         }
         &:after {
             .opacity(0);
@@ -61,7 +72,7 @@
             width: 0.45em;
             height: 0.15em;
             background: transparent;
-            border: 0.2em solid #333333;
+            border: 0.2em solid @checkbox-radio-checked-color;
             border-top: none;
             border-right: none;
             .transform(rotate(-45deg));
@@ -69,25 +80,24 @@
 
         /*--- Hover ---*/
         &:hover::before {
-            .box-shadow(0em 0em 0em 1px rgba(0, 0, 0, 0.3));
+            .box-shadow(0em 0em 0em 1px @checkbox-border-hover-color);
         }
 
         /*--- Down ---*/
         &:active::before {
-            background-color: #F5F5F5;
+            background-color: @checkbox-background-active-color;
         }
     }
 
     /*--- Inside Label ---*/
     label {
         display: block;
-        color: rgba(0, 0, 0, 0.6);
+        color: @checkbox-label-text-color;
         .transition(color 0.2s ease);
         &:hover {
-            color: rgba(0, 0, 0, 0.8);
+            color: @checkbox-label-text-hover-color;
         }
     }
-
 
     /*--- Focus ---*/
     input:focus {
@@ -129,11 +139,7 @@
     }
 }
 
-// 
-// Radio
-// 
-.radio() {
-    .checkbox;
+.@{ui-class-prefix}-radio {
     .box, label {
         &:before {
             min-width: 1em;
@@ -143,22 +149,17 @@
         }
         &:after {
             border: none;
-            top: 0.2em;
-            left: 0.2em;
-            width: 0.6em;
-            height: 0.6em;
-            background-color: #555555;
+            top: 0.25em;
+            left: 0.25em;
+            width: 0.5em;
+            height: 0.5em;
+            background-color: @checkbox-radio-checked-color;
             .border-radius(500px);
             .transform(none);
         }
     }
 }
-
-// 
-// Slider
-// 
-.slider() {
-    .checkbox;
+.@{ui-class-prefix}-slider {
     cursor: pointer;
     min-width: 3em;
     /* Line */
@@ -169,7 +170,7 @@
         content: '';
         width: 3em;
         height: 2px;
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: @checkbox-border-color;
     }
     /* Button */
     .box, label {
@@ -184,7 +185,7 @@
             width: 1.5em;
             height: 1.5em;
             .transform(none);
-            .box-shadow(0em 0em 0em 1px rgba(0, 0, 0, 0.1) inset);
+            .box-shadow(0em 0em 0em 1px @checkbox-border-color inset);
             .border-radius(50rem);
             .transition(left 0.3s ease 0s);
         }
@@ -201,7 +202,7 @@
             width: 0.75em;
             height: 0.75em;
             .transform(none);
-            .box-shadow(0em 0em 0em 1px rgba(0, 0, 0, 0.1) inset);
+            .box-shadow(0em 0em 0em 1px @checkbox-border-color inset);
             .border-radius(50rem);
             .transition(background 0.3s ease 0s, left 0.3s ease 0s;);
         }
@@ -219,7 +220,7 @@
     /* Off Color */
     .box, label {
         &:after {
-            background-color: #D95C5C;
+            background-color: @checkbox-slider-off-color;
         }
     }
 
@@ -227,17 +228,12 @@
     input:checked {
         ~ .box, ~ label {
             &:after {
-                background-color: #89B84C;
+                background-color: @checkbox-slider-on-color;
             }
         }
     }
 }
-
-// 
-// Toggle
-// 
-.toggle() {
-    .checkbox;
+.@{ui-class-prefix}-toggle {
     cursor: pointer;
     /* Switch */
     .box, label {
@@ -250,11 +246,11 @@
             top: -0.25em;
             left: 0em;
             z-index: 1;
-            background-color: #FFFFFF;
+            background-color: @checkbox-background-color;
             width: 3em;
             height: 1.5em;
             .transform(none);
-            .box-shadow(0em 0em 0em 1px rgba(0, 0, 0, 0.1) inset);
+            .box-shadow(0em 0em 0em 1px @checkbox-border-color inset);
             .border-radius(50rem);
         }
         /* Button Activation Light */
@@ -267,7 +263,7 @@
             border: none;
             width: 0.75em;
             height: 0.75em;
-            background-color: #D95C5C;
+            background-color: @checkbox-slider-off-color;
             .opacity(100);
             .box-shadow(none);
             .border-radius(50rem);
@@ -279,45 +275,19 @@
     :active {
         .box, label {
             &:before {
-                background-color: #F5F5F5;
+                background-color: @checkbox-background-active-color;
             }
         }
-    }
+    } 
 
     /* Active */
     input:checked {
         ~ .box, ~ label {
             &:after {
                 left: 1.75em;
-                background-color: #89B84C;
+                background-color: @checkbox-slider-on-color;
             }
         }
     }
-}
-
-//
-// Main
-// 
-
-
-//
-// ### Usage:
-//  <div class="@{ui-class-prefix}-(checkbox|toggle|slider|radio)">
-//      <input type="" />
-//      <label>label</label> <!-- or <div class="box"></div> -->
-//  </div>
-//
-.@{ui-class-prefix}-checkbox {
-    .checkbox();
-}
-
-.@{ui-class-prefix}-radio {
-    .radio();
-}
-.@{ui-class-prefix}-slider {
-    .slider();
-}
-.@{ui-class-prefix}-toggle {
-    .toggle();
 }
 

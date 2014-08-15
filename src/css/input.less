@@ -81,7 +81,7 @@
         width: 100%;
         margin: 0;
         outline: none;
-        border-radius: @input-border-radius;
+        border-radius: @default-box-border-radius;
         .transition(
             background-color 0.3s ease-out,
             box-shadow 0.2s ease,
@@ -136,10 +136,10 @@
                 text-decoration: none;
             }
             &.left {
-                .border-right-radius(@default-border-radius);
+                .border-right-radius(@default-box-border-radius);
             }
             &.right {
-                .border-right-radius(@default-border-radius);
+                .border-right-radius(@default-box-border-radius);
             }
         }
         > input:focus ~ .@{ui-class-prefix}-icon {
