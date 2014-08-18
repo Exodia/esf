@@ -78,25 +78,6 @@
   }
 }
 
-.button-variant(@color; @background; @border) {
-    color: @color;
-    background-color: @background;
-        border-color: @border;
-    &:hover,&.hover {
-        color: @color;
-        background-color: darken(@background, 10%);
-            border-color: darken(@border, 12%);
-    }
-}
- 
-.button-size(@height; @padding; @font-size; @border-radius) {
-    padding: 0 @padding;
-    font-size: @font-size;
-    border-radius: @border-radius;
-    height: @height;
-    line-height: @height - 2;
-}
-
 .esf-grid-u {
     display: inline-block;
     *display: inline;

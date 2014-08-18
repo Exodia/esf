@@ -106,7 +106,7 @@ button,
 input,
 select,
 textarea {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
 }
 /**
      * Address margins handled incorrectly in IE 6/7.
@@ -498,7 +498,7 @@ audio:not([controls]) {
      */
 mark {
   background: #ff0;
-  color: #666666;
+  color: #4a3b13;
 }
 /* ==========================================================================
        Figures
@@ -782,7 +782,7 @@ h6 .small {
   font-size: 75%;
 }
 body {
-  font-size: 16 px;
+  font-size: 16px px;
   line-height: 1.3;
 }
 p.indent {
@@ -1587,34 +1587,34 @@ textarea:focus {
 }
 .ui-button {
   display: inline-block;
-  white-space: nowrap;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   text-align: center;
-  cursor: pointer;
-  -webkit-user-drag: none;
+  vertical-align: middle;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   border: 1px solid transparent;
-  vertical-align: middle;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
-}
-.ui-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-.ui-button:hover {
-  text-decoration: none;
-}
-.ui-button {
   color: #ffffff;
   background-color: #808080;
   border-color: #808080;
   padding: 0 16px;
   font-size: 16px;
   border-radius: 4px;
-  height: 40px;
   line-height: 38px;
+  height: 40px;
+}
+.ui-button:hover {
+  text-decoration: none;
+}
+.ui-button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+.ui-button:focus {
+  outline: 0;
 }
 .ui-button:hover,
 .ui-button.hover {
@@ -1622,167 +1622,194 @@ textarea:focus {
   background-color: #666666;
   border-color: #616161;
 }
-.ui-button-primary {
+.ui-button.ui-icon-only {
+  padding: 0 11px;
+}
+.ui-button.ui-primary {
   color: #ffffff;
   background-color: #d00000;
   border-color: #d00000;
 }
-.ui-button-primary:hover,
-.ui-button-primary.hover {
+.ui-button.ui-primary:hover,
+.ui-button.ui-primary.hover {
   color: #ffffff;
   background-color: #9d0000;
   border-color: #930000;
 }
-.ui-button-secondary {
+.ui-button.ui-secondary {
   color: #ffffff;
   background-color: #137cbd;
   border-color: #137cbd;
 }
-.ui-button-secondary:hover,
-.ui-button-secondary.hover {
+.ui-button.ui-secondary:hover,
+.ui-button.ui-secondary.hover {
   color: #ffffff;
   background-color: #0e5e8f;
   border-color: #0d5885;
 }
-.ui-button-success {
+.ui-button.ui-success {
   color: #ffffff;
   background-color: #00bd3c;
   border-color: #00bd3c;
 }
-.ui-button-success:hover,
-.ui-button-success.hover {
+.ui-button.ui-success:hover,
+.ui-button.ui-success.hover {
   color: #ffffff;
   background-color: #008a2c;
   border-color: #008029;
 }
-.ui-button-danger {
+.ui-button.ui-danger {
   color: #ffffff;
   background-color: #d4440b;
   border-color: #d4440b;
 }
-.ui-button-danger:hover,
-.ui-button-danger.hover {
+.ui-button.ui-danger:hover,
+.ui-button.ui-danger.hover {
   color: #ffffff;
   background-color: #a43408;
   border-color: #9a3108;
 }
-.ui-button-info {
+.ui-button.ui-info {
   color: #ffffff;
   background-color: #137cbd;
   border-color: #137cbd;
 }
-.ui-button-info:hover,
-.ui-button-info.hover {
+.ui-button.ui-info:hover,
+.ui-button.ui-info.hover {
   color: #ffffff;
   background-color: #0e5e8f;
   border-color: #0d5885;
 }
-.ui-button-warning {
+.ui-button.ui-warning {
   color: #ffffff;
   background-color: #f35b1f;
   border-color: #f35b1f;
 }
-.ui-button-warning:hover,
-.ui-button-warning.hover {
+.ui-button.ui-warning:hover,
+.ui-button.ui-warning.hover {
   color: #ffffff;
   background-color: #d4440b;
   border-color: #ca410b;
 }
-.ui-button-link {
+.ui-button.ui-link {
   color: #4d4d4d;
   text-decoration: none;
   background: none;
   border: 0;
 }
-.ui-button-link:hover {
+.ui-button.ui-link:hover {
   color: #262626;
   text-decoration: underline;
 }
-.ui-button-link:hover {
+.ui-button.ui-link:hover {
   background: none;
 }
-.ui-icon-button {
-  padding: 0 10px;
-}
-.ui-button.fluid {
+.ui-button.ui-fluid {
   display: block;
   width: 100%;
 }
-.ui-button:focus {
-  outline: 0;
-}
-.ui-button.active,
+.ui-button.ui-active,
 .ui-button:active {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
 }
 .ui-button[disabled],
-.ui-button.disabled,
-.ui-button.disabled:hover,
-.ui-button.disabled:focus,
-.ui-button.disabled:active {
+.ui-button.ui-disabled,
+.ui-button.ui-disabled:hover,
+.ui-button.ui-disabled:focus,
+.ui-button.ui-disabled:active {
   opacity: 0.4;
   filter: alpha(opacity=40);
   cursor: not-allowed;
 }
-/* Firefox: Get rid of the inner focus border */
-.ui-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-.ui-button-group.mini .ui-button,
-.ui-input.mini .ui-action-container .ui-button,
-.ui-button.mini {
+.ui-button-group.ui-mini .ui-button,
+.ui-input.ui-mini .ui-action-container .ui-button,
+.ui-button.ui-mini {
   padding: 0 13px;
   font-size: 13px;
   border-radius: 4px;
-  height: 32.5px;
   line-height: 30.5px;
+  height: 32.5px;
 }
-.ui-button-group.small .ui-button,
-.ui-input.small .ui-action-container .ui-button,
-.ui-button.small {
+.ui-button-group.ui-mini .ui-button.ui-icon-only,
+.ui-input.ui-mini .ui-action-container .ui-button.ui-icon-only,
+.ui-button.ui-mini.ui-icon-only {
+  padding: 0 8.75px;
+}
+.ui-button-group.ui-small .ui-button,
+.ui-input.ui-small .ui-action-container .ui-button,
+.ui-button.ui-small {
   padding: 0 14px;
   font-size: 14px;
   border-radius: 4px;
-  height: 35px;
   line-height: 33px;
+  height: 35px;
 }
-.ui-button-group.large .ui-button,
-.ui-input.large .ui-action-container .ui-button,
-.ui-button.large {
+.ui-button-group.ui-small .ui-button.ui-icon-only,
+.ui-input.ui-small .ui-action-container .ui-button.ui-icon-only,
+.ui-button.ui-small.ui-icon-only {
+  padding: 0 9.5px;
+}
+.ui-button-group.ui-large .ui-button,
+.ui-input.ui-large .ui-action-container .ui-button,
+.ui-button.ui-large {
   padding: 0 18px;
   font-size: 18px;
   border-radius: 4px;
-  height: 45px;
   line-height: 43px;
+  height: 45px;
 }
-.ui-button-group.big .ui-button,
-.ui-input.big .ui-action-container .ui-button,
-.ui-button.big {
+.ui-button-group.ui-large .ui-button.ui-icon-only,
+.ui-input.ui-large .ui-action-container .ui-button.ui-icon-only,
+.ui-button.ui-large.ui-icon-only {
+  padding: 0 12.5px;
+}
+.ui-button-group.ui-big .ui-button,
+.ui-input.ui-big .ui-action-container .ui-button,
+.ui-button.ui-big {
   padding: 0 20px;
   font-size: 20px;
   border-radius: 4px;
-  height: 50px;
   line-height: 48px;
+  height: 50px;
 }
-.ui-button-group.huge .ui-button,
-.ui-input.huge .ui-action-container .ui-button,
-.ui-button.huge {
+.ui-button-group.ui-big .ui-button.ui-icon-only,
+.ui-input.ui-big .ui-action-container .ui-button.ui-icon-only,
+.ui-button.ui-big.ui-icon-only {
+  padding: 0 14px;
+}
+.ui-button-group.ui-huge .ui-button,
+.ui-input.ui-huge .ui-action-container .ui-button,
+.ui-button.ui-huge {
   font-size: 1.375em;
   padding: 0 22px;
   font-size: 22px;
   border-radius: 4px;
-  height: 55px;
   line-height: 53px;
+  height: 55px;
 }
-.ui-button-group.massive .ui-button,
-.ui-input.massive .ui-action-container .ui-button,
-.ui-button.massive {
+.ui-button-group.ui-huge .ui-button.ui-icon-only,
+.ui-input.ui-huge .ui-action-container .ui-button.ui-icon-only,
+.ui-button.ui-huge.ui-icon-only {
+  padding: 0 15.5px;
+}
+.ui-button-group.ui-massive .ui-button,
+.ui-input.ui-massive .ui-action-container .ui-button,
+.ui-button.ui-massive {
   padding: 0 24px;
   font-size: 24px;
   border-radius: 4px;
-  height: 60px;
   line-height: 58px;
+  height: 60px;
+}
+.ui-button-group.ui-massive .ui-button.ui-icon-only,
+.ui-input.ui-massive .ui-action-container .ui-button.ui-icon-only,
+.ui-button.ui-massive.ui-icon-only {
+  padding: 0 17px;
+}
+.ui-button-dropdown {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
 }
 .ui-button-group {
   display: inline-block;

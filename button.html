@@ -21,6 +21,7 @@
                     <li><a href="#button-states">按钮状态</a></li>
                     <li><a href="#button-color-variants">按钮皮肤</a></li>
                     <li><a href="#button-sizes">按钮尺寸</a></li>
+                    <li><a href="#button-fluid">Fluid Button</a></li>
                     <li><a href="#button-group">按钮组合</a></li>
                 </ul>
             </div>
@@ -43,8 +44,8 @@
 
                             <h3 id="button-icon">图标按钮</h3>
                             <div class="example">
-                                <button class="ui-button ui-icon-button"><i class="ui-icon fa fa-cloud-download"></i></button>
-                                <button class="ui-button ui-icon-button"><i class="ui-icon fa fa-users"></i></button>
+                                <button class="ui-button ui-icon-only"><i class="ui-icon fa fa-cloud-download"></i></button>
+                                <button class="ui-button ui-icon-only"><i class="ui-icon fa fa-users"></i></button>
                             </div>
 
                             <h3 id="button-icon-text">图标和文字按钮</h3>
@@ -68,21 +69,21 @@
                         </p>
                         <h4>Active</h4>
                         <div class="example">
-                            <button class="ui-button active">Button</button>
+                            <button class="ui-button ui-active">Button</button>
                             Or
                             <button class="ui-button">:active</button>
                         </div>
                         <h4>Hover</h4>
                         <div class="example">
-                            <button class="ui-button hover">Hover</button>
+                            <button class="ui-button ui-hover">Hover</button>
                             Or
                             <button class="ui-button">:hover</button>
                         </div>
                         <h4>Disabled</h4>
                         <div class="example">
                             <button class="ui-button" disabled="disabled"><span>Button</span></button>
-                            <a class="ui-button disabled">Anchor</a>
-                            <div class="ui-button disabled">Div</div>
+                            <a class="ui-button ui-disabled">Anchor</a>
+                            <div class="ui-button ui-disabled">Div</div>
                             <input type="button" class="ui-button" value="Input Button" disabled="disabled" />
                         </div>
 
@@ -92,25 +93,25 @@
                         </p>
                         <div class="example">
                             <!-- Standard button -->
-                            <button type="button" class="ui-button ui-button-default">Default</button>
+                            <button type="button" class="ui-button">Default</button>
 
                             <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                            <button type="button" class="ui-button ui-button-primary">Primary</button>
+                            <button type="button" class="ui-button ui-primary">Primary</button>
 
                             <!-- Indicates a successful or positive action -->
-                            <button type="button" class="ui-button ui-button-success">Success</button>
+                            <button type="button" class="ui-button ui-success">Success</button>
 
                             <!-- Contextual button for informational alert messages -->
-                            <button type="button" class="ui-button ui-button-info">Info</button>
+                            <button type="button" class="ui-button ui-info">Info</button>
 
                             <!-- Indicates caution should be taken with this action -->
-                            <button type="button" class="ui-button ui-button-warning">Warning</button>
+                            <button type="button" class="ui-button ui-warning">Warning</button>
 
                             <!-- Indicates a dangerous or potentially negative action -->
-                            <button type="button" class="ui-button ui-button-danger">Danger</button>
+                            <button type="button" class="ui-button ui-danger">Danger</button>
 
                             <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
-                            <button type="button" class="ui-button ui-button-link">Link</button>
+                            <button type="button" class="ui-button ui-link">Link</button>
                         </div>
 
                         <h3 id="button-sizes">按钮尺寸</h3>
@@ -118,12 +119,20 @@
                             按钮可以调整大小。
                         </p>
                         <div class="example">
-                            <button class="ui-button mini"><i class="icon fa fa-users"></i> success</button>
-                            <button class="ui-button small"><i class="icon fa fa-users"></i> error</button>
-                            <button class="ui-button large"><i class="icon fa fa-users"></i> warning </button>
-                            <button class="ui-button big"><i class="icon fa fa-users"></i> secondary </button>
-                            <button class="ui-button huge"><i class="icon fa fa-users"></i> secondary </button>
-                            <button class="ui-button massive"><i class="icon fa fa-users"></i> secondary </button>
+                            <button class="ui-button ui-mini"><i class="ui-icon fa fa-users"></i> mini </button>
+                            <button class="ui-button ui-small"><i class="ui-icon fa fa-users"></i> small </button>
+                            <button class="ui-button ui-large"><i class="ui-icon fa fa-users"></i> large </button>
+                            <button class="ui-button ui-big"><i class="ui-icon fa fa-users"></i> big </button>
+                            <button class="ui-button ui-huge"><i class="ui-icon fa fa-users"></i> huge </button>
+                            <button class="ui-button ui-massive"><i class="ui-icon fa fa-users"></i> massive </button>
+                        </div>
+
+                        <h3 id="button-fluid">Fluid Button</h3>
+                        <p>
+                            Block button.
+                        </p>
+                        <div class="example">
+                            <button class="ui-button ui-fluid"><i class="icon fa fa-users"></i> success</button>
                         </div>
 
                         <h3 id="button-group">按钮组合</h3>
@@ -142,28 +151,28 @@
                         <h4>图标组合</h4>
                         <div class="example">
                             <div class="ui-button-group">
-                                <button class="ui-button ui-icon-button"><i class="ui-icon fa fa-cloud-download"></i></button>
-                                <button class="ui-button ui-icon-button"><i class="ui-icon fa fa-users"></i></button>
-                                <button class="ui-button ui-icon-button"><i class="ui-icon fa fa-cloud-download"></i></button>
-                                <button class="ui-button ui-icon-button"><i class="ui-icon fa fa-users"></i></button>
+                                <button class="ui-button ui-icon-only"><i class="ui-icon fa fa-cloud-download"></i></button>
+                                <button class="ui-button ui-icon-only"><i class="ui-icon fa fa-users"></i></button>
+                                <button class="ui-button ui-icon-only"><i class="ui-icon fa fa-cloud-download"></i></button>
+                                <button class="ui-button ui-icon-only"><i class="ui-icon fa fa-users"></i></button>
                             </div>
                         </div>
 
                         <h4>大按钮组合</h4>
                         <div class="example">
-                            <div class="ui-button-group large">
+                            <div class="ui-button-group ui-large">
                                 <button type="button" class="ui-button">Left</button>
-                                <button type="button" class="ui-button active">Middle</button>
+                                <button type="button" class="ui-button ui-active">Middle</button>
                                 <button type="button" class="ui-button">Right</button>
                             </div>
-                            <div class="ui-button-group big">
+                            <div class="ui-button-group ui-big">
                                 <button type="button" class="ui-button">Left</button>
-                                <button type="button" class="ui-button active">Middle</button>
+                                <button type="button" class="ui-button ui-active">Middle</button>
                                 <button type="button" class="ui-button">Right</button>
                             </div>
-                            <div class="ui-button-group massive">
+                            <div class="ui-button-group ui-massive">
                                 <button type="button" class="ui-button">Left</button>
-                                <button type="button" class="ui-button active">Middle</button>
+                                <button type="button" class="ui-button ui-active">Middle</button>
                                 <button type="button" class="ui-button">Right</button>
                             </div>
                         </div>
@@ -171,14 +180,14 @@
                         <h4>组合的组合</h4>
                         <div class="example">
                             <div>
-                                <div class="ui-button-group big">
+                                <div class="ui-button-group ui-big">
                                     <button type="button" class="ui-button">Left</button>
-                                    <button type="button" class="ui-button active">Middle</button>
+                                    <button type="button" class="ui-button ui-active">Middle</button>
                                     <button type="button" class="ui-button">Right</button>
                                 </div>
-                                <div class="ui-button-group big">
+                                <div class="ui-button-group ui-big">
                                     <button type="button" class="ui-button">Left</button>
-                                    <button type="button" class="ui-button active">Middle</button>
+                                    <button type="button" class="ui-button ui-active">Middle</button>
                                     <button type="button" class="ui-button">Right</button>
                                 </div>
                             </div>

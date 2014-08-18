@@ -3,7 +3,7 @@
 // common config
 @default-font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
 @base-font-size: 16px;
-@text-color: @neutral-base-color;
+@body-text-color: @neutral-base-color;
 @body-color: @primary-bg-color;
 @body-line-height: 1.3;
 @default-box-border-radius: 4px;
@@ -61,7 +61,7 @@
 /* =========
    Buttons
    ========= */
-@default-icon-button-padding: 10px;
+@default-button-icon-padding: 10px;
 @default-button-padding: 16px;
 
 @default-button-text-color: @white;
@@ -144,7 +144,7 @@
 // 
 @dropdown-border-color: 1px solid rgba(0, 0, 0, 0.1);
 @dropdown-background-color: @primary-bg-color;
-@dropdown-text-color: @text-color;
+@dropdown-text-color: @body-text-color;
 @dropdown-text-size: @base-font-size * 0.75;
 @dropdown-hightlight-color: @black-10;
 @dropdown-item-padding: 0.5em 1em;
@@ -168,7 +168,7 @@
 
 // Form
 @form-legend-font-size: 1.25em;
-@form-legend-text-color: @text-color;
+@form-legend-text-color: @body-text-color;
 @form-legend-padding: 0.5em 0;
 @form-legend-margin: 0 0 0.5em;
 @form-legend-bottom-border: 1px solid @black-20;
@@ -197,7 +197,7 @@
 
 // default typographic settings
 @default-font-size: @base-font-size;
-@default-text-color: @text-color;
+@default-text-color: @body-text-color;
 @default-input-placeholder-color: #999;
 @default-base-font-family: @default-font-family;
 // * IE6/7下如果已经找到字体，不会再按字符进行fallback，故必须将雅黑置首位，写上Arial是为了在雅黑的情况下显示更好的英文字体
