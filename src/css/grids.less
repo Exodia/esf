@@ -1,10 +1,19 @@
-/*!
-Pure v0.5.0
-Copyright 2014 Yahoo! Inc. All rights reserved.
-Licensed under the BSD License.
-https://github.com/yui/pure/blob/master/LICENSE.md
-*/
-/*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
+// Name:            CSS Grid
+// Description:     Defines styles for CSS grid
+//
+// Component:       `ui-g`
+//
+// Mixins:          `.make-grid(@grid-columns)`
+//                  `.make-grid(@grid-columns, @class)`
+//
+// Markup:
+//
+// <div class="ui-g">
+//     <button class="ui-offset-1-5 ui-u-1-5"></button>
+//     <button class="ui-u-4-5"></button>
+// </div>
+//
+// ========================================================================
 
 .@{ui-class-prefix}-g {
     letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
@@ -54,14 +63,6 @@ https://github.com/yui/pure/blob/master/LICENSE.md
     word-spacing: -0.43em;
 }
 
-/*
-Resets the font family back to the OS/browser's default sans-serif font,
-this the same font stack that Normalize.css sets for the `body`.
-*/
-.@{ui-class-prefix}-g [class *= "@{ui-class-prefix}-u"] {
-    font-family: @default-font-family;
-}
-
 // shortcuts
 .@{ui-class-prefix}-u,
 .@{ui-class-prefix}-u-1,
@@ -70,7 +71,6 @@ this the same font stack that Normalize.css sets for the `body`.
  {
     &:extend(.esf-grid-u all);
 }
-
 
 .@{ui-class-prefix}-u-1 {
     width: 100%;
@@ -84,6 +84,25 @@ this the same font stack that Normalize.css sets for the `body`.
     width: 38.2%;
 }
 
+.esf-grid-u {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+    font-family: @default-font-family;
+}
+
+.make-grid(@grid-columns) {
+  .loop-grid-columns(@grid-columns, false, @grid-columns);
+}
+
+.make-grid(@grid-columns, @class) {
+  .loop-grid-columns(@grid-columns, @class, @grid-columns);
+}
+
 // custom grid.
 .make-grid(1);
 .make-grid(2);
@@ -92,3 +111,43 @@ this the same font stack that Normalize.css sets for the `body`.
 .make-grid(24);
 
 .make-grid(5);
+
+// Mixins
+// Basic looping in LESS
+.loop-grid-columns(@index, @class, @total) when (@index >= 0) {
+  ._calc-grid-column(@index, @class, @total);
+  // next iteration
+  .loop-grid-columns((@index - 1), @class, @total);
+}
+
+._calc-grid-column(@index, @class, @total) when (isstring(@class)) and (@index > 0) {
+    @width: (@index / @grid-columns);
+    @ie-width: (@width - 0.00031);
+    .@{ui-class-prefix}-u-@{class}-@{index}-@{total} {
+        width: percentage(@width);
+        // IE < 8 has issues with rounding, reducing the width slightly prevents the
+        // grid units from wrapping to the next line.
+        *width: percentage(ie-width);
+        &:extend(.esf-grid-u all);
+    }
+    .@{ui-class-prefix}-offset-@{class}-@{index}-@{total} {
+        margin-left: percentage(@width);
+        *margin-left: percentage(ie-width);
+    }
+}
+
+._calc-grid-column(@index, @class, @total) when (@index > 0) {
+    @width: (@index / @grid-columns);
+    @ie-width: (@width - 0.00031);
+    .@{ui-class-prefix}-u-@{index}-@{total} {
+        width: percentage(@width);
+        // IE < 8 has issues with rounding, reducing the width slightly prevents the
+        // grid units from wrapping to the next line.
+        *width: percentage(@ie-width);
+        &:extend(.esf-grid-u all);
+    }
+    .@{ui-class-prefix}-offset-@{index}-@{total} {
+        margin-left: percentage(@width);
+        *margin-left: percentage(ie-width);
+    }
+}
