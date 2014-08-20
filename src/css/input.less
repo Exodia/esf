@@ -1,3 +1,43 @@
+// Name:            Input
+// Description:     Defines styles for input
+//
+// Component:       `ui-input`
+//
+// Variants:        `transparent`
+//                  `with-icon`
+//                  `fluid`
+//                  `action`
+//
+// Sizes:           'mini`
+//                  `small`
+//                  `large`
+//                  `big`
+//                  `huge`
+//                  `massive`
+//
+// States:          `active`
+//                  `focus`
+//                  `disabled`
+//
+// Mixins:          
+//    .input-variant(
+//        @text-color,
+//        @background-color,
+//        @border-color,
+//        @active-border-color,
+//        @active-background-color,
+//        @focus-border-color,
+//        @focus-background-color,
+//        @disabled-border-color,
+//        @disabled-background-color,
+//        @error-background-color,
+//        @error-border-color,
+//        @error-text-color,
+//        @error-placeholder-color
+//    )
+//
+// ========================================================================
+
 .input-variant(
     @text-color,
     @background-color,
@@ -17,78 +57,129 @@
     // states
     input, textarea {
         background-color: @background-color;
-        border: @border-color;
+        border: 1px solid @border-color;
         .placeholder(@input-placeholder-color);
     }
     &.active input, input:active {
-        border-color: @active-border-color;
+        border-color: 1px solid @active-border-color;
         background-color: @active-background-color;
     }
     &.focus input, input:focus {
-        border-color: @focus-border-color;
+        border-color: 1px solid @focus-border-color;
         background-color: @focus-background-color;
     }
     &.disabled input, input[disabled] {
         background-color: @disabled-background-color;
-        border-color: @disabled-border-color;
+        border-color: 1px solid @disabled-border-color;
     }
     &.error input {
         background-color: @error-background-color;
-        border-color: @error-border-color;
+        border-color: 1px solid @error-border-color;
         color: @error-text-color;
         .placeholder(@error-placeholder-color);
     }
 }
 
-.input-size(@text-size, @height) {
-    input, textarea {
-        font-size: @text-size;
-        font-family: @default-font-family;
-    }
-    input {
-        height: @height;
-    }
-    &.with-icon {
-        .@{ui-class-prefix}-icon {
-            width: @height;
-            line-height: @height;
-            font-size: @text-size;
-        }
-        &.left {
-            input {
-                padding-left: @height;
-            }
-            .@{ui-class-prefix}-icon {
-                left: 0;
-            }
-        }
-        &.right {
-            input {
-                padding-right: @height;
-            }
-            .@{ui-class-prefix}-icon {
-                right: 0;
-            }
-        }
-    }
-}
-
-.@{ui-class-prefix}-input {
+.@{ui-class-prefix}input {
     display: inline-block;
     position: relative;
-    input, textarea {
+    font-size: @base-font-size;
+    font-family: @default-font-family;
+    > input, textarea {
         padding: @input-padding;
         width: 100%;
         margin: 0;
-        outline: none;
+        outline: 0;
         border-radius: @default-box-border-radius;
         .transition(
             background-color 0.3s ease-out,
             box-shadow 0.2s ease,
             border-color 0.2s ease
         );
-
         box-sizing: border-box;
+    }
+    > input {
+        height: @input-height;
+        &:focus ~ .@{ui-class-prefix}icon {
+            opacity: 1;
+        }
+    }
+    &.@{modifier-prefix}transparent > input {
+        border: none;
+        background-color: transparent;
+    }
+    &.@{modifier-prefix}with-icon {
+        &.@{modifier-prefix}left {
+            > input {
+                padding-left: @input-height;
+            }
+            > .@{ui-class-prefix}icon {
+                .border-left-radius(@default-box-border-radius);
+                left: 0;
+            }
+        }
+        &.@{modifier-prefix}right {
+            > input {
+                padding-right: @input-height;
+            }
+            > .@{ui-class-prefix}icon {
+                .border-right-radius(@default-box-border-radius);
+                right: 0;
+            }
+        }
+        > .@{ui-class-prefix}icon {
+            width: @input-height;
+            height: @input-height;
+            line-height: @input-height;
+            position: absolute;
+            opacity: 0.5;
+            top: 0;
+            text-align: center;
+            .transition(opacity 0.3s ease-out);
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    &.@{modifier-prefix}fluid {
+        display: block;
+        &.@{modifier-prefix}action {
+            display: table;
+            width: 100%;
+        }
+        &.action > .@{ui-class-prefix}action-container {
+            width: 0.01%;
+        }
+    }
+    &.@{modifier-prefix}action {
+        display: table;
+        > input {
+            display: table-cell;
+            &:first-child { 
+                border-right: none;
+                border-top-right-radius: 0px !important;
+                border-bottom-right-radius: 0px !important;
+            }
+            &:last-child {
+                border-left: none;
+                border-top-left-radius: 0px !important;
+                border-bottom-left-radius: 0px !important;
+            }
+        }
+        > .@{ui-class-prefix}action-container {
+            display: table-cell !important;
+            vertical-align: top;
+            white-space: nowrap;
+            font-size: 0;
+            &:last-child .@{ui-class-prefix}button {
+                border-top-left-radius: 0px !important;
+                border-bottom-left-radius: 0px !important;
+            }
+            &:first-child .@{ui-class-prefix}button {
+                border-top-right-radius: 0px !important;
+                border-bottom-right-radius: 0px !important; 
+            }
+        }
     }
     .input-variant(
         @input-text-color,
@@ -104,123 +195,5 @@
         @input-error-background-color,
         @input-error-text-color,
         @input-error-placeholder-color
-    );
-    .input-size(
-        @input-text-size,
-        @input-default-height
-    );
-    &.loading .loader {
-        //background: url(../images/loader-mini.gif) no-repeat 50% 50%;
-        &.icon:before, .icon:after {
-            display: none;
-        }
-    }
-    &.transparent input {
-        border: none;
-        background-color: transparent;
-    }
-    
-    &.with-icon {
-        .@{ui-class-prefix}-icon {
-            position: absolute;
-            opacity: 0.5;
-            top: 0px;
-            margin: 0em;
-            text-align: center;
-            box-sizing: border-box;
-
-            .transition(
-                opacity 0.3s ease-out
-            );
-            &:hover {
-                text-decoration: none;
-            }
-            &.left {
-                .border-right-radius(@default-box-border-radius);
-            }
-            &.right {
-                .border-right-radius(@default-box-border-radius);
-            }
-        }
-        > input:focus ~ .@{ui-class-prefix}-icon {
-            opacity: 1; 
-        }
-    }
-    &.fluid {
-        display: block;
-        &.action {
-            display: table;
-            width: 100%;
-        }
-        &.action > .@{ui-class-prefix}-action-container {
-            width: 0.01%;
-        }
-    }
-    &.action {
-        display: table;
-        > input {
-            display: table-cell;
-            &:first-child { 
-                border-right: none;
-                border-top-right-radius: 0px !important;
-                border-bottom-right-radius: 0px !important;
-            }
-            &:last-child {
-                border-left: none;
-                border-top-left-radius: 0px !important;
-                border-bottom-left-radius: 0px !important;
-            }
-        }
-        > .@{ui-class-prefix}-action-container {
-            display: table-cell !important;
-            vertical-align: top;
-            white-space: nowrap;
-            font-size: 0;
-            &:last-child .@{ui-class-prefix}-button {
-                border-top-left-radius: 0px !important;
-                border-bottom-left-radius: 0px !important;
-            }
-            &:first-child .@{ui-class-prefix}-button {
-                border-top-right-radius: 0px !important;
-                border-bottom-right-radius: 0px !important; 
-            }
-        }
-    }
-}
-
-.@{ui-class-prefix}-input.mini {
-    .input-size(
-        @input-text-size * 0.8125,
-        @input-default-height * 0.8125
-    ); 
-}
-.@{ui-class-prefix}-input.small {
-    .input-size(
-        @input-text-size * 0.875,
-        @input-default-height * 0.875
-    );
-}
-.@{ui-class-prefix}-input.large {
-    .input-size(
-        @input-text-size * 1.125,
-        @input-default-height * 1.125
-    );
-}
-.@{ui-class-prefix}-input.big {
-    .input-size(
-        @input-text-size * 1.25,
-        @input-default-height * 1.25
-    );
-}
-.@{ui-class-prefix}-input.huge {
-    .input-size(
-        @input-text-size * 1.375,
-        @input-default-height * 1.375
-    );
-}
-.@{ui-class-prefix}-input.massive {
-    .input-size(
-        @input-text-size * 1.5,
-        @input-default-height * 1.5
     );
 }

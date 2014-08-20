@@ -10,7 +10,7 @@
 //
 // Markup:
 //
-//  <div class="@{ui-class-prefix}-(checkbox|toggle|slider|radio)">
+//  <div class="@{ui-class-prefix}(checkbox|toggle|slider|radio)">
 //      <input type="" />
 //      <label>label</label> <!-- or <div class="box"></div> -->
 //  </div>
@@ -18,10 +18,10 @@
 // ========================================================================
 
 
-.@{ui-class-prefix}-checkbox,
-.@{ui-class-prefix}-radio,
-.@{ui-class-prefix}-slider,
-.@{ui-class-prefix}-toggle
+.@{ui-class-prefix}checkbox,
+.@{ui-class-prefix}radio,
+.@{ui-class-prefix}slider,
+.@{ui-class-prefix}toggle
  {
     position: relative;
     display: inline-block;
@@ -33,10 +33,10 @@
 
     /*--- Font Sizes ---*/
     font-size: 1em;
-    &.@{ui-class-prefix}-large {
+    &.@{ui-class-prefix}large {
         font-size: 1.125em;
     }
-    &.@{ui-class-prefix}-big {
+    &.@{ui-class-prefix}big {
         font-size: 1.25em;
     }
 
@@ -135,7 +135,7 @@
     }
 
     /*--- Disabled ---*/
-    &.@{ui-class-prefix}-disabled, input[disabled] {
+    &.@{ui-class-prefix}disabled, input[disabled] {
         .opacity(0);
         ~ .box:after, ~ label, label {
             .opacity(40);
@@ -144,7 +144,7 @@
     }
 }
 
-.@{ui-class-prefix}-radio {
+.@{ui-class-prefix}radio {
     .box, label {
         &:before {
             min-width: 1em;
@@ -164,7 +164,7 @@
         }
     }
 }
-.@{ui-class-prefix}-slider {
+.@{ui-class-prefix}slider {
     cursor: pointer;
     min-width: 3em;
     /* Line */
@@ -239,7 +239,7 @@
     }
 }
 
-.@{ui-class-prefix}-toggle {
+.@{ui-class-prefix}toggle {
     cursor: pointer;
     /* Switch */
     .box, label {

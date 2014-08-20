@@ -51,7 +51,7 @@ pre code {
     padding: 0;
 }
 
-.@{ui-class-prefix}-divider, hr {
+.@{ui-class-prefix}divider, hr {
     border-top: 1px solid @hr-color;
     height: 0;
     overflow:hidden;
@@ -154,24 +154,24 @@ ol {
         background: @head-background-color;
         color: @head-text-color;
     }
-    &.@{ui-variant-prefix}striped {
+    &.@{modifier-prefix}striped {
         tr:nth-child(2n-1) td {
             background-color: @striped-background-color;
             color: @striped-text-color;
         }
     }
-    &.@{ui-variant-prefix}bordered {
+    &.@{modifier-prefix}bordered {
         td {
             border-bottom: 1px solid @border-color;
         } 
     }
-    &.@{ui-variant-prefix}horizontal {
+    &.@{modifier-prefix}horizontal {
         th, td {
             border-width: 0 0 1px 0;
             border-bottom: 1px solid @border-color;
         } 
     }
-    &.@{ui-variant-prefix}hover-line {
+    &.@{modifier-prefix}hover-line {
         > tbody > tr:hover {
             > td,
             > th {
@@ -196,7 +196,7 @@ ol {
         font-size: @table-cell-font-size
     }
 }
-.@{ui-class-prefix}-table {
+.@{ui-class-prefix}table {
     border-collapse: collapse;
     border-spacing: 0;
     empty-cells: show;

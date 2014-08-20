@@ -6,54 +6,38 @@
 // Sub-objects:     `ui-button-group`
 //                  `ui-button-dropdown`
 //
-// Variants:        `ui-primary`
-//                  `ui-secondary`
-//                  `ui-success`
-//                  `ui-danger`
-//                  `ui-info`
-//                  `ui-warning`
-//                  `ui-link`
+// Variants:        `primary`
+//                  `secondary`
+//                  `success`
+//                  `danger`
+//                  `info`
+//                  `warning`
+//                  `link`
 //
-// Sizes:           `ui-fluid`
-//                  `ui-mini`
-//                  `ui-small`
-//                  `ui-large`
-//                  `ui-big`
-//                  `ui-huge`
-//                  `ui-massive`
+// Sizes:           `fluid`
+//                  `mini`
+//                  `small`
+//                  `large`
+//                  `big`
+//                  `huge`
+//                  `massive`
 //
-// States:          `ui-active`
-//                  `ui-hover`
-//                  `ui-disabled`
+// States:          `active`
+//                  `hover`
+//                  `disabled`
 //
 // Mixins:          `.button-variant(@text-color, @background-color, @border-color)`
-//                  `.button-size(@height, @v-padding, @font-size)`
-//
-// Markup:
-//
-// <!-- ui-button-group -->
-// <div class="ui-button-group">
-//     <button class="ui-button"></button>
-//     <button class="ui-button"></button>
-// </div>
-//
-// <!-- ui-button-dropdown -->
-// <div class="ui-button-dropdown" data-ui-dropdown>
-//     <button class="ui-button"></button>
-//     <div class="ui-dropdown">
-//         ...
-//     </div>
-// </div>
 //
 // ========================================================================
 
-.@{ui-class-prefix}-button {
+.@{ui-class-prefix}button {
     // for `a` elements
     display: inline-block;
     .box-sizing(border-box);
     text-align: center;
     vertical-align: middle;
     .user-select(none);
+    cursor: pointer;
     &:hover {
         text-decoration: none;
     }
@@ -65,35 +49,43 @@
         outline: 0;
     }
     border: 1px solid transparent;
+    line-height: @default-button-line-height;
+    height: @default-button-height;
+    padding: @default-button-padding;
+
+    &.@{modifier-prefix}icon-only {
+        padding: @default-button-icon-padding;
+    }
+    .border-radius(@default-box-border-radius);
     .button-variant(@default-button-text-color, @default-button-background-color, @default-button-border-color);
-    .button-size(@default-button-height, @default-button-padding, @base-font-size);
+    font-size: @base-font-size;
 }
 
-.@{ui-class-prefix}-button.@{ui-class-prefix}-primary {
+.@{ui-class-prefix}button.@{modifier-prefix}primary {
     .button-variant(@primary-button-text-color, @primary-button-background-color, @primary-button-border-color);
 }
 
-.@{ui-class-prefix}-button.@{ui-class-prefix}-secondary {
+.@{ui-class-prefix}button.@{modifier-prefix}secondary {
     .button-variant(@secondary-button-text-color, @secondary-button-background-color, @secondary-button-border-color);
 }
 
-.@{ui-class-prefix}-button.@{ui-class-prefix}-success {
+.@{ui-class-prefix}button.@{modifier-prefix}success {
     .button-variant(@success-button-text-color, @success-button-background-color, @success-button-border-color);
 }
 
-.@{ui-class-prefix}-button.@{ui-class-prefix}-danger {
+.@{ui-class-prefix}button.@{modifier-prefix}danger {
     .button-variant(@danger-button-text-color, @danger-button-background-color, @danger-button-border-color);
 }
 
-.@{ui-class-prefix}-button.@{ui-class-prefix}-info {
+.@{ui-class-prefix}button.@{modifier-prefix}info {
     .button-variant(@info-button-text-color, @info-button-background-color, @info-button-border-color);
 }
 
-.@{ui-class-prefix}-button.@{ui-class-prefix}-warning {
+.@{ui-class-prefix}button.@{modifier-prefix}warning {
     .button-variant(@warning-button-text-color, @warning-button-background-color, @warning-button-border-color);
 }
 
-.@{ui-class-prefix}-button.@{ui-class-prefix}-link {
+.@{ui-class-prefix}button.@{modifier-prefix}link {
     .link-like();
     background: none;
     &:hover {
@@ -102,63 +94,68 @@
     border: 0;
 }
 
-.@{ui-class-prefix}-button.@{ui-class-prefix}-fluid {
+.@{ui-class-prefix}button.@{modifier-prefix}fluid {
     display: block;
     width: 100%;
 }
 
-.@{ui-class-prefix}-button.@{ui-class-prefix}-active,
-.@{ui-class-prefix}-button:active {
+.@{ui-class-prefix}button.@{modifier-prefix}active,
+.@{ui-class-prefix}button:active {
     box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
 }
 
-.@{ui-class-prefix}-button[disabled],
-.@{ui-class-prefix}-button.@{ui-class-prefix}-disabled,
-.@{ui-class-prefix}-button.@{ui-class-prefix}-disabled:hover,
-.@{ui-class-prefix}-button.@{ui-class-prefix}-disabled:focus,
-.@{ui-class-prefix}-button.@{ui-class-prefix}-disabled:active {
+.@{ui-class-prefix}button[disabled],
+.@{ui-class-prefix}button.@{modifier-prefix}disabled,
+.@{ui-class-prefix}button.@{modifier-prefix}disabled:hover,
+.@{ui-class-prefix}button.@{modifier-prefix}disabled:focus,
+.@{ui-class-prefix}button.@{modifier-prefix}disabled:active {
     .opacity(40);
     cursor: not-allowed;
 }
 
-.@{ui-class-prefix}-button-group.@{ui-class-prefix}-mini .@{ui-class-prefix}-button,
-.@{ui-class-prefix}-input.@{ui-class-prefix}-mini .ui-action-container .@{ui-class-prefix}-button,
-.@{ui-class-prefix}-button.@{ui-class-prefix}-mini {
-    .button-size(@default-button-height * 0.8125, @default-button-padding * 0.8125, @base-font-size * 0.8125);
+.@{ui-class-prefix}button-group.@{modifier-prefix}mini .@{ui-class-prefix}button,
+.@{ui-class-prefix}input.@{modifier-prefix}mini,
+.@{ui-class-prefix}input.@{modifier-prefix}mini .@{ui-class-prefix}action-container .@{ui-class-prefix}button,
+.@{ui-class-prefix}button.@{modifier-prefix}mini {
+    font-size: @mini-font-size;
 }
 
-.@{ui-class-prefix}-button-group.@{ui-class-prefix}-small .@{ui-class-prefix}-button,
-.@{ui-class-prefix}-input.@{ui-class-prefix}-small .ui-action-container .@{ui-class-prefix}-button,
-.@{ui-class-prefix}-button.@{ui-class-prefix}-small {
-    .button-size(@default-button-height * 0.875, @default-button-padding * 0.875, @base-font-size * 0.875);
+.@{ui-class-prefix}button-group.@{ui-class-prefix}small .@{ui-class-prefix}button,
+.@{ui-class-prefix}input.@{modifier-prefix}small,
+.@{ui-class-prefix}input.@{modifier-prefix}small .@{ui-class-prefix}action-container .@{ui-class-prefix}button,
+.@{ui-class-prefix}button.@{modifier-prefix}small {
+    font-size: @small-font-size;
 }
 
-.@{ui-class-prefix}-button-group.@{ui-class-prefix}-large .@{ui-class-prefix}-button,
-.@{ui-class-prefix}-input.@{ui-class-prefix}-large .ui-action-container .@{ui-class-prefix}-button,
-.@{ui-class-prefix}-button.@{ui-class-prefix}-large {
-    .button-size(@default-button-height * 1.125, @default-button-padding * 1.125, @base-font-size * 1.125);
+.@{ui-class-prefix}button-group.@{ui-class-prefix}large .@{ui-class-prefix}button,
+.@{ui-class-prefix}input.@{modifier-prefix}large,
+.@{ui-class-prefix}input.@{modifier-prefix}large .@{ui-class-prefix}action-container .@{ui-class-prefix}button,
+.@{ui-class-prefix}button.@{modifier-prefix}large {
+    font-size: @large-font-size;
 }
 
-.@{ui-class-prefix}-button-group.@{ui-class-prefix}-big .@{ui-class-prefix}-button,
-.@{ui-class-prefix}-input.@{ui-class-prefix}-big .ui-action-container .@{ui-class-prefix}-button,
-.@{ui-class-prefix}-button.@{ui-class-prefix}-big { 
-    .button-size(@default-button-height * 1.25, @default-button-padding * 1.25, @base-font-size * 1.25);
+.@{ui-class-prefix}button-group.@{ui-class-prefix}big .@{ui-class-prefix}button,
+.@{ui-class-prefix}input.@{modifier-prefix}big,
+.@{ui-class-prefix}input.@{modifier-prefix}big .@{ui-class-prefix}action-container .@{ui-class-prefix}button,
+.@{ui-class-prefix}button.@{modifier-prefix}big { 
+    font-size: @big-font-size;
 }
 
-.@{ui-class-prefix}-button-group.@{ui-class-prefix}-huge .@{ui-class-prefix}-button,
-.@{ui-class-prefix}-input.@{ui-class-prefix}-huge .ui-action-container .@{ui-class-prefix}-button,
-.@{ui-class-prefix}-button.@{ui-class-prefix}-huge {
-    font-size: 1.375em;
-    .button-size(@default-button-height * 1.375, @default-button-padding * 1.375, @base-font-size * 1.375);
+.@{ui-class-prefix}button-group.@{ui-class-prefix}huge .@{ui-class-prefix}button,
+.@{ui-class-prefix}input.@{modifier-prefix}huge,
+.@{ui-class-prefix}input.@{modifier-prefix}huge .@{ui-class-prefix}action-container .@{ui-class-prefix}button,
+.@{ui-class-prefix}button.@{modifier-prefix}huge {
+    font-size: @huge-font-size;
 }
 
-.@{ui-class-prefix}-button-group.@{ui-class-prefix}-massive .@{ui-class-prefix}-button,
-.@{ui-class-prefix}-input.@{ui-class-prefix}-massive .ui-action-container .@{ui-class-prefix}-button,
-.@{ui-class-prefix}-button.@{ui-class-prefix}-massive {
-    .button-size(@default-button-height * 1.5, @default-button-padding * 1.5, @base-font-size * 1.5);
+.@{ui-class-prefix}button-group.@{ui-class-prefix}massive .@{ui-class-prefix}button,
+.@{ui-class-prefix}input.@{modifier-prefix}massive,
+.@{ui-class-prefix}input.@{modifier-prefix}massive .@{ui-class-prefix}action-container .@{ui-class-prefix}button,
+.@{ui-class-prefix}button.@{modifier-prefix}massive {
+    font-size: @massive-font-size;
 }
 
-.@{ui-class-prefix}-button-dropdown {
+.@{ui-class-prefix}button-dropdown-wrap {
     // 1. Behave like buttons
     display: inline-block;
     vertical-align: middle;
@@ -166,10 +163,10 @@
     position: relative;
 }
 
-.@{ui-class-prefix}-button-group {
+.@{ui-class-prefix}button-group {
     display: inline-block;
     font-size: 0;
-    .@{ui-class-prefix}-button {
+    .@{ui-class-prefix}button {
         &:first-child {
             margin-left: 0px;
         }
@@ -177,14 +174,14 @@
     }
 }
 
-.@{ui-class-prefix}-button-group > .@{ui-class-prefix}-button:not(:first-child):not(:last-child) {
+.@{ui-class-prefix}button-group > .@{ui-class-prefix}button:not(:first-child):not(:last-child) {
     border-radius: 0;
 }
-.@{ui-class-prefix}-button-group > .@{ui-class-prefix}-button:first-child:not(:last-child) {
+.@{ui-class-prefix}button-group > .@{ui-class-prefix}button:first-child:not(:last-child) {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
 }
-.@{ui-class-prefix}-button-group > .@{ui-class-prefix}-button:last-child:not(:first-child) {
+.@{ui-class-prefix}button-group > .@{ui-class-prefix}button:last-child:not(:first-child) {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
 }
@@ -197,17 +194,5 @@
         color: @text-color;
         background-color: darken(@background-color, 10%);
         border-color: darken(@border-color, 12%);
-    }
-}
- 
-.button-size(@height, @v-padding, @font-size) { 
-    padding: 0 @v-padding;
-    font-size: @font-size;
-    border-radius: @default-box-border-radius;
-    line-height: @height - 2;
-    height: @height;
-    // calculate icon padding
-    &.@{ui-class-prefix}-icon-only {
-        padding: 0 (@height - 2 - @font-size)/2;
     }
 }

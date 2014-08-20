@@ -15,7 +15,7 @@
 //
 // ========================================================================
 
-.@{ui-class-prefix}-g {
+.@{ui-class-prefix}g {
     letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
     *letter-spacing: normal; /* reset IE < 8 */
     *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
@@ -59,30 +59,38 @@
    and is not required in markup.
 */
 .opera-only :-o-prefocus,
-.@{ui-class-prefix}-g {
+.@{ui-class-prefix}g {
     word-spacing: -0.43em;
 }
 
 // shortcuts
-.@{ui-class-prefix}-u,
-.@{ui-class-prefix}-u-1,
-.@{ui-class-prefix}-u-golden-ratio,
-.@{ui-class-prefix}-u-golden-ratio-1
+.@{ui-class-prefix}u,
+.@{ui-class-prefix}u-1,
+.@{ui-class-prefix}u-golden-ratio,
+.@{ui-class-prefix}u-golden-ratio-1
  {
     &:extend(.esf-grid-u all);
 }
 
-.@{ui-class-prefix}-u-1 {
+.@{ui-class-prefix}u-1 {
     width: 100%;
 }
 
-.@{ui-class-prefix}-u-golden-ratio {
+.@{ui-class-prefix}u-golden-ratio {
     width: 61.8%;
 }
 
-.@{ui-class-prefix}-u-golden-ratio-1 {
+.@{ui-class-prefix}u-golden-ratio-1 {
     width: 38.2%;
 }
+
+// custom grid.
+.make-grid(2);
+.make-grid(3);
+.make-grid(4);
+.make-grid(24);
+
+.make-grid(5);
 
 .esf-grid-u {
     display: inline-block;
@@ -103,15 +111,6 @@
   .loop-grid-columns(@grid-columns, @class, @grid-columns);
 }
 
-// custom grid.
-.make-grid(1);
-.make-grid(2);
-.make-grid(3);
-.make-grid(4);
-.make-grid(24);
-
-.make-grid(5);
-
 // Mixins
 // Basic looping in LESS
 .loop-grid-columns(@index, @class, @total) when (@index >= 0) {
@@ -123,14 +122,14 @@
 ._calc-grid-column(@index, @class, @total) when (isstring(@class)) and (@index > 0) {
     @width: (@index / @grid-columns);
     @ie-width: (@width - 0.00031);
-    .@{ui-class-prefix}-u-@{class}-@{index}-@{total} {
+    .@{ui-class-prefix}u-@{class}-@{index}-@{total} {
         width: percentage(@width);
         // IE < 8 has issues with rounding, reducing the width slightly prevents the
         // grid units from wrapping to the next line.
         *width: percentage(ie-width);
         &:extend(.esf-grid-u all);
     }
-    .@{ui-class-prefix}-offset-@{class}-@{index}-@{total} {
+    .@{ui-class-prefix}offset-@{class}-@{index}-@{total} {
         margin-left: percentage(@width);
         *margin-left: percentage(ie-width);
     }
@@ -139,14 +138,14 @@
 ._calc-grid-column(@index, @class, @total) when (@index > 0) {
     @width: (@index / @grid-columns);
     @ie-width: (@width - 0.00031);
-    .@{ui-class-prefix}-u-@{index}-@{total} {
+    .@{ui-class-prefix}u-@{index}-@{total} {
         width: percentage(@width);
         // IE < 8 has issues with rounding, reducing the width slightly prevents the
         // grid units from wrapping to the next line.
         *width: percentage(@ie-width);
         &:extend(.esf-grid-u all);
     }
-    .@{ui-class-prefix}-offset-@{index}-@{total} {
+    .@{ui-class-prefix}offset-@{index}-@{total} {
         margin-left: percentage(@width);
         *margin-left: percentage(ie-width);
     }
