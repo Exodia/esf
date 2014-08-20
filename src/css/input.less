@@ -38,48 +38,6 @@
 //
 // ========================================================================
 
-.input-variant(
-    @text-color,
-    @background-color,
-    @border-color,
-    @active-border-color,
-    @active-background-color,
-    @focus-border-color,
-    @focus-background-color,
-    @disabled-border-color,
-    @disabled-background-color,
-    @error-background-color,
-    @error-border-color,
-    @error-text-color,
-    @error-placeholder-color
-) {
-    color: @text-color;
-    // states
-    input, textarea {
-        background-color: @background-color;
-        border: 1px solid @border-color;
-        .placeholder(@input-placeholder-color);
-    }
-    &.active input, input:active {
-        border-color: 1px solid @active-border-color;
-        background-color: @active-background-color;
-    }
-    &.focus input, input:focus {
-        border-color: 1px solid @focus-border-color;
-        background-color: @focus-background-color;
-    }
-    &.disabled input, input[disabled] {
-        background-color: @disabled-background-color;
-        border-color: 1px solid @disabled-border-color;
-    }
-    &.error input {
-        background-color: @error-background-color;
-        border-color: 1px solid @error-border-color;
-        color: @error-text-color;
-        .placeholder(@error-placeholder-color);
-    }
-}
-
 .@{ui-class-prefix}input {
     display: inline-block;
     position: relative;
@@ -147,7 +105,7 @@
             display: table;
             width: 100%;
         }
-        &.action > .@{ui-class-prefix}action-container {
+        &.@{modifier-prefix}action > .@{modifier-prefix}action-container {
             width: 0.01%;
         }
     }
@@ -166,7 +124,7 @@
                 border-bottom-left-radius: 0px !important;
             }
         }
-        > .@{ui-class-prefix}action-container {
+        > .@{modifier-prefix}action-container {
             display: table-cell !important;
             vertical-align: top;
             white-space: nowrap;
@@ -196,4 +154,46 @@
         @input-error-text-color,
         @input-error-placeholder-color
     );
+}
+
+.input-variant(
+    @text-color,
+    @background-color,
+    @border-color,
+    @active-border-color,
+    @active-background-color,
+    @focus-border-color,
+    @focus-background-color,
+    @disabled-border-color,
+    @disabled-background-color,
+    @error-background-color,
+    @error-border-color,
+    @error-text-color,
+    @error-placeholder-color
+) {
+    color: @text-color;
+    // states
+    > input, > textarea {
+        background-color: @background-color;
+        border: 1px solid @border-color;
+        .placeholder(@input-placeholder-color);
+    }
+    &.@{modifier-prefix}active > input, > input:active {
+        border-color: @active-border-color;
+        background-color: @active-background-color;
+    }
+    &.@{modifier-prefix}focus > input, > input:focus {
+        border-color: @focus-border-color;
+        background-color: @focus-background-color;
+    }
+    &.@{modifier-prefix}disabled > input, > input[disabled] {
+        background-color: @disabled-background-color;
+        border-color: @disabled-border-color;
+    }
+    &.@{modifier-prefix}error > input {
+        background-color: @error-background-color;
+        border-color: @error-border-color;
+        color: @error-text-color;
+        .placeholder(@error-placeholder-color);
+    }
 }

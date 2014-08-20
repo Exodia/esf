@@ -24,11 +24,11 @@ h4, h5, h6 {
 }
 
 body {
-    font-size: (@default-font-size)px;
+    font-size: @base-font-size;
     line-height: 1.3;
 }
 
-p.indent {
+p.@{ui-class-prefix}indent {
     text-indent: 2em;
 }
 
@@ -36,13 +36,14 @@ code,kbd {
     color: @code-text-color;
     white-space: nowrap;
     border: 1px solid @code-border-color;
-    border-radius: 3px;
+    border-radius: @default-box-border-radius;
     background: @code-background-color;
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
     font-size: @base-font-size * 0.75;
     padding: @code-padding;
 }
 
+// resest background color and other style when wrapped in pre
 pre code {
     color: inherit;
     white-space: inherit;
@@ -57,19 +58,20 @@ pre code {
     overflow:hidden;
 }
 
-.song {
+// Chinese font families
+.@{ui-class-prefix}song {
     font-family: @song-font;
 }
 
-.fang-song {
+.@{ui-class-prefix}fang-song {
     font-family: @fang-song-font
 }
 
-.hei {
+.@{ui-class-prefix}hei {
     font-family: @hei-font;
 }
 
-.kai {
+.@{ui-class-prefix}kai {
     font-family: @kai-font; 
 }
 
@@ -92,10 +94,6 @@ a {
     .link-like();
 }
 
-address {
-    font-style: normal;
-}
-
 ul,
 ol {
     margin-top: 0;
@@ -105,14 +103,18 @@ ol {
 }
 
 // Unstyled keeps list items block level, just removes default browser padding and list-style
-.list-unstyled {
+.esf-list-unstyled {
     padding-left: 0;
     list-style: none;
 }
 
+.@{ui-class-prefix}list-unstyled {
+    .esf-list-unstyled();
+}
+
 // Inline turns list items into inline-block
-.list-inline {
-  .list-unstyled();
+.@{ui-class-prefix}list-inline {
+  .esf-list-unstyled();
   margin-left: -5px;
 
   > li {
@@ -122,11 +124,11 @@ ol {
   }
 }
 
-.truncate {
+.@{ui-class-prefix}truncate {
     .ellipsis();
 }
 
-.truncate2 {
+.@{ui-class-prefix}truncate2 {
     .ellipsis(3);
 }
 
@@ -207,7 +209,8 @@ ol {
     td, th {
         border-width: 0 0 0 1px;
         margin: 0;
-        overflow: visible; /*to make ths where the title is really long work*/
+        // to make ths where the title is really long work
+        overflow: visible; 
     }
     thead {
         text-align: left;

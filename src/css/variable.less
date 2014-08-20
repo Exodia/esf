@@ -26,12 +26,6 @@
 @ui-class-prefix: ui-;
 @modifier-prefix: ;
 
-/* =========
-   Type
-   ========= */
-@link-color:       @triad-base-color;
-@link-hover-color: darken(@triad-base-color, 15%);
-
 // =========
 // Input
 // =========
@@ -41,6 +35,7 @@
 @input-text-color: @black-70;
 @input-text-size: @base-font-size;
 @input-placeholder-color: @black-20;
+
 // tab color, webkit only
 @input-tap-color: rgba(255, 255, 255, 0);
 @input-padding: 0.65em 1em;
@@ -80,7 +75,7 @@
 
 @secondary-button-text-color: @white;
 @secondary-button-background-color: @triad-base-color;
-@secondary-button-border-color: @triad-base-color; 
+@secondary-button-border-color: @triad-base-color;
 
 @success-button-text-color: @white;
 @success-button-background-color: @complement-hightlight-color;
@@ -88,7 +83,7 @@
 
 @warning-button-text-color: @white;
 @warning-button-background-color: @energetic-hightlight-color;
-@warning-button-border-color: @energetic-hightlight-color; 
+@warning-button-border-color: @energetic-hightlight-color;
 
 @danger-button-text-color: @white;
 @danger-button-background-color: @energetic-base-color;
@@ -96,15 +91,18 @@
 
 @info-button-text-color: @white;
 @info-button-background-color: @triad-base-color;
-@info-button-border-color: @triad-base-color; 
+@info-button-border-color: @triad-base-color;
 
-/* =========
-   Type
-   ========= */
+// =========
+// Type
+// =========
 @hei-font: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimHei, "黑体", STHeiti, "华文黑体", sans-serif;
 @song-font: "Helvetica Neue", Helvetica, Arial, SimSun, "宋体", STSong, "华文宋体", sans-serif;
 @fang-song-font: "Helvetica Neue", Helvetica, Arial, FangSong, "仿宋", STFangsong, "华文仿宋", sans-serif;
 @kai-font: "Helvetica Neue", Helvetica, Arial, KaiTi, "楷体", STKaiti, "华文楷体", sans-serif;
+
+@link-color:       @triad-base-color;
+@link-hover-color: darken(@triad-base-color, 15%);
 
 @headings-font-family: @hei-font; 
 @headings-font-weight: bold;
@@ -123,20 +121,20 @@
 
 @table-border-color: @black-40;
 @table-caption-text-color: @black;
-@table-caption-font-size: @base-font-size * 0.8;
+@table-caption-font-size: @mini-font-size;
 @table-caption-padding: 1em 0;
 @table-cell-padding: 0.5em 1em;
-@table-cell-font-size: @base-font-size * 0.75;
-@table-head-background-color: #e0e0e0;
-@table-head-text-color: #000;
+@table-cell-font-size: @mini-font-size;
+@table-head-background-color: @black-20;
+@table-head-text-color: @black;
 @table-hover-line-background-color: @black-10;
 @table-hover-line-text-color: @black;
-@table-striped-background-color: #f2f2f2;
+@table-striped-background-color: @black-10;
 @table-striped-text-color: @black;
 
-/* =========
-   Menu
-   ========= */
+// =========
+// Menu
+// =========
 @menu-background-color: @primary-color;
 @menu-text-color: @default-button-text-color;
 @menu-text-size: @base-font-size;
@@ -151,18 +149,18 @@
 @dropdown-border-color: 1px solid rgba(0, 0, 0, 0.1);
 @dropdown-background-color: @primary-bg-color;
 @dropdown-text-color: @body-text-color;
-@dropdown-text-size: @base-font-size * 0.75;
+@dropdown-text-size: @base-font-size * 0.875;
 @dropdown-hightlight-color: @black-10;
 @dropdown-item-padding: 0.5em 1em;
 @dropdown-separator-space: 0.35em;
 @dropdown-heading-padding: 0.5em 1em;
-@dropdown-heading-text-size: @base-font-size * 0.875;
+@dropdown-heading-text-size: @base-font-size;
 
-/* =========
-   Checkbox & Radio
-   ========= */
+// =========
+// Checkbox & Radio
+// =========
 @checkbox-background-color: @primary-bg-color;
-@checkbox-background-active-color: #F5F5F5;
+@checkbox-background-active-color: @black-10;
 @checkbox-radio-checked-color: @primary-color;
 @checkbox-label-text-color: rgba(0, 0, 0, 0.6);
 @checkbox-label-text-hover-color: rgba(0, 0, 0, 0.8);
@@ -175,7 +173,9 @@
 @checkbox-slider-off-color: @primary-color;
 @checkbox-slider-on-color: @complement-base-color;
 
+// =========
 // Form
+// =========
 @form-legend-font-size: 1.25em;
 @form-legend-text-color: @body-text-color;
 @form-legend-padding: 0.5em 0;
@@ -184,9 +184,9 @@
 @form-label-font-size: 1em;
 @form-row-bottom-margin: 0.8em;
 
-/* =========
-   z-index
-   ========= */
+// =========
+// z-index
+// =========
 @zindex-navbar:            1000;
 @zindex-dropdown:          1000;
 @zindex-popover:           1060;
@@ -195,11 +195,10 @@
 @zindex-modal-background:  1040;
 @zindex-modal:             1050;
 
-/*
-* 
-* ESF 变量，一般不用直接修改这里
-×
-*/
+
+// =========
+// ESF 变量，一般不用直接修改这里
+// =========
 // global flags
 @support-old-ie: true;
 @support-html5: true;

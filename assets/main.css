@@ -1,23 +1,3 @@
-/* =========
-   Type
-   ========= */
-/* =========
-   Type
-   ========= */
-/* =========
-   Menu
-   ========= */
-/* =========
-   Checkbox & Radio
-   ========= */
-/* =========
-   z-index
-   ========= */
-/*
-* 
-* ESF 变量，一般不用直接修改这里
-×
-*/
 /*! normalize.css v1.1.2 | MIT License | git.io/normalize */
 /* ==========================================================================
        Base
@@ -502,7 +482,7 @@ button[disabled],
 html input[disabled],
 ui-disabled {
   cursor: not-allowed;
-  opacity: 0.8;
+  opacity: 0.4;
 }
 .clearfix:before,
 .clearfix:after,
@@ -727,10 +707,10 @@ h6 .small {
   font-size: 75%;
 }
 body {
-  font-size: 16px px;
+  font-size: 16px;
   line-height: 1.3;
 }
-p.indent {
+p.ui-indent {
   text-indent: 2em;
 }
 code,
@@ -738,7 +718,7 @@ kbd {
   color: #b34e26;
   white-space: nowrap;
   border: 1px solid #cccccc;
-  border-radius: 3px;
+  border-radius: 4px;
   background: #e6e6e6;
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
   font-size: 12px;
@@ -757,16 +737,16 @@ hr {
   height: 0;
   overflow: hidden;
 }
-.song {
+.ui-song {
   font-family: "Helvetica Neue", Helvetica, Arial, SimSun, "宋体", STSong, "华文宋体", sans-serif;
 }
-.fang-song {
+.ui-fang-song {
   font-family: "Helvetica Neue", Helvetica, Arial, FangSong, "仿宋", STFangsong, "华文仿宋", sans-serif;
 }
-.hei {
+.ui-hei {
   font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimHei, "黑体", STHeiti, "华文黑体", sans-serif;
 }
-.kai {
+.ui-kai {
   font-family: "Helvetica Neue", Helvetica, Arial, KaiTi, "楷体", STKaiti, "华文楷体", sans-serif;
 }
 blockquote {
@@ -790,9 +770,6 @@ a:hover {
   color: #0c4e77;
   text-decoration: underline;
 }
-address {
-  font-style: normal;
-}
 ul,
 ol {
   margin-top: 0;
@@ -803,29 +780,32 @@ ul ol,
 ol ol {
   margin-bottom: 0;
 }
-.list-unstyled,
+.esf-list-unstyled,
 .ui-dropdown {
   padding-left: 0;
   list-style: none;
 }
-.list-inline {
+.ui-list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.ui-list-inline {
   padding-left: 0;
   list-style: none;
   margin-left: -5px;
 }
-.list-inline > li {
+.ui-list-inline > li {
   display: inline-block;
   padding-left: 5px;
   padding-right: 5px;
 }
-.truncate,
-.ui-form .inline-label {
+.ui-truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   white-space: nowrap;
 }
-.truncate2 {
+.ui-truncate2 {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -846,7 +826,6 @@ ol ol {
   border-width: 0 0 0 1px;
   margin: 0;
   overflow: visible;
-  /*to make ths where the title is really long work*/
 }
 .ui-table thead {
   text-align: left;
@@ -859,11 +838,11 @@ ol ol {
   border-left: 1px solid #999999;
 }
 .ui-table thead {
-  background: #e0e0e0;
+  background: #cccccc;
   color: #000000;
 }
 .ui-table.striped tr:nth-child(2n-1) td {
-  background-color: #f2f2f2;
+  background-color: #e6e6e6;
   color: #000000;
 }
 .ui-table.bordered td {
@@ -881,12 +860,12 @@ ol ol {
 }
 .ui-table caption {
   padding: 1em 0;
-  font-size: 12.8px;
+  font-size: 13px;
 }
 .ui-table td,
 .ui-table th {
   padding: 0.5em 1em;
-  font-size: 12px;
+  font-size: 13px;
 }
 .ui-g {
   letter-spacing: -0.31em;
@@ -1465,7 +1444,7 @@ textarea:focus {
   display: table;
   width: 100%;
 }
-.ui-input.fluid.action > .ui-action-container {
+.ui-input.fluid.action > .action-container {
   width: 0.01%;
 }
 .ui-input.action {
@@ -1484,71 +1463,71 @@ textarea:focus {
   border-top-left-radius: 0px !important;
   border-bottom-left-radius: 0px !important;
 }
-.ui-input.action > .ui-action-container {
+.ui-input.action > .action-container {
   display: table-cell !important;
   vertical-align: top;
   white-space: nowrap;
   font-size: 0;
 }
-.ui-input.action > .ui-action-container:last-child .ui-button {
+.ui-input.action > .action-container:last-child .ui-button {
   border-top-left-radius: 0px !important;
   border-bottom-left-radius: 0px !important;
 }
-.ui-input.action > .ui-action-container:first-child .ui-button {
+.ui-input.action > .action-container:first-child .ui-button {
   border-top-right-radius: 0px !important;
   border-bottom-right-radius: 0px !important;
 }
-.ui-input input,
-.ui-input textarea {
+.ui-input > input,
+.ui-input > textarea {
   background-color: #ffffff;
   border: 1px solid #b3b3b3;
 }
-.ui-input input:-moz-placeholder,
-.ui-input textarea:-moz-placeholder {
+.ui-input > input:-moz-placeholder,
+.ui-input > textarea:-moz-placeholder {
   color: #cccccc;
 }
-.ui-input input::-moz-placeholder,
-.ui-input textarea::-moz-placeholder {
+.ui-input > input::-moz-placeholder,
+.ui-input > textarea::-moz-placeholder {
   color: #cccccc;
 }
-.ui-input input::-webkit-input-placeholder,
-.ui-input textarea::-webkit-input-placeholder {
+.ui-input > input::-webkit-input-placeholder,
+.ui-input > textarea::-webkit-input-placeholder {
   color: #cccccc;
 }
-.ui-input input:-ms-input-placeholder,
-.ui-input textarea:-ms-input-placeholder {
+.ui-input > input:-ms-input-placeholder,
+.ui-input > textarea:-ms-input-placeholder {
   color: #cccccc;
 }
-.ui-input.active input,
-.ui-input input:active {
-  border-color: 1px solid #1b9ae8;
+.ui-input.active > input,
+.ui-input > input:active {
+  border-color: #1b9ae8;
   background-color: #fefdfa;
 }
-.ui-input.focus input,
-.ui-input input:focus {
-  border-color: 1px solid #1b9ae8;
+.ui-input.focus > input,
+.ui-input > input:focus {
+  border-color: #1b9ae8;
   background-color: #fefdfa;
 }
-.ui-input.disabled input,
-.ui-input input[disabled] {
+.ui-input.disabled > input,
+.ui-input > input[disabled] {
   background-color: #e6e6e6;
-  border-color: 1px solid rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.2);
 }
-.ui-input.error input {
+.ui-input.error > input {
   background-color: #e7bebe;
-  border-color: 1px solid #fffafa;
+  border-color: #fffafa;
   color: #d95c5c;
 }
-.ui-input.error input:-moz-placeholder {
+.ui-input.error > input:-moz-placeholder {
   color: #ff0000;
 }
-.ui-input.error input::-moz-placeholder {
+.ui-input.error > input::-moz-placeholder {
   color: #ff0000;
 }
-.ui-input.error input::-webkit-input-placeholder {
+.ui-input.error > input::-webkit-input-placeholder {
   color: #ff0000;
 }
-.ui-input.error input:-ms-input-placeholder {
+.ui-input.error > input:-ms-input-placeholder {
   color: #ff0000;
 }
 .ui-button {
@@ -1692,37 +1671,37 @@ textarea:focus {
 }
 .ui-button-group.mini .ui-button,
 .ui-input.mini,
-.ui-input.mini .ui-action-container .ui-button,
+.ui-input.mini .action-container .ui-button,
 .ui-button.mini {
   font-size: 13px;
 }
 .ui-button-group.ui-small .ui-button,
 .ui-input.small,
-.ui-input.small .ui-action-container .ui-button,
+.ui-input.small .action-container .ui-button,
 .ui-button.small {
   font-size: 14px;
 }
 .ui-button-group.ui-large .ui-button,
 .ui-input.large,
-.ui-input.large .ui-action-container .ui-button,
+.ui-input.large .action-container .ui-button,
 .ui-button.large {
   font-size: 18px;
 }
 .ui-button-group.ui-big .ui-button,
 .ui-input.big,
-.ui-input.big .ui-action-container .ui-button,
+.ui-input.big .action-container .ui-button,
 .ui-button.big {
   font-size: 20px;
 }
 .ui-button-group.ui-huge .ui-button,
 .ui-input.huge,
-.ui-input.huge .ui-action-container .ui-button,
+.ui-input.huge .action-container .ui-button,
 .ui-button.huge {
   font-size: 22px;
 }
 .ui-button-group.ui-massive .ui-button,
 .ui-input.massive,
-.ui-input.massive .ui-action-container .ui-button,
+.ui-input.massive .action-container .ui-button,
 .ui-button.massive {
   font-size: 24px;
 }
@@ -1790,7 +1769,7 @@ textarea:focus {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .ui-dropdown > li {
-  font-size: 12px;
+  font-size: 14px;
   background: #fefdfa;
 }
 .ui-dropdown > li > a {
@@ -1812,7 +1791,7 @@ textarea:focus {
 }
 .ui-dropdown > li.heading {
   padding: 0.5em 1em;
-  font-size: 14px;
+  font-size: 16px;
 }
 .ui-menu {
   overflow: visible;
@@ -1832,7 +1811,7 @@ textarea:focus {
 }
 .ui-menu > ul .ui-menu-item.disabled {
   cursor: not-allowed;
-  opacity: 0.8;
+  opacity: 0.4;
 }
 .ui-menu > ul .ui-menu-item.disabled a:hover {
   background: none;
@@ -1860,7 +1839,6 @@ textarea:focus {
 .ui-menu .ui-menu-item > a {
   color: #ffffff;
   padding: 0.5em 1em;
-  font-size: 16px;
 }
 .ui-menu .ui-menu-item > a:hover {
   background-color: #9d0000;
@@ -2796,7 +2774,7 @@ a.ui.teal.label:hover:before {
 .ui-radio label:active::before,
 .ui-slider label:active::before,
 .ui-toggle label:active::before {
-  background-color: #f5f5f5;
+  background-color: #e6e6e6;
 }
 .ui-checkbox label,
 .ui-radio label,
@@ -3085,7 +3063,7 @@ a.ui.teal.label:hover:before {
 }
 .ui-toggle :active .box:before,
 .ui-toggle :active label:before {
-  background-color: #f5f5f5;
+  background-color: #e6e6e6;
 }
 .ui-toggle input:checked ~ .box:after,
 .ui-toggle input:checked ~ label:after {

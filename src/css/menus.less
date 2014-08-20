@@ -1,4 +1,4 @@
-.menu-variant(@menu-background-color; @text-color; @menu-active-background-color; @menu-item-padding; @menu-item-margin; @menu-font-size; @menu-item-active-shadow) {
+.menu-variant(@menu-background-color; @text-color; @menu-active-background-color; @menu-item-padding; @menu-item-margin; @menu-item-active-shadow) {
     background: @menu-background-color;
     .@{ui-class-prefix}menu-item {
         margin: @menu-item-margin;
@@ -8,7 +8,6 @@
             &:hover {
                 background-color: darken(@menu-background-color, 10%);
             }
-            font-size: @menu-font-size;
         }
         &.active {
             background: darken(@menu-background-color, 10%);
@@ -81,7 +80,6 @@
         @menu-active-background-color,
         @menu-item-padding,
         @menu-item-margin,
-        @menu-text-size,
         @menu-item-active-shadow
     );
 }
