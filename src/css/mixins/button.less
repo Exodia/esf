@@ -1,0 +1,10 @@
+.button-variant(@text-color, @background-color, @border-color) {
+    color: @text-color;
+    background-color: @background-color;
+    border-color: @border-color;
+    &:hover,&.hover {
+        color: @text-color;
+        background-color: darken(@background-color, 10%);
+        border-color: darken(@border-color, 12%);
+    }
+}

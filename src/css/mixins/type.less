@@ -1,0 +1,111 @@
+.link-like() {
+  color: @link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: @link-hover-color;
+    text-decoration: underline;
+  }
+}
+
+// ***********
+// Table
+// ***********
+.table-variant(
+    @caption-text-color,
+    @border-color,
+    @head-background-color,
+    @head-text-color,
+    @striped-background-color,
+    @striped-text-color,
+    @hover-line-background-color,
+    @hover-line-text-color
+) {
+    border: 1px solid @border-color;
+    caption {
+        color: @caption-text-color;
+    }
+    td, th {
+        border-left: 1px solid @border-color;
+    }
+    thead {
+        background: @head-background-color;
+        color: @head-text-color;
+    }
+    &.@{modifier-prefix}striped {
+        tr:nth-child(2n-1) td {
+            background-color: @striped-background-color;
+            color: @striped-text-color;
+        }
+    }
+    &.@{modifier-prefix}bordered {
+        td {
+            border-bottom: 1px solid @border-color;
+        } 
+    }
+    &.@{modifier-prefix}horizontal {
+        th, td {
+            border-width: 0 0 1px 0;
+            border-bottom: 1px solid @border-color;
+        } 
+    }
+    &.@{modifier-prefix}hover-line {
+        > tbody > tr:hover {
+            > td,
+            > th {
+                background-color: @hover-line-background-color;
+                color: @hover-line-text-color; 
+            }
+        }
+    }
+}
+.table-size(
+    @table-caption-padding,
+    @table-caption-font-size,
+    @table-cell-padding,
+    @table-cell-font-size
+) {
+    caption {
+        padding: @table-caption-padding;
+        font-size: @table-caption-font-size;
+    }
+    td, th {
+        padding: @table-cell-padding;
+        font-size: @table-cell-font-size
+    }
+}
+.@{ui-class-prefix}table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    caption {
+        text-align: center;
+        font-weight: bold;
+    }
+    td, th {
+        border-width: 0 0 0 1px;
+        margin: 0;
+        // to make ths where the title is really long work
+        overflow: visible; 
+    }
+    thead {
+        text-align: left;
+    }
+
+    .table-variant(
+        @table-caption-text-color,
+        @table-border-color,
+        @table-head-background-color,
+        @table-head-text-color,
+        @table-striped-background-color,
+        @table-striped-text-color,
+        @table-hover-line-background-color,
+        @table-hover-line-text-color
+    );
+    .table-size(
+        @table-caption-padding,
+        @table-caption-font-size,
+        @table-cell-padding,
+        @table-cell-font-size
+    );
+}

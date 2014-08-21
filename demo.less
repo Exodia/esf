@@ -1,12 +1,14 @@
 @import "./src/css/est.less";
- 
+@import "./src/css/variable.less";
+@import "./src/css/mixins.less";
+
 body {
    .est-layout-fixed-header(60px);
 }
 
 .est-header {
     background: @primary-color;
-}
+} 
 
 .primary-bg-link {
     color: @primary-bg-color;
@@ -16,52 +18,18 @@ body {
     }
 }
 
-.header-button {
-    .button-size(60px, 15px, 32px, 0);  
-}
-.header-button-nav {
-    .button-size(60px, 12px 15px, 16px, 0);
-}
-.left-menu-separator {
-    border-left: 1px solid @black-10 !important;
-}
-.right-menu-separator {
-    border-right: 1px solid @black-10 !important;
-}
- 
 .brand-title {
-    margin-left: 80px;
-    margin-bottom: 0px;
-    margin-top: 10px;
-    img {
-        vertical-align: bottom;
+    a {
+        color: @white;
+        &:hover {
+            color: @white;
+            text-decoration: none;
+        }
     }
-}
-
-.ui-menu.nav > ul > li > a {
-    padding: 16px 21px;
-}
-
-#left-nav { 
-    width: 59px;
-    background: @primary-color;
-    position: fixed;
-    top: 60px; 
-    bottom: 0px;
-}
-
-#page-footer {
-    background: @black-70;
-    color: @black-10;
-}
-#content-container,
-#page-footer {
-    margin-left: 59px;
 }
 
 #container-frame { 
     width: 100%;
-    height: 100%;
     border: 0;
 }
  

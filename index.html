@@ -2,78 +2,66 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>Home - ESUI Demo</title>
+        <title>ESF</title>
         <link rel="stylesheet" href="assets/main.css" />
         <link rel="stylesheet" href="src/icons/css/font-awesome.css" />
         <link rel="stylesheet" href="demo.css" />
     </head>
     <body class="">
-        <header class="est-header" role="banner">
-            <a id="leftmenu-trigger" class="ui-button ui-button-primary header-button right-menu-separator pull-left" title="Toggle Sidebar">
-                <i class="fa fa-navicon"></i>
-            </a>
-            <div class="pull-right">
-                <div class="ui-menu horizontal nav">
-                    <ul>
-                        <li class="ui-menu-item">
-                            <a href="#"><i class="fa fa-magic"></i></a>
-                        </li>
-                        <li class="ui-menu-item"><a href="#"><i class="fa fa-level-down"></i></a></li>
-                        <li class="ui-menu-item"><a href="#"><i class="fa fa-bell"></i></a></li>
-                        <li class="ui-menu-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
-                    </ul>
+        <header class="est-header" id="header">
+            <div class="ui-g">
+                <div class="ui-u-1-5">
+                    <h1 class="brand-title ui-mt1 ui-ml3">
+                        <a class="navbar-brand" href="index.html">ESF</a>
+                    </h1>
+                </div>
+                <div class="ui-u-4-5">
+                    <div id="main-menu" class="ui-mt1 ui-menu horizontal hoverable ui-huge-font ui-fr ui-mr3">
+                        <ul>
+                            <li class="ui-menu-item">
+                                <a href="home.html" target="container-frame"><i class="fa fa-home"></i> 介绍</a>
+                            </li>
+                            <li class="ui-menu-item" title="CSS 栅格"><a href="css-grid.html" target="container-frame"><i class="fa fa-desktop"></i> 布局</a></li>
+                            <li class="ui-menu-item"><a href="type.html" target="container-frame"><i class="fa fa-text-height"></i> 基础元素</a></li>
+                            <li class="ui-menu-item">
+                                <a href="#">
+                                    <i class="fa fa-check-square"></i> 表单元素
+                                </a>
+                                <ul class="ui-dropdown">
+                                    <li><a href="button.html" target="container-frame">按钮</a></li>
+                                    <li><a href="checkbox.html" target="container-frame">Checkbox</a></li>
+                                    <li><a href="input.html" target="container-frame">输入框</a></li>
+                                    <li><a href="form.html" target="container-frame">表单</a></li>
+                                </ul>
+                            </li>
+                            <li class="ui-menu-item"><a href="menu.html" target="container-frame"><i class="fa fa-anchor"></i> 导航</a></li>
+                            <li class="ui-menu-item"><a href="http://fontello.com/" target="container-frame"><i class="fa fa-file-image-o"></i> 图标</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <h1 class="brand-title ml1">
-                <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" /></a>
-            </h1>
         </header>
         <div class="est-body">
-            <div id="left-nav">
-                <div class="ui-menu vertical nav hoverable">
-                    <ul id="navigator">
-                        <li class="ui-menu-item" title="介绍"><a href="home.html" target="container-frame"><i class="fa fa-home"></i></a></li>
-                        <li class="ui-menu-item" title="CSS 栅格"><a href="css-grid.html" target="container-frame"><i class="fa fa-desktop"></i></a></li>
-                        <li class="ui-menu-item"><a href="type.html" target="container-frame"><i class="fa fa-text-height"></i></a></li>
-                        <li class="ui-menu-item">
-                            <a href="#">
-                                <i class="fa fa-check-square"></i>
-                            </a>
-                            <ul class="ui-dropdown flyout right">
-                                <li><a href="button.html" target="container-frame">按钮</a></li>
-                                <li><a href="checkbox.html" target="container-frame">Checkbox</a></li>
-                                <li><a href="input.html" target="container-frame">输入框</a></li>
-                                <li><a href="form.html" target="container-frame">表单</a></li>
-                            </ul>
-                        </li>
-                        <li class="ui-menu-item"><a href="menu.html" target="container-frame"><i class="fa fa-anchor"></i></a></li>
-                        <li class="ui-menu-item"><a href="http://fontello.com/" target="container-frame"><i class="fa fa-file-image-o"></i></a></li>
-                        <!--<li class="ui-menu-item"><a href="label.html" target="container-frame"><i class="fa fa-font"></i></a></li>-->
-                    </ul>
-                </div>
-            </div>
             <div id="content-container">
-                <div id="header">
-
-                </div>
-                <div id="content">
+                <div id="content" style="overflow:hidden;">
                     <iframe id="container-frame" name="container-frame" src="home.html" seamless="seamless">
                     </iframe>
                 </div>
             </div>
-            <footer id="page-footer" role="contentinfo">
-                <div class="clearfix align-center">
-                    <button class="pull-right ui-button ui-button-primary" id="back-to-top"><i class="fa fa-arrow-up"></i></button>
-                    百度 © 2014
-                </div>
-            </footer>
         </div>
     </body>
     <script>
-        (function () {
-            var h = (Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 60 - 42) + 'px';
+        var onResize = function () {
+            var headerHeight = document.getElementById('header').offsetHeight;
+            console.log(document.documentElement.clientHeight);
+            console.log(window.innerHeight);
+            
+            var h = (Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - headerHeight) + 'px';
+            console.log(h);
+            document.getElementById('container-frame').style.height = h;
             document.getElementById('content').style.height = h;
-            //document.getElementById('container-frame').style.height = h;
-        })();
+        };
+        onResize();
+        window.onresize = onResize;
     </script>
 </html>

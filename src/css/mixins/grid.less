@@ -1,0 +1,58 @@
+.esf-grid-u {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+    font-family: @default-font-family;
+}
+
+.make-grid(@grid-columns) {
+  .loop-grid-columns(@grid-columns, false, @grid-columns);
+}
+
+.make-grid(@grid-columns, @class) {
+  .loop-grid-columns(@grid-columns, @class, @grid-columns);
+}
+
+// Mixins
+// Basic looping in LESS
+.loop-grid-columns(@index, @class, @total) when (@index >= 0) {
+  ._calc-grid-column(@index, @class, @total);
+  // next iteration
+  .loop-grid-columns((@index - 1), @class, @total);
+}
+
+._calc-grid-column(@index, @class, @total) when (isstring(@class)) and (@index > 0) {
+    @width: (@index / @grid-columns);
+    @ie-width: (@width - 0.00031);
+    .@{ui-class-prefix}u-@{class}-@{index}-@{total} {
+        width: percentage(@width);
+        // IE < 8 has issues with rounding, reducing the width slightly prevents the
+        // grid units from wrapping to the next line.
+        *width: percentage(ie-width);
+        &:extend(.esf-grid-u all);
+    }
+    .@{ui-class-prefix}offset-@{class}-@{index}-@{total} {
+        margin-left: percentage(@width);
+        *margin-left: percentage(ie-width);
+    }
+}
+
+._calc-grid-column(@index, @class, @total) when (@index > 0) {
+    @width: (@index / @grid-columns);
+    @ie-width: (@width - 0.00031);
+    .@{ui-class-prefix}u-@{index}-@{total} {
+        width: percentage(@width);
+        // IE < 8 has issues with rounding, reducing the width slightly prevents the
+        // grid units from wrapping to the next line.
+        *width: percentage(@ie-width);
+        &:extend(.esf-grid-u all);
+    }
+    .@{ui-class-prefix}offset-@{index}-@{total} {
+        margin-left: percentage(@width);
+        *margin-left: percentage(ie-width);
+    }
+}

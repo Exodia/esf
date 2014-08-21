@@ -1,50 +1,3 @@
-.menu-variant(@menu-background-color; @text-color; @menu-active-background-color; @menu-item-padding; @menu-item-margin; @menu-item-active-shadow) {
-    background: @menu-background-color;
-    .@{ui-class-prefix}menu-item {
-        margin: @menu-item-margin;
-        > a {
-            color: @text-color;
-            padding: @menu-item-padding;
-            &:hover {
-                background-color: darken(@menu-background-color, 10%);
-            }
-        }
-        &.active {
-            background: darken(@menu-background-color, 10%);
-            box-shadow: @menu-item-active-shadow;
-        }
-    }
-    .@{ui-class-prefix}menu-separator-before,
-    .@{ui-class-prefix}menu-separator-after {
-        border-color: rgba(0, 0, 0, 0.1);
-    }
-}
-
-.@{ui-class-prefix}menu {
-    overflow: visible;
-    position: relative;
-
-    > ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        .@{ui-class-prefix}menu-item {
-            position: relative;
-            > a {
-                text-decoration: none;
-                display: block;
-            }
-            &.disabled {
-                a {
-                    &:hover {
-                        background: none;
-                    }
-                }
-                .ui-disabled();
-            }
-        }
-    }
-}
 
 .@{ui-class-prefix}menu.hoverable {
     .@{ui-class-prefix}menu-item {
@@ -85,7 +38,7 @@
 }
 
 .@{ui-class-prefix}menu.horizontal {
-    &:extend(.clearfix all);
+    &:extend(.esf-clearfix all);
     .@{ui-class-prefix}menu-item {
         float: left;
     }

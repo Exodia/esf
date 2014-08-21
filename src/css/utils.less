@@ -1,12 +1,28 @@
-.clearfix {
-  &:before,
-  &:after {
-    content: " "; // 1
-    display: table; // 2
-  }
-  &:after {
-    clear: both;
-  }
+// Name:            Utils
+// Description:     Defines utility selectors.
+//
+// ========================================================================
+
+.esf-clearfix {
+    .clearfix();
+}
+
+.@{ui-class-prefix}clearfix {
+    &:extend(esf-clearfix all);
+}
+
+// padding utilities
+.@{ui-class-prefix}pl0 {
+    padding-left: 0 !important;
+}
+.@{ui-class-prefix}pb0 {
+    padding-bottom: 0 !important;
+}
+.@{ui-class-prefix}pr0 {
+    padding-right: 0 !important;
+}
+.@{ui-class-prefix}pt0 {
+    padding-top: 0 !important;
 }
 
 .make-pad(1);
@@ -14,78 +30,85 @@
 .make-pad(3);
 .make-pad(4);
 
-.no-pl {
-    padding-left: 0 !important;
+// margin utilities
+.@{ui-class-prefix}ml0 {
+    margin-left: 0 !important;
 }
-.no-pb {
-    padding-bottom: 0 !important;
+.@{ui-class-prefix}mb0 {
+    margin-bottom: 0 !important;
 }
-.no-pr {
-    padding-right: 0 !important;
+.@{ui-class-prefix}mr0 {
+    margin-right: 0 !important;
 }
-.no-pt {
-    padding-top: 0 !important;
+.@{ui-class-prefix}mt0 {
+    margin-top: 0 !important;
 }
 
 .make-margin(1);
 .make-margin(2);
 .make-margin(3);
-
-.no-ml {
-    margin-left: 0 !important;
-}
-.no-mb {
-    margin-bottom: 0 !important;
-}
-.no-mr {
-    margin-right: 0 !important;
-}
-.no-mt {
-    margin-top: 0 !important;
-}
+.make-margin(4);
 
 // text-alignments
-.align-left {
+.@{ui-class-prefix}align-left {
     text-align: left;
 }
-.align-center {
+.@{ui-class-prefix}align-center {
     text-align: center;
 }
-.align-right {
+.@{ui-class-prefix}align-right {
     text-align: right;
 }
 
-//
-.nowrap { white-space: nowrap; }
+// no space break
+.@{ui-class-prefix}nowrap {
+    white-space: nowrap;
+}
 
-.center-block {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+// block center
+.@{ui-class-prefix}center-block {
+    .center-block();
 }
 
 // float
-.pull-left {
+.@{ui-class-prefix}fl {
     float: left;
 }
-.pull-right {
+.@{ui-class-prefix}fr {
     float: right;
 }
  
-/* The ghost, nudged to maintain perfect centering */
-.vertical-align:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -0.25em; /* Adjusts for spacing */
+// The ghost, nudged to maintain perfect centering
+.@{ui-class-prefix}vertical-align:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
 }
 
 .@{ui-class-prefix}block {
     display: block !important;
 }
 
-.@{ui-class-prefix}block-center {
-    .center-block();
+.@{ui-class-prefix}base-font {
+    font-size: @base-font-size;
 }
-
+.@{ui-class-prefix}mini-font {
+    font-size: @mini-font-size;
+}
+.@{ui-class-prefix}small-font {
+    font-size: @small-font-size;
+}
+.@{ui-class-prefix}large-font {
+    font-size: @large-font-size;
+}
+.@{ui-class-prefix}big-font {
+    font-size: @big-font-size;
+}
+.@{ui-class-prefix}huge-font {
+    font-size: @huge-font-size;
+}
+.@{ui-class-prefix}massive-font {
+    font-size: @massive-font-size;
+}

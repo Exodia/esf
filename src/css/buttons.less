@@ -30,37 +30,6 @@
 //
 // ========================================================================
 
-.@{ui-class-prefix}button {
-    // for `a` elements
-    display: inline-block;
-    .box-sizing(border-box);
-    text-align: center;
-    vertical-align: middle;
-    .user-select(none);
-    cursor: pointer;
-    &:hover {
-        text-decoration: none;
-    }
-    &::-moz-focus-inner {
-        padding: 0;
-        border: 0;
-    }
-    &:focus {
-        outline: 0;
-    }
-    border: 1px solid transparent;
-    line-height: @default-button-line-height;
-    height: @default-button-height;
-    padding: @default-button-padding;
-
-    &.@{modifier-prefix}icon-only {
-        padding: @default-button-icon-padding;
-    }
-    .border-radius(@default-box-border-radius);
-    .button-variant(@default-button-text-color, @default-button-background-color, @default-button-border-color);
-    font-size: @base-font-size;
-}
-
 .@{ui-class-prefix}button.@{modifier-prefix}primary {
     .button-variant(@primary-button-text-color, @primary-button-background-color, @primary-button-border-color);
 }
@@ -186,13 +155,33 @@
     border-top-left-radius: 0;
 }
 
-.button-variant(@text-color, @background-color, @border-color) {
-    color: @text-color;
-    background-color: @background-color;
-    border-color: @border-color;
-    &:hover,&.hover {
-        color: @text-color;
-        background-color: darken(@background-color, 10%);
-        border-color: darken(@border-color, 12%);
+.@{ui-class-prefix}button {
+    // for `a` elements
+    display: inline-block;
+    .box-sizing(border-box);
+    text-align: center;
+    vertical-align: middle;
+    .user-select(none);
+    cursor: pointer;
+    &:hover {
+        text-decoration: none;
     }
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+    &:focus {
+        outline: 0;
+    }
+    border: 1px solid transparent;
+    line-height: @default-button-line-height;
+    height: @default-button-height;
+    padding: @default-button-padding;
+
+    &.@{modifier-prefix}icon-only {
+        padding: @default-button-icon-padding;
+    }
+    .border-radius(@default-box-border-radius);
+    .button-variant(@default-button-text-color, @default-button-background-color, @default-button-border-color);
+    font-size: @base-font-size;
 }

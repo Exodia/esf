@@ -1,32 +1,82 @@
-/* =========
-   Type
-   ========= */
-/* =========
-   Input & button height
-   ========= */
-/* =========
-   Inputs
-   ========= */
-/* =========
-   Buttons
-   ========= */
-/* =========
-   Type
-   ========= */
-/* =========
-   Menu
-   ========= */
-/* =========
-   Checkbox & Radio
-   ========= */
-/* =========
-   z-index
-   ========= */
-/*
-* 
-* ESF 变量，一般不用直接修改这里
-×
-*/
+.ui-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 1px solid #999999;
+}
+.ui-table caption {
+  text-align: center;
+  font-weight: bold;
+}
+.ui-table td,
+.ui-table th {
+  border-width: 0 0 0 1px;
+  margin: 0;
+  overflow: visible;
+}
+.ui-table thead {
+  text-align: left;
+}
+.ui-table caption {
+  color: #000000;
+}
+.ui-table td,
+.ui-table th {
+  border-left: 1px solid #999999;
+}
+.ui-table thead {
+  background: #cccccc;
+  color: #000000;
+}
+.ui-table.striped tr:nth-child(2n-1) td {
+  background-color: #e6e6e6;
+  color: #000000;
+}
+.ui-table.bordered td {
+  border-bottom: 1px solid #999999;
+}
+.ui-table.horizontal th,
+.ui-table.horizontal td {
+  border-width: 0 0 1px 0;
+  border-bottom: 1px solid #999999;
+}
+.ui-table.hover-line > tbody > tr:hover > td,
+.ui-table.hover-line > tbody > tr:hover > th {
+  background-color: #e6e6e6;
+  color: #000000;
+}
+.ui-table caption {
+  padding: 1em 0;
+  font-size: 13px;
+}
+.ui-table td,
+.ui-table th {
+  padding: 0.5em 1em;
+  font-size: 13px;
+}
+.ui-menu {
+  overflow: visible;
+  position: relative;
+}
+.ui-menu > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.ui-menu > ul .ui-menu-item {
+  position: relative;
+}
+.ui-menu > ul .ui-menu-item > a {
+  text-decoration: none;
+  display: block;
+}
+.ui-menu > ul .ui-menu-item.disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+.ui-menu > ul .ui-menu-item.disabled a:hover {
+  background: none;
+}
 .esf-grid-u {
   display: inline-block;
   *display: inline;
@@ -35,6 +85,7 @@
   word-spacing: normal;
   vertical-align: top;
   text-rendering: auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", sans-serif;
 }
 body > .est-header {
   position: fixed;
@@ -66,55 +117,15 @@ body > .est-body:after {
   color: #fefdfa;
   text-decoration: none;
 }
-.header-button {
-  padding: 0 15px;
-  font-size: 32px;
-  border-radius: 0;
-  height: 60px;
-  line-height: 58px;
+.brand-title a {
+  color: #ffffff;
 }
-.header-button-nav {
-  padding: 0 12px 15px;
-  font-size: 16px;
-  border-radius: 0;
-  height: 60px;
-  line-height: 58px;
-}
-.left-menu-separator {
-  border-left: 1px solid #e6e6e6 !important;
-}
-.right-menu-separator {
-  border-right: 1px solid #e6e6e6 !important;
-}
-.brand-title {
-  margin-left: 80px;
-  margin-bottom: 0px;
-  margin-top: 10px;
-}
-.brand-title img {
-  vertical-align: bottom;
-}
-.ui-menu.nav > ul > li > a {
-  padding: 16px 21px;
-}
-#left-nav {
-  width: 59px;
-  background: #d00000;
-  position: fixed;
-  top: 60px;
-  bottom: 0px;
-}
-#page-footer {
-  background: #4d4d4d;
-  color: #e6e6e6;
-}
-#content-container,
-#page-footer {
-  margin-left: 59px;
+.brand-title a:hover {
+  color: #ffffff;
+  text-decoration: none;
 }
 #container-frame {
   width: 100%;
-  height: 100%;
   border: 0;
 }
 #navigator-features {

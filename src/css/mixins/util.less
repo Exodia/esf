@@ -1,0 +1,63 @@
+// padding & margin
+.make-pad(@factor)  {
+    .@{ui-class-prefix}p@{factor} {
+        padding: @gutter * @factor;
+    }
+    .@{ui-class-prefix}pl@{factor} {
+        padding-left: @gutter * @factor;
+    }
+    .@{ui-class-prefix}pb@{factor} {
+        padding-bottom: @gutter * @factor;
+    }
+    .@{ui-class-prefix}pr@{factor} {
+        padding-right: @gutter * @factor;
+    }
+    .@{ui-class-prefix}pt@{factor} {
+        padding-top: @gutter * @factor;
+    }
+    .@{ui-class-prefix}pv@{factor} {
+        padding-top: @gutter * @factor;
+        padding-bottom: @gutter * @factor;
+    }
+    .@{ui-class-prefix}ph@{factor} {
+        padding-left: @gutter * @factor;
+        padding-right: @gutter * @factor;
+    }
+}
+
+.make-margin(@factor)  {
+    .@{ui-class-prefix}m@{factor} {
+        margin: @gutter * @factor;
+    }
+    .@{ui-class-prefix}ml@{factor} {
+        margin-left: @gutter * @factor;
+    }
+    .@{ui-class-prefix}mb@{factor} {
+        margin-bottom: @gutter * @factor;
+    }
+    .@{ui-class-prefix}mr@{factor} {
+        margin-right: @gutter * @factor;
+    }
+    .@{ui-class-prefix}mt@{factor} {
+        margin-top: @gutter * @factor;
+    }
+    .@{ui-class-prefix}mv@{factor} {
+        margin-top: @gutter * @factor;
+        margin-bottom: @gutter * @factor;
+    }
+    .@{ui-class-prefix}mh@{factor} {
+        margin-left: @gutter * @factor;
+        margin-right: @gutter * @factor;
+    }
+}
+
+.center-block() {
+    display: block !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ui-disabled() {
+    cursor: not-allowed;
+    opacity: 0.4;
+}
