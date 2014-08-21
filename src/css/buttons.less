@@ -82,48 +82,6 @@
     cursor: not-allowed;
 }
 
-.@{ui-class-prefix}button-group.@{modifier-prefix}mini .@{ui-class-prefix}button,
-.@{ui-class-prefix}input.@{modifier-prefix}mini,
-.@{ui-class-prefix}input.@{modifier-prefix}mini .@{modifier-prefix}action-container .@{ui-class-prefix}button,
-.@{ui-class-prefix}button.@{modifier-prefix}mini {
-    font-size: @mini-font-size;
-}
-
-.@{ui-class-prefix}button-group.@{ui-class-prefix}small .@{ui-class-prefix}button,
-.@{ui-class-prefix}input.@{modifier-prefix}small,
-.@{ui-class-prefix}input.@{modifier-prefix}small .@{modifier-prefix}action-container .@{ui-class-prefix}button,
-.@{ui-class-prefix}button.@{modifier-prefix}small {
-    font-size: @small-font-size;
-}
-
-.@{ui-class-prefix}button-group.@{ui-class-prefix}large .@{ui-class-prefix}button,
-.@{ui-class-prefix}input.@{modifier-prefix}large,
-.@{ui-class-prefix}input.@{modifier-prefix}large .@{modifier-prefix}action-container .@{ui-class-prefix}button,
-.@{ui-class-prefix}button.@{modifier-prefix}large {
-    font-size: @large-font-size;
-}
-
-.@{ui-class-prefix}button-group.@{ui-class-prefix}big .@{ui-class-prefix}button,
-.@{ui-class-prefix}input.@{modifier-prefix}big,
-.@{ui-class-prefix}input.@{modifier-prefix}big .@{modifier-prefix}action-container .@{ui-class-prefix}button,
-.@{ui-class-prefix}button.@{modifier-prefix}big { 
-    font-size: @big-font-size;
-}
-
-.@{ui-class-prefix}button-group.@{ui-class-prefix}huge .@{ui-class-prefix}button,
-.@{ui-class-prefix}input.@{modifier-prefix}huge,
-.@{ui-class-prefix}input.@{modifier-prefix}huge .@{modifier-prefix}action-container .@{ui-class-prefix}button,
-.@{ui-class-prefix}button.@{modifier-prefix}huge {
-    font-size: @huge-font-size;
-}
-
-.@{ui-class-prefix}button-group.@{ui-class-prefix}massive .@{ui-class-prefix}button,
-.@{ui-class-prefix}input.@{modifier-prefix}massive,
-.@{ui-class-prefix}input.@{modifier-prefix}massive .@{modifier-prefix}action-container .@{ui-class-prefix}button,
-.@{ui-class-prefix}button.@{modifier-prefix}massive {
-    font-size: @massive-font-size;
-}
-
 .@{ui-class-prefix}button-dropdown-wrap {
     // 1. Behave like buttons
     display: inline-block;
@@ -134,25 +92,23 @@
 
 .@{ui-class-prefix}button-group {
     display: inline-block;
-    font-size: 0;
+    vertical-align: middle;
     .@{ui-class-prefix}button {
         &:first-child {
             margin-left: 0px;
         }
         margin-left: -1px;
+        float: left;
     }
-}
-
-.@{ui-class-prefix}button-group > .@{ui-class-prefix}button:not(:first-child):not(:last-child) {
-    border-radius: 0;
-}
-.@{ui-class-prefix}button-group > .@{ui-class-prefix}button:first-child:not(:last-child) {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-}
-.@{ui-class-prefix}button-group > .@{ui-class-prefix}button:last-child:not(:first-child) {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
+    > .@{ui-class-prefix}button:not(:first-child):not(:last-child) {
+        .border-radius(0);
+    }
+    > .@{ui-class-prefix}button:first-child:not(:last-child) {
+        .border-right-radius(0);
+    }
+    > .@{ui-class-prefix}button:last-child:not(:first-child) {
+        .border-left-radius(0);
+    }
 }
 
 .@{ui-class-prefix}button {
@@ -183,5 +139,4 @@
     }
     .border-radius(@default-box-border-radius);
     .button-variant(@default-button-text-color, @default-button-background-color, @default-button-border-color);
-    font-size: @base-font-size;
 }

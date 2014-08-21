@@ -16,40 +16,35 @@
 // ========================================================================
 
 .@{ui-class-prefix}g {
-    letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
-    *letter-spacing: normal; /* reset IE < 8 */
-    *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
-    text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
+    letter-spacing: -0.31em; // Webkit: collapse white-space between units
+    *letter-spacing: normal; // reset IE < 8
+    *word-spacing: -0.43em; // IE < 8: 
+    word-spacing: -0.43em;
+    text-rendering: optimizespeed; // Webkit: fixes text-rendering: optimizeLegibility
+    // Sets the font stack to fonts known to work properly with the above letter
+    // and word spacings. See: https://github.com/yui/pure/issues/41/
 
-    /*
-    Sets the font stack to fonts known to work properly with the above letter
-    and word spacings. See: https://github.com/yui/pure/issues/41/
+    // The following font stack makes Pure Grids work on all known environments.
 
-    The following font stack makes Pure Grids work on all known environments.
+    // * FreeSans: Ships with many Linux distros, including Ubuntu
 
-    * FreeSans: Ships with many Linux distros, including Ubuntu
+    // * Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
+    //   Arial to get picked up by the browser, even though neither is available
+    //   in Chrome OS.
 
-    * Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
-      Arial to get picked up by the browser, even though neither is available
-      in Chrome OS.
+    // * Droid Sans: Ships with all versions of Android.
 
-    * Droid Sans: Ships with all versions of Android.
+    // * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
 
-    * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
-    */
     font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 
-    /*
-    Use flexbox when possible to avoid `letter-spacing` side-effects.
+    //Use flexbox when possible to avoid `letter-spacing` side-effects.
 
-    NOTE: Firefox (as of 25) does not currently support flex-wrap, so the
-    `-moz-` prefix version is omitted.
-    */
-
+    // NOTE: Firefox (as of 25) does not currently support flex-wrap, so the
+    // `-moz-` prefix version is omitted.
     display: -webkit-flex;
     -webkit-flex-flow: row wrap;
-
-    /* IE10 uses display: flexbox */
+    // IE10 uses display: flexbox
     display: -ms-flexbox;
     -ms-flex-flow: row wrap;
 }
@@ -58,8 +53,7 @@
    The ".opera-only" selector is used to prevent actual prefocus styling
    and is not required in markup.
 */
-.opera-only :-o-prefocus,
-.@{ui-class-prefix}g {
+.opera-only :-o-prefocus {
     word-spacing: -0.43em;
 }
 
@@ -67,8 +61,7 @@
 .@{ui-class-prefix}u,
 .@{ui-class-prefix}u-1,
 .@{ui-class-prefix}u-golden-ratio,
-.@{ui-class-prefix}u-golden-ratio-1
- {
+.@{ui-class-prefix}u-golden-ratio-1 {
     &:extend(.esf-grid-u all);
 }
 
@@ -88,6 +81,5 @@
 .make-grid(2);
 .make-grid(3);
 .make-grid(4);
-.make-grid(24);
-
 .make-grid(5);
+.make-grid(24);
