@@ -2,33 +2,353 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>Button - ESUI Demo</title>
+        <title>ESF - Icons</title>
         <link rel="stylesheet" href="assets/main.css" />
-        <link rel="stylesheet" href="src/icons/css/font-awesome.css" />
+        <link rel="stylesheet" href="src/icons/main.css" />
         <link rel="stylesheet" href="demo.css" />
+        <link rel="stylesheet" href="assets/prism.css" />
+        <script src="assets/prism.js"></script>
+        <script src="assets/jquery-1.11.1.min.js"></script>
+        <script src="assets/demo.js"></script>
     </head>
     <body class="ui-m3">
-        <h1 class="align-center">Icons</h1>
         <div id="layout" class="ui-g">
             <div class="ui-u-1-5">
-                <ul id="navigator" class="ui-list-unstyled">
-                    <li><a href="index.html">Get Started</a></li>
-                    <li><a href="button.html">按钮</a></li>
-                    <li><a href="#">布局网格</a></li>
-                    <li><a href="checkbox.html">Checkbox</a></li>
-                    <li><a href="form.html">表单</a></li>
-                    <li><a href="icons.html">图标</a></li>
-                    <li><a href="input.html">输入框</a></li>
-                    <li><a href="label.html">标签</a></li>
-                    <li><a href="menu.html">导航菜单</a></li>
-                    <li><a href="type.html">文字样式</a></li>
+                <ul id="navigator-features" class="ui-list-unstyled">
+                    <li><a href="#font-util">图标工具（Font Utils）</a></li>
+                    <li><a href="#font-bdicon">百度图标（Baidu Icon）</a></li>
+                    <li><a href="#font-awesome">奥桑木图标（Font Awesome）</a></li>
                 </ul>
             </div>
             <div class="ui-u-4-5">
                 <div id="main" class="content ui-p2 ui-pt0">
-                    <h2 id="icons" class="content-subhead">Icons</h2>
+                    <h2>图标（Web font）</h2>
+                    <div class="ui-divider"></div>
+                    <p>
+                        图标（Web font）包含了常用的Web font。包括Font awesome, baidu Icon。
+                    </p>
+                    <h3 id="font-util">图标工具（Font Utils）</h3>
+                    <div class="example">
+                        <div class="ui-mb1">带边框的 <i class="bdicon bdicon-baidu-logo ui-icon-border"></i></div>
+                        <div class="ui-mb1">固定宽度 <i class="bdicon bdicon-baidu-logo ui-icon-fw"></i></div>
+                        <div class="ui-mb1">转圈 <i class="bdicon bdicon-baidu-logo ui-icon-spin"></i></div>
+                    </div>
+                    <h3 id="font-bdicon">Baidu Icon</h3>
                     <div class="icons-list">
-                        <h3>71 New Icons in 4.1</h3>
+                        <div class="ui-g">
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-data-ads">
+                                    </i>
+                                    bdicon-data-ads
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-data-all">
+                                    </i>
+                                    bdicon-data-all
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-data-one">
+                                    </i>
+                                    bdicon-data-one
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-data-three">
+                                    </i>
+                                    bdicon-data-three
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-data-two">
+                                    </i>
+                                    bdicon-data-two
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-data-website">
+                                    </i>
+                                    bdicon-data-website
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-chart-distribution">
+                                    </i>
+                                    bdicon-chart-distribution
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-chart-graph">
+                                    </i>
+                                    bdicon-chart-graph
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-chart-histogram">
+                                    </i>
+                                    bdicon-chart-histogram
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-chart-pie">
+                                    </i>
+                                    bdicon-chart-pie
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-chart-trend">
+                                    </i>
+                                    bdicon-chart-trend
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-chart-distribution">
+                                    </i>
+                                    bdicon-chart-distribution
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-chart-graph">
+                                    </i>
+                                    bdicon-chart-graph
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-chart-histogram">
+                                    </i>
+                                    bdicon-chart-histogram
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-chart-pie">
+                                    </i>
+                                    bdicon-chart-pie
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-chart-trend">
+                                    </i>
+                                    bdicon-chart-trend
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-chart-distribution">
+                                    </i>
+                                    bdicon-chart-distribution
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-chart-graph">
+                                    </i>
+                                    bdicon-chart-graph
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-chart-histogram">
+                                    </i>
+                                    bdicon-chart-histogram
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-chart-pie">
+                                    </i>
+                                    bdicon-chart-pie
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-chart-trend">
+                                    </i>
+                                    bdicon-chart-trend
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-refresh">
+                                    </i>
+                                    bdicon-refresh
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-region">
+                                    </i>
+                                    bdicon-region
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-reverse">
+                                    </i>
+                                    bdicon-reverse
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-delete">
+                                    </i>
+                                    bdicon-delete
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-new">
+                                    </i>
+                                    bdicon-new
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-baidu-logo">
+                                    </i>
+                                    bdicon-baidu-logo
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-age">
+                                    </i>
+                                    bdicon-age
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-refresh">
+                                    </i>
+                                    bdicon-refresh
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-search">
+                                    </i>
+                                    bdicon-search
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-setting">
+                                    </i>
+                                    bdicon-setting
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-user">
+                                    </i>
+                                    bdicon-user
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-view">
+                                    </i>
+                                    bdicon-view
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-mail">
+                                    </i>
+                                    bdicon-mail
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-upload">
+                                    </i>
+                                    bdicon-upload
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-order">
+                                    </i>
+                                    bdicon-order
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-new">
+                                    </i>
+                                    bdicon-new
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-access-network">
+                                    </i>
+                                    bdicon-access-network
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-calendar">
+                                    </i>
+                                    bdicon-calendar
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-nav-expend">
+                                    </i>
+                                    bdicon-nav-expend
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-nav-expend">
+                                    </i>
+                                    bdicon-nav-expend
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-nav-collapse">
+                                    </i>
+                                    bdicon-nav-collapse
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-more-app">
+                                    </i>
+                                    bdicon-more-app
+                                </a>
+                            </div>
+                            <div class="fa-hover ui-u-1-4">
+                                <a>
+                                    <i class="bdicon bdicon-baidu-chart-distribution">
+                                    </i>
+                                    bdicon-baidu-chart-distribution
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 id="font-awesome">Font Awesome</h3>
+                    <div class="icons-list">
+                        <h4>71 New Icons in 4.1</h4>
                         <div class="ui-g">
                             <div class="fa-hover ui-u-1-4"><a href="../icon/car"><i class="fa fa-automobile"></i> fa-automobile <span class="text-muted">(alias)</span></a></div>
 
@@ -210,7 +530,7 @@
 
                             <div class="fa-hover ui-u-1-4"><a href="../icon/yahoo"><i class="fa fa-yahoo"></i> fa-yahoo</a></div>
                         </div>
-                        <h3>Web Application Icons</h3>
+                        <h4>Web Application Icons</h4>
                         <div class="ui-g">
                             <div class="fa-hover ui-u-1-4"><a href="../icon/adjust"><i class="fa fa-adjust"></i> fa-adjust</a></div>
 
@@ -796,7 +1116,7 @@
 
                             <div class="fa-hover ui-u-1-4"><a href="../icon/wrench"><i class="fa fa-wrench"></i> fa-wrench</a></div>
                         </div>
-                        <h3>File Type Icons</h3>
+                        <h4>File Type Icons</h4>
                         <div class="ui-g">
                             <div class="fa-hover ui-u-1-4"><a href="../icon/file"><i class="fa fa-file"></i> fa-file</a></div>
 
@@ -835,19 +1155,7 @@
                             <div class="fa-hover ui-u-1-4"><a href="../icon/file-archive-o"><i class="fa fa-file-zip-o"></i> fa-file-zip-o <span class="text-muted">(alias)</span></a></div>
 
                         </div>
-                        <h3>Spinner Icons</h3>
-                        <div class="ui-g">
-                            <div class="fa-hover ui-u-1-4"><a href="../icon/circle-o-notch"><i class="fa fa-circle-o-notch fa-spin"></i> fa-circle-o-notch</a></div>
-
-                            <div class="fa-hover ui-u-1-4"><a href="../icon/cog"><i class="fa fa-cog"></i> fa-cog</a></div>
-
-                            <div class="fa-hover ui-u-1-4"><a href="../icon/cog"><i class="fa fa-gear"></i> fa-gear <span class="text-muted">(alias)</span></a></div>
-
-                            <div class="fa-hover ui-u-1-4"><a href="../icon/refresh"><i class="fa fa-refresh"></i> fa-refresh</a></div>
-
-                            <div class="fa-hover ui-u-1-4"><a href="../icon/spinner"><i class="fa fa-spinner fa-spin"></i> fa-spinner</a></div>
-                        </div>
-                        <h3>Form Control Icons</h3>
+                        <h4>Form Control Icons</h4>
                         <div class="ui-g">
                             <div class="fa-hover ui-u-1-4"><a href="../icon/check-square"><i class="fa fa-check-square"></i> fa-check-square</a></div>
 
@@ -871,7 +1179,7 @@
 
                             <div class="fa-hover ui-u-1-4"><a href="../icon/square-o"><i class="fa fa-square-o"></i> fa-square-o</a></div>
                         </div>
-                        <h3>Currency Icons</h3>
+                        <h4>Currency Icons</h4>
                         <div class="ui-g">
                             <div class="fa-hover ui-u-1-4"><a href="../icon/btc"><i class="fa fa-bitcoin"></i> fa-bitcoin <span class="text-muted">(alias)</span></a></div>
 
@@ -915,7 +1223,7 @@
 
                             <div class="fa-hover ui-u-1-4"><a href="../icon/jpy"><i class="fa fa-yen"></i> fa-yen <span class="text-muted">(alias)</span></a></div>
                         </div>
-                        <h3>Text Editor Icons</h3>
+                        <h4>Text Editor Icons</h4>
                         <div class="ui-g">
                             <div class="fa-hover ui-u-1-4"><a href="../icon/align-center"><i class="fa fa-align-center"></i> fa-align-center</a></div>
 
@@ -1015,7 +1323,7 @@
 
                             <div class="fa-hover ui-u-1-4"><a href="../icon/chain-broken"><i class="fa fa-unlink"></i> fa-unlink <span class="text-muted">(alias)</span></a></div>
                         </div>
-                        <h3>Directional Icons</h3>
+                        <h4>Directional Icons</h4>
                         <div class="ui-g">
                             <div class="fa-hover ui-u-1-4"><a href="../icon/angle-double-down"><i class="fa fa-angle-double-down"></i> fa-angle-double-down</a></div>
 
@@ -1121,7 +1429,6 @@
 
                             <div class="fa-hover ui-u-1-4"><a href="../icon/caret-square-o-up"><i class="fa fa-toggle-up"></i> fa-toggle-up <span class="text-muted">(alias)</span></a></div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>

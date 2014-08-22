@@ -1,13 +1,12 @@
-/*!
- *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome
- *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
- */
+/*
+  Font awesome
+*/
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome-webfont.eot?v=4.1.0');
-  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+  src: url('font-awesome/fonts/fontawesome-webfont.eot?v=4.1.0');
+  src: url('font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('font-awesome/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('font-awesome/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('font-awesome/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -19,167 +18,6 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-/* makes the font 33% larger relative to the icon container */
-.fa-lg {
-  font-size: 1.3333333333333333em;
-  line-height: 0.75em;
-  vertical-align: -15%;
-}
-.fa-2x {
-  font-size: 2em;
-}
-.fa-3x {
-  font-size: 3em;
-}
-.fa-4x {
-  font-size: 4em;
-}
-.fa-5x {
-  font-size: 5em;
-}
-.fa-fw {
-  width: 1.2857142857142858em;
-  text-align: center;
-}
-.fa-ul {
-  padding-left: 0;
-  margin-left: 2.142857142857143em;
-  list-style-type: none;
-}
-.fa-ul > li {
-  position: relative;
-}
-.fa-li {
-  position: absolute;
-  left: -2.142857142857143em;
-  width: 2.142857142857143em;
-  top: 0.14285714285714285em;
-  text-align: center;
-}
-.fa-li.fa-lg {
-  left: -1.8571428571428572em;
-}
-.fa-border {
-  padding: .2em .25em .15em;
-  border: solid 0.08em #eeeeee;
-  border-radius: .1em;
-}
-.pull-right {
-  float: right;
-}
-.pull-left {
-  float: left;
-}
-.fa.pull-left {
-  margin-right: .3em;
-}
-.fa.pull-right {
-  margin-left: .3em;
-}
-.fa-spin {
-  -webkit-animation: spin 2s infinite linear;
-  -moz-animation: spin 2s infinite linear;
-  -o-animation: spin 2s infinite linear;
-  animation: spin 2s infinite linear;
-}
-@-moz-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-  }
-  100% {
-    -moz-transform: rotate(359deg);
-  }
-}
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-  }
-}
-@-o-keyframes spin {
-  0% {
-    -o-transform: rotate(0deg);
-  }
-  100% {
-    -o-transform: rotate(359deg);
-  }
-}
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-.fa-rotate-90 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-.fa-rotate-180 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-.fa-rotate-270 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-  -webkit-transform: rotate(270deg);
-  -moz-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
-  -o-transform: rotate(270deg);
-  transform: rotate(270deg);
-}
-.fa-flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
-  -webkit-transform: scale(-1, 1);
-  -moz-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
-  -o-transform: scale(-1, 1);
-  transform: scale(-1, 1);
-}
-.fa-flip-vertical {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
-  -webkit-transform: scale(1, -1);
-  -moz-transform: scale(1, -1);
-  -ms-transform: scale(1, -1);
-  -o-transform: scale(1, -1);
-  transform: scale(1, -1);
-}
-.fa-stack {
-  position: relative;
-  display: inline-block;
-  width: 2em;
-  height: 2em;
-  line-height: 2em;
-  vertical-align: middle;
-}
-.fa-stack-1x,
-.fa-stack-2x {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  text-align: center;
-}
-.fa-stack-1x {
-  line-height: inherit;
-}
-.fa-stack-2x {
-  font-size: 2em;
-}
-.fa-inverse {
-  color: #ffffff;
 }
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
@@ -1563,4 +1401,155 @@
 }
 .fa-bomb:before {
   content: "\f1e2";
+}
+/*
+  Baidu Icon
+*/
+@font-face {
+  font-family: "bdicon";
+  src: url('font-bdicon/fonts/bdicon.eot');
+  src: url('font-bdicon/fonts/bdicon.eot?#iefix') format('eot'), url('font-bdicon/fonts/bdicon.woff') format('woff'), url('font-bdicon/fonts/bdicon.ttf') format('truetype'), url('font-bdicon/fonts/bdicon.svg#bdicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.bdicon {
+  font-family: "bdicon";
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.bdicon-data-ads:before {
+  content: "\E001";
+}
+.bdicon-data-all:before {
+  content: "\E002";
+}
+.bdicon-data-one:before {
+  content: "\E003";
+}
+.bdicon-data-three:before {
+  content: "\E004";
+}
+.bdicon-data-two:before {
+  content: "\E005";
+}
+.bdicon-data-website:before {
+  content: "\E006";
+}
+.bdicon-chart-distribution:before {
+  content: "\E007";
+}
+.bdicon-chart-graph:before {
+  content: "\E008";
+}
+.bdicon-chart-histogram:before {
+  content: "\E009";
+}
+.bdicon-chart-pie:before {
+  content: "\E00A";
+}
+.bdicon-chart-trend:before {
+  content: "\E00B";
+}
+.bdicon-chart-distribution:before {
+  content: "\E00C";
+}
+.bdicon-chart-graph:before {
+  content: "\E00D";
+}
+.bdicon-chart-histogram:before {
+  content: "\E00E";
+}
+.bdicon-chart-pie:before {
+  content: "\E00F";
+}
+.bdicon-chart-trend:before {
+  content: "\E010";
+}
+.bdicon-chart-distribution:before {
+  content: "\E011";
+}
+.bdicon-chart-graph:before {
+  content: "\E012";
+}
+.bdicon-chart-histogram:before {
+  content: "\E013";
+}
+.bdicon-chart-pie:before {
+  content: "\E014";
+}
+.bdicon-chart-trend:before {
+  content: "\E015";
+}
+.bdicon-refresh:before {
+  content: "\E016";
+}
+.bdicon-region:before {
+  content: "\E017";
+}
+.bdicon-reverse:before {
+  content: "\E018";
+}
+.bdicon-delete:before {
+  content: "\E019";
+}
+.bdicon-new:before {
+  content: "\E01A";
+}
+.bdicon-baidu-logo:before {
+  content: "\E01B";
+}
+.bdicon-age:before {
+  content: "\E01C";
+}
+.bdicon-refresh:before {
+  content: "\E01D";
+}
+.bdicon-search:before {
+  content: "\E01E";
+}
+.bdicon-setting:before {
+  content: "\E01F";
+}
+.bdicon-user:before {
+  content: "\E020";
+}
+.bdicon-view:before {
+  content: "\E021";
+}
+.bdicon-mail:before {
+  content: "\E022";
+}
+.bdicon-upload:before {
+  content: "\E024";
+}
+.bdicon-order:before {
+  content: "\E025";
+}
+.bdicon-new:before {
+  content: "\E026";
+}
+.bdicon-access-network:before {
+  content: "\E027";
+}
+.bdicon-calendar:before {
+  content: "\E028";
+}
+.bdicon-nav-expend:before {
+  content: "\E029";
+}
+.bdicon-nav-expend:before {
+  content: "\E02A";
+}
+.bdicon-nav-collapse:before {
+  content: "\E02B";
+}
+.bdicon-more-app:before {
+  content: "\E02C";
+}
+.bdicon-baidu-chart-distribution:before {
+  content: "\E02D";
 }

@@ -180,3 +180,16 @@ body > .est-body:after {
   color: #ffffff;
   text-align: center;
 }
+.fa-hover {
+  margin-bottom: 20px;
+}
+.fa-hover a {
+  color: #4a3b13;
+}
+.fa-hover a i {
+  margin-right: 10px;
+  font-size: 2em;
+}
+.fa-hover a:hover {
+  color: #4a3b13;
+}

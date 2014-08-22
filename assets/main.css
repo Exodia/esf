@@ -857,6 +857,72 @@ input[type="search"]::-webkit-search-decoration {
 .ui-massive {
   font-size: 24px;
 }
+.ui-icon-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #4a3b13;
+  border-radius: .1em;
+}
+.ui-icon-fw {
+  width: 1.28571429em;
+  text-align: center;
+}
+.ui-icon-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.ui-icon-2x {
+  font-size: 2em;
+}
+.ui-icon-3x {
+  font-size: 3em;
+}
+.ui-icon-4x {
+  font-size: 4em;
+}
+.ui-icon-5x {
+  font-size: 5em;
+}
+.ui-icon-spin {
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
 [hidden] {
   display: none !important;
 }
